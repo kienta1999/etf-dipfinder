@@ -21,8 +21,10 @@ def main(date):
     df["dip_score"] = scan.dip_score.reindex(df.index)
     df["dip_rank"] = df.dip_score.rank(method="min").astype(int)
     df["stabilizing"] = scan.stabilizing.reindex(df.index)
+    df["theme"] = scan.theme.reindex(df.index)
     df = df.sort_values("wtd", ascending=False)
     df.insert(0, "wtd_rank", range(1, len(df) + 1))
+    df["theme_rank"] = df.groupby("theme").cumcount() + 1  # buy list: theme_rank == 1 only; others are alternates
     df.to_csv(out / "scores.csv", float_format="%.2f")
     print(f"lenses: {have} (weights renormalised to {wsum:.2f})")
     print(df.to_string(float_format="{:.2f}".format))

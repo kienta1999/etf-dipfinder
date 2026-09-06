@@ -55,7 +55,8 @@ say "the world needs uranium" without knowing whether it's cheap.
 `score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`.
 **Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
 all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
-Bucket: **buy** = cause ≥ 7 and (stabilizing or catalyst ≥ 7); **watch** = rotation but still
+Bucket: **buy** = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and `theme_rank == 1` — overlapping funds
+(URA/URNM/NLR, GDX/GDXJ, TAN/ICLN/PBW…) are one position; the rest of the theme are *alternates*, not extra buys; **watch** = rotation but still
 falling / catalyst far; **avoid** = veto. Save `output/<DATE>/scores.csv` (lens scores, weighted,
 my_rank, dip_score).
 
