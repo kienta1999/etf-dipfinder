@@ -1,0 +1,122 @@
+"""Scan the ETF universe for dips. Writes data/scan.csv, prints top dips + leaders.
+
+is_dip = (price < SMA200  OR  dd_52w <= DD_MIN)  AND  rs_spy_3m < 0
+"""
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import yfinance as yf
+
+# --- knobs ---
+DD_MIN = -0.10          # at least this far off 52w high (fast dip)
+MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
+BENCH = "SPY"
+OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
+
+UNIVERSE = {
+    "bench": "SPY QQQ IWM RSP MAGS",
+    "sector": "XLK XLF XLV XLE XLI XLY XLP XLU XLB XLRE XLC",
+    "semis": "SMH SOXX XSD PSI DRAM",
+    "software": "IGV WCLD SKYY",
+    "cyber": "CIBR HACK BUG",
+    "ai/robot": "BOTZ ROBO ARKQ AIQ BAI AIHY AIPO PHOX QTUM XT",
+    "internet/ark": "FDN ARKK ARKW",
+    "banks": "KRE KBE KBWB",
+    "fin-other": "IAI IAK FINX ARKF",
+    "crypto": "BLOK BKCH WGMI IBIT ETHA",
+    "biotech": "XBI IBB ARKG GNOM",
+    "health-other": "IHI XHE IHF XHS PPH",
+    "oil/gas": "XOP OIH FCG AMLP USO",
+    "nuclear": "URA URNM NLR",
+    "metals": "COPX PICK XME REMX LIT",
+    "gold/silver": "GDX GDXJ SIL GLD SLV",
+    "clean": "TAN ICLN QCLN PBW HYDR FAN",
+    "grid/infra": "GRID PAVE IGF",
+    "defense": "ITA PPA XAR SHLD EUAD",
+    "space": "UFO ARKX",
+    "transport": "JETS IYT",
+    "housing": "XHB ITB",
+    "consumer": "XRT PEJ BJK IBUY ONLN",
+    "reit": "VNQ SRVR DTCR",
+    "water": "PHO",
+    "country": "KWEB FXI EEM EFA EWJ EWY EWT EWZ INDA ARGT VNM",
+}
+THEME = {t: k for k, v in UNIVERSE.items() for t in v.split()}
+
+
+def ret(px, n):
+    return px.iloc[-1] / px.iloc[-1 - n] - 1 if len(px) > n else np.nan
+
+
+def metrics(px, vol, spy):
+    """One row of metrics for a single ETF. px/vol/spy are aligned Series."""
+    px, vol = px.dropna(), vol.reindex(px.dropna().index)
+    spy = spy.reindex(px.index).ffill()
+    last = px.iloc[-1]
+    roll_hi = px.rolling(252, min_periods=20).max()
+    dd_series = px / roll_hi - 1
+    dd = dd_series.iloc[-1]
+    vol60 = px.pct_change().iloc[-60:].std() * np.sqrt(252)
+    sma200 = px.iloc[-200:].mean() if len(px) >= 200 else np.nan
+    sma50 = px.iloc[-50:].mean() if len(px) >= 50 else np.nan
+    return {
+        "days": len(px),
+        "price": last,
+        "dd_52w": dd,
+        "dd_pctile": (dd_series.dropna() <= dd).mean(),  # low = unusually deep for this ETF
+        "dd_z": dd / vol60 if vol60 else np.nan,
+        "vs_sma200": last / sma200 - 1,
+        "vs_sma50": last / sma50 - 1,
+        "rs_spy_3m": ret(px, 63) - ret(spy, 63),
+        "rs_spy_6m": ret(px, 126) - ret(spy, 126),
+        "rs_spy_12m": ret(px, 252) - ret(spy, 252),
+        "ret_10d": ret(px, 10),
+        "vol_60d": vol60,
+        "dollar_vol": (px * vol).iloc[-20:].mean(),
+    }
+
+
+def flag_dips(df):
+    """Adds is_dip, stabilizing, dip_score (0 = most beaten up). Returns sorted df."""
+    df = df.copy()
+    deep = (df.vs_sma200 < 0) | (df.dd_52w <= DD_MIN)
+    df["is_dip"] = deep & (df.rs_spy_3m < 0)
+    df["stabilizing"] = df.ret_10d > 0
+    dips = df[df.is_dip]
+    df["dip_score"] = dips[["dd_z", "rs_spy_6m", "vs_sma200"]].rank(pct=True).mean(axis=1)
+    return df.sort_values(["is_dip", "dip_score", "rs_spy_3m"], ascending=[False, True, True])
+
+
+def main():
+    tickers = list(THEME)
+    raw = yf.download(tickers, period="3y", auto_adjust=True, progress=False, threads=True)
+    close, volume = raw["Close"], raw["Volume"]
+    spy = close[BENCH]
+    rows = {}
+    for t in tickers:
+        if t not in close or close[t].dropna().shape[0] < 30:
+            print(f"skip {t}: no data", file=sys.stderr)
+            continue
+        rows[t] = metrics(close[t], volume[t], spy)
+    df = pd.DataFrame(rows).T
+    df.insert(0, "theme", pd.Series(THEME))
+    illiquid = df[df.dollar_vol < MIN_DOLLAR_VOL].index.tolist()
+    if illiquid:
+        print(f"dropped illiquid: {' '.join(illiquid)}", file=sys.stderr)
+    df = flag_dips(df[df.dollar_vol >= MIN_DOLLAR_VOL])
+    OUT.parent.mkdir(exist_ok=True)
+    df.to_csv(OUT, float_format="%.4f")
+
+    cols = ["theme", "dd_52w", "dd_z", "dd_pctile", "vs_sma200", "rs_spy_3m", "rs_spy_6m", "ret_10d", "stabilizing", "dip_score"]
+    pd.set_option("display.width", 200)
+    print(f"\n=== DIPS ({df.is_dip.sum()} of {len(df)}) — top 15 ===")
+    print(df[df.is_dip][cols].head(15).to_string(float_format="{:.3f}".format))
+    print("\n=== LEADERS (rs_spy_3m) — regime ===")
+    print(df.sort_values("rs_spy_3m", ascending=False)[["theme", "rs_spy_3m", "rs_spy_6m", "dd_52w"]].head(8).to_string(float_format="{:.3f}".format))
+    print(f"\nwrote {OUT}")
+
+
+if __name__ == "__main__":
+    main()

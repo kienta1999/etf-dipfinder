@@ -1,0 +1,10 @@
+[project]
+name = "etf-dipfinder"
+version = "0.1.0"
+description = "Scan a curated ETF universe for dips: below SMA200 / off 52w high AND lagging SPY."
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance>=0.2.40",
+    "pandas>=2.2",
+    "numpy>=1.26",
+]
