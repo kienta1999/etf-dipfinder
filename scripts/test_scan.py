@@ -41,8 +41,19 @@ assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 
 assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9
 assert abs(f.dip_low_pct) < 1e-9                             # fast is sitting on its dip low
 assert abs(f.size_1pct * -f.sl_pct - 0.01) < 1e-9
-f = df.loc["fast"]
-assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 52w high
-assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9
-assert abs(f.dip_low_pct) < 1e-9                             # fast is sitting on its dip low
+
+# consolidate: parse + bucket
+import tempfile
+from consolidate import parse, bucket
+tmp = Path(tempfile.mkdtemp()) / "b.md"
+tmp.write_text("| 1 | NLR | 8 |\n| 2 | **URA** | 7 |\n| 3 | GLD | 7.5 |\n")
+try:
+    parse(tmp, {"NLR", "URA", "GLD"}); raise SystemExit("parse should reject dropped rows")
+except AssertionError:
+    pass
+assert parse(tmp, {"NLR"}) == {"NLR": 8}
+sc = pd.DataFrame({"cause": [8, 8, 3, 7], "catalyst": [7, 7, 9, 5], "stabilizing": [False, False, True, False],
+                   "veto": [False, False, True, False], "theme": ["nuc", "nuc", "clean", "clean"]}, index=list("ABCD"))
+b = bucket(sc)
+assert list(b.theme_rank) == [1, 2, 0, 1] and list(b.bucket) == ["buy", "alt", "avoid", "watch"]
 print("ok")

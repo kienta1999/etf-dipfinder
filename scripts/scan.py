@@ -14,8 +14,6 @@ DD_MIN = -0.10          # at least this far off 52w high (fast dip)
 MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
 SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
 RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
-SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
-RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
 BENCH = "SPY"
 OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
 
@@ -105,6 +103,10 @@ def main():
     tickers = list(THEME)
     raw = yf.download(tickers, period="3y", auto_adjust=True, progress=False, threads=True)
     close, volume = raw["Close"], raw["Volume"]
+    now = pd.Timestamp.now(tz="America/New_York")
+    if close.index[-1].date() == now.date() and now.hour < 16:   # drop today's partial bar
+        close, volume = close.iloc[:-1], volume.iloc[:-1]
+    asof = close.index[-1].date()
     spy = close[BENCH]
     rows = {}
     for t in tickers:
@@ -114,16 +116,20 @@ def main():
         rows[t] = metrics(close[t], volume[t], spy)
     df = pd.DataFrame(rows).T
     df.insert(0, "theme", pd.Series(THEME))
-    illiquid = df[df.dollar_vol < MIN_DOLLAR_VOL].index.tolist()
-    if illiquid:
-        print(f"dropped illiquid: {' '.join(illiquid)}", file=sys.stderr)
-    df = flag_dips(df[df.dollar_vol >= MIN_DOLLAR_VOL])
+    df.insert(1, "asof", str(asof))
+    liquid = df.dollar_vol >= MIN_DOLLAR_VOL          # NaN volume counts as illiquid
+    if (~liquid).any():
+        print(f"dropped illiquid: {' '.join(df.index[~liquid])}", file=sys.stderr)
+    df = flag_dips(df[liquid])
+    young = df.index[df.rs_spy_3m.isna()]
+    if len(young):
+        print(f"too young for rs_spy_3m (cannot flag): {' '.join(young)}", file=sys.stderr)
     OUT.parent.mkdir(exist_ok=True)
     df.to_csv(OUT, float_format="%.4f")
 
     cols = ["theme", "dd_52w", "dd_z", "dd_pctile", "vs_sma200", "rs_spy_3m", "rs_spy_6m", "ret_10d", "stabilizing", "dip_score"]
     pd.set_option("display.width", 200)
-    print(f"\n=== DIPS ({df.is_dip.sum()} of {len(df)}) — top 15 ===")
+    print(f"\n=== DIPS ({df.is_dip.sum()} of {len(df)}) as of {asof} — top 15 ===")
     print(df[df.is_dip][cols].head(15).to_string(float_format="{:.3f}".format))
     print("\n=== LEADERS (rs_spy_3m) — regime ===")
     print(df.sort_values("rs_spy_3m", ascending=False)[["theme", "rs_spy_3m", "rs_spy_6m", "dd_52w"]].head(8).to_string(float_format="{:.3f}".format))
