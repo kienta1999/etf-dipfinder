@@ -70,7 +70,7 @@ top-3's load-bearing facts from primary sources.
 
 Regime: 2-3 lines.
 
-| my # | ETF | theme | dd_52w | dip_score# | cause | need | cat | basket | price | wtd | bucket | why (1 line) |
+| my # | ETF | theme | dd_52w | dip_score# | cause | need | cat | basket | price | wtd | TP | SL | R/R | bucket | why (1 line) |
 ...all candidates, in MY order...
 
 Deviations from weighted score: one sentence each.
@@ -79,5 +79,6 @@ Caveat: the one macro thing that flips the whole list.
 Panel: lenses run / skipped, searches used, verifier yes/no.
 ```
 
-Keep "why" to one line. No price targets, no sizing. Append to `SESSIONS.md` per the session-log
+TP / SL / R/R come from scores.csv (`tp_pct` `sl_pct` `rr`; blank TP and R/R for avoids). Add the 4-line
+footnote explaining the rules (see log/2026-09-06.md). Keep "why" to one line. No other targets or sizing. Append to `SESSIONS.md` per the session-log
 hook. Overwrite `data/` freely; never delete `log/` or `output/*/dossier.md` — they're the audit trail.
