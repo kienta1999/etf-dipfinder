@@ -60,6 +60,6 @@ log/<DATE>.md                 the memo — audit trail, never delete
 
 ## 4. Latest run — 2026-09-06
 
-Buy: **NLR, URA, GLD, XLU**. Watch: URNM SLV XAR SHLD ITB ICLN. Avoid: TAN UFO PBW. Full table in `log/2026-09-06.md`.
+Buy (one per theme): **NLR, GLD, XLU**; URA/URNM are nuclear alternates. Watch: SLV XAR SHLD ITB ICLN. Avoid: TAN UFO PBW. Full table in `log/2026-09-06.md`.
 Headline: uranium term price at an 18-year high while uranium equities fell 14-17% — the commodity says the seller is a
-position, not a thesis. All four buys lean on the Sep 16 FOMC not hiking.
+position, not a thesis. All three buys lean on the Sep 16 FOMC not hiking.
