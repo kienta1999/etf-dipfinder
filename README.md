@@ -63,3 +63,12 @@ log/<DATE>.md                 the memo — audit trail, never delete
 Buy (one per theme): **NLR, GLD, XLU**; URA/URNM are nuclear alternates. Watch: SLV XAR SHLD ITB ICLN. Avoid: TAN UFO PBW. Full table in `log/2026-09-06.md`.
 Headline: uranium term price at an 18-year high while uranium equities fell 14-17% — the commodity says the seller is a
 position, not a thesis. All three buys lean on the Sep 16 FOMC not hiking.
+
+## 5. TODO (next session)
+
+- **TP / SL columns.** Idea: TP = prior 52-week high (i.e. `dd_52w` is the upside), SL = a vol-scaled stop
+  (e.g. `−1.5 × vol_60d / √12` monthly move, or the lower of the post-dip low). Both are computable in `scan.py`
+  from data already there; add `tp_pct`, `sl_pct`, and reward/risk to the memo table. Open question: is ATH the
+  right TP for a *broken* theme (TAN/UFO) — probably only for rotation dips.
+- Run the verifier (Phase 3.5) on NLR / GLD / XLU top claims.
+- Re-scan after FOMC Sep 16 2026.

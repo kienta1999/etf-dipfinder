@@ -24,3 +24,5 @@
 **Continue:**
 - Optional: run the verifier on NLR/URA/GLD top claims (one Opus agent). Re-scan after FOMC Sep 16.
 - Open: should `buy` require stabilizing? Add strict column? Push to a remote (none yet).
+- Added one-buy-per-theme rule (`theme_rank`), memo updated: buy NLR GLD XLU; URA/URNM alternates. Repo public at https://github.com/kienta1999/etf-dipfinder.
+- TODO for next session in README §5: TP/SL columns (TP = 52w high, SL = vol-scaled), verifier, post-FOMC rescan.
