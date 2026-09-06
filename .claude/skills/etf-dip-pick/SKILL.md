@@ -55,10 +55,10 @@ say "the world needs uranium" without knowing whether it's cheap.
 `score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`.
 **Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
 all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
-Bucket: **buy** = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and `theme_rank == 1` — overlapping funds
-(URA/URNM/NLR, GDX/GDXJ, TAN/ICLN/PBW…) are one position; the rest of the theme are *alternates*, not extra buys; **watch** = rotation but still
-falling / catalyst far; **avoid** = veto. Save `output/<DATE>/scores.csv` (lens scores, weighted,
-my_rank, dip_score).
+`consolidate.py` writes the `bucket` column (buy / alt / watch / avoid — rule in README §2): overlapping funds
+(URA/URNM/NLR, GDX/GDXJ, TAN/ICLN/PBW…) are one position, so only `theme_rank == 1` can be buy; the rest are *alt*.
+Start the memo from `scores.csv` buckets; any override (e.g. a rule-buy you judge watch) is a deviation — one sentence.
+Never hand-edit `scores.csv`; my rank lives in the memo only.
 
 Optional Phase 3.5 (skip on tight budget, say so in the memo): one Opus verifier re-checks the
 top-3's load-bearing facts from primary sources.

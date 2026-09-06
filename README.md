@@ -41,8 +41,19 @@ can't contaminate the others:
 | price | .15 | unusually cheap vs own history, trend intact, bounce started? |
 
 Agents run **sequentially** and each writes `output/<DATE>/score_<lens>.md` before the next starts, so a budget cutoff
-resumes from the first missing ballot. `consolidate.py` computes the weighted score; the orchestrator sets **my rank**
-(deviations get one sentence each) and writes `log/<DATE>.md`.
+resumes from the first missing ballot. `consolidate.py` is deterministic: weighted score, `theme_rank` (order inside a
+theme by weighted score, non-vetoed only), and `bucket`:
+
+| bucket | rule |
+|---|---|
+| avoid | cause ≤ 3 (veto) |
+| buy | cause ≥ 7 and (stabilizing or catalyst ≥ 7) and `theme_rank == 1` |
+| alt | same but `theme_rank > 1` — URA/URNM/NLR are one position, not three |
+| watch | everything else |
+
+The orchestrator then sets **my rank** and may override a bucket; every deviation from `scores.csv` gets one sentence
+in `log/<DATE>.md`. First `consolidate.py` run freezes `data/scan.csv` into `output/<DATE>/scan.csv` so a later
+re-scan never changes a dated result.
 
 Borrowed from `conviction-pick-sp500/stock-pick-dip`: dossier → independent lenses → consolidate → dated log. Dropped:
 company-level lenses (moat, balance sheet) — an ETF is a basket.
@@ -51,9 +62,10 @@ company-level lenses (moat, balance sheet) — an ETF is a basket.
 
 ```
 scripts/scan.py, consolidate.py, test_scan.py
-data/scan.csv                 regenerated, gitignored
+data/scan.csv                 latest scan, gitignored (has an asof column = last close used)
+output/<DATE>/scan.csv        frozen scan the panel scored against (committed)
 output/<DATE>/dossier.md      what the panel saw (committed)
-output/<DATE>/score_*.md      ballots (gitignored)   scores.csv (committed)
+output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
 .claude/skills/etf-dip-pick/       SKILL.md + lenses.md
 ```
@@ -66,6 +78,6 @@ position, not a thesis. All three buys lean on the Sep 16 FOMC not hiking.
 
 ## 5. TODO (next session)
 
-- ~~TP / SL columns~~ done: `tp_pct sl_pct dip_low_pct rr size_1pct` in scan.py → scores.csv; re-run scan to populate data/scan.csv.
+- ~~TP / SL columns~~ done. ~~Adversarial review fixes~~ done (bucket column, frozen scan, parse asserts, NaN guards).
 - Run the verifier (Phase 3.5) on NLR / GLD / XLU top claims.
 - Re-scan after FOMC Sep 16 2026.

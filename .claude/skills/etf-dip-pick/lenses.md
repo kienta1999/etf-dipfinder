@@ -17,8 +17,8 @@ writes `output/<DATE>/score_<lens>.md`. Weights are applied by the orchestrator 
 - **My rank** is the orchestrator's final order after reading all five ballots. It may deviate from the
   weighted score — every deviation gets one written sentence. It always deviates from `dip_score`
   (that is depth, not quality) — the memo shows both so the reader can see the gap.
-- Buy = top of my rank AND cause ≥ 7 AND (stabilizing OR catalyst ≥ 7). Watch = rotation but still
-  falling / catalyst far. Avoid = veto.
+- Bucket is computed by `consolidate.py`: buy = cause ≥ 7 AND (stabilizing OR catalyst ≥ 7) AND first
+  non-vetoed in its theme; alt = same but not first; avoid = veto; else watch. Overrides go in the memo as deviations.
 
 ## Ballot format (every lens)
 ```
