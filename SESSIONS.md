@@ -1,6 +1,7 @@
 # Sessions
 
 ## 2026-09-05 — project created: scanner + /dipfind skill
+**Resume:** `claude --resume 37e23d4f-34ee-41a9-8273-a0b1ff1bc431` (from `investment_strategy/`)
 **Did:**
 - Chose name `etf-dipfinder`; curated ~115 liquid sector/thematic ETFs (SPDR sectors, semis, AI/robot, nuclear, defense, metals, clean, crypto, country) incl. 2026 launches DRAM, AIPO, AIHY, BAI, PHOX.
 - `scripts/scan.py`: yfinance 3y download → dd_52w, dd_z (dd/vol), dd_pctile (vs own history), vs_sma200/50, rs_spy_3m/6m/12m, ret_10d, dollar_vol. Drops <$5M/day.
