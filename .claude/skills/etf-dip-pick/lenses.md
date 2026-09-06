@@ -1,4 +1,4 @@
-# dipfind — the five scoring lenses
+# etf-dip-pick — the five scoring lenses
 
 Each lens is one subagent. It scores EVERY candidate 1-10 on its criterion only, ranks them, and
 writes `output/<DATE>/score_<lens>.md`. Weights are applied by the orchestrator at consolidation.

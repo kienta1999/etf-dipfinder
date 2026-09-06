@@ -1,9 +1,9 @@
 ---
-name: dipfind
-description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then decide which dips are worth buying. Runs the deterministic scan (scripts/scan.py), builds a dossier, fans out to five SEQUENTIAL Opus scoring panelists (cause, necessity, catalyst, basket, price), consolidates a weighted score plus the orchestrator's own rank, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), wants to know where money is rotating, or wants a quick single-agent pass ("quick dipfind") — even if they don't say "ETF" or "/dipfind". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
+name: etf-dip-pick
+description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then decide which dips are worth buying. Runs the deterministic scan (scripts/scan.py), builds a dossier, fans out to five SEQUENTIAL Opus scoring panelists (cause, necessity, catalyst, basket, price), consolidates a weighted score plus the orchestrator's own rank, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), wants to know where money is rotating, or wants a quick single-agent pass ("quick etf-dip-pick") — even if they don't say "ETF" or "/etf-dip-pick". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
 ---
 
-# dipfind — rank ETF dips, separate dips from falling knives
+# etf-dip-pick — rank ETF dips, separate dips from falling knives
 
 An ETF 25% off its high is either **on sale** (money rotated elsewhere, thesis intact) or
 **broken** (the thesis changed). The scan can't tell; the panel can. Two modes:
@@ -66,7 +66,7 @@ top-3's load-bearing facts from primary sources.
 ## Phase 4 — memo → `log/<DATE>.md`
 
 ```
-# dipfind <DATE> — panel   (or: quick)
+# etf-dip-pick <DATE> — panel   (or: quick)
 
 Regime: 2-3 lines.
 

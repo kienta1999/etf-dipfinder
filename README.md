@@ -6,7 +6,7 @@ Scan ~115 liquid sector / thematic ETFs for dips, then decide which dips are wor
 uv sync
 uv run python scripts/scan.py                 # → data/scan.csv + DIPS / LEADERS
 uv run python scripts/test_scan.py            # self-check
-/dipfind                                      # Claude: quick memo, or full 5-lens Opus panel
+/etf-dip-pick                                      # Claude: quick memo, or full 5-lens Opus panel
 uv run python scripts/consolidate.py <DATE>   # merge panel ballots → output/<DATE>/scores.csv
 ```
 
@@ -55,7 +55,7 @@ data/scan.csv                 regenerated, gitignored
 output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (gitignored)   scores.csv (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
-.claude/skills/dipfind/       SKILL.md + lenses.md
+.claude/skills/etf-dip-pick/       SKILL.md + lenses.md
 ```
 
 ## 4. Latest run — 2026-09-06
