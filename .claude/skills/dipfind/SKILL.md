@@ -1,91 +1,82 @@
 ---
 name: dipfind
-description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then work out WHY each is down and sort them into rotation dips (buy candidates), fundamental breaks (avoid), or unclear. Runs the deterministic scan in etf-dipfinder/scripts/scan.py, web-checks the top dips, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), or wants to know where money is rotating — even if they don't say "ETF" or "/dipfind". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
+description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then decide which dips are worth buying. Runs the deterministic scan (scripts/scan.py), builds a dossier, fans out to five SEQUENTIAL Opus scoring panelists (cause, necessity, catalyst, basket, price), consolidates a weighted score plus the orchestrator's own rank, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), wants to know where money is rotating, or wants a quick single-agent pass ("quick dipfind") — even if they don't say "ETF" or "/dipfind". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
 ---
 
 # dipfind — rank ETF dips, separate dips from falling knives
 
-The script does the arithmetic; this skill exists for the one thing arithmetic
-can't do. An ETF that is 25% off its high is either **on sale** (money rotated
-into a hotter theme, the theme's thesis is intact, it will mean-revert) or
-**broken** (the thesis itself changed — regulation, demand collapse, a key
-holding blew up — and cheap keeps getting cheaper). The numbers look identical.
-Only reading the news tells them apart, and that's the whole job.
+An ETF 25% off its high is either **on sale** (money rotated elsewhere, thesis intact) or
+**broken** (the thesis changed). The scan can't tell; the panel can. Two modes:
 
-## 1. Run the scan
+- **quick** — orchestrator alone, one search per ETF, memo with buckets. ~5 min, cheap.
+- **panel** (default when the user says "rank", "review", "which to buy") — quick pass becomes
+  the dossier, then five Opus panelists score one criterion each, orchestrator consolidates.
 
-```
-cd etf-dipfinder && uv run python scripts/scan.py
-```
+The user is on a Pro plan. **Every panelist runs sequentially and writes its ballot to disk before
+the next starts**, so a budget cutoff leaves finished work on disk and the run resumes from the
+first missing `score_<lens>.md`. Never run panelists in parallel. Cap each at ~10 web searches.
 
-(Use the full path if unsure of cwd — the shell may already be inside
-`etf-dipfinder/`, in which case `cd etf-dipfinder` fails.)
-
-It prints two blocks and writes `data/scan.csv`:
-
-- **DIPS** — ETFs with `is_dip = (price < SMA200 OR dd_52w ≤ −10%) AND rs_spy_3m < 0`,
-  sorted by `dip_score` (0 = most beaten up on depth + relative weakness + trend).
-- **LEADERS** — top 8 by `rs_spy_3m`. Not candidates; they're context.
-
-If the script errors on a delisted ticker, that's already handled (it prints
-`skip X` and continues). Only investigate if the CSV is missing or nearly empty.
-
-## 2. Read the regime first
-
-Look at LEADERS before any dip. The question is: *where did the money go?*
-
-Dips usually come in clusters that mirror the leaders. If crypto and biotech
-lead while nuclear, defense, space and rare earths all sit in the dip list
-together, that's one rotation, not five separate problems — the AI-physical
-trade unwinding into risk-on. A cluster like that is much more likely to be
-"rotation" than a lone ETF falling while its siblings hold up (which smells
-idiosyncratic and deserves a harder look).
-
-Write two lines on this. It frames every bucket decision below.
-
-## 3. Check the top ~10 dips
-
-For each, one web search — `"<TICKER> ETF" <theme> selloff <Month YYYY>` — and
-read enough to answer: *did the thesis change, or just the flows?*
-
-| bucket | means | typical evidence |
-|---|---|---|
-| **rotation** | thesis intact, money left for something hotter | "profit-taking after big run", rate moves, risk-on/off, sector rotation, macro fear, one bad print at a top holding |
-| **break** | thesis impaired | policy reversal (subsidy repeal, export ban), demand collapse, tech obsolescence, fraud/blowup at a top-3 holding, the theme's core commodity structurally oversupplied |
-| **unclear** | one search didn't settle it | say so; don't guess |
-
-Then cross-check the row's numbers — they modulate confidence, not the bucket:
-
-- `dd_pctile < 0.10` — this drawdown is in the worst decile of *this ETF's own
-  3-year history*. Real event, not normal noise. (XBI at −15% is a Tuesday;
-  XLP at −10% is news.) `dd_z` says the same thing in vol units.
-- `stabilizing` (10-day return > 0) — the bounce has started. Without it,
-  even a rotation dip is still a knife; note it as *watch*, not *buy*.
-- `days < 250` — young ETF (DRAM, AIPO…). Its SMA200 / 52w numbers are
-  since-inception and mean less. Say so.
-- `rs_spy_12m` strongly positive while `rs_spy_3m` negative — a leader that's
-  resting, the most common good dip shape.
-
-## 4. Write the memo and log it
-
-Append to `log/YYYY-MM-DD.md` (create if missing). Logging is what makes the
-skill improvable — in three months you can check which buckets were right.
+## Phase 0 — scan
 
 ```
-# dipfind YYYY-MM-DD
-
-Regime: <2 lines>
-
-| # | ETF | theme | dd_52w | vs_sma200 | rs_spy_3m | stab | bucket | why (1 line) |
-|---|-----|-------|--------|-----------|-----------|------|--------|--------------|
-| 1 | KWEB | china | -36% | -13% | -6% | no | rotation | Tariff headline + Mag7 rotation; earnings at top holdings fine |
-| 2 | TAN  | clean | -35% | -13% | -30% | no | break | IRA credits repealed in July bill; thesis needs policy reversal |
-...
-
-Buy candidates (rotation + stabilizing): ...
-Watch (rotation, still falling): ...
-Avoid (break): ...
+cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
 ```
 
-Keep the "why" to one line — the point is the bucket, not a research report.
-No price targets, no position sizes; that's the user's call.
+Prints DIPS (sorted by `dip_score`, 0 = most beaten up) and LEADERS, writes `data/scan.csv`.
+`dip_score` is *depth*, not quality — it's the CSV's rank, never the memo's.
+
+## Phase 1 — quick pass → dossier
+
+Read LEADERS first: *where did the money go?* Dips cluster as the mirror of the leaders; one
+cluster = one rotation, not N separate problems. A lone dip while siblings hold is idiosyncratic.
+
+For the top ~12-15 dips, one web search each — `"<TICKER> ETF" <theme> selloff <Month YYYY>` —
+and a provisional bucket: **rotation** (thesis intact) / **break** (policy repeal, demand collapse,
+obsolescence, top-holding blowup, permanent re-rating) / **unclear**.
+
+Write `output/<DATE>/dossier.md`: (A) the candidates' full CSV rows with column legend, (B) leaders,
+(C) the quick-pass memo, marked *unverified — challenge it*. In quick mode, stop here and write the
+memo (format below) to `log/<DATE>.md`.
+
+## Phase 2 — panel, sequential
+
+Read `lenses.md` (same folder). For each lens in order **cause → necessity → catalyst → basket →
+price**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
+(`subagent_type: "claude"`, `model: "opus"`) with: working dir, "read dossier.md and your row in
+lenses.md", score ALL candidates 1-10 on that lens only, ≤10 searches, write the ballot file in the
+lenses.md format, return it. Wait for it before starting the next.
+
+Why one criterion per agent: a single agent asked for "overall" quietly lets the loudest fact
+(usually the price drop) contaminate every other judgment. Splitting forces the necessity scorer to
+say "the world needs uranium" without knowing whether it's cheap.
+
+## Phase 3 — consolidate
+
+`score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`.
+**Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
+all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
+Bucket: **buy** = cause ≥ 7 and (stabilizing or catalyst ≥ 7); **watch** = rotation but still
+falling / catalyst far; **avoid** = veto. Save `output/<DATE>/scores.csv` (lens scores, weighted,
+my_rank, dip_score).
+
+Optional Phase 3.5 (skip on tight budget, say so in the memo): one Opus verifier re-checks the
+top-3's load-bearing facts from primary sources.
+
+## Phase 4 — memo → `log/<DATE>.md`
+
+```
+# dipfind <DATE> — panel   (or: quick)
+
+Regime: 2-3 lines.
+
+| my # | ETF | theme | dd_52w | dip_score# | cause | need | cat | basket | price | wtd | bucket | why (1 line) |
+...all candidates, in MY order...
+
+Deviations from weighted score: one sentence each.
+Buy: ...   Watch: ...   Avoid: ...
+Caveat: the one macro thing that flips the whole list.
+Panel: lenses run / skipped, searches used, verifier yes/no.
+```
+
+Keep "why" to one line. No price targets, no sizing. Append to `SESSIONS.md` per the session-log
+hook. Overwrite `data/` freely; never delete `log/` or `output/*/dossier.md` — they're the audit trail.
