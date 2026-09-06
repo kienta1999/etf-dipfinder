@@ -12,6 +12,10 @@ import yfinance as yf
 # --- knobs ---
 DD_MIN = -0.10          # at least this far off 52w high (fast dip)
 MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
+SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
+RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
+SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
+RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
 BENCH = "SPY"
 OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
 
@@ -61,6 +65,9 @@ def metrics(px, vol, spy):
     vol60 = px.pct_change().iloc[-60:].std() * np.sqrt(252)
     sma200 = px.iloc[-200:].mean() if len(px) >= 200 else np.nan
     sma50 = px.iloc[-50:].mean() if len(px) >= 50 else np.nan
+    dip_low = px.loc[px.iloc[-252:].idxmax():].min()   # lowest close since the 52w high = thesis stop
+    tp = 1 / (1 + dd) - 1                               # back to the 52w high; -27% dd is a +37% climb
+    sl = -SL_SIGMA * vol60 / np.sqrt(12) if vol60 else np.nan
     return {
         "days": len(px),
         "price": last,
@@ -75,6 +82,11 @@ def metrics(px, vol, spy):
         "ret_10d": ret(px, 10),
         "vol_60d": vol60,
         "dollar_vol": (px * vol).iloc[-20:].mean(),
+        "tp_pct": tp,
+        "sl_pct": sl,
+        "dip_low_pct": dip_low / last - 1,   # informational: structural stop; 0 = sitting on the low
+        "rr": tp / -sl if sl else np.nan,
+        "size_1pct": RISK / -sl if sl else np.nan,
     }
 
 

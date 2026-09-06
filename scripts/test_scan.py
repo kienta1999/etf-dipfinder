@@ -36,4 +36,13 @@ assert not df.loc["fast", "stabilizing"]                  # still falling
 assert df.loc["slow", "dip_score"] >= 0 and np.isnan(df.loc["lead", "dip_score"])
 assert 0 <= df.loc["slow", "dd_pctile"] <= 0.05           # at its own worst → low pctile
 assert df.index[0] in ("fast", "slow")                    # dips sort first
+f = df.loc["fast"]
+assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 52w high
+assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9
+assert abs(f.dip_low_pct) < 1e-9                             # fast is sitting on its dip low
+assert abs(f.size_1pct * -f.sl_pct - 0.01) < 1e-9
+f = df.loc["fast"]
+assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 52w high
+assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9
+assert abs(f.dip_low_pct) < 1e-9                             # fast is sitting on its dip low
 print("ok")
