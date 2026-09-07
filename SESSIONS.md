@@ -26,3 +26,11 @@
 - Open: should `buy` require stabilizing? Add strict column? Push to a remote (none yet).
 - Added one-buy-per-theme rule (`theme_rank`), memo updated: buy NLR GLD XLU; URA/URNM alternates. Repo public at https://github.com/kienta1999/etf-dipfinder.
 - TODO for next session in README §5: TP/SL columns (TP = 52w high, SL = vol-scaled), verifier, post-FOMC rescan.
+
+## 2026-09-06 (b) — /etf-dip-pick-lite: one-agent version
+**Did:**
+- New skill `.claude/skills/etf-dip-pick-lite/SKILL.md`: same scan + lenses.md + weights/veto/theme rule, but one agent,
+  one search per theme (~10 total), scores consolidated with an inline pandas snippet, memo only to `log/<DATE>-lite.md`.
+  Nothing written to `output/`, no verifier.
+- Ran it: `log/2026-09-06-lite.md`. Buy NLR; GLD/XLU watch until FOMC Sep 16 — same answer as the full panel at ~1/6 the tokens.
+**Continue:** post-FOMC rescan (Sep 16/17) — lite first; run the full panel only if the buy list changes.
