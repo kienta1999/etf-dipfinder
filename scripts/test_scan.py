@@ -56,4 +56,8 @@ sc = pd.DataFrame({"cause": [8, 8, 3, 7], "catalyst": [7, 7, 9, 5], "stabilizing
                    "veto": [False, False, True, False], "theme": ["nuc", "nuc", "clean", "clean"]}, index=list("ABCD"))
 b = bucket(sc)
 assert list(b.theme_rank) == [1, 2, 0, 1] and list(b.bucket) == ["buy", "alt", "avoid", "watch"]
+from consolidate import deploy
+d = deploy(pd.DataFrame({"bucket": ["buy", "buy", "watch"], "sl_pct": [-0.1, -0.2, -0.1], "tp_pct": [0.3, 0.3, 0.3]}, index=list("XYZ")), 30000)
+assert list(d.index) == ["X", "Y"] and list(d.usd) == [20000, 10000]        # each loses the same $ at its stop
+assert d.loss_at_sl.sum() == -4000 and d.gain_at_tp.sum() == 9000
 print("ok")

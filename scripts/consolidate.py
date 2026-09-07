@@ -1,4 +1,4 @@
-"""Merge panel ballots → output/<DATE>/scores.csv. Usage: uv run python scripts/consolidate.py 2026-09-06
+"""Merge panel ballots → output/<DATE>/scores.csv. Usage: uv run python scripts/consolidate.py 2026-09-06 [CAPITAL] [NLR,GLD,XLU]
 
 First run freezes data/scan.csv into output/<DATE>/scan.csv so later rescans never change this date's scores."""
 import re, shutil, sys
@@ -28,7 +28,17 @@ def bucket(df):
     df.loc[df.veto, "bucket"] = "avoid"
     return df
 
-def main(date):
+def deploy(df, capital, only=None):
+    """Risk-parity split of `capital` across bucket == buy, or across `only` (the memo's final buys if it overrode
+    the rule). Each position loses the same $ at its stop. Returns per-ETF $, loss at SL, gain at TP."""
+    b = df[df.bucket == "buy"] if only is None else df.loc[only]
+    w = (1 / -b.sl_pct); w = w / w.sum()
+    out = pd.DataFrame({"usd": (capital * w).round(-2), "sl_pct": b.sl_pct, "tp_pct": b.tp_pct})
+    out["loss_at_sl"] = (out.usd * out.sl_pct).round(-2)
+    out["gain_at_tp"] = (out.usd * out.tp_pct).round(-2)
+    return out
+
+def main(date, capital=None, only=None):
     out = Path(__file__).resolve().parent.parent / "output" / date
     snap = out / "scan.csv"
     if not snap.exists():
@@ -55,6 +65,11 @@ def main(date):
     df.to_csv(out / "scores.csv", float_format="%.2f")
     print(f"lenses: {have} (weights renormalised to {wsum:.2f})")
     print(df.to_string(float_format="{:.2f}".format))
+    if capital:
+        d = deploy(df, capital, only)
+        print(f"\ndeploy ${capital:,.0f} across buys (risk parity):")
+        print(d.to_string(float_format="{:,.2f}".format))
+        print(f"max loss {d.loss_at_sl.sum():,.0f}  max gain {d.gain_at_tp.sum():,.0f}")
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], float(sys.argv[2]) if len(sys.argv) > 2 else None, sys.argv[3].split(",") if len(sys.argv) > 3 else None)

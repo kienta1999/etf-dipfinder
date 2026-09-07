@@ -75,10 +75,17 @@ Regime: 2-3 lines.
 
 Deviations from weighted score: one sentence each.
 Buy: ...   Watch: ...   Avoid: ...
+
+## With $100k (`consolidate.py <DATE> 100000 <final buys>`)
+Risk-parity table: $ per buy, loss at SL, gain at TP, totals. Then tranche call: if the buys share one macro
+catalyst (same FOMC / same policy date) → half now, half after it; if independent → all in. Stops as orders,
+TPs as alerts. Max loss = all stops hit (gaps lose more); max gain = all funds back to 52w high (no timeline).
+
 Caveat: the one macro thing that flips the whole list.
 Panel: lenses run / skipped, searches used, verifier yes/no.
 ```
 
-TP / SL / R/R come from scores.csv (`tp_pct` `sl_pct` `rr`; blank TP and R/R for avoids). Add the 4-line
+TP / SL / R/R come from scores.csv (`tp_pct` `sl_pct` `rr`; blank TP and R/R for avoids). The $100k section comes
+from `consolidate.py <DATE> 100000 <ticker,ticker,...>` — pass the memo's final buys if it overrode a rule-buy. Add the 4-line
 footnote explaining the rules (see log/2026-09-06.md). Keep "why" to one line. No other targets or sizing. Append to `SESSIONS.md` per the session-log
 hook. Overwrite `data/` freely; never delete `log/` or `output/*/dossier.md` — they're the audit trail.
