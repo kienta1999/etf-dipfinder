@@ -91,3 +91,6 @@ nothing buyable. `log/2026-09-06-lite.md`.
 - ~~TP / SL columns~~ done. ~~Adversarial review fixes~~ done (bucket column, frozen scan, parse asserts, NaN guards).
 - Run the verifier (Phase 3.5) on NLR / GLD / XLU top claims.
 - Re-scan after FOMC Sep 16 2026.
+- Shallow dips score too high: ROBO / XLC / XLY / PPA (-6 to -11%, R/R < 1.3) ranked mid-table on the lite rerun. Either
+  a depth gate in the price lens (dd_52w > -12% or R/R < 1.2 → price ≤ 4) or a `min_rr` cut in `scan.py`.
+- Build `-lite` versions of stock-pick-dip / momentum / earnings (memo in conviction-pick-sp500/TODO.md).
