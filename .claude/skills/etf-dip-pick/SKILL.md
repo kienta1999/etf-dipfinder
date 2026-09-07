@@ -14,7 +14,12 @@ An ETF 25% off its high is either **on sale** (money rotated elsewhere, thesis i
 
 The user is on a Pro plan. **Every panelist runs sequentially and writes its ballot to disk before
 the next starts**, so a budget cutoff leaves finished work on disk and the run resumes from the
-first missing `score_<lens>.md`. Never run panelists in parallel. Cap each at ~10 web searches.
+first missing `score_<lens>.md`. Never run panelists in parallel.
+
+**No search cap here — full is the reliable mode, `/etf-dip-pick-lite` is the cheap one.** A panelist searches
+until its facts are pinned and stops: it re-checks nothing it has already confirmed, and never searches to score
+a fund whose theme is already covered by a sibling. Stop rule per lens — every score rests on a number or a dated
+event the panelist can name, or the ballot says "unverified" and the score caps at 5.
 
 ## Phase 0 — scan
 
@@ -44,7 +49,8 @@ memo (format below) to `log/<DATE>.md`.
 Read `lenses.md` (same folder). For each lens in order **cause → necessity → catalyst → basket →
 price**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
 (`subagent_type: "claude"`, `model: "opus"`) with: working dir, "read dossier.md and your row in
-lenses.md", score ALL candidates 1-10 on that lens only, ≤10 searches, write the ballot file in the
+lenses.md", score ALL candidates 1-10 on that lens only, search as far as the stop rule needs (no cap;
+WebFetch a primary source when a snippet is the only evidence for a buy-grade score), write the ballot file in the
 lenses.md format, return it. Wait for it before starting the next. Cause, necessity and catalyst are **theme**
 questions: research once per theme, copy the score to siblings, one sentence where a sibling differs. Basket and
 price are per fund; price needs no search (CSV columns).
@@ -63,8 +69,10 @@ all five ballots, and reorder where the ballots' facts justify it — one senten
 Start the memo from `scores.csv` buckets; any override (e.g. a rule-buy you judge watch) is a deviation — one sentence.
 Never hand-edit `scores.csv`; my rank lives in the memo only.
 
-Optional Phase 3.5 (skip on tight budget, say so in the memo): one Opus verifier re-checks the
-top-3's load-bearing facts from primary sources.
+Phase 3.5 — verifier, not optional in panel mode: one Opus verifier re-checks the top-3's load-bearing facts
+from primary sources, uncapped searches, and may demote. This is the phase that caught a stale quote holding up
+two rule-buys on 2026-09-06; skipping it makes the run a lite run with extra steps. Genuinely out of budget →
+run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 
 ## Phase 4 — memo → `log/<DATE>.md`
 
@@ -85,7 +93,7 @@ catalyst (same FOMC / same policy date) → half now, half after it; if independ
 TPs as alerts. Max loss = all stops hit (gaps lose more); max gain = all funds back to 52w high (no timeline).
 
 Caveat: the one macro thing that flips the whole list.
-Panel: lenses run / skipped, searches used, verifier yes/no.
+Panel: lenses run / skipped, searches used, verifier findings (or why lite would have been the honest call).
 ```
 
 TP / SL / R/R come from scores.csv (`tp_pct` `sl_pct` `rr`; blank TP and R/R for avoids). The $100k section comes
