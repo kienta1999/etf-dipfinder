@@ -83,6 +83,8 @@ log/<DATE>-lite.md            lite memo
 Buy (one per theme): **NLR, GLD, XLU**; URA/URNM are nuclear alternates. Watch: SLV XAR SHLD ITB ICLN. Avoid: TAN UFO PBW. Full table and the $100k split (risk parity, half now / half after FOMC) in `log/2026-09-06.md`.
 Headline: uranium term price at an 18-year high while uranium equities fell 14-17% — the commodity says the seller is a
 position, not a thesis. All three buys lean on the Sep 16 FOMC not hiking.
+Lite rerun on the theme-first cut (30 funds / 15 themes): same answer, NLR the only buy; ai/robot, lithium, XLY, XLC added
+nothing buyable. `log/2026-09-06-lite.md`.
 
 ## 5. TODO (next session)
 

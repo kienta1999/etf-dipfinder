@@ -37,3 +37,5 @@
 - Theme-first candidates: `scan.py` themes re-cut to "same headline moves both" (gold ≠ silver, each SPDR sector its own
   theme, one theme per country, solar ≠ clean, crypto spot ≠ equity, defense US ≠ EU). `TOP_THEMES = 15`; CANDIDATES =
   every dip in the 15 deepest themes (today 30 funds / 15 themes vs 15 funds / 9 themes). Both skills research once per theme.
+- Re-ran lite on the theme-first cut (30 funds / 15 themes, 4 new searches): buy list unchanged — NLR buy, GLD/XLU watch
+  until FOMC. New themes (ai/robot, lithium, XLY, XLC) are rests in uptrends or wobbles, not dips. `log/2026-09-06-lite.md`.
