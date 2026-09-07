@@ -1,5 +1,9 @@
 """Merge panel ballots → output/<DATE>/scores.csv. Usage: uv run python scripts/consolidate.py 2026-09-06 [CAPITAL] [NLR,GLD,XLU]
 
+Lite (no ballots, sizes straight off data/scan.csv): uv run python scripts/consolidate.py lite 100000 NLR
+
+Lite (no ballots, sizes straight off data/scan.csv): uv run python scripts/consolidate.py lite 100000 NLR
+
 First run freezes data/scan.csv into output/<DATE>/scan.csv so later rescans never change this date's scores."""
 import re, shutil, sys
 from pathlib import Path
@@ -72,4 +76,10 @@ def main(date, capital=None, only=None):
         print(f"max loss {d.loss_at_sl.sum():,.0f}  max gain {d.gain_at_tp.sum():,.0f}")
 
 if __name__ == "__main__":
+    if sys.argv[1] == "lite":  # sizing without ballots: consolidate.py lite 100000 NLR,GLD
+        scan = pd.read_csv(Path(__file__).resolve().parent.parent / "data" / "scan.csv", index_col=0)
+        d = deploy(scan, float(sys.argv[2]), sys.argv[3].split(","))
+        print(d.to_string(float_format="{:,.2f}".format))
+        print(f"max loss {d.loss_at_sl.sum():,.0f}  max gain {d.gain_at_tp.sum():,.0f}")
+        sys.exit()
     main(sys.argv[1], float(sys.argv[2]) if len(sys.argv) > 2 else None, sys.argv[3].split(",") if len(sys.argv) > 3 else None)

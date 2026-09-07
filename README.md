@@ -7,7 +7,7 @@ uv sync
 uv run python scripts/scan.py                 # → data/scan.csv + CANDIDATES (dips in top 15 themes) / LEADERS
 uv run python scripts/test_scan.py            # self-check
 /etf-dip-pick                                      # Claude: full 5-lens Opus panel → log/<DATE>.md
-/etf-dip-pick-lite                                 # Claude: one agent, ~10 searches → log/<DATE>-lite.md
+/etf-dip-pick-lite                                 # Claude: one agent, ~12 searches, same memo sections → log/<DATE>-lite.md
 uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots → scores.csv; optional $ split of buys
 ```
 
@@ -74,7 +74,7 @@ output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
 .claude/skills/etf-dip-pick/       SKILL.md + lenses.md
-.claude/skills/etf-dip-pick-lite/  SKILL.md (one agent, reads ../etf-dip-pick/lenses.md, writes log/<DATE>-lite.md only)
+.claude/skills/etf-dip-pick-lite/  SKILL.md (one agent, reads ../etf-dip-pick/lenses.md, same memo sections as full, writes log/<DATE>-lite.md only)
 log/<DATE>-lite.md            lite memo
 ```
 
