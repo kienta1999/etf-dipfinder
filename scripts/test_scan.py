@@ -25,6 +25,7 @@ same = spy.copy()
 
 df = pd.DataFrame({k: metrics(v, vol, spy) for k, v in
                    dict(fast=fast, slow=slow, lead=lead, same=same).items()}).T
+df.insert(0, "theme", ["a", "b", "a", "b"])
 df = flag_dips(df)
 
 assert df.loc["fast", "dd_52w"] <= DD_MIN and df.loc["fast", "vs_sma200"] > 0
@@ -36,6 +37,8 @@ assert not df.loc["fast", "stabilizing"]                  # still falling
 assert df.loc["slow", "dip_score"] >= 0 and np.isnan(df.loc["lead", "dip_score"])
 assert 0 <= df.loc["slow", "dd_pctile"] <= 0.05           # at its own worst → low pctile
 assert df.index[0] in ("fast", "slow")                    # dips sort first
+assert df.loc["fast", "is_candidate"] and df.loc["slow", "is_candidate"] and not df.loc["lead", "is_candidate"]
+assert df.loc["fast", "theme_score"] == df.loc["fast", "dip_score"]   # only dip in its theme
 f = df.loc["fast"]
 assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 52w high
 assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9

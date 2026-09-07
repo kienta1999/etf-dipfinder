@@ -1,4 +1,4 @@
-"""Scan the ETF universe for dips. Writes data/scan.csv, prints top dips + leaders.
+"""Scan the ETF universe for dips. Writes data/scan.csv, prints candidates (grouped by theme) + leaders.
 
 is_dip = (price < SMA200  OR  dd_52w <= DD_MIN)  AND  rs_spy_3m < 0
 """
@@ -15,11 +15,15 @@ MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
 SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
 RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
 BENCH = "SPY"
+TOP_THEMES = 15         # candidates = every dip in the 15 themes with the deepest best dip
 OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
 
+# A theme = funds the SAME headline moves (gold + gold miners, uranium + reactors). Cause/necessity/catalyst are
+# researched once per theme; basket/price per fund. XLU/XLY share only the SPDR wrapper, so each sector is its own theme.
 UNIVERSE = {
     "bench": "SPY QQQ IWM RSP MAGS",
-    "sector": "XLK XLF XLV XLE XLI XLY XLP XLU XLB XLRE XLC",
+    "tech": "XLK", "financials": "XLF", "health": "XLV", "energy": "XLE", "industrials": "XLI",
+    "discretionary": "XLY", "staples": "XLP", "utilities": "XLU", "materials": "XLB", "realestate": "XLRE", "comms": "XLC",
     "semis": "SMH SOXX XSD PSI DRAM",
     "software": "IGV WCLD SKYY",
     "cyber": "CIBR HACK BUG",
@@ -27,23 +31,33 @@ UNIVERSE = {
     "internet/ark": "FDN ARKK ARKW",
     "banks": "KRE KBE KBWB",
     "fin-other": "IAI IAK FINX ARKF",
-    "crypto": "BLOK BKCH WGMI IBIT ETHA",
+    "crypto-spot": "IBIT ETHA",
+    "crypto-equity": "BLOK BKCH WGMI",
     "biotech": "XBI IBB ARKG GNOM",
     "health-other": "IHI XHE IHF XHS PPH",
     "oil/gas": "XOP OIH FCG AMLP USO",
     "nuclear": "URA URNM NLR",
-    "metals": "COPX PICK XME REMX LIT",
-    "gold/silver": "GDX GDXJ SIL GLD SLV",
-    "clean": "TAN ICLN QCLN PBW HYDR FAN",
+    "base-metals": "COPX PICK XME",
+    "rare-earth": "REMX",
+    "lithium": "LIT",
+    "gold": "GDX GDXJ GLD",
+    "silver": "SIL SLV",
+    "solar": "TAN",
+    "clean": "ICLN QCLN PBW",
+    "hydrogen": "HYDR",
+    "wind": "FAN",
     "grid/infra": "GRID PAVE IGF",
-    "defense": "ITA PPA XAR SHLD EUAD",
+    "defense-us": "ITA PPA XAR SHLD",
+    "defense-eu": "EUAD",
     "space": "UFO ARKX",
     "transport": "JETS IYT",
     "housing": "XHB ITB",
     "consumer": "XRT PEJ BJK IBUY ONLN",
     "reit": "VNQ SRVR DTCR",
     "water": "PHO",
-    "country": "KWEB FXI EEM EFA EWJ EWY EWT EWZ INDA ARGT VNM",
+    "china": "KWEB FXI",
+    "em": "EEM", "dev-exus": "EFA", "japan": "EWJ", "korea": "EWY", "taiwan": "EWT", "brazil": "EWZ",
+    "india": "INDA", "argentina": "ARGT", "vietnam": "VNM",
 }
 THEME = {t: k for k, v in UNIVERSE.items() for t in v.split()}
 
@@ -96,7 +110,9 @@ def flag_dips(df):
     df["stabilizing"] = df.ret_10d > 0
     dips = df[df.is_dip]
     df["dip_score"] = dips[["dd_z", "rs_spy_6m", "vs_sma200"]].rank(pct=True).mean(axis=1)
-    return df.sort_values(["is_dip", "dip_score", "rs_spy_3m"], ascending=[False, True, True])
+    df["theme_score"] = df.dip_score.groupby(df.theme).transform("min").where(df.is_dip)   # theme's best dip
+    df["is_candidate"] = df.is_dip & (df.theme_score.rank(method="dense") <= TOP_THEMES)
+    return df.sort_values(["is_candidate", "theme_score", "dip_score", "rs_spy_3m"], ascending=[False, True, True, True])
 
 
 def main():
@@ -129,8 +145,12 @@ def main():
 
     cols = ["theme", "dd_52w", "dd_z", "dd_pctile", "vs_sma200", "rs_spy_3m", "rs_spy_6m", "ret_10d", "stabilizing", "dip_score"]
     pd.set_option("display.width", 200)
-    print(f"\n=== DIPS ({df.is_dip.sum()} of {len(df)}) as of {asof} — top 15 ===")
-    print(df[df.is_dip][cols].head(15).to_string(float_format="{:.3f}".format))
+    c = df[df.is_candidate]
+    print(f"\n=== CANDIDATES: {len(c)} dips in the top {c.theme.nunique()} themes ({df.is_dip.sum()} dips of {len(df)}) as of {asof} ===")
+    print(c[cols].to_string(float_format="{:.3f}".format))
+    rest = df[df.is_dip & ~df.is_candidate]
+    if len(rest):
+        print(f"\nother dips (themes ranked > {TOP_THEMES}): {' '.join(rest.index)}")
     print("\n=== LEADERS (rs_spy_3m) — regime ===")
     print(df.sort_values("rs_spy_3m", ascending=False)[["theme", "rs_spy_3m", "rs_spy_6m", "dd_52w"]].head(8).to_string(float_format="{:.3f}".format))
     print(f"\nwrote {OUT}")

@@ -22,16 +22,17 @@ first missing `score_<lens>.md`. Never run panelists in parallel. Cap each at ~1
 cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
 ```
 
-Prints DIPS (sorted by `dip_score`, 0 = most beaten up) and LEADERS, writes `data/scan.csv`.
-`dip_score` is *depth*, not quality — it's the CSV's rank, never the memo's.
+Prints CANDIDATES — every dip in the `TOP_THEMES` (15) themes whose best dip is deepest, grouped by theme — and
+LEADERS, writes `data/scan.csv`. A theme = funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ); XLU and XLY
+are separate themes. `dip_score` is *depth*, not quality — it's the CSV's rank, never the memo's.
 
 ## Phase 1 — quick pass → dossier
 
 Read LEADERS first: *where did the money go?* Dips cluster as the mirror of the leaders; one
 cluster = one rotation, not N separate problems. A lone dip while siblings hold is idiosyncratic.
 
-For the top ~12-15 dips, one web search each — `"<TICKER> ETF" <theme> selloff <Month YYYY>` —
-and a provisional bucket: **rotation** (thesis intact) / **break** (policy repeal, demand collapse,
+Candidates = the CANDIDATES block. One web search per **theme**, not per fund — `"<theme> ETF" selloff <Month YYYY>` —
+and a provisional bucket per theme, copied to siblings unless the search gives a fund-specific reason (one sentence): **rotation** (thesis intact) / **break** (policy repeal, demand collapse,
 obsolescence, top-holding blowup, permanent re-rating) / **unclear**.
 
 Write `output/<DATE>/dossier.md`: (A) the candidates' full CSV rows with column legend, (B) leaders,
@@ -44,7 +45,9 @@ Read `lenses.md` (same folder). For each lens in order **cause → necessity →
 price**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
 (`subagent_type: "claude"`, `model: "opus"`) with: working dir, "read dossier.md and your row in
 lenses.md", score ALL candidates 1-10 on that lens only, ≤10 searches, write the ballot file in the
-lenses.md format, return it. Wait for it before starting the next.
+lenses.md format, return it. Wait for it before starting the next. Cause, necessity and catalyst are **theme**
+questions: research once per theme, copy the score to siblings, one sentence where a sibling differs. Basket and
+price are per fund; price needs no search (CSV columns).
 
 Why one criterion per agent: a single agent asked for "overall" quietly lets the loudest fact
 (usually the price drop) contaminate every other judgment. Splitting forces the necessity scorer to
@@ -56,7 +59,7 @@ say "the world needs uranium" without knowing whether it's cheap.
 **Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
 all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
 `consolidate.py` writes the `bucket` column (buy / alt / watch / avoid — rule in README §2): overlapping funds
-(URA/URNM/NLR, GDX/GDXJ, TAN/ICLN/PBW…) are one position, so only `theme_rank == 1` can be buy; the rest are *alt*.
+(URA/URNM/NLR, GLD/GDX/GDXJ, ICLN/QCLN/PBW…) are one position, so only `theme_rank == 1` can be buy; the rest are *alt*.
 Start the memo from `scores.csv` buckets; any override (e.g. a rule-buy you judge watch) is a deviation — one sentence.
 Never hand-edit `scores.csv`; my rank lives in the memo only.
 

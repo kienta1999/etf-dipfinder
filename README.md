@@ -4,9 +4,10 @@ Scan ~115 liquid sector / thematic ETFs for dips, then decide which dips are wor
 
 ```
 uv sync
-uv run python scripts/scan.py                 # → data/scan.csv + DIPS / LEADERS
+uv run python scripts/scan.py                 # → data/scan.csv + CANDIDATES (dips in top 15 themes) / LEADERS
 uv run python scripts/test_scan.py            # self-check
-/etf-dip-pick                                      # Claude: quick memo, or full 5-lens Opus panel
+/etf-dip-pick                                      # Claude: full 5-lens Opus panel → log/<DATE>.md
+/etf-dip-pick-lite                                 # Claude: one agent, ~10 searches → log/<DATE>-lite.md
 uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots → scores.csv; optional $ split of buys
 ```
 
@@ -18,13 +19,18 @@ uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots →
 - The AND gate — lagging SPY over 3 months — stops a broad selloff from flagging the whole universe. In a real crash the
   trade is SPY, not sector picking.
 - Everything is computed; only dips are ranked. Leaders are kept because they tell you *where the money went*.
+- **Candidates are picked by theme, not by depth.** A theme = funds the same headline moves (URA/URNM/NLR;
+  GLD/GDX/GDXJ; XLU is its own theme, so is XLY). Themes rank by their deepest dip; the top `TOP_THEMES` (15) themes
+  contribute every one of their dips as candidates. Research is once per theme, so 15 themes cost the same as 15 funds
+  and cover more ground; siblings still get their own row, score and `theme_rank`.
 
 Columns worth knowing: `dd_z` (drawdown ÷ vol — XBI at −15% is noise, XLP at −10% is news), `dd_pctile` (how deep vs
 this ETF's own 3y history; < 0.10 = real event), `stabilizing` (10-day return > 0), `dip_score` (depth rank, 0 = most
 beaten up). `dip_score` is depth, **not** quality. Knobs at the top of `scripts/scan.py`.
 
-Universe: SPDR sectors, semis (SMH/SOXX/DRAM), AI/robot, software, cyber, banks, crypto, biotech, oil/gas, nuclear, metals,
-gold/silver, clean, grid, defense, space, housing, consumer, REIT, country. < $5M/day dollar volume is dropped.
+Universe (~50 themes): each SPDR sector, semis (SMH/SOXX/DRAM), AI/robot, software, cyber, banks, crypto spot vs equity,
+biotech, oil/gas, nuclear, base metals / rare earth / lithium, gold, silver, solar / clean / hydrogen / wind, grid, defense
+US vs EU, space, housing, consumer, REIT, one theme per country. < $5M/day dollar volume is dropped.
 
 ## 2. The panel (judgment)
 
@@ -68,6 +74,8 @@ output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
 .claude/skills/etf-dip-pick/       SKILL.md + lenses.md
+.claude/skills/etf-dip-pick-lite/  SKILL.md (one agent, reads ../etf-dip-pick/lenses.md, writes log/<DATE>-lite.md only)
+log/<DATE>-lite.md            lite memo
 ```
 
 ## 4. Latest run — 2026-09-06

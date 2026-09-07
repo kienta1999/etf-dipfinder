@@ -34,3 +34,6 @@
   Nothing written to `output/`, no verifier.
 - Ran it: `log/2026-09-06-lite.md`. Buy NLR; GLD/XLU watch until FOMC Sep 16 — same answer as the full panel at ~1/6 the tokens.
 **Continue:** post-FOMC rescan (Sep 16/17) — lite first; run the full panel only if the buy list changes.
+- Theme-first candidates: `scan.py` themes re-cut to "same headline moves both" (gold ≠ silver, each SPDR sector its own
+  theme, one theme per country, solar ≠ clean, crypto spot ≠ equity, defense US ≠ EU). `TOP_THEMES = 15`; CANDIDATES =
+  every dip in the 15 deepest themes (today 30 funds / 15 themes vs 15 funds / 9 themes). Both skills research once per theme.

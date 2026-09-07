@@ -13,11 +13,12 @@ Budget: **≤10 WebSearch total, no WebFetch** of filings/PDFs. Search snippets 
 ```
 cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
 ```
-Read LEADERS first (where did the money go?), then the top ~12-15 DIPS. `dip_score` is depth, not quality.
+Read LEADERS first (where did the money go?), then CANDIDATES — every dip in the 15 deepest themes, grouped by
+theme. `dip_score` is depth, not quality.
 
 ## 2. Research — one search per theme
-Group the candidates by `theme` (URA/URNM/NLR are one theme, TAN/ICLN/PBW one, GLD/SLV one…). One search
-per theme: `"<theme> ETF" selloff <Month YYYY> outlook`. Plus one regime search (10y yield, Fed odds).
+The scan already groups candidates by `theme` — funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ; XLU alone).
+One search per theme: `"<theme> ETF" selloff <Month YYYY> outlook`. Plus one regime search (10y yield, Fed odds).
 Siblings in a theme share cause / necessity / catalyst scores unless the snippet gives a fund-specific reason
 (e.g. US-residential-solar policy hits TAN but not ICLN) — then write that one sentence.
 Basket and price need no search: basket from what you know of the fund's top holdings / concentration;
