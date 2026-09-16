@@ -39,3 +39,6 @@
   every dip in the 15 deepest themes (today 30 funds / 15 themes vs 15 funds / 9 themes). Both skills research once per theme.
 - Re-ran lite on the theme-first cut (30 funds / 15 themes, 4 new searches): buy list unchanged — NLR buy, GLD/XLU watch
   until FOMC. New themes (ai/robot, lithium, XLY, XLC) are rests in uptrends or wobbles, not dips. `log/2026-09-06-lite.md`.
+- 2026-09-15 lite (12 searches): regime flipped — 10y 5%, hike 92% priced. NLR still the only buy (-34%, term U3O8 $96.50
+  record; cause cut to 7 on AI-capex doubt), URNM/URA alt, GLD/XLU watch until the Sep 16 statement. TAN/UFO/PBW avoid →
+  watch. $5,740 NLR (size_1pct), half now / half post-FOMC. `log/2026-09-15-lite.md`.
