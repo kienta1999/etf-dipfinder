@@ -56,7 +56,7 @@ demote to watch and say so in Deviations. This is not the full verifier — it c
 
 Regime: 2-3 lines.
 
-| my # | ETF | theme | dd_52w | dip# | cause | need | cat | basket | price | wtd | TP | SL | R/R | bucket | why (1 line) |
+| my # | ETF | theme | dd_52w | dip# | cause | necessity | catalyst | basket | price | wtd | TP | SL | R/R | bucket | why (1 line) |
 ...all candidates, in MY order...
 
 <4-line TP / SL / R/R / dip# / wtd footnote — same wording as the full memo, see log/2026-09-06.md>

@@ -81,7 +81,7 @@ run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 
 Regime: 2-3 lines.
 
-| my # | ETF | theme | dd_52w | dip_score# | cause | need | cat | basket | price | wtd | TP | SL | R/R | bucket | why (1 line) |
+| my # | ETF | theme | dd_52w | dip# | cause | necessity | catalyst | basket | price | wtd | TP | SL | R/R | bucket | why (1 line) |
 ...all candidates, in MY order...
 
 Deviations from weighted score: one sentence each.
@@ -95,6 +95,10 @@ TPs as alerts. Max loss = all stops hit (gaps lose more); max gain = all funds b
 Caveat: the one macro thing that flips the whole list.
 Panel: lenses run / skipped, searches used, verifier findings (or why lite would have been the honest call).
 ```
+
+Copy the header row above verbatim: spell the five lenses out in full, keep every column, and do not
+rename, abbreviate, reorder or drop one. A reader who has never seen the skill must be able to read the
+table without a legend, and `why (1 line)` is the only place each row's reasoning survives.
 
 TP / SL / R/R come from scores.csv (`tp_pct` `sl_pct` `rr`; blank TP and R/R for avoids). The $100k section comes
 from `consolidate.py <DATE> 100000 <ticker,ticker,...>` — pass the memo's final buys if it overrode a rule-buy. Add the 4-line
