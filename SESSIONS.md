@@ -83,3 +83,25 @@
 **Continue:** post-event rescan (after Sep 24 summit and/or Oct 27–30 cluster) — lite first, full panel only if the
 buy list changes. Open: GitHub deploy-key auth (new key generated, public key given to user for the repo's
 deploy-keys page with write access; existing personal key is registered elsewhere and GitHub rejects duplicates).
+
+### 2026-09-18 correction (same day, ~10:30 PDT) — first memo was wrong, fixed
+- Independent review ("Claude comment") flagged four problems; all verified true against the code:
+  (1) I bypassed `scripts/consolidate.py` and hand-wrote `scores.csv` with an ad-hoc script — no bucket/veto/thin/theme_rank;
+  (2) rule's real buys on my own lens scores = URNM + UFO only (six of my eight "buys" fail the
+  `cause ≥ 7 and (stabilizing or catalyst ≥ 7)` gate and I never declared that deviation);
+  (3) skipped the thin −1 penalty (GRID 7.70→6.70 etc.); (4) panelist ballots were in a column format
+  `consolidate.py` can't parse (my spawn-brief spec, not the panelists' fault).
+- Also confirmed: day-18 scan byte-identical to day 17 (market still open today); cause-10s went 0→14 on
+  identical data (BOTZ 6→10 citing the same events) — judgment lenses are noisy day-to-day, which is what
+  the gate is for. Regime premises were never verified by the verifier; I verified them myself: Sept 16
+  FOMC hike 25bp to 3.75–4.00% confirmed, 10y 5.003% close Sept 17 (19-yr high) confirmed, Brent ~$102–104
+  and falling (NOT $108 — Saudi restoring East-West pipeline), Warsh signaled likely October skip → December
+  is the next hike risk.
+- Fix: ballots rewritten in parser format (`| N | TICKER | score | note |`), `consolidate.py 2026-09-18`
+  re-ran → real `scores.csv`; memo rewritten as correction with rule-backed buckets (buy URNM UFO; alts
+  NLR URA ARKX AIPO; watch rest incl. demoted IGF XLU SLV XAR GLD BOTZ; avoid TAN PBW QCLN ICLN); $100k
+  deploy from the rule: URNM $41.8k / UFO $58.2k, max loss −$16.2k, max gain +$58.7k. Committed + pushed
+  to master as a correction.
+- Lesson recorded in AGENTS.md: never hand-write scores.csv; always run consolidate.py; ballot format must
+  match the parser; verifier brief must point at ~/workspace/skills/etf-dip-pick/SKILL.md (does not exist in
+  the repo); on scan-unchanged days prefer lite mode over a full re-panel.
