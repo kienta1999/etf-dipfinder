@@ -105,3 +105,9 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Lesson recorded in AGENTS.md: never hand-write scores.csv; always run consolidate.py; ballot format must
   match the parser; verifier brief must point at ~/workspace/skills/etf-dip-pick/SKILL.md (does not exist in
   the repo); on scan-unchanged days prefer lite mode over a full re-panel.
+
+## 2026-09-18 — re-run after Claude's check_memo fix (pulled 85f2e01)
+- Pulled Claude's 4 commits (check_memo.py audit, verifier scoped to buys+regime, memo header verbatim, lens columns spelled out).
+- `check_memo.py 2026-09-18` found 1 ERROR: UFO was a buy (58% of deploy) but absent from verifier.md — the old verifier checked top-3 by score (URNM NLR IGF) instead of the buys.
+- Fixed: verifier.md now covers UFO (Flight 14 → Mon Sept 28, first orbital attempt + first revenue flight with 26 Starlink V3, UFO holds SpaceX ~5%; slip Sept 22→28 reprices the catalyst in time not kind — catalyst 9 stands). Memo table rewritten to the template header verbatim (my # | ETF | theme | dd_52w | dip# | cause | necessity | catalyst | basket | price | wtd | TP | SL | R/R | bucket | why (1 line)) with dip# and per-row why; UFO dates updated to Sept 28 throughout.
+- Re-audit: 0 errors, 2 warnings (byte-identical scan + 33 score swings on identical prices — both already explained in the memo's correction section: judgment lenses are noisy, the gate is the defense).
