@@ -69,8 +69,12 @@ all five ballots, and reorder where the ballots' facts justify it — one senten
 Start the memo from `scores.csv` buckets; any override (e.g. a rule-buy you judge watch) is a deviation — one sentence.
 Never hand-edit `scores.csv`; my rank lives in the memo only.
 
-Phase 3.5 — verifier, not optional in panel mode: one Opus verifier re-checks the top-3's load-bearing facts
-from primary sources, uncapped searches, and may demote. This is the phase that caught a stale quote holding up
+Phase 3.5 — verifier, not optional in panel mode: one Opus verifier re-checks, from primary sources with
+uncapped searches, the load-bearing facts behind **every fund the rule buckets `buy`** (not the top 3 by
+weighted score — on 2026-09-18 UFO was a buy ranked 10th and went unverified, so the one position whose
+whole case was a dated event had that date checked by nobody), plus the regime premises the memo opens on.
+It writes `output/<DATE>/verifier.md` as a claim / verdict / evidence table — confirmations listed the same
+way as demotions, so a clean pass leaves as much evidence as a failing one — and may demote. This is the phase that caught a stale quote holding up
 two rule-buys on 2026-09-06; skipping it makes the run a lite run with extra steps. Genuinely out of budget →
 run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 
