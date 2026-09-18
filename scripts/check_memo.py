@@ -91,6 +91,42 @@ def main(date):
             if col not in head:
                 warns.append(f"memo header dropped '{col}' ({why})")
 
+    # 5. Every fund the rule buys must appear in the verifier's report (Phase 3.5).
+    if "bucket" in committed.columns:
+        vf = next((out / n for n in ("verifier.md", "verify.md") if (out / n).exists()), None)
+        buys = list(committed.index[committed.bucket == "buy"])
+        if vf is None:
+            errors.append(f"no verifier report in output/{date} - Phase 3.5 is not optional")
+        else:
+            txt = vf.read_text()
+            unchecked = [t for t in buys if not re.search(rf"\b{t}\b", txt)]
+            if unchecked:
+                errors.append(f"buys absent from {vf.name}, so nothing verified their case: {unchecked}")
+
+    # 6. Lens scores that move hard with no new prices behind them.
+    prev = [d.name for d in sorted((ROOT / "output").iterdir())
+            if d.is_dir() and d.name[0].isdigit() and d.name < date and (d / "scores.csv").exists()]
+    if prev:
+        pdate = prev[-1]
+        pscan, pscores = ROOT / "output" / pdate / "scan.csv", ROOT / "output" / pdate / "scores.csv"
+        same_scan = pscan.exists() and pscan.read_bytes() == (out / "scan.csv").read_bytes()
+        if same_scan:
+            warns.append(f"scan.csv is byte-identical to {pdate} - no new market data, so every score change "
+                         f"is re-scoring, not the market")
+        old = pd.read_csv(pscores, index_col=0)
+        moved = []
+        for lens in LENSES:
+            if lens in old.columns and lens in committed.columns:
+                both = old.index.intersection(committed.index)
+                d = (committed.loc[both, lens] - old.loc[both, lens])
+                moved += [f"{t} {lens} {int(old.loc[t, lens])}->{int(committed.loc[t, lens])}"
+                          for t in both if abs(d[t]) >= 3]
+        if moved:
+            (warns if not same_scan else warns).append(
+                f"lens scores moved 3+ points vs {pdate}"
+                + (" on identical prices" if same_scan else "") + f": {sorted(moved)}"
+                + " - the memo should say why, or the judgment layer is just noisy")
+
     for e in errors: print(f"ERROR   {e}")
     for w in warns: print(f"WARN    {w}")
     print(f"\n{date}: {len(errors)} error(s), {len(warns)} warning(s)")
