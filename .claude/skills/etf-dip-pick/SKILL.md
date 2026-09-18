@@ -61,7 +61,7 @@ say "the world needs uranium" without knowing whether it's cheap.
 
 ## Phase 3 — consolidate
 
-`score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`, −1 if thin (R/R < 1.3 or dd_52w > −12%).
+`score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`, −1 if thin (R/R < 1.3).
 **Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
 all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
 `consolidate.py` writes the `bucket` column (buy / alt / watch / avoid — rule in README §2): overlapping funds

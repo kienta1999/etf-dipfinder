@@ -55,7 +55,7 @@ theme by weighted score, non-vetoed only), and `bucket`:
 | avoid | cause ≤ 3 (veto) |
 | buy | cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not `thin` and `theme_rank == 1` |
 | alt | same but `theme_rank > 1` — URA/URNM/NLR are one position, not three |
-| watch | everything else — incl. `thin` (R/R < 1.3 or dd_52w > −12%), which also costs 1 point of `wtd` |
+| watch | everything else — incl. `thin` (R/R < 1.3), which also costs 1 point of `wtd` |
 
 The orchestrator then sets **my rank** and may override a bucket; every deviation from `scores.csv` gets one sentence
 in `log/<DATE>.md`. First `consolidate.py` run freezes `data/scan.csv` into `output/<DATE>/scan.csv` so a later

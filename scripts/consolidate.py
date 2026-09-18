@@ -9,7 +9,7 @@ import pandas as pd
 
 W = {"cause": .30, "necessity": .20, "catalyst": .20, "basket": .15, "price": .15}
 VETO = 3  # cause <= VETO → avoid
-THIN_RR, THIN_DD = 1.3, -0.12  # R/R below / drawdown shallower than this = thin dip: wtd −1 and never buy (still listed)
+THIN_RR = 1.3  # R/R = TP / 1.5 monthly sigma, i.e. dip depth in vol units; below this = thin: wtd −1 and never buy (still listed)
 
 def parse(p, candidates):
     rows = re.findall(r"^\|\s*\d+\s*\|\s*([A-Z]+)\s*\|\s*(\d+)\s*\|", p.read_text(), re.M)
@@ -19,10 +19,10 @@ def parse(p, candidates):
 
 def bucket(df):
     """buy = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not thin and first eligible in theme; alt = same but not
-    first; avoid = veto; else watch. thin (R/R < THIN_RR or dd_52w > THIN_DD) costs 1 point of wtd and can't be a buy.
+    first; avoid = veto; else watch. thin (R/R < THIN_RR) costs 1 point of wtd and can't be a buy.
     theme_rank counts non-vetoed rows only (0 = vetoed). Sorts by wtd and (re)writes wtd_rank."""
     df = df.copy()
-    df["thin"] = (df.rr < THIN_RR) | (df.dd_52w > THIN_DD)
+    df["thin"] = df.rr < THIN_RR
     df["wtd"] = df.wtd - df.thin
     df = df.sort_values("wtd", ascending=False)
     df["wtd_rank"] = range(1, len(df) + 1)

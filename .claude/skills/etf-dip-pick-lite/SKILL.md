@@ -39,7 +39,7 @@ df["wtd"] = sum(df[l] * w for l, w in W.items())
 df["veto"] = df.cause <= VETO
 for c in ["theme","dd_52w","dip_score","stabilizing","tp_pct","sl_pct","rr"]: df[c] = scan[c].reindex(df.index)
 df["dip_rank"] = df.dip_score.rank(method="min").astype(int)   # depth rank = memo's dip# column
-df = bucket(df)   # thin (R/R < 1.3 or dd_52w > −12%) → wtd −1, never buy
+df = bucket(df)   # thin (R/R < 1.3) → wtd −1, never buy
 print(df.to_string())
 ```
 Then set **my rank**: start from `wtd`, reorder only where a fact justifies it — one sentence per deviation.
