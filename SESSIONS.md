@@ -61,3 +61,25 @@
 **Continue:** post-event rescan (after Sep 24 summit and/or Oct 27–30 cluster) — lite first, full panel only if the buy
   list changes. Open: GitHub deploy-key auth (new key generated, public key given to user for the repo's deploy-keys
   page with write access; existing personal key is registered elsewhere and GitHub rejects duplicates).
+
+## 2026-09-18 — full panel on 32 candidates / 15 themes (user: rerun for day 18, then "push change to master okay")
+**Did:**
+- Ran the full panel (user authorized direct push to master): scan froze `data/scan.csv` → `output/2026-09-18/scan.csv`;
+  five sequential lens ballots all written for exactly 32 tickers (`dossier.md`, `score_cause.md`, `score_necessity.md`,
+  `score_catalyst.md`, `score_basket.md`, `score_price.md`); consolidated → `scores.csv`.
+- Cause-lens vetoes: TAN/PBW/QCLN (cause 2), ICLN (cause 3) — accelerated US tax-credit phaseouts = structural
+  policy repeal, not a dip.
+- Verifier (Phase 3.5) re-checked URNM/NLR/IGF load-bearing facts on primary sources — all confirmed, no demotions
+  (TradeTech LT uranium $97/lb Sept 15 = all-time high for term price; Red Book 2026: 64 reactors under construction;
+  Google–Fortum 22y PPA €13B from Fortum's own 9/9 release; Cameco Q3 pre-market Oct 30). 9/18 live prices are 1–2%
+  better than scan closes for the top three.
+- Memo `log/2026-09-18.md`: buy URNM IGF XLU SLV UFO XAR GLD BOTZ; alts NLR URA PAVE GRID SHLD ITA PPA ARKX ARKQ;
+  watch 14 (REMX INDA LIT FXI KWEB XHB ITB AIPO ROBO BAI QTUM + others); avoid ICLN TAN PBW QCLN.
+  $100k risk parity: deployed $85,720 (1% risk × 8), max loss −$8,000, max gain +$20,663. Deviations: NLR/URA → alt
+  (sibling rule, URNM is nuclear buy); GRID → alt (price 2: R/R 1.10, above 200d — chasing); UFO → buy (Flight 14
+  NET Sept 22, FAA-cleared). Tranche: UFO full now; XLU/SLV/GLD/XAR/BOTZ half now + half post Oct 27–30 cluster
+  (Warsh FOMC risk Oct 28); nuclear/grid full now.
+- Committed dated artifacts + log + this entry; pushed straight to master per user instruction.
+**Continue:** post-event rescan (after Sep 24 summit and/or Oct 27–30 cluster) — lite first, full panel only if the
+buy list changes. Open: GitHub deploy-key auth (new key generated, public key given to user for the repo's
+deploy-keys page with write access; existing personal key is registered elsewhere and GitHub rejects duplicates).
