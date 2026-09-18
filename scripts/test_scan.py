@@ -55,10 +55,20 @@ try:
 except AssertionError:
     pass
 assert parse(tmp, {"NLR"}) == {"NLR": 8}
-sc = pd.DataFrame({"cause": [8, 8, 3, 7], "catalyst": [7, 7, 9, 5], "stabilizing": [False, False, True, False],
-                   "veto": [False, False, True, False], "theme": ["nuc", "nuc", "clean", "clean"]}, index=list("ABCD"))
+# E is thin (rr < THIN_RR): wtd 7.5 - 1 = 6.5, so it sorts below B and can never be a buy.
+sc = pd.DataFrame({"cause": [8, 8, 3, 7, 8], "catalyst": [7, 7, 9, 5, 7],
+                   "stabilizing": [False, False, True, False, False],
+                   "veto": [False, False, True, False, False],
+                   "theme": ["nuc", "nuc", "clean", "clean", "nuc"],
+                   "wtd": [8.0, 7.0, 6.0, 5.0, 7.5],
+                   "rr": [2.0, 2.0, 2.0, 2.0, 1.0]}, index=list("ABCDE"))
 b = bucket(sc)
-assert list(b.theme_rank) == [1, 2, 0, 1] and list(b.bucket) == ["buy", "alt", "avoid", "watch"]
+assert list(b.index) == list("ABECD")                      # sorted by wtd after the thin penalty
+assert list(b.thin) == [False, False, True, False, False]
+assert list(b.wtd) == [8.0, 7.0, 6.5, 6.0, 5.0]            # thin costs exactly 1 point
+assert list(b.wtd_rank) == [1, 2, 3, 4, 5]
+assert list(b.theme_rank) == [1, 2, 3, 0, 1]
+assert list(b.bucket) == ["buy", "alt", "watch", "avoid", "watch"]   # E qualifies on every leg but thin
 from consolidate import deploy
 d = deploy(pd.DataFrame({"bucket": ["buy", "buy", "watch"], "sl_pct": [-0.1, -0.2, -0.1], "tp_pct": [0.3, 0.3, 0.3]}, index=list("XYZ")), 30000)
 assert list(d.index) == ["X", "Y"] and list(d.usd) == [20000, 10000]        # each loses the same $ at its stop
