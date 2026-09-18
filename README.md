@@ -92,4 +92,6 @@ nothing buyable. `log/2026-09-06-lite.md`.
 - Verifier (Phase 3.5) is now mandatory in panel mode; out of budget → run `/etf-dip-pick-lite` instead.
 - Re-scan after FOMC Sep 16 2026.
 - ~~Shallow dips score too high~~ done: `thin` flag in `consolidate.py` (2026-09-17 panel test case: XLU and GRID buy → watch).
+- ~~No check that the memo matches the rule~~ done: `scripts/check_memo.py <DATE>` (Phase 3.6) — catches a
+  hand-written `scores.csv`, unparseable ballots, and memo buckets that contradict `consolidate.py`.
 - Build `-lite` versions of stock-pick-dip / momentum / earnings (memo in conviction-pick-sp500/TODO.md).

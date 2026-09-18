@@ -74,6 +74,11 @@ from primary sources, uncapped searches, and may demote. This is the phase that 
 two rule-buys on 2026-09-06; skipping it makes the run a lite run with extra steps. Genuinely out of budget →
 run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 
+Phase 3.6 — audit, before the memo is final: `uv run python scripts/check_memo.py <DATE>`.
+It fails the run if `scores.csv` was not written by `consolidate.py`, if the ballots do not parse,
+if re-running the rule does not reproduce `scores.csv`, or if any bucket printed in the memo
+contradicts the one the rule computed. Fix what it reports; never publish a memo it exits non-zero on.
+
 ## Phase 4 — memo → `log/<DATE>.md`
 
 ```
