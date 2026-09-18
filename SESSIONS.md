@@ -42,3 +42,22 @@
 - 2026-09-15 lite (12 searches): regime flipped — 10y 5%, hike 92% priced. NLR still the only buy (-34%, term U3O8 $96.50
   record; cause cut to 7 on AI-capex doubt), URNM/URA alt, GLD/XLU watch until the Sep 16 statement. TAN/UFO/PBW avoid →
   watch. $5,740 NLR (size_1pct), half now / half post-FOMC. `log/2026-09-15-lite.md`.
+
+## 2026-09-17 — full panel on 32 candidates / 15 themes (user: "tiếp luôn… commit lên đc k push thẳng master okay")
+**Did:**
+- Ran the full panel (user authorized direct push to master): scan froze `data/scan.csv` → `output/2026-09-17/scan.csv`;
+  five sequential lens ballots all written for exactly 32 tickers (`dossier.md`, `score_cause.md`, `score_necessity.md`,
+  `score_catalyst.md`, `score_basket.md`, `score_price.md`); `scripts/consolidate.py 2026-09-17` → `scores.csv`.
+- Fixes along the way: dossier BAI row now says `stabilizing=yes` (matches scan.csv); XHB basket link corrected (was PBW's).
+- Verifier (Phase 3.5) re-checked XLU/NLR/URNM load-bearing facts on primary sources — all confirmed, no demotions
+  (XLU 0.08%/$21.5B/100% utilities on ssga.com; NLR 0.52%/26 holdings/Cameco Oct 30 on vaneck.com/BusinessWire; URNM
+  0.75%/≥80% mandate/top-three 47.2% on sprottetfs.com; FOMC Oct 27–28 + Dec 8–9 on federalreserve.gov). Regime
+  cross-check: Sep 16 FOMC **hiked** 25bp to 3.75–4.00% (first since 2023), 10y hit 5.008% Sep 14–15.
+- Memo `log/2026-09-17.md`: buy XLU NLR GRID REMX UFO; alts URNM URA IGF PAVE ARKX; watch 18; avoid ICLN TAN QCLN PBW
+  (cause veto). $100k risk parity: XLU $36.7k / NLR $13.2k / GRID $20.2k / REMX $13.3k / UFO $16.7k; max loss −$11.5k,
+  max gain +$30.7k. Tranche: XLU/NLR/GRID half now + half post Oct 27–30 cluster; REMX half now + half post Sep 24
+  summit; UFO full now. Caveat: Warsh hikes again Oct 28 → whole rate-sensitive list re-prices lower.
+- Committed dated artifacts + log + this entry; pushed straight to master per user instruction.
+**Continue:** post-event rescan (after Sep 24 summit and/or Oct 27–30 cluster) — lite first, full panel only if the buy
+  list changes. Open: GitHub deploy-key auth (new key generated, public key given to user for the repo's deploy-keys
+  page with write access; existing personal key is registered elsewhere and GitHub rejects duplicates).
