@@ -30,21 +30,16 @@ price from the CSV columns (`dd_pctile`, `dd_z`, `rs_spy_12m`, `stabilizing`).
 ## 3. Score and consolidate — in python, not in your head
 Score every candidate 1-10 on each lens, then run this in the scratchpad (reads TP/SL from `data/scan.csv`):
 ```python
-import pandas as pd
+import sys; sys.path.insert(0, "scripts"); import pandas as pd
+from consolidate import W, VETO, bucket          # same weights, veto, thin penalty and bucket rule as the panel
 S = {"NLR": (8,9,8,7,8), ...}   # cause, necessity, catalyst, basket, price
-W = (.30,.20,.20,.15,.15)
 scan = pd.read_csv("data/scan.csv", index_col=0)
-df = pd.DataFrame(S, index=["cause","need","cat","basket","price"]).T
-df["wtd"] = (df * W).sum(axis=1).round(2)
-df["veto"] = df.cause <= 3
+df = pd.DataFrame(S, index=list(W)).T
+df["wtd"] = sum(df[l] * w for l, w in W.items())
+df["veto"] = df.cause <= VETO
 for c in ["theme","dd_52w","dip_score","stabilizing","tp_pct","sl_pct","rr"]: df[c] = scan[c].reindex(df.index)
 df["dip_rank"] = df.dip_score.rank(method="min").astype(int)   # depth rank = memo's dip# column
-df = df.sort_values("wtd", ascending=False)
-df["theme_rank"] = 0; ok = ~df.veto
-df.loc[ok, "theme_rank"] = df[ok].groupby("theme").cumcount() + 1
-qual = ok & (df.cause >= 7) & (df.stabilizing.astype(bool) | (df.cat >= 7))
-df["bucket"] = "watch"; df.loc[qual, "bucket"] = "alt"; df.loc[qual & (df.theme_rank == 1), "bucket"] = "buy"
-df.loc[df.veto, "bucket"] = "avoid"
+df = bucket(df)   # thin (R/R < 1.3 or dd_52w > −12%) → wtd −1, never buy
 print(df.to_string())
 ```
 Then set **my rank**: start from `wtd`, reorder only where a fact justifies it — one sentence per deviation.
@@ -66,7 +61,7 @@ Regime: 2-3 lines.
 
 <4-line TP / SL / R/R / dip# / wtd footnote — same wording as the full memo, see log/2026-09-06.md>
 
-Deviations from the bucket rule (cause ≥ 7 and (stabilizing or cat ≥ 7), first non-vetoed in theme = buy, rest = alt):
+Deviations from the bucket rule (cause ≥ 7 and (stabilizing or cat ≥ 7), not thin, first non-vetoed in theme = buy, rest = alt):
 one sentence each (or "none"), including any demotion from the spot-check.
 Buy: ...   Alt: ...   Watch: ...   Avoid: ...
 

@@ -53,9 +53,9 @@ theme by weighted score, non-vetoed only), and `bucket`:
 | bucket | rule |
 |---|---|
 | avoid | cause ≤ 3 (veto) |
-| buy | cause ≥ 7 and (stabilizing or catalyst ≥ 7) and `theme_rank == 1` |
+| buy | cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not `thin` and `theme_rank == 1` |
 | alt | same but `theme_rank > 1` — URA/URNM/NLR are one position, not three |
-| watch | everything else |
+| watch | everything else — incl. `thin` (R/R < 1.3 or dd_52w > −12%), which also costs 1 point of `wtd` |
 
 The orchestrator then sets **my rank** and may override a bucket; every deviation from `scores.csv` gets one sentence
 in `log/<DATE>.md`. First `consolidate.py` run freezes `data/scan.csv` into `output/<DATE>/scan.csv` so a later
@@ -91,6 +91,5 @@ nothing buyable. `log/2026-09-06-lite.md`.
 - ~~TP / SL columns~~ done. ~~Adversarial review fixes~~ done (bucket column, frozen scan, parse asserts, NaN guards).
 - Verifier (Phase 3.5) is now mandatory in panel mode; out of budget → run `/etf-dip-pick-lite` instead.
 - Re-scan after FOMC Sep 16 2026.
-- Shallow dips score too high: ROBO / XLC / XLY / PPA (-6 to -11%, R/R < 1.3) ranked mid-table on the lite rerun. Either
-  a depth gate in the price lens (dd_52w > -12% or R/R < 1.2 → price ≤ 4) or a `min_rr` cut in `scan.py`.
+- ~~Shallow dips score too high~~ done: `thin` flag in `consolidate.py` (2026-09-17 panel test case: XLU and GRID buy → watch).
 - Build `-lite` versions of stock-pick-dip / momentum / earnings (memo in conviction-pick-sp500/TODO.md).

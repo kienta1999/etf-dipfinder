@@ -17,8 +17,9 @@ writes `output/<DATE>/score_<lens>.md`. Weights are applied by the orchestrator 
 - **My rank** is the orchestrator's final order after reading all five ballots. It may deviate from the
   weighted score — every deviation gets one written sentence. It always deviates from `dip_score`
   (that is depth, not quality) — the memo shows both so the reader can see the gap.
-- Bucket is computed by `consolidate.py`: buy = cause ≥ 7 AND (stabilizing OR catalyst ≥ 7) AND first
-  non-vetoed in its theme; alt = same but not first; avoid = veto; else watch. Overrides go in the memo as deviations.
+- Bucket is computed by `consolidate.py`: buy = cause ≥ 7 AND (stabilizing OR catalyst ≥ 7) AND not thin AND first
+  non-vetoed in its theme; alt = same but not first; avoid = veto; else watch. Thin = R/R < 1.3 or dd_52w > −12%:
+  wtd −1 and never buy — shallow, low-vol dips (XLU/GRID/IGF-type) stay in the table but sink. Overrides go in the memo as deviations.
 
 ## Ballot format (every lens)
 ```

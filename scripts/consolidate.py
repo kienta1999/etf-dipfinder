@@ -2,8 +2,6 @@
 
 Lite (no ballots, sizes straight off data/scan.csv): uv run python scripts/consolidate.py lite 100000 NLR
 
-Lite (no ballots, sizes straight off data/scan.csv): uv run python scripts/consolidate.py lite 100000 NLR
-
 First run freezes data/scan.csv into output/<DATE>/scan.csv so later rescans never change this date's scores."""
 import re, shutil, sys
 from pathlib import Path
@@ -11,6 +9,7 @@ import pandas as pd
 
 W = {"cause": .30, "necessity": .20, "catalyst": .20, "basket": .15, "price": .15}
 VETO = 3  # cause <= VETO → avoid
+THIN_RR, THIN_DD = 1.3, -0.12  # R/R below / drawdown shallower than this = thin dip: wtd −1 and never buy (still listed)
 
 def parse(p, candidates):
     rows = re.findall(r"^\|\s*\d+\s*\|\s*([A-Z]+)\s*\|\s*(\d+)\s*\|", p.read_text(), re.M)
@@ -19,13 +18,18 @@ def parse(p, candidates):
     return d
 
 def bucket(df):
-    """buy = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and first eligible in theme; alt = same but not first;
-    avoid = veto; else watch. theme_rank counts non-vetoed rows only (0 = vetoed)."""
+    """buy = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not thin and first eligible in theme; alt = same but not
+    first; avoid = veto; else watch. thin (R/R < THIN_RR or dd_52w > THIN_DD) costs 1 point of wtd and can't be a buy.
+    theme_rank counts non-vetoed rows only (0 = vetoed). Sorts by wtd and (re)writes wtd_rank."""
     df = df.copy()
+    df["thin"] = (df.rr < THIN_RR) | (df.dd_52w > THIN_DD)
+    df["wtd"] = df.wtd - df.thin
+    df = df.sort_values("wtd", ascending=False)
+    df["wtd_rank"] = range(1, len(df) + 1)
     ok = ~df.veto
     df["theme_rank"] = 0
     df.loc[ok, "theme_rank"] = df[ok].groupby("theme").cumcount() + 1
-    qual = ok & (df.cause >= 7) & (df.stabilizing.astype(bool) | (df.catalyst >= 7))
+    qual = ok & ~df.thin & (df.cause >= 7) & (df.stabilizing.astype(bool) | (df.catalyst >= 7))
     df["bucket"] = "watch"
     df.loc[qual, "bucket"] = "alt"
     df.loc[qual & (df.theme_rank == 1), "bucket"] = "buy"
@@ -61,10 +65,9 @@ def main(date, capital=None, only=None):
     df["dip_rank"] = df.dip_score.rank(method="min").astype("Int64")
     df["stabilizing"] = scan.stabilizing.reindex(df.index)
     df["theme"] = scan.theme.reindex(df.index)
-    for c in ["tp_pct", "sl_pct", "dip_low_pct", "rr", "size_1pct"]:
+    for c in ["dd_52w", "tp_pct", "sl_pct", "dip_low_pct", "rr", "size_1pct"]:
         if c in scan: df[c] = scan[c].reindex(df.index)
-    df = df.sort_values("wtd", ascending=False)
-    df.insert(0, "wtd_rank", range(1, len(df) + 1))
+    df.insert(0, "wtd_rank", 0)
     df = bucket(df)
     df.to_csv(out / "scores.csv", float_format="%.2f")
     print(f"lenses: {have} (weights renormalised to {wsum:.2f})")
