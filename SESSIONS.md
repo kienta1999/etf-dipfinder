@@ -118,3 +118,10 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Dossier correction: the first pass claimed the clean-energy "subsidy repeal" thesis had no primary evidence — wrong. The cause lens verified OBBBA's 25D termination + ITC/PTC phase-out on primary sources; that correction is what set TAN to veto and ICLN/QCLN/PBW to cause 4.
 - Regime: FOMC Sept 16 +25bp to 3.75–4.00% (unanimous, first hike since July 2023); 10y ~5.0%; Brent $103.87 (9/18 settlement), off ~$108 mid-Sept peak.
 - $100k risk parity across 7 buys: deployed ≈$99,900, max loss −$10,500, max gain +$29,500. Memo: log/2026-09-21.md. No deviations from scores.csv.
+
+## 2026-09-21 (b) — verified rerun supersedes the scheduled run
+- New full 4-lens panel (cause → necessity → catalyst → basket sequential; price now deterministic, no price panelist) on the same 31-candidate scan; dossier corrected and diff-validated against scan.csv (ROWS IDENTICAL).
+- Rule buys (3): NLR (7.65), UFO (7.55), BOTZ (6.90). Alt: ARKX, URA, URNM. No vetoes. Thin (R/R<1.3, −1pt): BAI, GRID, QTUM, AIPO, ROBO, ARKQ — all watch.
+- Verifier (independent): CONFIRM all three buys from primary sources — Cameco IR release (Q3 10/30 BMO) + record $97/lb term price (NLR catalyst 10); SpaceX via X (Flight 14 NET 9/28) with SpaceX now a top-5 UFO holding post-IPO (UFO catalyst 10); nvidia.com GTC 2027 FAQ (3/14–18/2027, NVIDIA #5 BOTZ holding; catalyst 8 — annual event, softer "market not positioned"). Regime confirmed: FOMC 10/28 + 12/9 on federalreserve.gov; 10y 5.01% (9/18 close); Sept +25bp to 3.75–4.00%. Zero demotions — scores.csv untouched, consolidation not rerun. One catalysts.md row appended (GTC 2027); Flight 14, Cameco Q3, FOMC dates already rows.
+- `check_memo.py 2026-09-21`: 0 errors, 2 warnings (dropped dip# column; lens swings vs 9/18 — expected from a fresh re-panel). Memo replaced at log/2026-09-21.md (supersedes the scheduled-run memo above).
+- $100k risk parity: NLR $26,000 / UFO $33,700 / BOTZ $40,300; max loss −$13,800, max gain +$40,300. Tranche: all in — independent catalysts.

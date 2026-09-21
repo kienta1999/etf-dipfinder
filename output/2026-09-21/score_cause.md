@@ -1,48 +1,45 @@
 # cause — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only) | key source |
-| 1 | BOTZ | 9 | Sep 14 selloff triggered by Amodei's "pace the frontier" essay; zero capex cuts announced — pure sentiment scare | aistockwire, Sep 16, 2026 |
-| 2 | ARKQ | 9 | Same AI-regulation scare; no change to any AI capex plan per Bernstein — macro-tourist selling | aistockwire, Sep 16, 2026 |
-| 3 | ROBO | 9 | Sold with the AI-scare basket; robotics automation-capex drivers untouched by the essay | aistockwire, Sep 16, 2026 |
-| 4 | QTUM | 9 | AI-scare contagion; quantum/AI demand narrative intact, no demand event | aistockwire, Sep 16, 2026 |
-| 5 | BAI | 9 | AI-scare contagion; no capex or demand change behind the drawdown | aistockwire, Sep 16, 2026 |
-| 6 | AIPO | 9 | AI-scare contagion; nothing in AI capex or the IPO pipeline changed | aistockwire, Sep 16, 2026 |
-| 7 | XLU | 9 | Textbook rate victim: -3.04% week into Sep 16 FOMC 25bp hike with 10y >5%; regulated earnings untouched | eOption, Sep 17, 2026 |
-| 8 | URNM | 8 | Miners sold on AI-sector contagion + 19y-high yields while spot held $90/lb and term hit $97/lb ATH — sentiment, not fuel demand | sparverius substack, Sep 16, 2026 |
-| 9 | NLR | 8 | Same uranium-contagion/yield selloff; fuel demand projections (WNA: demand doubling by 2040) intact | sparverius substack, Sep 16, 2026 |
-| 10 | URA | 8 | Same contagion selloff with firm spot/term pricing; no change to the supply-deficit story | discoveryalert.com, Sep 2026 |
-| 11 | SLV | 8 | Real-yield-driven pullback with +0.41 12m RS vs SPY — profit-taking after the run, monetary-hedge thesis intact | scan data/dossier, Sep 18, 2026 |
-| 12 | UFO | 8 | Only event is Starship Flight 14 slipping to NET Sep 28 — schedule noise, no space-economy thesis change | dossier, Sep 2026 |
-| 13 | ARKX | 8 | Same Starship schedule slip; -15% drawdown is mild rotation | dossier, Sep 2026 |
-| 14 | SHLD | 8 | High-yield/fatigue selling; mid-Sept coverage cites strong backlogs/revenue visibility — no operating deterioration | dossier, Sep 2026 |
-| 15 | XAR | 8 | Same defense fatigue/yield pressure; backlogs intact | dossier, Sep 2026 |
-| 16 | ITA | 8 | Same defense fatigue/yield pressure; backlogs intact | dossier, Sep 2026 |
-| 17 | PPA | 8 | Same defense fatigue/yield pressure; backlogs intact | dossier, Sep 2026 |
-| 18 | REMX | 7 | -25% in 3 months is profit-taking after a 146% run since Apr 2025; de-risking thesis intact, but short interest +696% shows real counterpositioning | marketbeat/stocktitan, Sep 2026 |
-| 19 | GRID | 7 | AI-capex repricing question, but $283.7M of 5-day inflows into the falling fund — rotation with mild valuation-re-rating risk | tradingnews.com, early Sep 2026 |
-| 20 | PAVE | 7 | Same grid/capex repricing; infrastructure spending story intact but some repricing risk | tradingnews.com, early Sep 2026 |
-| 21 | IGF | 7 | Same grid/infra repricing; demand story intact | tradingnews.com, early Sep 2026 |
-| 22 | ITB | 6 | Rate-frozen demand is real damage (NAHB 32, 38% of builders cutting prices) though structural shortage thesis intact | NAHB/dossier, Sep 2026 |
-| 23 | XHB | 6 | Same rate-frozen demand damage; 30y mortgage 6.76%, highest in 1y+ | dossier, Sep 2026 |
-| 24 | INDA | 6 | Flow-fragile (FII-driven) with no clear thesis break; foreign flows recovered in August | dossier, Sep 2026 |
-| 25 | XLY | 6 | Rate-anxiety pressure valve ($528.3M weekly outflows) with genuine consumer squeeze (CPI 3.4%), but labor/consumption base not broken | Zacks, Sep 15, 2026 |
-| 26 | LIT | 5 | Lithium commodity glut is genuine supply-side thesis damage, not mere rotation, though long-term EV demand intact | dossier, Sep 2026 |
-| 27 | KWEB | 5 | Aug 24 Alibaba $10.2B placement = supply overhang + weak-demand fears; partly offset by AI cloud rev +45% YoY and AI capex | ainvest, Sep 3, 2026; ad-hoc-news.de, Sep 18, 2026 |
-| 28 | PBW | 4 | OBBBA repeals wind/solar ITC/PTC for projects placed in service after Dec 31, 2027 — real policy thesis damage with a runway | stblaw.com / steptoe.com, Jul 2025 analysis |
-| 29 | ICLN | 4 | Same OBBBA wind/solar credit phase-out; rate/policy-driven thesis damage, not pure rotation | steptoe.com, Jul 2025 analysis |
-| 30 | QCLN | 4 | Same OBBBA wind/solar credit phase-out; thesis damaged on policy, not flows | steptoe.com, Jul 2025 analysis |
-| 31 | TAN | 3 | Section 25D 30% residential credit terminated Dec 31, 2025 (OBBBA, signed Jul 4, 2025) — outright policy repeal for its core market; only commercial channel partially survives | govtschemes.org, Sep 20, 2026 |
+| 1 | XLU | 9 | band 10 pure rotation (−1: 10y near 5% may partly persist and re-rate bond-proxy multiples): worst-performing sector week ending Sep 18 on rising yields alone, electricity demand thesis untouched | dossier quick-pass; search result: 10y ~5.01% |
+| 2 | TAN | 7 | band 7: Fed hike week raised financing costs for residential solar; concentrated sector selling (TAN −2% vs SPY −0.2% Friday Sep 18), demand mechanism intact | now.solar / 24/7 Wall St, 2026-09-19 |
+| 3 | URNM | 7 | band 7: Sep selling on AI-safety headlines + Ukraine-thaw geopolitics (Russia-sanction premium fading) + Kazakhstan ramp, while LT uranium price still $97/lb and rising — thesis intact | OilPrice.com; Sparverius substack, 2026-09-15 |
+| 4 | NLR | 7 | band 7: same nuclear cause as URNM — sentiment/geopolitics, not a demand break | same as URNM |
+| 5 | URA | 7 | band 7: same nuclear cause as URNM; miner-heavy mix but dip driver identical | same as URNM |
+| 6 | SLV | 7 | band 7: real-yield move (10y real yield +22bp Sep 9–16) plus profit-taking after parabolic run; Silver Institute flags 46.3M oz 2026 deficit — structural deficit thesis intact | goldsilver.com, 2026-09-18; fxleaders, 2026-09-19 |
+| 7 | UFO | 7 | band 7: schedule slip only — Starship Flight 14 moved Sep 22 → NET Sep 28 (pending FAA), first revenue flight with 26 Starlink V3; no thesis change | SpaceX via X, 2026-09-17; newspaceeconomy.ca |
+| 8 | ARKX | 7 | band 7: same space cause as UFO, but ARKX's shallower dip (−15% vs −36%) reflects diversification beyond pure space exposure | same as UFO |
+| 9 | SHLD | 7 | band 7: Iran-truce headline + scaled-back supplemental war-funding request; base budget and record backlogs intact (Raymond James: "be buyers on this pullback," Sep 15) | Dow Jones/Barron's via TradingView, 2026-09-15 |
+| 10 | XAR | 7 | band 7: same defense cause as SHLD — political noise, backlog math unchanged | same as SHLD |
+| 11 | ITA | 7 | band 7: same defense cause as SHLD — geopolitical headline shock, not program damage | same as SHLD |
+| 12 | PPA | 7 | band 7: same defense cause as SHLD — digestion of headline, backlogs intact | same as SHLD |
+| 13 | ITB | 7 | band 7: high mortgage rates freeze demand, structural housing shortage intact — rate-driven, not demand-collapse | dossier quick-pass 2026-09-21 |
+| 14 | XHB | 7 | band 7: same housing cause as ITB — builder incentives + expensive homes, shortage thesis intact | same as ITB |
+| 15 | IGF | 7 | band 7: AI-capex valuation repricing; hyperscaler-capex sensitivity is a price question, not a demand break in transformers/transmission | dossier quick-pass 2026-09-21 |
+| 16 | PAVE | 7 | band 7: same grid/infra cause; reported positive 1m/YTD flows while price fell ~5.5% — sellers not the demand story | dossier quick-pass 2026-09-21 |
+| 17 | GRID | 7 | band 7: same grid/infra cause; GRID trades above its 200-day even at the dip — mean-reversion inside an intact trend | same as IGF |
+| 18 | BOTZ | 7 | band 7: Sep 14 selloff on Amodei's Sep 12 "pace the frontier" essay (Altman and Musk agreed); no company announced capex cuts, most of the loss recovered by Friday Sep 18 — sentiment, demand unchanged | aistockwire, 2026-09-19 |
+| 19 | ARKQ | 7 | band 7: same AI-sentiment cause as BOTZ — headline-driven, no demand change | same as BOTZ |
+| 20 | ROBO | 7 | band 7: same AI-sentiment cause as BOTZ | same as BOTZ |
+| 21 | AIPO | 7 | band 7: same AI-sentiment cause as BOTZ; still stabilizing per scan | same as BOTZ |
+| 22 | QTUM | 7 | band 7: same AI-sentiment cause as BOTZ; still stabilizing per scan | same as BOTZ |
+| 23 | BAI | 7 | band 7: same AI-sentiment cause as BOTZ; still stabilizing per scan | same as BOTZ |
+| 24 | XLY | 7 | band 7: market's pressure valve for rate anxiety — 6 straight down weeks, hot August CPI (+0.3% vs +0.2%), 10y near 5% — consumer demand intact, discount-rate headwind | dossier quick-pass 2026-09-21; eOption, 2026-09-18 |
+| 25 | REMX | 6 | band 7 (−1: lithium-oversupply drags the fund's battery-material holdings): unwinding of an extended strategic-metals rally, speculative positioning cooled, valuations de-rated; security-premium thesis intact | Tickeron REMX analysis, ~Aug 2026 |
+| 26 | PBW | 6 | band 7 (−1: policy/rate sensitivity and margin pressure are material): ICLN rallied 40%+ over the past year and is now pulling back; rate-driven mean-reversion, but subsidy/policy dependence keeps it off a clean 7 | dossier quick-pass; Motley Fool, 2026-08 |
+| 27 | ICLN | 6 | band 7 (−1: policy/rate sensitivity): −25.5% since June 2 high is mean-reversion after a strong run; clean-energy transition thesis intact, but financing-dependent business models make rate path load-bearing | barchart ICLN; Motley Fool, 2026-06-17 |
+| 28 | QCLN | 6 | band 7 (−1: policy/rate sensitivity): same clean-energy cause as ICLN — post-rally pullback amplified by rate policy, not demand collapse | same as ICLN |
+| 29 | KWEB | 5 | band 5: Alibaba's Aug 24 ~$10.2B placement (3.8% of diluted base) created forced priced supply, plus persistent outflows (1m −$2.09B, 6m −$3.46B); operating base not established as broken, but evidence is not only flows | ainvest, Sep 2026; Bloomberg via BusinessMirror, 2026-09-10 |
+| 30 | INDA | 5 | band 5: weak downtrend with fund-flow pressure; no clean cause pinned and no evidence it is only flows — unverified | dossier quick-pass 2026-09-21 |
+| 31 | LIT | 4 | band 3 (+1: curtailments and demand growth point to rebalancing in 2026–27, so not permanently impaired): lithium glut persists per UBS into 2027 — miners shutting mines (Mineral Resources' Bald Hill, Pilbara), prices below cost for ~26% of production — a real fundamental impairment of the lithium-mining thesis, not mere sentiment | OilPrice.com/UBS via Reuters; dossier quick-pass |
 
-## Top-3 notes
+Top-3 notes:
+- XLU (9): The single load-bearing fact is that XLU's −12.7% drawdown is a pure discount-rate move — the 10-year traded near 5.01% and XLU was the worst-performing sector for the week ending September 18, 2026, while nothing in electricity demand changed (dossier quick-pass, 2026-09-21). That is band 10's "sellers are macro tourists" almost verbatim; the −1 keeps it honest that structurally higher rates could partly persist and re-rate bond-proxy multiples.
+- SLV (7): The selloff was a real-rate move, not a silver story — the 10-year real yield rose 22bp from September 9 to 16 while breakeven inflation fell, and silver round-tripped the whole oil-shock episode (goldsilver.com, 2026-09-18). The structural bull case is untouched: the Silver Institute flags a 46.3M oz shortfall for 2026, the sixth consecutive annual deficit (fxleaders, 2026-09-19).
+- URNM (7): The miners fell 3–4% in a single session (Sep 15) on calls for AI safety regulation plus Ukraine-thaw geopolitics reducing the Russia-sanction premium, while uranium futures held at $73.50 and the long-term contracting price kept marching higher to $97/lb (OilPrice.com; Sparverius substack, 2026-09-15). A dip driven by sentiment and supply-side headlines with the commodity bid is band 7, not a thesis break.
 
-**BOTZ:** The single load-bearing fact is that no AI company changed any capital spending plan in response to the Amodei essay — Bernstein's Madison Rezaei explicitly said it is "not a call for a lowering of capex or stopping model training." That makes the Sep 14 AI-infrastructure selloff (VRT -8.6%, NVDA -3.9% premarket) a sentiment/regulatory scare, the cleanest rotation case in the panel (aistockwire, Sep 16, 2026).
-
-**ARKQ:** Same load-bearing fact as BOTZ — the AI selloff was narrative repositioning, confirmed by cybersecurity names (CRWD +5.6%, PANW +5.1%) rallying on the same news; robotics/automation capex drivers were never implicated. A diversified AI/robotics basket falling with pure AI-infrastructure names is contagion, not demand damage (aistockwire, Sep 16, 2026).
-
-**XLU:** Utilities fell 3.04% in the week of the Sep 16 FOMC 25bp hike (first hike since 2023) with the 10-year above 5%, while regulated earnings and the electrification demand story did not change. Textbook rate-driven multiple compression — sellers are duration tourists, not thesis sellers (eOption, Sep 17, 2026).
-
-## Disagreements with the dossier's first-pass memo
-
-- **MAJOR — the dossier's "subsidy repeal" dismissal is wrong.** The dossier says the prior memo's "subsidy repeal" thesis found "NO primary supporting evidence — treat as unverified." Primary evidence exists: the One Big Beautiful Bill Act (signed July 4, 2025) terminated the Section 25D 30% residential clean energy credit for expenditures after Dec 31, 2025, and eliminates the wind/solar PTC/ITC for projects placed in service after Dec 31, 2027 (unless start-of-construction safe-harbored by July 4, 2026) — sources: govtschemes.org (Sep 20, 2026), stblaw.com, steptoe.com, congress.gov CRS. This is why TAN scores 3 (veto) and PBW/ICLN/QCLN score 4 — genuine policy-driven thesis damage, not rotation.
-- **REMX:** dossier says "no clean current selloff explanation found." Confirmed no single event, but context matters: REMX is up 146% since the April 2025 bottom (marketbeat) and -25% over 3 months — classic profit-taking after a parabolic policy-driven run. Caveat: short interest up 696% since Sep 2025 to 5% of shares (stocktitan, Sep 10, 2026) — i.e., not purely passive rotation.
-- **Uranium attribution confirmed and strengthened:** the miner selloff was the third straight down day through Sep 16, explicitly attributed to the AI-sector selloff plus Treasury yields at 19-year highs, while spot held $90.15/lb and the long-term contract price hit $97/lb — an 18-year high (sparverius substack, Sep 15–16, 2026; alphabriefing.com). Thesis intact; the scare is contagion.
-- **KWEB:** dossier's "weak-demand concerns" framing is one-sided — Alibaba's FQ1 2027 (released Aug 20, 2026) showed AI Cloud/Compute revenue +45% YoY with capex +75% YoY to $9.97B, and the $10.2B placement funds AI infrastructure (ad-hoc-news.de/Yahoo Finance, Sep 18–19, 2026). The drop is supply-overhang + sentiment more than demand collapse — hence 5, not lower.
+Disagreements with the dossier's first-pass memo:
+- Space: the dossier was right to exclude the SPCX/IPO chatter; I additionally pinned Flight 14's slip to NET September 28 (SpaceX, 2026-09-17) as a benign schedule event, not a cause for concern — supports band 7 rather than "unclear."
+- AI/robotics: the dossier's quick pass did not capture the September 14 Amodei-essay selloff (aistockwire, 2026-09-19); pinning it moves the theme from "unclear" to band 7, since no company announced capex cuts and most of the loss recovered by September 18.
+- Defense: the dossier leaned "unclear leaning rotation"; I pinned the Iran-truce headline + supplemental war-funding request cut as the driver with record backlogs intact (Raymond James/Barron's, 2026-09-15), moving it to band 7.
+- Silver: the dossier called it "pressure from higher real yields" — I confirmed the mechanism (real-rate move, +22bp) and the still-intact deficit, supporting band 7 rather than "rotation" with unknown weight.
+- Nuclear: the dossier said "AI-growth fears and high Treasury yields"; I found the sharper drivers are AI-safety headlines plus Ukraine-thaw geopolitics and the Kazakhstan KATKO ramp — same band 7 conclusion, better-grounded facts.

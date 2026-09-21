@@ -1,48 +1,44 @@
 # necessity — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only) | key source |
-| 1 | XLU | 10 | Electricity is civilisation-critical with structurally rising demand (data centers, electrification); regulated monopolies cannot be routed around | webpronews.com/IEA, Sep 2026 |
-| 2 | GRID | 9 | Grid hardware is the binding constraint on the AI buildout — connection queues up to 10 years; US transmission investment approved/under construction could triple this decade | theregister.com, Sep 15, 2026 |
-| 3 | URNM | 9 | WNA: uranium demand +28% by 2030, doubling by 2040 to >150,000 tU; 70+ countries considering new reactors; no scalable baseload substitute | tradingview.com/Reuters (WNA Nuclear Fuel Report 2025), Sep 2025 |
-| 4 | NLR | 9 | Same nuclear demand trajectory; reactor life extensions plus SMR pipeline lock in fuel demand for decades | ecofinagency.com, Aug 2026 |
-| 5 | URA | 9 | Same; primary mines cover only ~80% of reactor requirements and new mines take 10-15 years — supply cannot route around the deficit | alphabriefing.com, Sep 2026 |
-| 6 | REMX | 9 | NdFeB magnets are irreplaceable in EV motors, wind turbines, robotics and defense; IEA sees magnet demand +30% by 2030; China controls 90%+ of refining | alcircle.com (IEA report), Sep 2026 |
-| 7 | ITB | 9 | US structural housing shortage (~5M units); shelter is a biological need that no technology routes around | dossier, Sep 2026 |
-| 8 | XHB | 9 | Same structural shortage plus home-improvement demand; demographics guarantee 5-10y need regardless of rate cycles | dossier, Sep 2026 |
-| 9 | IGF | 8 | Global infrastructure (power, transport, water) is multi-decade, non-discretionary capex; McKinsey sees ~$7T data-center investment through 2030 alone | rbcgam.com, Apr 2026 |
-| 10 | PAVE | 8 | US infrastructure buildout is physical work that cannot be digitized or offshored away | rbcgam.com, Apr 2026 |
-| 11 | SLV | 8 | Sixth consecutive annual deficit (Silver Institute: 46.3M oz for 2026); industrial use is 56%+ of demand and 72%+ of supply is inelastic byproduct | ainvest.com (Silver Institute World Silver Survey 2026), Aug 2026 |
-| 12 | SHLD | 8 | Global military spending hit a record $2.89T (SIPRI 2025); NATO's 3.5% GDP target makes rearmament a multi-decade demand floor | informedclearly.com, 2026 |
-| 13 | XAR | 8 | Same rearmament supercycle; order backlogs at records (Rheinmetall guided ~€135bn, BAE £83.6bn) | theboard.world, 2026 |
-| 14 | ITA | 8 | Same; sovereign defense demand cannot be substituted or postponed indefinitely | informedclearly.com, 2026 |
-| 15 | PPA | 8 | Same; aerospace/defense primes sit behind decade-long contracted backlogs | theboard.world, 2026 |
-| 16 | BOTZ | 8 | Industrial automation is structural (aging demographics, reshoring); robotics demand is cumulative, not cyclical | medium.com, Sep 2026 |
-| 17 | ARKQ | 8 | Autonomous systems plus robotics ride the same labor-shortage automation wave | medium.com, Sep 2026 |
-| 18 | ROBO | 8 | Same automation thesis; factories do not decommission robots seasonally | medium.com, Sep 2026 |
-| 19 | BAI | 8 | AI is becoming general-purpose infrastructure; Gartner: AI-optimized server power draw overtakes conventional servers in 2027 | bizzbuzz.news (Gartner), Jun 2026 |
-| 20 | AIPO | 8 | Owns AI compute's physical layer (power generation, grid equipment, data centers) — AI cannot exist without it | globenewswire.com, Apr 17, 2026 |
-| 21 | LIT | 7 | Lithium demand ~1.0M MT rising to 2.0M+ MT by 2030 (~18% CAGR) on EVs and grid storage, but sodium-ion can route around stationary and low-end uses | github.com bigpic-markets critical-minerals thesis, Sep 2026 |
-| 22 | UFO | 7 | Launch and satcom becoming strategic infrastructure (Starlink V3 orbital deployment), but still partially substitutable by terrestrial networks | dossier, Sep 2026 |
-| 23 | INDA | 7 | India growing 6.4-7.4%, fastest major economy, on demographics and manufacturing diversification — but single-country exposure is substitutable via broad EM | ibef.org, 2026 |
-| 24 | ICLN | 7 | Global clean-energy buildout is structural (cheapest new electrons); US policy is routable but ex-US demand is intact | dossier, Sep 2026 |
-| 25 | XLY | 6 | Consumption is permanent but cyclical and deferrable; discretionary spending is the most substitutable theme in the panel | dossier, Sep 2026 |
-| 26 | ARKX | 6 | Innovation optionality rather than necessity; space exposure diluted with speculative tech that may never commercialize | dossier, Sep 2026 |
-| 27 | QCLN | 6 | US clean energy structurally needed but policy-routable (OBBBA wind/solar phase-out); competes with gas and nuclear in the power mix | dossier, Sep 2026 |
-| 28 | PBW | 6 | Same as QCLN but small-cap US exposure makes it the most policy-sensitive clean fund | dossier, Sep 2026 |
-| 29 | TAN | 5 | Global solar need is real (cheapest utility power), but the US residential channel lost its 30% credit and solar is substitutable in the power mix | govtschemes.org, Sep 20, 2026 |
-| 30 | KWEB | 5 | Chinese AI cloud is structurally important (+45% YoY), but Beijing policy can route around investor exposure and US tech is a substitute | dossier (ad-hoc-news.de), Sep 2026 |
-| 31 | QTUM | 4 | Quantum computing is still pre-commercial; classical computing suffices for 5-10y needs and the timeline can slip indefinitely | dossier, Sep 2026 |
+| 1 | XLU | 10 | band 10: electricity is civilisation-critical with no substitute; EIA sees US power demand rising from record 4,195B kWh (2025) to 4,349B kWh (2027) on datacenters + electrification | EIA STEO via Reuters, 2026-07-07 |
+| 2 | GRID | 9 | band 10 (−1: utility capex timing gated by regulators, deferrable): no substitute for wires/transformers; IEA says grid investment ~$550B in 2026 (+20% YoY) and must grow ~50% by 2030 with 2,500 GW stuck in queues | IEA Electricity 2026 via kenyaengineer.co.ke |
+| 3 | PAVE | 9 | band 10 (−1: same grid capex deferrability): US infrastructure buildout is civilisation-critical, no substitute for transmission capacity | same as GRID |
+| 4 | IGF | 9 | band 10 (−1: same grid capex deferrability): global grid/infrastructure spend is the bottleneck of electrification, demand structurally rising | same as GRID |
+| 5 | URNM | 8 | band 7 (+1: contracted, not speculative — 13 hyperscaler deals, 9.8 GW committed; firm 24/7 carbon-free baseload has no scalable substitute for AI datacenters) | smrintel.com, verified 2026-07-06 |
+| 6 | NLR | 8 | band 7 (+1: same contracted nuclear demand as URNM; IEA: nuclear investment >$80B/yr, 78 GW under construction across 15 countries) | same as URNM; IEA WEI 2026 |
+| 7 | URA | 8 | band 7 (+1: same contracted nuclear demand as URNM — miner-heavy mix but the theme's structural need is identical) | same as URNM |
+| 8 | TAN | 7 | band 7: solar structurally growing (IEA: $365B/yr, $1B/day, biggest single energy-investment category) but substitutable by wind/nuclear | IEA WEI 2026 via ethicalmarketingnews.com |
+| 9 | BOTZ | 7 | band 7: automation structurally growing (industrial robotics $48.3B in 2025 → $90.6B by 2030, 13.4% CAGR on labor shortages) with visible competing tech (humanoid vs industrial, software vs hardware) | Mordor Intelligence via openpr.com |
+| 10 | ARKQ | 7 | band 7: same AI/automation structural growth as BOTZ | same as BOTZ |
+| 11 | ROBO | 7 | band 7: same AI/automation structural growth as BOTZ | same as BOTZ |
+| 12 | AIPO | 7 | band 7: same AI/automation structural growth as BOTZ | same as BOTZ |
+| 13 | QTUM | 7 | band 7: same AI/automation structural growth as BOTZ | same as BOTZ |
+| 14 | BAI | 7 | band 7: same AI/automation structural growth as BOTZ | same as BOTZ |
+| 15 | SHLD | 6 | band 5 (+1: contracted, visible demand — US primes hold $1.36T combined backlog, +25% y/y; global spend $2.9T, 11th straight annual increase) | PwC via edwardconard.com, 2026-06-24; ainvest.com |
+| 16 | XAR | 6 | band 5 (+1: same contracted backlog visibility as SHLD) | same as SHLD |
+| 17 | ITA | 6 | band 5 (+1: same contracted backlog visibility as SHLD) | same as SHLD |
+| 18 | PPA | 6 | band 5 (+1: same contracted backlog visibility as SHLD) | same as SHLD |
+| 19 | ITB | 6 | band 7 (−1: ~4M-home US shortfall per Realtor.com Sep 2026 is structural, but homebuilder demand realization is cyclical and rate-gated) | Realtor.com, 2026-09-21 |
+| 20 | XHB | 6 | band 7 (−1: same structural shortage / cyclical realization split as ITB) | same as ITB |
+| 21 | INDA | 6 | band 7 (−1: IMF sees 6.5% FY27/FY28, fastest-growing major economy at 2x global average, but equity-demand realization is flow-dependent — dossier flagged fund-flow pressure) | IMF WEO Apr 2026 via ToI |
+| 22 | LIT | 6 | band 7 (−1: sodium-ion at scaled deployment in 2026 — CATL "dual-star" plan — is a visible route-around for part of lithium demand) | Caixin, 2025-12-30; cnevpost.com |
+| 23 | SLV | 6 | band 7 (−1: solar thrifting/copper substitution visibly eroding the biggest growth engine — LONGi mass-producing base-metal cells, PV silver demand −19% in 2026; monetary half cyclical) | ainvest.com, 2026-08; Silver Institute WSS 2026 |
+| 24 | REMX | 6 | band 7 (−1: substitution/recycling and non-China supply response visible; demand growth itself structural — IEA: magnet demand +30% by 2030 on EVs/wind) | IEA via alcircle.com |
+| 25 | UFO | 6 | band 7 (−1: demand concentrated in a few vertically-integrated constellations; SpaceNews: most open-market value is already earmarked — structurally growing but thin for the rest of the chain) | spacenews.com |
+| 26 | ARKX | 6 | band 7 (−1: same concentrated space-demand structure as UFO; broader innovation exposure does not change the theme's structural need) | same as UFO |
+| 27 | PBW | 6 | band 7 (−1: subsidy/policy dependence is load-bearing and wind/solar compete with each other and nuclear; transition demand itself structurally growing) | IEA WEI 2026 ($665B renewables) |
+| 28 | ICLN | 6 | band 7 (−1: same policy-dependence/substitutability discount as PBW) | same as PBW |
+| 29 | QCLN | 6 | band 7 (−1: same policy-dependence/substitutability discount as PBW) | same as PBW |
+| 30 | KWEB | 5 | band 5: real demand (Chinese consumers, cloud), cyclical, no structural growth claim; regulatory cap on the upside | dossier quick-pass 2026-09-21 |
+| 31 | XLY | 3 | band 3: consumer discretionary by definition — demand rests on consumer health, which may not hold | anchor definition |
 
-## Top-3 notes
+Top-3 notes: 2 sentences each on the single most load-bearing fact, with source + date.
+- **XLU (10):** The load-bearing fact is that US electricity demand is in structural, record-setting growth — the EIA projects consumption rising from a record 4,195 billion kWh in 2025 to 4,349 billion kWh in 2027, driven by AI datacenters and electrification, with commercial sales outpacing residential for the first time (Reuters, 2026-07-07). Electricity cannot be substituted or routed around, so this is band 10's "civilisation-critical, no substitute, demand structurally rising" almost verbatim.
+- **GRID (9):** The bottleneck is no longer generation but the network — the IEA says meeting demand growth requires annual grid investment to rise ~50% from ~$400B today by 2030, with more than 2,500 GW of renewables, storage and large-load projects sitting in connection queues (IEA Electricity 2026, via kenyaengineer.co.ke). The −1 reflects that utility capex is regulator-gated and deferrable, keeping it off a clean 10.
+- **URNM (8):** The structural demand is contracted, not hoped for — every major hyperscaler has signed nuclear deals totaling ~9.8 GW across 13 projects, because AI training clusters need 24/7 carbon-free baseload at a scale only nuclear can deliver (smrintel.com, verified 2026-07-06). The +1 over band 7 reflects that these are signed PPAs with 2027–2035 delivery, not speculative SMR roadmaps.
 
-**XLU:** The load-bearing fact is that US data centers alone are projected to consume ~426 TWh by 2030 — about 10% of national electricity, doubling from 2025 — and Moody's estimates $110B in new US power plants is needed through 2030 just to serve that load. Utilities are the monopoly toll-takers on demand that is structurally rising and cannot be substituted away (webpronews.com, Sep 2026).
-
-**GRID:** The load-bearing fact is that the grid — not chips or capital — is now the binding constraint on AI scaling: Gartner calls power availability "the new constraint," grid connection queues run up to 10 years in prime data-center markets, and US transmission investment already approved could triple this decade. You cannot route around transformers, switchgear, and transmission when every AI rack draws as much as 100 homes (theregister.com, Sep 15, 2026).
-
-**URNM:** The load-bearing fact is the WNA's Nuclear Fuel Report 2025 projecting reactor uranium requirements climbing ~28% by 2030 and more than doubling by 2040 to over 150,000 tU, while primary mines cover only ~80% of demand and new mines take 10-15 years to develop. Nuclear is the only scalable firm baseload for the AI power buildout, and the fuel cycle has no substitute (tradingview.com/Reuters, Sep 2025).
-
-## Disagreements with the dossier's first-pass memo
-
-- **Agree with the cause lens's OBBBA correction:** the dossier's claim of "NO primary supporting evidence" for the subsidy-repeal thesis was wrong — the One Big Beautiful Bill Act (signed Jul 4, 2025) terminated the 25D residential credit and phases out wind/solar ITC/PTC. For necessity this means US solar and US clean energy are genuinely more policy-routable than the dossier implied, which is why TAN scores 5 and the US-tilted clean funds score 6.
-- **Silver nuance the dossier missed:** solar silver thrifting is real (-19% in 2026 per the Silver Institute, with LONGi substituting base metals), which is genuine substitution-at-the-margin — but the market still posted its sixth consecutive annual deficit (46.3M oz) because industrial breadth (EVs, electronics, data centers, grid) and inelastic byproduct supply dominate. Net: supports SLV at 8, not higher.
-- **REMX:** agree with the cause lens that the selloff is profit-taking after a parabolic run; it does not touch necessity — NdFeB magnets remain irreplaceable and robotics is an emerging second demand engine alongside EVs, so REMX stays at 9.
-- No other disagreements: the dossier's theme quick-pass reads are consistent with a necessity lens.
+Disagreements with the dossier's first-pass memo:
+- **Space:** the dossier left the theme "unclear"; I pinned it at 6 (band 7, −1) because the space economy is structurally growing ($630B in 2023 → ~$1.8T by 2035 forecast) even though value concentrates in a few vertically-integrated constellations — growth is real, breadth is the discount.
+- **Defense:** the dossier leaned "unclear leaning rotation"; the cause panel's backlog evidence (PwC $1.36T combined backlog, +25% y/y; 11th straight year of rising global spend) supports band 5 with a +1 for contracted visibility rather than anything higher — geopolitics can still unwind it.
+- **Clean energy:** the dossier called it "unclear"; I score it 6 (band 7, −1) because IEA 2026 data shows $665B in renewable investment — the structural growth is documented, and the −1 is for the subsidy/policy load-bearing that the dossier flagged.
+- **none** beyond those three; all other theme assessments are consistent with the dossier's quick pass.

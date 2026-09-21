@@ -1,33 +1,105 @@
-# Verifier — 2026-09-21
+# Verifier report — etf-dip-pick 2026-09-21 (Phase 3.5)
 
-Adversarial, evidence-first re-check of the regime premises and ballot claims used by the five lenses. Everything dated 2026-09-21 (Monday, PDT) unless noted. Statuses: VERIFIED / CORRECTED / CONFLICTED / UNVERIFIED / STALE.
+Independent re-check of the three rule buys' load-bearing facts from primary sources,
+2026-09-21. Buys per `scores.csv` (rule `cause ≥ 7 AND (stabilizing OR catalyst ≥ 7)
+AND not thin AND theme_rank == 1`):
 
-## Regime premises
+- **NLR** (buy, nuclear) — cause 7, catalyst 10, not thin, theme_rank 1
+- **UFO** (buy, space) — cause 7, catalyst 10, not thin, theme_rank 1
+- **BOTZ** (buy, ai/robot) — cause 7, catalyst 8, not thin, theme_rank 1
 
-- **FOMC Sept 16, 2026: +25bp to 3.75–4.00%, first hike since July 2023, 12–0 unanimous**: VERIFIED — multiple independent secondary sources agree on all four facts (Conference Board; TradingView/Coinpedia live-update). Primary Fed statement not pulled directly, so treat as verified-via-secondary.
-- **10-year Treasury "5.003% current"**: UNVERIFIED — no authoritative source (Fed/Treasury/FRED) retrieved for a Sept 17–18 close. Reported context: 5.041% intraday high Sept 15, weekly close ~5.003% (alphabetastock blog, low-authority source). The figure is broadly plausible as a close, but the memo must label it with date and source, not "current".
-- **Oil (Brent ~$102–104 after peaking near $108)**: VERIFIED — front-month ICE Brent settled $103.87 on Sept 18, 2026 per Dow Jones Market Data via Morningstar (confirmed secondarily by Trading Economics $103.21 for Sept 18; Finnhub quote $102.616). "Peaked near $108" consistent with that week's context; WTI ~$100–101 consistent.
-- **Starship Flight 14, NET Sept 28, 2026**: VERIFIED — first sustained/orbital Starship trajectory, deployment of 26 operational Starlink V3 satellites, described as first revenue-generating Starship mission (TechCrunch Sept 15, 2026; Engadget; aero-news). Material caveat: still pending regulatory approval as of reporting. Sept 28, 2026 is a Monday — matches "NET Monday" framing.
-- **December 8–9 FOMC (XLU/SLV catalyst leg)**: UNVERIFIED by source but calendar-consistent — Dec 8–9, 2026 are Tuesday–Wednesday, the standard FOMC pattern. Not material to any bucket.
+## 1. NLR — CONFIRM (catalyst 10 stands)
 
-## Ballot claims
+- **Cameco Q3 2026 results, before market open, Friday 2026-10-30.** Confirmed on the
+  primary source: Cameco's own Q2 2026 news release states "We plan to announce our
+  2026 third quarter results before markets open on Friday, October 30, 2026"
+  (cameco.com, 2026-Q2-News-Release.pdf; syndicated on BusinessWire, 2026-07-31).
+- **Long-term uranium ~$97/lb:** TradeTech long-term indicator $97.00/lb as of
+  2026-09-18 (record, breaking the 2007 $95 peak); UxC $96 on Sep 1.
+- **Basket facts spot-checked:** AUM $3.74–3.91B (≈$3.8–4.0B), fee 0.52%, 26–29
+  holdings, top-10 ~60.5% — matches the ballot's 7-band note (fee 0.52% confirmed by
+  ainvest/finviz; one aggregator shows 0.61%, minority outlier).
+- **Judgment under the three rules:** CONFIRMATION — company-confirmed ✔. BREADTH —
+  Cameco is the sector bellwether; the print plus contracting commentary moves the
+  whole uranium-miner theme, not just Cameco ✔. ONE-SIDEDNESS — the dated bellwether
+  readout, into a record $97/lb term market after a 9–12% ten-day selloff, is
+  directionally one-sided for uranium miners ✔.
+- **Verdict: catalyst 10 confirmed. No demotion.**
 
-- **NVIDIA Q3 FY2027 earnings Nov 17, 2026**: VERIFIED as company-stated — Toshiya Hari (VP IR) on the Aug 26, 2026 Q2 call: "earnings call to discuss the results of our third quarter of fiscal 2027 is scheduled for November 17th" (transcript via MarketBeat; Webull likewise lists Nov 17, 2026 as Confirmed). Aggregator estimates differ (MarketBeat Nov 18 estimated; Seeking Alpha Nov 25) — company date stands. Nov 17, 2026 is a Tuesday.
-- **XLU necessity (data centers ~426 TWh by 2030, ~10% of US electricity, Moody's $110B new plants)**: VERIFIED — Moody's Ratings report published Sept 14, 2026 via Bloomberg: $110B for 45 GW of new generation by 2030; IEA forecast of 426 TWh data-center consumption in 2030 = ~10% of US electricity; >30 GW from gas. (thehindubusinessline.com, Moneyweb, datacentremagazine.com all report the same figures.)
-- **GRID necessity (connection queues up to 10 years; transmission investment could triple)**: VERIFIED — datacenterknowledge.com: grid-connection energization "may take up to 10 years in some areas"; Camus Energy: upgrades take 5–10 years. The Register (Sept 15, 2026) citing Moody's: $80–115B in grid investment through 2030 already approved or under construction, "with the potential to triple over the next decade".
-- **URNM necessity (uranium +28% by 2030, >2x by 2040 to >150,000 tU; mines cover ~80%; new mines 10–15 years)**: VERIFIED with one correction — WNA Nuclear Fuel Report 2025: demand climbs 28% by 2030 (~86–87 kt/yr) and more than doubles to over 150,000 t by 2040 vs ~67,000 t in 2024 (Reuters via TradingView; mining.com). 2025 mine output met ~80% of reactor requirements (alphabriefing.com; WNA notes supply adequate short-term only). CORRECTED: WNA states mine lead time is **10–20 years** from discovery, not the ballot's "10–15" — the ballot used the low end; the correction strengthens the tight-supply thesis.
-- **Uranium spot $90.15 (Sept 16) / term $97 / "1,146th day above $80"**: UNVERIFIED as stated — closest confirmable figures: Trading Economics spot $89.95/lb on Sept 15, 2026; UxC/TradeTech long-term benchmark $95.50/lb at end-June 2026 (discoveryalert.com). The exact "$90.15" and "$97" figures and the day-count are unconfirmed.
-- **SLV necessity (sixth consecutive annual deficit of 46.3M oz)**: VERIFIED — Silver Institute World Silver Survey 2026 (published April 15, 2026, compiled by Metals Focus): deficit of 46.3 Moz (1,439 t), "the sixth in a row" (silverinstitute.org PDF; INN; IndexBox quoting Philip Newman). **Byproduct "72%+ inelastic"**: VERIFIED in-range — sources cite 70–75% of mined silver as byproduct of copper/lead/zinc/gold mining (Investec 2025 via miningvisuals; ainvest; thetanerd). Exact "72%" attribution not found, but inside the consensus range.
-- **Cause top-three ("no AI company changed capex due to Amodei essay"; Bernstein "Rezaei" quote; CRWD/PANW rally 8–14%)**: UNVERIFIED — "no capex change" is a negative cross-sectional claim that cannot be verified. The Bernstein attribution to "Rezaei" was not found; what exists: Bernstein's July 2026 CISO survey ("AI-driven demand continues" — directionally supportive of demand), and Bernstein analyst Peter Weed downgrading PANW/OKTA/S on Sept 17, 2026 on valuation after a ~100% sector rally (startupfortune.com) — a valuation call, not a demand call. The CRWD/PANW rally figures were not confirmed.
-- **TAN veto — OBBBA signed July 4, 2025**: VERIFIED (Miller Canfield, Andersen, Cerini & Associates, all law-firm analyses). **Section 25D ends for expenditures after Dec 31, 2025**: VERIFIED (same sources; govtschemes table). **Wind/solar 45Y/48E phase-out**: VERIFIED — facilities beginning construction after July 4, 2026 must be placed in service by Dec 31, 2027 (Chapman, Nelson Mullins, K&L Gates, Gibson Dunn). **EO 14315 (July 7, 2025) + IRS Notice 2025-42 (Aug 15, 2025)**: VERIFIED — directed strict enforcement and eliminated the 5% safe harbor except for low-output solar. "Repeal hits 10–15% of US demand": UNVERIFIED share figure. Veto's core factual base is solid.
-- **MP Materials earnings Nov 5 "confirmed" (REMX catalyst leg)**: CONFLICTED — TipRanks lists "Oct 29, 2026 After Close (Confirmed)"; MarketBeat lists "Thursday, November 5, 2026" as an estimate explicitly marked not-confirmed. The "confirmed Nov 5" claim is wrong or at best source-dependent; the confirmed claim is Oct 29.
-- **MP "DoD-backed first commercial magnet output from Independence by year-end"**: STALE — the cited source is a Q3-2025 write-up in which Litinsky's "by year's end" meant end of 2025. Recycling it for 2026 without a 2026 source is stale sourcing.
-- **Basket lens figures (XLU fee/AUM/holdings; PAVE 102 holdings / top-10 ~32% / 0.47% fee / $13.3B AUM; INDA 171–174 holdings / top-10 ~34% / 0.61% fee)**: NOT INDEPENDENTLY CHECKED this pass — treat as UNVERIFIED; they come from prior memo/dossier research, not this verification round.
+## 2. UFO — CONFIRM (catalyst 10 stands)
 
-## Discrepancies material to the buy list
+- **Starship Flight 14, NET 2026-09-28.** Confirmed by SpaceX via X on 2026-09-17
+  (slip from Sep 22 to NET Sep 28, still pending FAA licensing); TechCrunch
+  (2026-09-15/17): first orbital attempt, first revenue flight, 26 Starlink V3
+  satellites into operational orbit; second Starship flight since SpaceX's June 2026 IPO.
+- **SpaceX is public and a top-5 UFO holding:** ticker SPCX, ~4.6–5.3% weight
+  (TipRanks Sep 10, 2026; MarketBeat, barchart) — added to UFO in the June 2026
+  VettaFi index reconstitution. This answers the breadth question directly: Flight 14
+  is not about some peripheral constituent; it is about a top-5 holding (~$2T market
+  cap) and the industry's milestone event of the year, which validates the commercial
+  space thesis for the whole basket (cheaper heavy launch → satellite economics for
+  UFO's operators/manufacturers).
+- **Basket facts spot-checked:** 66 holdings, $550.4M AUM, top-10 49.83% — matches
+  the ballot.
+- **Judgment under the three rules:** CONFIRMATION — company-confirmed ✔. BREADTH —
+  moves a top-5 constituent AND is theme-validating for the whole space economy ✔.
+  ONE-SIDEDNESS — named event, 7 days out, high probability of attempt, market not
+  positioned (UFO −36%); success is directionally positive for the theme ✔.
+  (The date is still NET/pending FAA — noted, but consistent with band 10's
+  "near, high-probability" as used by this panel; it is not an estimated cadence date.)
+- **Verdict: catalyst 10 confirmed. No demotion.**
 
-- **Nothing found that would flip any bucket=buy.** The TAN cause-3 veto is factually grounded in verified statute changes (25D termination; 45Y/48E phase-out; EO 14315 / Notice 2025-42). Buys XLU, SLV, UFO, BOTZ, REMX, ITA, PAVE are unaffected by the findings.
-- **REMX catalyst 9 is partially overstated**: the earnings date should be cited as Oct 29, 2026 (confirmed per TipRanks) with MarketBeat's Nov 5 estimate noted as conflicting — not "confirmed Nov 5". The DoD-price-floor / Independence-year-end leg rests on a stale 2025 source. Catalyst remains ≥7 on the earnings date alone (now closer, and confirmed by one source), so the buy gate is intact, but the memo should not claim a 2026 year-end commercial-magnet timeline without a current source.
-- **Uranium lead time corrected to WNA's 10–20 years** (ballot said 10–15) — strengthens, not weakens, the URNM thesis; URNM is `watch` on the catalyst gate, not a buy, so no bucket impact.
-- **Treasury 5.003%**: memo should carry it as a dated close with its source, not as a live figure.
-- Unverified-but-immaterial: exact uranium spot/term figures, CRWD/PANW rally numbers, Bernstein "Rezaei" attribution, basket AUM/holdings details, REMX "146% run" figure, TAN "10–15% of US demand".
+## 3. BOTZ — CONFIRM (catalyst 8 stands)
+
+- **NVIDIA GTC 2027, March 14–18, 2027, San Jose McEnery Convention Center.**
+  Confirmed on the primary source: nvidia.com GTC 2027 FAQ states "NVIDIA GTC will
+  take place from March 14–18, 2027" at the San Jose McEnery Convention Center
+  (live page, crawled 2026-09-21).
+- **NVIDIA is BOTZ's #5 holding at ~7.6–7.8%** (stockanalysis, as of 2026-09-18;
+  BOTZ AUM $3.34B, fee 0.68% — both match the ballot; holdings count varies by
+  aggregator (86–103) vs the ballot's 62–67 — stale count, immaterial to the catalyst
+  judgment).
+- **Judgment under the three rules:** CONFIRMATION — company/primary-source confirmed
+  ✔ (this is what separates it from band 4; the unconfirmed hyperscaler Q3 earnings
+  cadence stays out). BREADTH — GTC is the industry's flagship AI developer
+  conference; the keynote and robotics/physical-AI launches move NVIDIA (~7.7% of
+  the fund) and AI/robot sentiment broadly, not just one constituent ✔. ONE-SIDEDNESS —
+  a flagship product-launch showcase is directionally one-sided for AI/robot
+  sentiment (launches are bullish-by-design, not a timing coin-flip like FOMC or a
+  two-sided outcome like Black Friday) ✔. ~6 months out, inside the lens's 3–12 month
+  window ✔.
+- **Caveat recorded:** GTC is annual/recurring, so "market not positioned" is softer
+  than for a one-off milestone — which is why band 8 (not 10) is the correct band.
+  The score does not rely on this claim.
+- **Verdict: catalyst 8 confirmed. No demotion.**
+
+## 4. Regime premises — verified
+
+- **FOMC decisions 2026-10-28 and 2026-12-09:** confirmed on federalreserve.gov —
+  meetings 2026-10-27/28 and 2026-12-08/09, policy statements on the second day
+  (Oct 28, Dec 9). Already rows in `log/catalysts.md`; no action.
+- **10-year yield near 5.01% around Sep 18:** confirmed — 5.01% Sep 18 close
+  (TS2 via U.S. Treasury daily par yield curve); 5.014% Sep 15 close (Dow Jones wire).
+  Matches the dossier's "traded near 5.01%".
+- **September FOMC move:** +25bp to 3.75–4.00% on Sep 16, unanimous 12–0, first hike
+  since July 2023 (Federal Reserve statement). Matches the dossier's rotation read.
+- **Oil:** the current rerun's dossier names no numbered Brent premise — USO appears
+  only as a scan momentum leader (deterministic scan output; nothing to verify). The
+  Brent $103.87 figure in `log/2026-09-21.md` belongs to the earlier (scheduled)
+  run's memo, not this rerun; the rerun memo is still to be written.
+
+## 5. New confirmed events appended to `log/catalysts.md`
+
+- **NVIDIA GTC 2027** (ai/robot) — confirmed new on nvidia.com FAQ; not previously
+  a row → appended below. Starship Flight 14, Cameco Q3, and both FOMC dates were
+  already rows; no duplicates added.
+
+## 6. Final demotions
+
+**None.** All three buys' load-bearing facts confirmed on primary sources; every
+catalyst score survives the confirmation/breadth/one-sidedness rules. No ballot
+files were edited, `scores.csv` is untouched (no consolidation rerun required —
+no buy dropped below the gate). Final rule buckets stand:
+
+- **Buy:** NLR, UFO, BOTZ
+- **Alt:** ARKX, URA, URNM

@@ -18,3 +18,4 @@ drops them. Retracted rows get `RETRACTED` in the `match` column and are ignored
 | space | Starship | Starship Flight 14 — first orbital attempt, 26 Starlink V3, first revenue flight | 2026-09-28 | SpaceX via TechCrunch / USA Today, 2026-09-17 slip notice | 2026-09-21 |
 | macro | FOMC | FOMC decision | 2026-10-28 | federalreserve.gov FOMC calendar | 2026-09-18 |
 | macro | FOMC | FOMC decision | 2026-12-09 | federalreserve.gov FOMC calendar | 2026-09-18 |
+| ai/robot | GTC | NVIDIA GTC 2027, San Jose McEnery Convention Center — flagship AI/robotics launch showcase | 2027-03-14 | nvidia.com GTC FAQ | 2026-09-21 |
