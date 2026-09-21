@@ -140,6 +140,26 @@ def main(date):
                 + (" on identical prices" if same_scan else "") + f": {sorted(moved)}"
                 + " - the memo should say why, or the judgment layer is just noisy")
 
+    # 6b. A table with no |---| delimiter renders on GitHub as one wall of pipes. The memo is the
+    #     deliverable; one that does not render is not published, however correct its numbers.
+    for mp in (ROOT / "log" / f"{date}.md", ROOT / "log" / f"{date}-lite.md"):
+        if not mp.exists():
+            continue
+        L = mp.read_text().splitlines()
+        for i, ln in enumerate(L):
+            row = ln.strip().startswith("|")
+            prev = i > 0 and L[i - 1].strip().startswith("|")
+            nxt = L[i + 1].strip() if i + 1 < len(L) else ""
+            if row and not prev and nxt.startswith("|"):
+                if not (re.fullmatch(r"\|[\s:|-]*\|?", nxt) and "-" in nxt):
+                    errors.append(f"{mp.name} line {i+1}: table header has no |---| delimiter row, "
+                                  f"so GitHub renders the whole table as one paragraph")
+                else:
+                    h, d = ln.strip().strip("|").count("|"), nxt.strip("|").count("|")
+                    if h != d:
+                        warns.append(f"{mp.name} line {i+1}: header has {h+1} columns but the "
+                                     f"delimiter has {d+1} — the table will render ragged")
+
     # 7. A run nobody committed is a run nobody else can see. check_memo reads the filesystem,
     #    so everything above passes locally whether or not the work was ever pushed - which is
     #    exactly how conviction-pick-sp500 published three runs of picks off an uncommitted
