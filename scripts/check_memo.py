@@ -88,9 +88,10 @@ def main(date):
         for l in LENSES:
             if not re.search(rf"\|\s*{l}\s*\|", head):
                 errors.append(f"memo header is missing the spelled-out '{l}' column")
-        for col, why in [("why", "per-row reasoning is the only rationale in the memo"),
-                         ("dip#", "depth rank, recoverable from scores.csv dip_rank")]:
-            if col not in head:
+        for cols, why in [(("why",), "per-row reasoning is the only rationale in the memo"),
+                          (("dip#", "dip_score#"), "depth rank, recoverable from scores.csv dip_rank")]:
+            col = cols[0]
+            if not any(c in head for c in cols):
                 warns.append(f"memo header dropped '{col}' ({why})")
 
     # 5. Every fund the rule buys must appear in the verifier's report (Phase 3.5).
