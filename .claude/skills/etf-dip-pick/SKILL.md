@@ -86,7 +86,10 @@ run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 Phase 3.6 — audit, before the memo is final: `uv run python scripts/check_memo.py <DATE>`.
 It fails the run if `scores.csv` was not written by `consolidate.py`, if the ballots do not parse,
 if re-running the rule does not reproduce `scores.csv`, or if any bucket printed in the memo
-contradicts the one the rule computed. Fix what it reports; never publish a memo it exits non-zero on.
+contradicts the one the rule computed. It also fails when anything under `output/` or `log/` is uncommitted, because a run nobody committed
+is a run nobody else can see: every other check here reads the filesystem and passes locally either way.
+Fix what it reports, commit what it lists, and re-run until it exits 0 — the run is not finished, and the
+memo is not published, while it is non-zero.
 
 ## Phase 4 — memo → `log/<DATE>.md`
 

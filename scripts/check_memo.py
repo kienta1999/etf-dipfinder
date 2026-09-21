@@ -7,7 +7,7 @@ Exit code 1 on any ERROR.
 Run it on the date you just produced. Run it on an older date and it tells you that memo no
 longer matches the current rule - which is the point: that is how the stale 2026-09-17 buy list
 (GRID, filed before the thin rule landed) was caught."""
-import re, shutil, sys, io, contextlib
+import re, shutil, subprocess, sys, io, contextlib
 from pathlib import Path
 import pandas as pd
 
@@ -138,6 +138,16 @@ def main(date):
                 f"lens scores moved 3+ points vs {pdate}"
                 + (" on identical prices" if same_scan else "") + f": {sorted(moved)}"
                 + " - the memo should say why, or the judgment layer is just noisy")
+
+    # 7. A run nobody committed is a run nobody else can see. check_memo reads the filesystem,
+    #    so everything above passes locally whether or not the work was ever pushed - which is
+    #    exactly how conviction-pick-sp500 published three runs of picks off an uncommitted
+    #    screen and lost their inputs for good.
+    dirty = subprocess.run(["git", "status", "--porcelain", "output/", "log/"], cwd=ROOT,
+                           capture_output=True, text=True).stdout.strip()
+    if dirty:
+        errors.append("uncommitted files under output/ or log/ - the run is not finished until "
+                      "this is empty:\n" + "\n".join("    " + ln for ln in dirty.splitlines()))
 
     for e in errors: print(f"ERROR   {e}")
     for w in warns: print(f"WARN    {w}")
