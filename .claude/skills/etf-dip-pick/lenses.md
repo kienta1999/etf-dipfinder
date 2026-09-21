@@ -12,6 +12,42 @@ computed from `dd_pctile`, `rs_spy_12m` and `stabilizing` and written into `scan
 | **basket** | 0.15 | Is the ETF itself a clean way to own the theme? Holdings quality, concentration, hidden exposures, structure, expense ratio, liquidity | diversified, profitable holdings, theme-pure, cheap, liquid | one stock = 25%, half the fund is a different theme, junky/unprofitable constituents, structural decay (futures roll, single-stock convert overhang) |
 | **price** | 0.15 | *Computed, not voted.* Is this unusually cheap for **this** ETF, and is the long-term trend intact? `depth(dd_pctile: <=.02 -> 5, <=.05 -> 4, <=.10 -> 3, <=.25 -> 2, else 1) + trend(rs_spy_12m: >0 -> 3, >-.15 -> 2, >-.35 -> 1, else 0) + 2 if stabilizing` | worst-decile drawdown vs own history, 12m trend still positive, bounce started | ordinary bad patch (dd_pctile > 0.25), 12m trend broken, still falling |
 
+## Anchors — score the band first, then move at most 1 point for a named reason
+
+A rubric with only 10 and 1 defined leaves 2-9 to taste, and taste resamples: across
+2026-09-17/18/21, on price moves under 3%, catalyst went 7 -> 4 -> 9 for six different funds and
+21 scores reversed direction by 3+ points. Pick the band a fund falls in, say which band in the
+ballot's reason column, and only then adjust by one point with a stated fact. A score two or more
+points from where its band puts it is a deviation and needs its own sentence.
+
+**cause** — 10 pure rotation, thesis untouched · **7** mean-reversion inside an intact trend, or a
+real but temporary headwind (rates, input costs) with demand unchanged · **5** sentiment or fear,
+no thesis change *established* and no evidence it is only flows · **3** a fundamental impairment
+that may be permanent (this is the veto line) · 1 policy repeal, demand collapse, permanent re-rating.
+
+**necessity** — 10 civilisation-critical, no substitute, demand structurally rising · **7**
+structurally growing but substitutable, or with a visible competing technology · **5** real demand,
+cyclical, no structural growth claim · **3** discretionary, or demand rests on conditions that may
+not hold · 1 fashion trade, easily substituted, or subsidy-dependent with the subsidy gone.
+
+**catalyst** — the band is set by *who confirmed the date* and *whether the outcome is one-sided*,
+never by how exciting the theme is:
+- **10** date confirmed by the company or agency itself, inside 90 days, outcome materially
+  one-sided for the theme, market not yet positioned
+- **8** confirmed date 3-12 months out; or a confirmed near date that is material but partly priced
+- **6** scheduled event whose outcome cuts both ways (an FOMC meeting, a CPI print). Symmetric
+  events are *timing*, not direction, and cannot score 7+ on the calendar alone
+- **4** expected on cadence but no date confirmed (a quarterly print not yet scheduled, a bill with
+  no floor date)
+- **2** nothing on the calendar; "eventually mean-reverts"
+
+**basket** — 10 diversified, profitable, theme-pure, cheap, liquid · **7** theme-pure and liquid
+with one visible flaw (top-ten above ~50%, or fee above ~0.60%) · **5** two such flaws, or ~a third
+of the fund is a different theme · **3** a single name above ~20%, or half the fund off-theme ·
+1 one stock at 25%, junky constituents, structural decay (futures roll, convert overhang).
+
+**price** is not scored by a panelist at all — see the table above; it is `price_score()`.
+
 ## Consolidation (orchestrator)
 - `score = Σ weight × lens_score`.
 - **Veto:** cause ≤ 3 → bucket = *avoid* regardless of score.

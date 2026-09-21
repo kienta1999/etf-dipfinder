@@ -20,6 +20,8 @@ first missing `score_<lens>.md`. Never run panelists in parallel.
 until its facts are pinned and stops: it re-checks nothing it has already confirmed, and never searches to score
 a fund whose theme is already covered by a sibling. Stop rule per lens — every score rests on a number or a dated
 event the panelist can name, or the ballot says "unverified" and the score caps at 5.
+Every ballot row names the band from `lenses.md` it scored into; the anchors bind, and a score 2+ points
+off its band is a deviation that needs its own sentence.
 
 ## Phase 0 — scan
 
