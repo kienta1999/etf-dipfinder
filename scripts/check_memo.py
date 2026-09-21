@@ -12,6 +12,7 @@ from pathlib import Path
 import pandas as pd
 
 import consolidate
+import carry_forward
 ROOT = Path(__file__).resolve().parent.parent
 LENSES = ["cause", "necessity", "catalyst", "basket", "price"]   # price is computed, not balloted
 BALLOTS = ["cause", "necessity", "catalyst", "basket"]
@@ -103,6 +104,16 @@ def main(date):
             unchecked = [t for t in buys if not re.search(rf"\b{t}\b", txt)]
             if unchecked:
                 errors.append(f"buys absent from {vf.name}, so nothing verified their case: {unchecked}")
+
+    # 5b. A catalyst the verifier already confirmed must not quietly vanish from the next ballot.
+    cat_ballot = out / "score_catalyst.md"
+    if cat_ballot.exists() and "theme" in committed.columns:
+        txt, themes = cat_ballot.read_text(), set(committed.theme.dropna())
+        for r in carry_forward.unexpired(date):
+            if r["theme"] in themes and not re.search(re.escape(r["match"]), txt, re.I):
+                errors.append(f"confirmed catalyst dropped: {r['match']} ({r['event']}, {r['date']}) is live for "
+                              f"theme '{r['theme']}' and verified on {r['verified_on']}, but score_catalyst.md "
+                              f"never mentions it")
 
     # 6. Lens scores that move hard with no new prices behind them.
     prev = [d.name for d in sorted((ROOT / "output").iterdir())
