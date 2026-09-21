@@ -47,7 +47,7 @@ assert abs(f.size_1pct * -f.sl_pct - 0.01) < 1e-9
 
 # consolidate: parse + bucket
 import tempfile
-from consolidate import parse, bucket
+from consolidate import parse, bucket, price_score
 tmp = Path(tempfile.mkdtemp()) / "b.md"
 tmp.write_text("| 1 | NLR | 8 |\n| 2 | **URA** | 7 |\n| 3 | GLD | 7.5 |\n")
 try:
@@ -69,6 +69,14 @@ assert list(b.wtd) == [8.0, 7.0, 6.5, 6.0, 5.0]            # thin costs exactly 
 assert list(b.wtd_rank) == [1, 2, 3, 4, 5]
 assert list(b.theme_rank) == [1, 2, 3, 0, 1]
 assert list(b.bucket) == ["buy", "alt", "watch", "avoid", "watch"]   # E qualifies on every leg but thin
+# price lens is arithmetic now: same inputs must always give the same score
+assert price_score(.01, .10, True) == 10      # worst 1%, 12m intact, bouncing
+assert price_score(.30, -.50, False) == 1     # ordinary patch, trend broken, still falling
+assert price_score(.015, .08, False) == 8     # deep + trend, no bounce yet
+assert price_score(.015, .08, True) == 10     # the bounce is worth exactly 2
+assert all(1 <= price_score(a, b, c) <= 10    # never leaves the 1-10 scale
+           for a in (0, .02, .05, .10, .25, 1) for b in (-1, -.35, -.15, 0, 1) for c in (True, False))
+
 from consolidate import deploy
 d = deploy(pd.DataFrame({"bucket": ["buy", "buy", "watch"], "sl_pct": [-0.1, -0.2, -0.1], "tp_pct": [0.3, 0.3, 0.3]}, index=list("XYZ")), 30000)
 assert list(d.index) == ["X", "Y"] and list(d.usd) == [20000, 10000]        # each loses the same $ at its stop

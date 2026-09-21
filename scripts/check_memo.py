@@ -13,7 +13,8 @@ import pandas as pd
 
 import consolidate
 ROOT = Path(__file__).resolve().parent.parent
-LENSES = ["cause", "necessity", "catalyst", "basket", "price"]
+LENSES = ["cause", "necessity", "catalyst", "basket", "price"]   # price is computed, not balloted
+BALLOTS = ["cause", "necessity", "catalyst", "basket"]
 errors, warns = [], []
 
 
@@ -51,10 +52,10 @@ def main(date):
     shutil.rmtree(tmp, ignore_errors=True); tmp.mkdir(parents=True)
     try:
         shutil.copy(out / "scan.csv", tmp / "scan.csv")
-        found = [l for l in LENSES if (out / f"score_{l}.md").exists()]
+        found = [l for l in BALLOTS if (out / f"score_{l}.md").exists()]
         for l in found:
             shutil.copy(out / f"score_{l}.md", tmp / f"score_{l}.md")
-        for l in set(LENSES) - set(found):
+        for l in set(BALLOTS) - set(found):
             errors.append(f"missing ballot score_{l}.md")
         if found:
             try:

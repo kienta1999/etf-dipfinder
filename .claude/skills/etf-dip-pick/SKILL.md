@@ -1,6 +1,6 @@
 ---
 name: etf-dip-pick
-description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then decide which dips are worth buying. Runs the deterministic scan (scripts/scan.py), builds a dossier, fans out to five SEQUENTIAL Opus scoring panelists (cause, necessity, catalyst, basket, price), consolidates a weighted score plus the orchestrator's own rank, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), wants to know where money is rotating, or wants a quick single-agent pass ("quick etf-dip-pick") — even if they don't say "ETF" or "/etf-dip-pick". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
+description: Find and rank sector / thematic ETFs that are in a dip — below their 200-day SMA or ≥10% off the 52-week high AND lagging SPY over 3 months — then decide which dips are worth buying. Runs the deterministic scan (scripts/scan.py), builds a dossier, fans out to four SEQUENTIAL Opus scoring panelists (cause, necessity, catalyst, basket; price is computed), consolidates a weighted score plus the orchestrator's own rank, and writes a dated memo to log/. Use this whenever the user asks what ETFs or sectors are "on sale", "beaten down", "lagging", "oversold", "which sectors are dipping", "buy the dip" for ETFs/sectors/themes (semis, nuclear, defense, biotech, clean energy, crypto, gold miners, China, etc.), wants to know where money is rotating, or wants a quick single-agent pass ("quick etf-dip-pick") — even if they don't say "ETF" or "/etf-dip-pick". For single-stock dips use conviction-pick-sp500's /stock-pick-dip instead.
 ---
 
 # etf-dip-pick — rank ETF dips, separate dips from falling knives
@@ -46,14 +46,14 @@ memo (format below) to `log/<DATE>.md`.
 
 ## Phase 2 — panel, sequential
 
-Read `lenses.md` (same folder). For each lens in order **cause → necessity → catalyst → basket →
-price**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
+Read `lenses.md` (same folder). Four lenses are researched; **price is computed by `consolidate.price_score()`
+from the scan, so never spawn a price panelist and never write `score_price.md`.** For each lens in order
+**cause → necessity → catalyst → basket**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
 (`subagent_type: "claude"`, `model: "opus"`) with: working dir, "read dossier.md and your row in
 lenses.md", score ALL candidates 1-10 on that lens only, search as far as the stop rule needs (no cap;
 WebFetch a primary source when a snippet is the only evidence for a buy-grade score), write the ballot file in the
 lenses.md format, return it. Wait for it before starting the next. Cause, necessity and catalyst are **theme**
-questions: research once per theme, copy the score to siblings, one sentence where a sibling differs. Basket and
-price are per fund; price needs no search (CSV columns).
+questions: research once per theme, copy the score to siblings, one sentence where a sibling differs. Basket is per fund.
 
 Why one criterion per agent: a single agent asked for "overall" quietly lets the loudest fact
 (usually the price drop) contaminate every other judgment. Splitting forces the necessity scorer to

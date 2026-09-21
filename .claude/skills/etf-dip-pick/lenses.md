@@ -1,7 +1,8 @@
 # etf-dip-pick — the five scoring lenses
 
-Each lens is one subagent. It scores EVERY candidate 1-10 on its criterion only, ranks them, and
-writes `output/<DATE>/score_<lens>.md`. Weights are applied by the orchestrator at consolidation.
+Four lenses are subagents: each scores EVERY candidate 1-10 on its criterion only, ranks them, and
+writes `output/<DATE>/score_<lens>.md`. **price is not a subagent** - it is `consolidate.price_score()`,
+computed from `dd_pctile`, `rs_spy_12m` and `stabilizing` and written into `scan.csv` as `price_score`. Weights are applied by the orchestrator at consolidation.
 
 | lens | weight | question | 10 looks like | 1 looks like |
 |---|---|---|---|---|
@@ -9,7 +10,7 @@ writes `output/<DATE>/score_<lens>.md`. Weights are applied by the orchestrator 
 | **necessity** | 0.20 | How much does the world *need* this theme in 5-10y, and can anything (AI, substitute tech, policy) route around it? | civilisation-critical, no substitute, demand structurally rising | fashion trade, easily substituted, or dependent on a subsidy that's gone |
 | **catalyst** | 0.20 | Is there a *dated, concrete* trigger in 3-12 months that reverses the flow? | named event, near, high-probability, market not yet positioned for it | "eventually mean-reverts" with nothing on the calendar |
 | **basket** | 0.15 | Is the ETF itself a clean way to own the theme? Holdings quality, concentration, hidden exposures, structure, expense ratio, liquidity | diversified, profitable holdings, theme-pure, cheap, liquid | one stock = 25%, half the fund is a different theme, junky/unprofitable constituents, structural decay (futures roll, single-stock convert overhang) |
-| **price** | 0.15 | Is this *unusually* cheap for this ETF, and is the long-term trend intact? Use dd_pctile, dd_z, rs_spy_12m, stabilizing, plus valuation vs own history (P/E, P/B, or commodity vs cost curve) | worst-decile drawdown vs own history, valuation at multi-year low, 12m trend still positive, bounce started | ordinary bad patch (dd_pctile > 0.25), valuation not cheap, 12m trend broken, still falling |
+| **price** | 0.15 | *Computed, not voted.* Is this unusually cheap for **this** ETF, and is the long-term trend intact? `depth(dd_pctile: <=.02 -> 5, <=.05 -> 4, <=.10 -> 3, <=.25 -> 2, else 1) + trend(rs_spy_12m: >0 -> 3, >-.15 -> 2, >-.35 -> 1, else 0) + 2 if stabilizing` | worst-decile drawdown vs own history, 12m trend still positive, bounce started | ordinary bad patch (dd_pctile > 0.25), 12m trend broken, still falling |
 
 ## Consolidation (orchestrator)
 - `score = Σ weight × lens_score`.

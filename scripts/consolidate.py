@@ -8,6 +8,20 @@ from pathlib import Path
 import pandas as pd
 
 W = {"cause": .30, "necessity": .20, "catalyst": .20, "basket": .15, "price": .15}
+BALLOT_LENSES = ["cause", "necessity", "catalyst", "basket"]  # price is computed, not voted on
+
+
+def price_score(dd_pctile, rs_spy_12m, stabilizing):
+    """The price lens as lenses.md defines it, in arithmetic instead of a subagent's judgment.
+
+    'Unusually cheap for THIS ETF' (depth vs its own history, not absolute drawdown - dip_score and
+    rr already carry absolute depth), '12m trend intact', 'bounce started'. Scored by an LLM this
+    swung 7 points across three runs on unchanged inputs (QTUM 6 -> 1 -> 8); here it cannot move
+    unless the scan moves."""
+    s = 5 if dd_pctile <= .02 else 4 if dd_pctile <= .05 else 3 if dd_pctile <= .10 else 2 if dd_pctile <= .25 else 1
+    s += 3 if rs_spy_12m > 0 else 2 if rs_spy_12m > -.15 else 1 if rs_spy_12m > -.35 else 0
+    s += 2 if stabilizing else 0
+    return min(max(s, 1), 10)
 VETO = 3  # cause <= VETO → avoid
 THIN_RR = 1.3  # R/R = TP / 1.5 monthly sigma, i.e. dip depth in vol units; below this = thin: wtd −1 and never buy (still listed)
 
@@ -53,11 +67,16 @@ def main(date, capital=None, only=None):
         shutil.copy(out.parent.parent / "data" / "scan.csv", snap)
         print(f"froze data/scan.csv → {snap}")
     scan = pd.read_csv(snap, index_col=0)
-    ballots = {l: out / f"score_{l}.md" for l in W if (out / f"score_{l}.md").exists()}
+    ballots = {l: out / f"score_{l}.md" for l in BALLOT_LENSES if (out / f"score_{l}.md").exists()}
     cands = set(re.findall(r"^\|\s*\d+\s*\|\s*([A-Z]+)\s*\|", next(iter(ballots.values())).read_text(), re.M))
     df = pd.DataFrame({l: parse(p, cands) for l, p in ballots.items()})
+    if "price_score" in scan:                      # scans written since the price lens became code
+        df["price"] = scan.price_score.reindex(df.index)
+    else:                                          # older frozen scans: recompute from their columns
+        df["price"] = [price_score(scan.dd_pctile[t], scan.rs_spy_12m[t], bool(scan.stabilizing[t]))
+                       for t in df.index]
     assert not df.isna().any().any(), f"missing scores:\n{df[df.isna().any(axis=1)]}"
-    have = list(ballots)
+    have = list(ballots) + ["price"]
     wsum = sum(W[l] for l in have)
     df["wtd"] = sum(df[l] * W[l] for l in have) / wsum
     df["veto"] = df.get("cause", pd.Series(10, index=df.index)) <= VETO

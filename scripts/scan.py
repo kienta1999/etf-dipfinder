@@ -9,6 +9,8 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
+from consolidate import price_score
+
 # --- knobs ---
 DD_MIN = -0.10          # at least this far off 52w high (fast dip)
 MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
@@ -110,6 +112,7 @@ def flag_dips(df):
     df["stabilizing"] = df.ret_10d > 0
     dips = df[df.is_dip]
     df["dip_score"] = dips[["dd_z", "rs_spy_6m", "vs_sma200"]].rank(pct=True).mean(axis=1)
+    df["price_score"] = [price_score(r.dd_pctile, r.rs_spy_12m, bool(r.stabilizing)) for _, r in df.iterrows()]
     df["theme_score"] = df.dip_score.groupby(df.theme).transform("min").where(df.is_dip)   # theme's best dip
     df["is_candidate"] = df.is_dip & (df.theme_score.rank(method="dense") <= TOP_THEMES)
     return df.sort_values(["is_candidate", "theme_score", "dip_score", "rs_spy_3m"], ascending=[False, True, True, True])
