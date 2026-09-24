@@ -1,0 +1,38 @@
+# necessity — 2026-09-23
+| rank | ETF | score | one-line reason (this lens only) | key source |
+| 1 | URNM | 10 | WNA: uranium demand +28% by 2030, doubling to 150kt by 2040; existing mines cover only 40% of reactor needs by 2035, no substitute in operating reactors | tradingview.com Reuters 2025-09-05 |
+| 2 | IGF | 10 | EIA 9/1/26: strongest 4-yr US electricity growth since 2000 on data centers; every electron needs the same wires — grid cannot be routed around | webpronews 2026-09-23 |
+| 3 | PAVE | 10 | Same grid/infra theme: PJM peak demand +32GW by 2030 on data centers; transformer/switchgear lead times measured in years, prices doubled in 5 yrs | webpronews 2026-09-23 |
+| 4 | NLR | 10 | Same nuclear theme: utilities signing long-term contracts above $150/lb; reactor fuel demand is inelastic — baseload plants must buy to run | ainvest 2026-09-23 |
+| 5 | URA | 10 | Same nuclear theme: 70GW under construction globally (30-yr high); new uranium mines take 10-20 yrs from discovery — the gap cannot be built around | oilprice.com 2026-09-23 |
+| 6 | REMX | 9 | IEA: magnet rare-earth demand doubled since 2015, +33% by 2030; Adamas sees 60kt/yr NdFeB undersupply by 2030 — EV motors/wind/defense have no high-performance substitute | mining.com 2026-09-23 |
+| 7 | XAR | 9 | SIPRI: global military spending hit record $2.89T in 2025, 11th consecutive increase; US Congress approved >$1T for 2026 — structural, not a spike | defensenews 2026-04-27 |
+| 8 | XLU | 9 | Data centers to claim 8-11.8% of US electricity by 2030 (DOE/LBNL); regulated utilities are the monopoly delivery vehicle for load that must be served | webpronews 2026-09-23 |
+| 9 | ITA | 9 | Same US-defense theme: NATO target raised to 5% of GDP by 2035; Europe +14% in 2025, sharpest Central/Western Europe growth since Cold War end | informedclearly.com 2026-09-23 |
+| 10 | PPA | 9 | Same US-defense theme: sovereign military capability has no substitute; US budgets rising toward $1.5T by 2027 under current proposals | defensenews 2026-04-27 |
+| 11 | TAN | 8 | IEA: renewables 45% of global electricity by 2030, solar 80% of new additions; cheapest new power in nearly every country — economics now subsidy-independent | argusmedia.com 2026-09-23 |
+| 12 | LIT | 8 | Lithium demand ~3Mt LCE by 2030 (5x 2022); lithium-ion keeps 85-90% of batteries through 2030 — sodium-ion only 3-5%, capping pricing power not dominance | mining.com Bain 2024 |
+| 13 | ICLN | 8 | IEA Renewables 2025: ~890GW/yr renewable additions by 2030, solar+wind 96% of it as the most affordable new capacity in almost every country | argusmedia.com 2026-09-23 |
+| 14 | PBW | 8 | Same clean theme: IEA net-zero pathway needs $5T/yr energy investment by 2030; solar at 630GW/yr plus wind at 390GW/yr additions | taiyangnews.info 2026-09-23 |
+| 15 | QCLN | 8 | Same clean theme: EU alone targets 700GW solar by 2030; electrification of transport and industry is a structural multi-decade buildout | ainvest 2026-09-23 |
+| 16 | ITB | 8 | US structurally short ~3.7M homes (Freddie Mac); 1M households never formed for lack of supply — demographic demand does not cycle away | resiclubanalytics.com 2026-09-23 |
+| 17 | XHB | 8 | Same housing theme: White House economists peg single-family shortfall at 10M; trapped-renter cohort is a multi-year demand floor | credaily.com 2026-04-14 |
+| 18 | SLV | 7 | 50-60% of silver is industrial, 5 straight deficit years; but thrifting is real — copper alternatives could displace 260M oz/yr by 2030 per Heraeus | ad-hoc-news.de 2026-09-23 |
+| 19 | INDA | 7 | SBI: India 3rd-largest economy by 2028, upper-middle income by 2030; median age 28, largest young workforce — structural growth, though other EMs partially substitute | livemint.com 2026-01-20 |
+| 20 | GLD | 6 | Central-bank de-dollarization buying is structural, but gold-as-hedge is substitutable and it has no industrial necessity underpinning it | barchart via stoneybrookelevators.ca 2026-09-23 |
+| 21 | UFO | 6 | Space economy $626B 2025 to ~$950B by 2030, launch services 15.2% CAGR; satellite infra increasingly critical but tourism/in-space manufacturing are optional | newswire.ca 2026-07-20 |
+| 22 | ARKX | 6 | Same space theme: demand structurally rising, yet the world functions fine without the aspirational half of the $1.8T 2035 forecast | prnewswire 2026-07-20 |
+| 23 | VNM | 6 | Vietnam: 7.8% GDP growth, manufacturing diversification hub; but a small economy — factories can route to India/Mexico/Indonesia instead | thailand-business-news.com 2026-09-14 |
+| 24 | KWEB | 4 | China tech is actively being routed around — decoupling/friendshoring plus domestic platform alternatives make the theme substitutable by design | dossier 2026-09-23 |
+
+Top-3 notes:
+- URNM (nuclear): the WNA's Nuclear Fuel Report sees uranium demand rising 28% by 2030 and more than doubling to 150,000 tU by 2040 from ~67,000 t in 2024, while existing mines cover only 40% of reactor requirements by 2035 and new mines take 10-20 years from discovery (Reuters via tradingview, 2025-09-05; ainvest, 2026). Because operating reactors cannot substitute uranium, this is physical need, not preference — the lens's top-end criterion.
+- IGF (grid/infra): the EIA's September 1, 2026 forecast calls for the strongest four-year US electricity growth since 2000, driven by data centers that Goldman Sachs puts at 8% of US power by 2030, with PJM alone facing +32 GW of peak demand by 2030 and transformer lead times measured in years (webpronews, 2026-09-23). Every generation technology — solar, wind, nuclear, gas — needs the same wires, so grid buildout is the one theme that cannot be substituted or routed around.
+- REMX (rare earths): the IEA finds demand for the four magnet rare earths has doubled since 2015 and rises another third by 2030, with permanent magnets accounting for ~95% of rare-earth consumption by value across EVs, wind turbines, AI data centers and defense (IEA via blerrp.com, 2026-09-22). Adamas Intelligence forecasts 60,000 t/yr of NdFeB undersupply by 2030 while China holds 91% of refining and 94% of magnet output — and high-performance magnets have no substitute.
+
+Disagreements with the dossier's first-pass memo:
+- Solar/TAN and clean (PBW/ICLN/QCLN): the memo frames these as "rate victims" (cause). On necessity there is no downgrade — the US residential credit (25D) is definitively gone (ended 12/31/2025; commercial 48E runs through 2027/2030), but global solar necessity is now subsidy-independent: cheapest new power in nearly every country per the IEA. Necessity scores 8, not penalized for the subsidy cut.
+- Space (UFO/ARKX): the memo notes the Starship Flight 14 trigger (a catalyst judgment). On necessity the theme scores only 6 — launch demand is real (15.2% CAGR) but the world does not *need* the aspirational half of the $1.8T-by-2035 forecast (tourism, cislunar); necessity is modest, not a buy signal on its own.
+- KWEB: the memo says "policy overhang, not a sale" (cause). On necessity this is the panel's lowest score (4) — the theme is actively being routed around via decoupling and friendshoring, which is precisely the lens's low-end criterion ("can anything route around it?").
+- Gold (GLD): the memo says "geopolitical bid survives the hike" (cause). Necessity is only 6 — a monetary hedge with structural central-bank demand, but substitutable as a hedge and backed by no industrial need.
+- Housing (ITB/XHB): the memo calls it a "break" on demand destruction (cause). Necessity disagrees with the implication: the US is structurally 3.7-10M homes short, so the *need* for homebuilding is 8 even when the rate cycle is crushing demand — the lens judges the 5-10y need, not the current cycle.
