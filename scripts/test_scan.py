@@ -104,4 +104,14 @@ from consolidate import deploy
 d = deploy(pd.DataFrame({"bucket": ["buy", "buy", "watch"], "sl_pct": [-0.1, -0.2, -0.1], "tp_pct": [0.3, 0.3, 0.3]}, index=list("XYZ")), 30000)
 assert list(d.index) == ["X", "Y"] and list(d.usd) == [20000, 10000]        # each loses the same $ at its stop
 assert d.loss_at_sl.sum() == -4000 and d.gain_at_tp.sum() == 9000
+# memo rendering: the three ways 2026-09-28's memo broke on GitHub
+from check_memo import render_problems
+good = "| a | b |\n|---|---|\n| 1 | $5 |\n\ntext\n"
+assert render_problems(good) == []
+assert "delimiter" in render_problems("| a | b |\n|---|---|---|\n| 1 | 2 |\n")[0][1]      # 2 vs 3 columns
+assert render_problems("| a |\n|---|\n| 1 |\nMax loss\n")[0][0] == 4                     # text folded into table
+assert render_problems("spend $1.5T request, RTX $289B backlog\n") == []               # closer before a digit
+assert render_problems("costs $5 and $10\n") == []
+assert "math" in render_problems("the $x$ term\n")[0][1]
+assert render_problems("the \\$x\\$ term and `$a$`\n") == []                          # escaped / in code
 print("ok")

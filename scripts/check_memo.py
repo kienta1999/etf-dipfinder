@@ -21,6 +21,35 @@ DOUBT = re.compile(r"unverif|unconfirm|not confirmed|not found|no (verified )?da
                    re.I)
 
 
+def render_problems(text):
+    """[(line_no, problem)] for markdown GitHub will not render as written."""
+    out, L = [], text.splitlines()
+    in_table = False
+    for i, ln in enumerate(L):
+        row = ln.strip().startswith("|")
+        nxt = L[i + 1].strip() if i + 1 < len(L) else ""
+        if row and not in_table and nxt.startswith("|"):
+            if not (re.fullmatch(r"\|[\s:|-]*\|?", nxt) and "-" in nxt):
+                out.append((i + 1, "table header has no |---| delimiter row, so GitHub renders the whole "
+                                   "table as one paragraph"))
+            else:
+                h, d = ln.strip().strip("|").count("|"), nxt.strip("|").count("|")
+                if h != d:
+                    out.append((i + 1, f"header has {h+1} columns but the delimiter has {d+1} - GitHub does "
+                                       f"not render a table whose delimiter row does not match its header"))
+        if in_table and not row and ln.strip():
+            out.append((i + 1, "text directly under a table (no blank line) - GitHub folds it into the table "
+                               "as a row"))
+        in_table = row
+        # $...$ is inline math on GitHub when the opener is followed by a non-space and the closer is
+        # preceded by one and not followed by a digit - so "$18,700 | -$3,400" is safe, "$1.5T ... RTX$" is not.
+        bare = re.sub(r"`[^`]*`", "", ln)
+        if re.search(r"(?<!\\)\$(?=\S)[^$]*?(?<=\S)(?<!\\)\$(?!\d)", bare):
+            out.append((i + 1, "unescaped $...$ pair - GitHub renders the text between them as a math "
+                               "formula; write \\$"))
+    return out
+
+
 def memo_table(date):
     """(header line, {ticker: bucket}) for the memo's main ranking table."""
     for p in (ROOT / "log" / f"{date}.md", ROOT / "log" / f"{date}-lite.md"):
@@ -156,25 +185,11 @@ def main(date):
                 + (" on identical prices" if same_scan else "") + f": {sorted(moved)}"
                 + " - the memo should say why, or the judgment layer is just noisy")
 
-    # 6b. A table with no |---| delimiter renders on GitHub as one wall of pipes. The memo is the
-    #     deliverable; one that does not render is not published, however correct its numbers.
+    # 6b. The memo is the deliverable; one GitHub cannot render is not published, however correct its
+    #     numbers. 2026-09-28 shipped all three failures below at once.
     for mp in (ROOT / "log" / f"{date}.md", ROOT / "log" / f"{date}-lite.md"):
-        if not mp.exists():
-            continue
-        L = mp.read_text().splitlines()
-        for i, ln in enumerate(L):
-            row = ln.strip().startswith("|")
-            prev = i > 0 and L[i - 1].strip().startswith("|")
-            nxt = L[i + 1].strip() if i + 1 < len(L) else ""
-            if row and not prev and nxt.startswith("|"):
-                if not (re.fullmatch(r"\|[\s:|-]*\|?", nxt) and "-" in nxt):
-                    errors.append(f"{mp.name} line {i+1}: table header has no |---| delimiter row, "
-                                  f"so GitHub renders the whole table as one paragraph")
-                else:
-                    h, d = ln.strip().strip("|").count("|"), nxt.strip("|").count("|")
-                    if h != d:
-                        warns.append(f"{mp.name} line {i+1}: header has {h+1} columns but the "
-                                     f"delimiter has {d+1} — the table will render ragged")
+        if mp.exists():
+            errors.extend(f"{mp.name} line {n}: {msg}" for n, msg in render_problems(mp.read_text()))
 
     # 7. A run nobody committed is a run nobody else can see. check_memo reads the filesystem,
     #    so everything above passes locally whether or not the work was ever pushed - which is
