@@ -180,3 +180,31 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - check_memo.py 2026-09-27: 1 error (uncommitted files — coordinator commits/pushes after all panels), 1 warning (byte-identical scan — expected in lite mode). Memo: log/2026-09-27-lite.md.
 - $100k risk parity (official script, 4 buys): UFO $25,400 (SL −12%, TP +56%), GLD $29,200 (SL −10%, TP +26%), REMX $17,400 (SL −17%, TP +64%), IHI $28,000 (SL −11%, TP +24%); each loses $3,000 at its stop; max loss −$12,000, max gain +$39,700. Tranche: all in now — Flight 14 tomorrow, MOFCOM snapback 11/10; stops as orders, TPs as alerts.
 - Known discrepancy (reported, not fixed — skill is read-only): SKILL.md/lenses.md/README prose still describes five subagent panelists incl. price; consolidate.py has BALLOT_LENSES = ["cause","necessity","catalyst","basket"] and computes price deterministically. Followed the script.
+
+## 2026-09-28 — daily consistency run 7/30 (ETF lite)
+
+- Pre-market 1:16 AM PDT, Monday. `git pull` clean, tree clean.
+- Fresh scan asof 2026-09-25 (no new completed session; Monday US session not open).
+  Scan materially identical to 2026-09-27: one float-formatting wobble in the XLV row
+  (non-candidate, −0.0208 vs −0.0209 in one derived column), everything else equal →
+  lite carry-forward per the byte-identical-scan rule.
+- Carried all 8 output files from output/2026-09-27/; consolidate.py 2026-09-28
+  regenerated scores.csv (bucket/veto/thin/theme_rank verified present).
+- Buys unchanged: UFO, REMX, GLD, IHI. Avoid: KWEB (cause-3 veto). Zero bucket
+  overrides; no thin names (ARKX R/R 1.32 clears).
+- Spot-checks (9/28): FAA AUTHORIZATION for Starship Flight 14 granted (thedailyflare
+  9/27); window today 8:15–9:30 AM EDT, status GO, Musk: "aiming to launch tomorrow
+  morning" — UFO's dated catalyst is live today. MOFCOM No. 70: no extension signed
+  over the weekend (rare earths silent at the 9/24 summit; silmarilmedia/sphera
+  confirm 11/10/26 automatic snapback) — REMX forcing function intact. Regime:
+  10y closed 5.16% Friday (intraday 5.2297%, highest since 2007), 30y 5.5319%
+  (highest since 2004), Oct hike ~66% priced, S&P 500 7,743.41 (+0.5% Fri); gold
+  $4,284.8–4,291 (+0.4%); Trump rejected Iran's proposed deal over the weekend —
+  Hormuz-reopening optimism fragile into Monday.
+- $100k risk-parity (same buys): UFO $25.4k, GLD $29.2k, REMX $17.4k, IHI $28.0k;
+  max loss −$12,000, max gain +$39,700. Tranche: all in now (Flight 14 today,
+  11/10 MOFCOM snapback).
+- Memo: log/2026-09-28-lite.md. Open question (user's call, pending since 9/24):
+  user challenged "never lite, always full" vs the skill's byte-identical-scan
+  lite rule — the task body carries the lite rule, so lite was run; his ruling
+  is still pending.

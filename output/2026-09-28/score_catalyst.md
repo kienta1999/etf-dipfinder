@@ -1,0 +1,43 @@
+# catalyst — 2026-09-26
+| rank | ETF | score | one-line reason (this lens only) | key source |
+| 1 | UFO | 9 | Starship Flight 14 NET Mon Sept 28 — first orbital attempt, 26 Starlink V3 sats; wet dress rehearsal complete 9/24, pending FAA license. | https://teslanorth.com/2026/09/23/starship-flight-14-september-28/ |
+| 2 | ARKX | 9 | Same Flight 14 theme catalyst as UFO (thin flag is a basket/price issue, not a catalyst one); sell-the-news risk post-launch. | https://www.teslarati.com/spacex-tells-the-fcc-that-starship-flight-14-is-going-to-orbit/ |
+| 3 | REMX | 9 | China MOFCOM suspension (Announcement No. 70) expires Nov 10, 2026 — expanded rare-earth controls snap back unless extended; "no extension" not priced. | https://silmarilmedia.com/article/november-mineral-truce-expiry-markets-manufacturers-repricing-risk |
+| 4 | GLD | 7 | Nov 10 expiry is a dated risk-off/safe-haven trigger, plus FOMC Oct 27–28 decision on real yields — two dated forks, both near. | https://sphera.com/resources/blog/your-rare-earth-exposure-may-be-invisible/ |
+| 5 | SHLD | 6 | LMT Q3 Oct 20 (announced) opens the defense earnings wave — bookings/backlog prints are the war-premium reversal test; routine, market positioned. | https://www.zacks.com/stock/research/LMT/earnings-calendar |
+| 6 | XAR | 6 | Same LMT-led earnings wave as SHLD; no sibling-specific dated trigger. | https://www.zacks.com/stock/research/LMT/earnings-calendar |
+| 7 | ITA | 6 | Same LMT-led earnings wave as SHLD. | https://www.zacks.com/stock/research/LMT/earnings-calendar |
+| 8 | PPA | 6 | Same LMT-led earnings wave as SHLD. | https://www.zacks.com/stock/research/LMT/earnings-calendar |
+| 9 | IHI | 6 | ISRG Q3 Oct 20 (est.) — 14% of the fund; procedure-volume print is the dated test of the expensive-defensive de-rating. | https://www.zacks.com/stock/research/ISRG/earnings-calendar/ |
+| 10 | TAN | 6 | ENPH Q3 Oct 27 (est.) is the residential-solar demand read; routine earnings, market positioned, direction two-sided. | https://www.zacks.com/stock/research/ENPH/earnings-calendar?icid=SITE_SECTION-SUB_SECTION-quote_nav_tracking-zcom-left_subnav_quote_navbar-earnings_dates_announcements/ |
+| 11 | XLU | 6 | FOMC Oct 27–28 (~70% priced second hike): a hold/pause surprise is the flow reversal for duration; a hike extends the pain. | dossier regime section (FOMC Oct 27–28) |
+| 12 | ICLN | 6 | Clean Q3 wave: ENPH Oct 27 + SEDG Nov 4 (est.) — SEDG the most direct holding read-through; routine, market positioned. | https://www.marketbeat.com/stocks/NASDAQ/SEDG/earnings/ |
+| 13 | PBW | 6 | Same clean-earnings wave as ICLN. | https://www.marketbeat.com/stocks/NASDAQ/SEDG/earnings/ |
+| 14 | QCLN | 6 | Same clean-earnings wave as ICLN. | https://www.marketbeat.com/stocks/NASDAQ/SEDG/earnings/ |
+| 15 | IGF | 6 | MSFT Q1 FY27 ~Oct 27/28 (unconfirmed est.) — capex guidance is the dated AI-grid-demand reaffirmation; routine, market positioned. | https://www.wallstreethorizon.com/microsoft-earnings-calendar |
+| 16 | PAVE | 6 | Same MSFT-capex theme driver as IGF. | https://www.wallstreethorizon.com/microsoft-earnings-calendar |
+| 17 | ITB | 6 | DHI fiscal Q4 Oct 29 (company-confirmed) + FOMC Oct 27–28: orders/margin print and rate fork, both genuinely two-sided. | https://www.businesswire.com/news/home/20260910426955/en/D.R.-Horton-Inc.-to-Release-2026-Fourth-Quarter-and-Fiscal-Year-End-Earnings-on-October-29-2026 |
+| 18 | XHB | 6 | Same DHI/FOMC theme driver as ITB. | https://www.businesswire.com/news/home/20260910426955/en/D.R.-Horton-Inc.-to-Release-2026-Fourth-Quarter-and-Fiscal-Year-End-Earnings-on-October-29-2026 |
+| 19 | LIT | 6 | ALB Q3 Nov 4 (est.) — sector's next formal supply/pricing update; note the Q2 beat ($3.75 vs $3.20) still sold off, so direction is two-sided. | https://marketbeat.com/stocks/NYSE/ALB/earnings/ |
+| 20 | ARGT | 6 | IMF third-review mission in Buenos Aires (~Sept 21) deciding ~$900M disbursement; Board decision expected October — genuine near-term positive fork. | https://particle.news/story/imf-begins-third-review-of-argentina-program-to-decide-us900-million-release |
+| 21 | URNM | 5 | No verified dated trigger: "Cameco Q3 Oct 30" unconfirmed — cameco.com lists no 2026 Q3 date (2025 Q3 was reported early Nov); capped per stop rule. | https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results |
+| 22 | NLR | 5 | Same unverified nuclear calendar as URNM. | https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results |
+| 23 | URA | 5 | Same unverified nuclear calendar as URNM. | https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results |
+| 24 | INDA | 5 | RBI MPC Oct 5–7 (decision Oct 7) is verified but leans adverse/neutral — hold expected, SBI argues the hike case strengthened; can't fix dollar-driven FPI outflows. | https://www.5paisa.com/blog/rbi-mpc-meeting-schedule |
+| 25 | KWEB | 4 | Calendar holds only adverse dates: Busan-truce expiry Jan 10, 2027 (verified cliff) and the Nov 10 rare-earth snapback hurts China tech supply chains — no positive trigger. | https://www.global-agriculture.com/global-agriculture/us-china-trade-truce-extended-through-january-2027-but-farm-purchase-pledges-lag/ |
+
+Top-3 notes:
+- UFO (9): The load-bearing fact is that SpaceX itself confirmed Monday, Sept 28 as the target for Flight 14 — the program's first orbital attempt, deploying 26 Starlink V3 satellites — and completed the full-stack wet dress rehearsal on Sept 24 (teslanorth, 9/23; teslarati, 9/24). The residual risk is the FAA license: SpaceX's own 9/23 post still says "pending regulatory approval," so the date is firm but not locked.
+- ARKX (9): ARKX rides the identical Flight 14 catalyst — the theme score is the same, with the thin flag (R/R 1.32) being a price/basket concern outside this lens. The nuance for ARKX is timing: a successful Sept 28 orbital flight is a sector-wide sentiment event, but its smaller, more volatile basket makes the dossier's sell-the-news risk more acute for it than for UFO.
+- REMX (9): The load-bearing fact is the automatic Nov 10, 2026 expiry of China's MOFCOM Announcement No. 70 suspension — the expanded rare-earth export controls snap back by default unless Beijing affirmatively extends (silmarilmedia, 9/23; sphera, ~9/15). The second leg is the Nov 27 expiry for gallium/germanium/antimony, and with Greer reintroducing "no extension" risk that stockmoguls (9/25) says is still not priced, the 45-day clock is the cleanest dated forcing function on this ballot.
+
+Disagreements with the dossier's first-pass memo:
+- Cameco Q3 "Oct 30": CHALLENGED — unverifiable. Cameco's own site lists no 2026 Q3 results date (the latest announced is the Q2 2026 report), and the Q3 2025 results were analyzed ~Nov 7–10, 2025 — an early-November pattern, not Oct 30. Nuclear is capped at 5 per the stop rule; a confirmed Q3 date would lift URNM/NLR/URA to ~6–7.
+- Housing/IHI "need a catalyst, which the searches did not produce": FOUND. Housing has D.R. Horton's company-confirmed fiscal Q4 print on Oct 29 (businesswire 9/10) plus the FOMC Oct 27–28 fork; IHI has Intuitive Surgical Q3 on Oct 20 (est.). Both dated and near, though directionally two-sided — hence 6s, not higher.
+- Defense "no dated catalyst": FOUND — Lockheed Martin Q3 on Oct 20 (announced per Zacks) opens the defense earnings wave; scored 6 (routine, market positioned).
+- Gold framed as pure rate victim with no catalyst: the Nov 10 rare-earth expiry is a dated risk-off/safe-haven trigger the market hasn't priced — GLD gets 7, not 5.
+- Clean "no dated catalyst": FOUND the Q3 earnings wave (ENPH Oct 27 est., SEDG Nov 4 est.) — scored 6, routine.
+- Argentina "unclear" resolves to 6: the IMF third-review mission (in Buenos Aires from ~Sept 21, deciding ~$900M disbursement, Board decision expected October) is a dated, concrete, near-term positive fork. Caveat: one AI-curated summary (vespernews) wrongly claims a presidential election is "two weeks" away — Argentina's next presidential election is Oct 2027 (midterms were Oct 2025); disregard that line.
+- Space sell-the-news risk: confirmed as real, but it doesn't change the 9 — the event is 2 days out and named by SpaceX itself.
+- All other first-pass catalyst calls (rare-earth Nov 10 as the forcing function; grid living on the FOMC/capex calendar) confirmed or upgraded with dated specifics.
+- Verification standard applied: a date reported by ≥2 independent earnings calendars (even as "estimated") anchors a score; a company announcement (LMT, DHI) is stronger. "Unconfirmed" dates (MSFT Oct 27/28 per Wall Street Horizon) are flagged in the row. Cameco fails the standard entirely — no source gives any 2026 Q3 date.
