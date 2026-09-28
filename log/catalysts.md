@@ -22,6 +22,8 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | macro | FOMC | FOMC decision | 2026-10-28 | federalreserve.gov FOMC calendar | 2026-09-18 |
 | macro | FOMC | FOMC decision | 2026-12-09 | federalreserve.gov FOMC calendar | 2026-09-18 |
 | ai/robot | GTC | NVIDIA GTC 2027, San Jose McEnery Convention Center — flagship AI/robotics launch showcase | 2027-03-14 | nvidia.com GTC FAQ | 2026-09-21 |
+| solar | Solar IV | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | 2026-10-14 | Reuters/SRN 2026-09-11; SMM; Sxcoal | 2026-09-28 |
+| solar | Solar IV | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | 2026-11-02 | Sxcoal 2026-09-14; Reuters 2026-09-11 | 2026-09-28 |
 
 ## Disputed
 
@@ -31,4 +33,4 @@ Move a row up into the table above (or delete it) once one does.
 
 | theme | claim | readings | sources | noted on |
 |---|---|---|---|---|
-| rare-earth | China's suspension of its Oct-2025 rare-earth export controls (MOFCOM Announcement No. 70) | (a) expires 2026-11-10 with automatic snapback — the 2026-09-24 Trump–Xi summit extended the *tariff* truce to 2027-01-10 but said nothing on rare earths; (b) the rare-earth suspension itself was extended to 2027-01-10 | (a) 2026-09-26 and 2026-09-27 verifiers (Sphera, SilmarilMedia; China's statement silent on rare earths); (b) 2026-09-25 verifier (Bessent 9/23, CNBC, WSJ), Rinnovabili. No MOFCOM text seen by either side | 2026-09-28 |
+| rare-earth | China's suspension of its Oct-2025 rare-earth export controls (MOFCOM Announcement No. 70) | (a) expires 2026-11-10 with automatic snapback — MOFCOM No. 70 text (2025-11-07, pre-summit), per Sphera and pre-summit SilmarilMedia; (b) the rare-earth export-control pause was extended with the truce to 2027-01-10 — Bessent confirmed post-9/24-summit (The Global Market Brief 9/26; chomcho; tamaranews 9/26). Some outlets (FXStreet, InvestedAlpha) report no *new* firm rare-earth commitments. No MOFCOM text seen on either side | (a) MOFCOM No. 70 text; (b) Bessent via The Global Market Brief 9/26, chomcho, tamaranews 9/26 | 2026-09-28 |

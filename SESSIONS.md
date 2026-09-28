@@ -208,3 +208,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
   user challenged "never lite, always full" vs the skill's byte-identical-scan
   lite rule — the task body carries the lite rule, so lite was run; his ruling
   is still pending.
+- 2026-09-28 full rerun (overwrites the morning lite run on the identical 9/25-asof scan; always-full ruling): dossier + 4 lenses (cause, necessity, catalyst, basket) re-judged from scratch, consolidate.py, verifier (1 demotion: REMX catalyst 9→6, buy→watch, via ballot edit + consolidate rerun), memo log/2026-09-28.md. Buy: NLR, ARKX, TAN, IHI; Core: XLU, IGF; Avoid: KWEB (veto). $100k risk parity: NLR $18,700, ARKX $28,700, TAN $21,400, IHI $31,100; max loss −$13,600, max gain +$36,900. Tranche: all in (independent catalysts). log/catalysts.md: +2 rows (Solar IV 10/14, 11/2), rare-earth dispute kept in ## Disputed, 0 retractions. check_memo.py exits 0.
