@@ -61,9 +61,9 @@ Regime: 2-3 lines.
 
 <4-line TP / SL / R/R / dip# / wtd footnote — same wording as the full memo, see log/2026-09-06.md>
 
-Deviations from the bucket rule (cause ≥ 7 and (stabilizing or cat ≥ 7), not thin, first non-vetoed in theme = buy, rest = alt):
+Deviations from the bucket rule (cause ≥ 7 and (stabilizing or cat ≥ 7), not thin, first non-vetoed in theme = buy; broad fund with cause ≥ 7 and necessity ≥ 8, not thin, first in theme = core; rest = alt):
 one sentence each (or "none"), including any demotion from the spot-check.
-Buy: ...   Alt: ...   Watch: ...   Avoid: ...
+Buy: ...   Core: ...   Alt: ...   Watch: ...   Avoid: ...
 
 ## With $100k (`consolidate.py lite 100000 <final buys>`)
 Risk-parity table: $ per buy, loss at SL, gain at TP, totals. Then the tranche call: buys sharing one macro date →

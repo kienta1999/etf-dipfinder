@@ -54,7 +54,8 @@ theme by weighted score, non-vetoed only), and `bucket`:
 |---|---|
 | avoid | cause ≤ 3 (veto) |
 | buy | cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not `thin` and `theme_rank == 1` |
-| alt | same but `theme_rank > 1` — URA/URNM/NLR are one position, not three |
+| core | broad fund (`BROAD_THEMES`: utilities, grid/infra, gold, staples, industrials, materials, realestate, banks), not a buy, with cause ≥ 7 and necessity ≥ 8, not `thin`, `theme_rank == 1` — no catalyst needed. Held long term: outside the risk-parity split, no stop, rebalance at ±25% of target weight, exit only on a cause veto |
+| alt | same (buy or core) but `theme_rank > 1` — URA/URNM/NLR are one position, not three |
 | watch | everything else — incl. `thin` (R/R < 1.3), which also costs 1 point of `wtd` |
 
 The orchestrator then sets **my rank** and may override a bucket; every deviation from `scores.csv` gets one sentence

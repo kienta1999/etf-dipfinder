@@ -29,16 +29,39 @@ def unexpired(asof=None):
     return [r for r in load() if r["date"] >= asof and "RETRACTED" not in r["match"].upper()]
 
 
+def disputed():
+    """Rows under '## Disputed': dates sources contradict each other on. Neither reading is confirmed."""
+    rows, on = [], False
+    for ln in LEDGER.read_text().splitlines():
+        if ln.startswith("## "):
+            on = ln.strip().lower().startswith("## disputed")
+            continue
+        c = [x.strip() for x in ln.strip().strip("|").split("|")] if on and ln.strip().startswith("|") else []
+        if len(c) == 5 and not set(c[0]) <= set("-: ") and c[0] != "theme":
+            rows.append(dict(zip(["theme", "claim", "readings", "sources", "noted_on"], c)))
+    return rows
+
+
 def block(asof=None):
-    live = unexpired(asof)
+    live, dis = unexpired(asof), disputed()
+    tail = []
+    if dis:
+        tail = ["", "### Disputed — sources contradict each other; neither date is confirmed", "",
+                "| theme | claim | readings | sources |", "|---|---|---|---|"]
+        tail += [f"| {r['theme']} | {r['claim']} | {r['readings']} | {r['sources']} |" for r in dis]
+        tail += ["", "A catalyst score of 7+ that rests on a disputed date must cite a primary source (the issuing",
+                 "ministry / agency / company) that settles it; otherwise score only what holds under both readings."]
     if not live:
-        return "## D. Confirmed catalysts carried forward\n\nNone live.\n"
+        return "\n".join(["## D. Confirmed catalysts carried forward", "", "None live."] + tail) + "\n"
     out = ["## D. Confirmed catalysts carried forward — already verified, do NOT rescore as 'not found'",
            "", "| theme | event | date | confirmed by |", "|---|---|---|---|"]
     out += [f"| {r['theme']} | {r['event']} | **{r['date']}** | {r['confirmed_by']} |" for r in live]
     out += ["", "A panelist that cannot re-find one of these writes \"carried forward, not re-searched\" and keeps",
-            "the band the date earns. It does not score the theme down for having no dated trigger."]
-    return "\n".join(out) + "\n"
+            "the band the date earns. It does not score the theme down for having no dated trigger, and never",
+            "calls it \"unverified\": only a cited source that CONTRADICTS the date overturns it (write",
+            "\"CONTRADICTED: <source>\"; the verifier then marks the ledger row RETRACTED). check_memo.py fails",
+            "a ballot that doubts a live row without one."]
+    return "\n".join(out + tail) + "\n"
 
 
 if __name__ == "__main__":

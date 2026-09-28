@@ -24,6 +24,11 @@ def price_score(dd_pctile, rs_spy_12m, stabilizing):
     return min(max(s, 1), 10)
 VETO = 3  # cause <= VETO → avoid
 THIN_RR = 1.3  # R/R = TP / 1.5 monthly sigma, i.e. dip depth in vol units; below this = thin: wtd −1 and never buy (still listed)
+# Broad sector / infrastructure / gold funds: a temporary cause on something the world needs usually recovers; a dated
+# catalyst only says *when*. They get their own path (bucket "core") that drops the catalyst/stabilizing leg and is held
+# long term (rebalance bands, no stop). Narrow themes (space, nuclear, rare earths, solar, china…) keep the buy rule.
+BROAD_THEMES = {"utilities", "grid/infra", "gold", "staples", "industrials", "materials", "realestate", "banks"}
+CORE_NECESSITY = 8  # necessity >= this (with cause >= 7) makes a broad fund core
 
 def parse(p, candidates):
     rows = re.findall(r"^\|\s*\d+\s*\|\s*([A-Z]+)\s*\|\s*(\d+)\s*\|", p.read_text(), re.M)
@@ -33,7 +38,9 @@ def parse(p, candidates):
 
 def bucket(df):
     """buy = cause ≥ 7 and (stabilizing or catalyst ≥ 7) and not thin and first eligible in theme; alt = same but not
-    first; avoid = veto; else watch. thin (R/R < THIN_RR) costs 1 point of wtd and can't be a buy.
+    first; core = a BROAD_THEMES fund that is not a buy but has cause ≥ 7 and necessity ≥ CORE_NECESSITY, not thin, first
+    in theme (no catalyst needed; a later-ranked sibling that qualifies the same way is alt); avoid = veto; else watch.
+    thin (R/R < THIN_RR) costs 1 point of wtd and can't be a buy or core.
     theme_rank counts non-vetoed rows only (0 = vetoed). Sorts by wtd and (re)writes wtd_rank."""
     df = df.copy()
     df["thin"] = df.rr < THIN_RR
@@ -44,9 +51,12 @@ def bucket(df):
     df["theme_rank"] = 0
     df.loc[ok, "theme_rank"] = df[ok].groupby("theme").cumcount() + 1
     qual = ok & ~df.thin & (df.cause >= 7) & (df.stabilizing.astype(bool) | (df.catalyst >= 7))
+    necessity = df["necessity"] if "necessity" in df else pd.Series(0, index=df.index)
+    core = ok & ~df.thin & df.theme.isin(BROAD_THEMES) & (df.cause >= 7) & (necessity >= CORE_NECESSITY)
     df["bucket"] = "watch"
-    df.loc[qual, "bucket"] = "alt"
-    df.loc[qual & (df.theme_rank == 1), "bucket"] = "buy"
+    df.loc[qual | core, "bucket"] = "alt"
+    df.loc[core & (df.theme_rank == 1), "bucket"] = "core"
+    df.loc[qual & (df.theme_rank == 1), "bucket"] = "buy"     # the dated-catalyst path wins when both apply
     df.loc[df.veto, "bucket"] = "avoid"
     return df
 
@@ -91,6 +101,10 @@ def main(date, capital=None, only=None):
     df.to_csv(out / "scores.csv", float_format="%.2f")
     print(f"lenses: {have} (weights renormalised to {wsum:.2f})")
     print(df.to_string(float_format="{:.2f}".format))
+    core = list(df.index[df.bucket == "core"])
+    if core:
+        print(f"\ncore (broad funds, long-term holds — outside the risk-parity split, no stop; rebalance at ±25% of "
+              f"target weight, exit only on a cause veto): {', '.join(core)}")
     if capital:
         d = deploy(df, capital, only)
         print(f"\ndeploy ${capital:,.0f} across buys (risk parity):")

@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 LENSES = ["cause", "necessity", "catalyst", "basket", "price"]   # price is computed, not balloted
 BALLOTS = ["cause", "necessity", "catalyst", "basket"]
 errors, warns = [], []
+DOUBT = re.compile(r"unverif|unconfirm|not confirmed|not found|no (verified )?dated|no date|could ?n[o']t (find|verify)",
+                   re.I)
 
 
 def memo_table(date):
@@ -94,10 +96,10 @@ def main(date):
             if not any(c in head for c in cols):
                 warns.append(f"memo header dropped '{col}' ({why})")
 
-    # 5. Every fund the rule buys must appear in the verifier's report (Phase 3.5).
+    # 5. Every fund the rule buys (buy or core) must appear in the verifier's report (Phase 3.5).
     if "bucket" in committed.columns:
         vf = next((out / n for n in ("verifier.md", "verify.md") if (out / n).exists()), None)
-        buys = list(committed.index[committed.bucket == "buy"])
+        buys = list(committed.index[committed.bucket.isin(["buy", "core"])])
         if vf is None:
             errors.append(f"no verifier report in output/{date} - Phase 3.5 is not optional")
         else:
@@ -115,6 +117,20 @@ def main(date):
                 errors.append(f"confirmed catalyst dropped: {r['match']} ({r['event']}, {r['date']}) is live for "
                               f"theme '{r['theme']}' and verified on {r['verified_on']}, but score_catalyst.md "
                               f"never mentions it")
+
+    # 5c. ...nor be scored down as "unverified". A confirmed row is overturned only by a cited source that
+    #     CONTRADICTS it (then the verifier marks the row RETRACTED). "Could not find it" is not evidence:
+    #     on 2026-09-26 the ballot and verifier called Cameco's Oct 30 date "unverifiable" - a date two
+    #     earlier verifiers had quoted from Cameco's own release - and capped nuclear at catalyst 5.
+    if cat_ballot.exists() and "theme" in committed.columns:
+        live = {r["theme"]: r for r in carry_forward.unexpired(date)}
+        for t, s, note in re.findall(r"^\|\s*\d+\s*\|\s*\**([A-Z]+)\**\s*\|\s*(\d+)\s*\|(.*)$",
+                                     cat_ballot.read_text(), re.M):
+            r = live.get(committed.theme.get(t))
+            if r and DOUBT.search(note) and "CONTRADICTED" not in note:
+                errors.append(f"{t} catalyst {s}: ballot doubts a confirmed catalyst ({r['match']} {r['date']}, "
+                              f"log/catalysts.md, verified {r['verified_on']}) without citing a contradicting "
+                              f"source - write 'CONTRADICTED: <source>' or score the date it has")
 
     # 6. Lens scores that move hard with no new prices behind them.
     prev = [d.name for d in sorted((ROOT / "output").iterdir())

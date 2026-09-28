@@ -55,7 +55,10 @@ of the fund is a different theme · **3** a single name above ~20%, or half the 
   weighted score — every deviation gets one written sentence. It always deviates from `dip_score`
   (that is depth, not quality) — the memo shows both so the reader can see the gap.
 - Bucket is computed by `consolidate.py`: buy = cause ≥ 7 AND (stabilizing OR catalyst ≥ 7) AND not thin AND first
-  non-vetoed in its theme; alt = same but not first; avoid = veto; else watch. Thin = R/R < 1.3:
+  non-vetoed in its theme; core = a broad fund (utilities, grid/infra, gold, staples, industrials, materials,
+  realestate, banks) that is not a buy but has cause ≥ 7 AND necessity ≥ 8, not thin, first in its theme — no catalyst
+  needed, because a temporary cause on something the world needs recovers and a date only says when; alt = same (buy or
+  core) but not first; avoid = veto; else watch. Thin = R/R < 1.3:
   wtd −1 and never buy — vol-normalised depth, so a −10% XLU dip can be deeper than a −20% NLR dip; thin names stay in the table but sink. Overrides go in the memo as deviations.
 
 ## Ballot format (every lens)

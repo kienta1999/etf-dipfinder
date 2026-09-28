@@ -69,6 +69,29 @@ assert list(b.wtd) == [8.0, 7.0, 6.5, 6.0, 5.0]            # thin costs exactly 
 assert list(b.wtd_rank) == [1, 2, 3, 4, 5]
 assert list(b.theme_rank) == [1, 2, 3, 0, 1]
 assert list(b.bucket) == ["buy", "alt", "watch", "avoid", "watch"]   # E qualifies on every leg but thin
+# core: broad funds need cause + necessity, not a catalyst. Replays 2026-09-26 (XLU/IGF/PAVE/GLD) plus edge cases.
+sc = pd.DataFrame({"cause":      [10, 8, 8, 8, 8, 6, 8, 8],
+                   "necessity":  [10, 10, 10, 6, 9, 10, 7, 9],
+                   "catalyst":   [6, 6, 6, 7, 3, 6, 3, 6],
+                   "stabilizing": [False] * 8,
+                   "veto":       [False] * 8,
+                   "theme": ["utilities", "grid/infra", "grid/infra", "gold", "space", "staples", "banks", "materials"],
+                   "wtd":        [8.45, 7.85, 7.25, 7.10, 7.0, 6.9, 6.8, 6.7],
+                   "rr":         [2.9, 2.5, 1.6, 2.5, 3.0, 2.0, 2.0, 1.1],
+                   "sl_pct": [-0.06, -0.04, -0.08, -0.10, -0.12, -0.05, -0.08, -0.09],
+                   "tp_pct": [0.18, 0.10, 0.12, 0.26, 0.56, 0.10, 0.16, 0.10]}, index=["XLU", "IGF", "PAVE", "GLD", "UFO", "XLP", "KBE", "XLB"])
+b = bucket(sc)
+assert b.bucket["XLU"] == "core" and b.bucket["IGF"] == "core"  # the two broad funds the catalyst gate kept on watch
+assert b.bucket["PAVE"] == "alt"                                # qualifies, but IGF leads grid/infra
+assert b.bucket["GLD"] == "buy"                                 # catalyst 7: the buy path wins over core
+assert b.bucket["UFO"] == "watch"                               # narrow theme: necessity 9 alone never makes core
+assert b.bucket["XLP"] == "watch"                               # cause 6 < 7: necessity cannot carry a weak cause
+assert b.bucket["KBE"] == "watch"                               # necessity 7 < CORE_NECESSITY
+assert b.bucket["XLB"] == "watch"                               # thin (R/R < 1.3) is never core
+sc.loc["XLU", ["cause", "veto"]] = [3, True]
+assert bucket(sc).bucket["XLU"] == "avoid"                      # the cause veto still overrides everything
+from consolidate import deploy as _deploy
+assert list(_deploy(b, 10000).index) == ["GLD"]                 # core stays out of the risk-parity split
 # price lens is arithmetic now: same inputs must always give the same score
 assert price_score(.01, .10, True) == 10      # worst 1%, 12m intact, bouncing
 assert price_score(.30, -.50, False) == 1     # ordinary patch, trend broken, still falling

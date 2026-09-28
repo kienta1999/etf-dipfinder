@@ -68,17 +68,21 @@ say "the world needs uranium" without knowing whether it's cheap.
 `score = 0.30·cause + 0.20·necessity + 0.20·catalyst + 0.15·basket + 0.15·price`, −1 if thin (R/R < 1.3).
 **Veto:** cause ≤ 3 → *avoid* regardless. Then set **my rank**: start from the weighted score, read
 all five ballots, and reorder where the ballots' facts justify it — one sentence per deviation.
-`consolidate.py` writes the `bucket` column (buy / alt / watch / avoid — rule in README §2): overlapping funds
+`consolidate.py` writes the `bucket` column (buy / core / alt / watch / avoid — rule in README §2; *core* is a broad
+fund bought on cause + necessity without a dated catalyst, held long term with no stop): overlapping funds
 (URA/URNM/NLR, GLD/GDX/GDXJ, ICLN/QCLN/PBW…) are one position, so only `theme_rank == 1` can be buy; the rest are *alt*.
 Start the memo from `scores.csv` buckets; any override (e.g. a rule-buy you judge watch) is a deviation — one sentence.
 Never hand-edit `scores.csv`; my rank lives in the memo only.
 
 Phase 3.5 — verifier, not optional in panel mode: one Opus verifier re-checks, from primary sources with
-uncapped searches, the load-bearing facts behind **every fund the rule buckets `buy`** (not the top 3 by
+uncapped searches, the load-bearing facts behind **every fund the rule buckets `buy` or `core`** (not the top 3 by
 weighted score — on 2026-09-18 UFO was a buy ranked 10th and went unverified, so the one position whose
 whole case was a dated event had that date checked by nobody), plus the regime premises the memo opens on.
 Every dated event it CONFIRMS gets a row appended to `log/catalysts.md` (theme, match keyword, event,
-date, source, verified-on) so the next run inherits it. It writes `output/<DATE>/verifier.md` as a claim / verdict / evidence table — confirmations listed the same
+date, source, verified-on) so the next run inherits it. A live row is overturned only by a cited source that
+CONTRADICTS it — then mark it `RETRACTED` with that source; "could not re-find it" leaves the row standing, and
+`check_memo.py` fails a catalyst ballot that calls a live row "unverified". Dates that sources contradict each other
+on go in the ledger's `## Disputed` table, not the confirmed one. It writes `output/<DATE>/verifier.md` as a claim / verdict / evidence table — confirmations listed the same
 way as demotions, so a clean pass leaves as much evidence as a failing one — and may demote. This is the phase that caught a stale quote holding up
 two rule-buys on 2026-09-06; skipping it makes the run a lite run with extra steps. Genuinely out of budget →
 run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
@@ -102,12 +106,14 @@ Regime: 2-3 lines.
 ...all candidates, in MY order...
 
 Deviations from weighted score: one sentence each.
-Buy: ...   Watch: ...   Avoid: ...
+Buy: ...   Core: ...   Watch: ...   Avoid: ...
 
 ## With $100k (`consolidate.py <DATE> 100000 <final buys>`)
 Risk-parity table: $ per buy, loss at SL, gain at TP, totals. Then tranche call: if the buys share one macro
 catalyst (same FOMC / same policy date) → half now, half after it; if independent → all in. Stops as orders,
 TPs as alerts. Max loss = all stops hit (gaps lose more); max gain = all funds back to 52w high (no timeline).
+Core funds are listed separately under the table, not in the risk-parity split: long-term holds, no stop,
+rebalance at ±25% of target weight, exit only if a later run vetoes the cause.
 
 Caveat: the one macro thing that flips the whole list.
 Panel: lenses run / skipped, searches used, verifier findings (or why lite would have been the honest call).
