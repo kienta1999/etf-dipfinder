@@ -209,3 +209,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
   lite rule — the task body carries the lite rule, so lite was run; his ruling
   is still pending.
 - 2026-09-28 full rerun (overwrites the morning lite run on the identical 9/25-asof scan; always-full ruling): dossier + 4 lenses (cause, necessity, catalyst, basket) re-judged from scratch, consolidate.py, verifier (1 demotion: REMX catalyst 9→6, buy→watch, via ballot edit + consolidate rerun), memo log/2026-09-28.md. Buy: NLR, ARKX, TAN, IHI; Core: XLU, IGF; Avoid: KWEB (veto). $100k risk parity: NLR $18,700, ARKX $28,700, TAN $21,400, IHI $31,100; max loss −$13,600, max gain +$36,900. Tranche: all in (independent catalysts). log/catalysts.md: +2 rows (Solar IV 10/14, 11/2), rare-earth dispute kept in ## Disputed, 0 retractions. check_memo.py exits 0.
+
+## 2026-09-29 — ETF panel (full, fresh scan)
+
+- Fresh scan asof 2026-09-28 close: all 105 universe rows changed vs the 2026-09-25 frozen scan. GRID entered the candidate set, SHLD exited. 25 candidates, 15 themes.
+- Dossier + 4 lenses run strictly sequentially (cause, necessity, catalyst, basket); price computed deterministically by consolidate.py from scan's price_score column. Cause: 18 tickers ≥7 (LIT at veto line 3). Necessity: 19 ≥7. Catalyst: TAN 8, URNM/NLR/URA 8 only. Basket: 10 ≥7 with sibling splits on concrete fund facts.
+- Verifier (Phase 3.5): GO on all buys (URA, TAN, IHI) and core (IGF, XLU); zero contradictions. Confirmed: Cameco Q3 10/30 (company PR), Solar IV 10/14 + 11/2 (Reuters/SMM/Sxcoal), FOMC 10/28 (federalreserve.gov), 10y 5.241% (WSJ/Morningstar), Brent $105.28. Rare-earth dispute stays in log/catalysts.md ## Disputed — REMX capped at catalyst 6 per the ledger rule (no primary MOFCOM text; no 7+ on the disputed date). Confirmed rows bumped to verified_on 2026-09-29, 0 retractions, 0 new rows.
+- Buy: URA, TAN, IHI. Core: IGF, XLU (outside the risk-parity split). Alternates: NLR, URNM, PAVE, ARKX. Avoid: LIT (cause 3 veto). No bucket overrides; GRID thin (R/R 1.09) → watch.
+- $100k risk-parity (buys only): URA $24,000, TAN $30,100, IHI $45,900; max loss −$14,100, max gain +$45,500. Tranche: all in (independent catalysts).
+- Memo: log/2026-09-29.md. check_memo.py: 0 substantive errors (exit 0 once committed; the uncommitted-artifacts check is the parent's to clear — this subagent does not commit).
