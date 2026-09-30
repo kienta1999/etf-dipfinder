@@ -218,3 +218,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: URA, TAN, IHI. Core: IGF, XLU (outside the risk-parity split). Alternates: NLR, URNM, PAVE, ARKX. Avoid: LIT (cause 3 veto). No bucket overrides; GRID thin (R/R 1.09) → watch.
 - $100k risk-parity (buys only): URA $24,000, TAN $30,100, IHI $45,900; max loss −$14,100, max gain +$45,500. Tranche: all in (independent catalysts).
 - Memo: log/2026-09-29.md. check_memo.py: 0 substantive errors (exit 0 once committed; the uncommitted-artifacts check is the parent's to clear — this subagent does not commit).
+
+## 2026-09-30 — ETF panel (full, fresh scan)
+
+- Fresh scan asof 2026-09-29 close. ARGT entered the candidate set, GLD theme exited (GDX now a leader), BJK delisted. 26 candidates, 15 themes.
+- Dossier + 4 lenses run strictly sequentially (cause, necessity, catalyst, basket); price computed deterministically by consolidate.py from scan's price_score column. Cause: no vetoes (18 tickers ≥7, TAN/clean 6s, KWEB/ARGT 5s). Necessity: XLU 10, IGF/PAVE/GRID 9, NLR/URNM/URA + XME 8; ARGT/XLY 3s. Catalyst: 20 tickers at 6, 6 at 4 — nothing above 6 (all dated triggers symmetric or unconfirmed). Basket: XAR 10, IGF/PAVE/XME/XHB 9; LIT/ARGT/URNM/ITA/XLY 3 (single name >~20%).
+- Verifier (Phase 3.5): GO on buy PAVE and core XLU; zero contradictions. Confirmed: 10y 5.256% settled 9/29 (WSJ), Brent $103.2–103.7 / WTI ~$89.6 (Reuters/WSJ), FOMC 10/28 live row carried (no contradiction), MS 97 GW data-center demand 2026–28 / 33 GW shortfall by 2028, IEA +3.6%/+3.8% power demand 2026/27 (iea.org), PAVE 0.47% fee / 101 holdings / ~$13.3B, XLU 0.08% fee / ~$21B. Rare-earth dispute stays in log/catalysts.md ## Disputed (Bessent's 9/24 extension-to-2027-01-10 has no MOFCOM text; REMX capped at catalyst 6). log/catalysts.md: 0 new rows, 0 retractions, Disputed sources updated 2026-09-30.
+- Buy: PAVE. Core: XLU (outside the risk-parity split). Alternates: IGF, ARKX. Avoid: none. No bucket overrides; GRID thin (R/R 1.06) → watch.
+- $100k risk-parity (buys only): PAVE $100,000; max loss −$7,600, max gain +$13,200. Tranche: all in (single buy; only dated trigger is symmetric FOMC 10/28).
+- Memo: log/2026-09-30.md. check_memo.py: 0 substantive/rendering errors — 1 WARN (lens swings 3+ pts vs 9/29: ITA basket 6→3, LIT cause 3→7, XHB basket 6→9 — fresh-scan, new-panelist judgment differences, no band violations); the uncommitted-artifacts ERROR is the parent's to clear (no commit from this subagent).
