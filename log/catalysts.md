@@ -17,13 +17,14 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 
 | theme | match | event | date | confirmed by | verified on |
 |---|---|---|---|---|---|
-| nuclear | Cameco | Cameco Q3 results, before market open | 2026-10-30 | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 | 2026-09-29 |
+| nuclear | Cameco | Cameco Q3 results, before market open | 2026-10-30 | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 and 2026-10-01 (BusinessWire 20260730139928: "We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026") | 2026-10-01 |
 | space | Starship | Starship Flight 14 — first orbital attempt, 26 Starlink V3, first revenue flight | 2026-09-28 | SpaceX via TechCrunch / USA Today, 2026-09-17 slip notice | 2026-09-21 |
-| macro | FOMC | FOMC decision | 2026-10-28 | federalreserve.gov FOMC calendar; re-verified 2026-09-29 | 2026-09-29 |
-| macro | FOMC | FOMC decision | 2026-12-09 | federalreserve.gov FOMC calendar; re-verified 2026-09-29 | 2026-09-29 |
+| macro | FOMC | FOMC decision (Oct 27-28 meeting, statement on second day) | 2026-10-28 | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01 | 2026-10-01 |
+| macro | FOMC | FOMC decision (Dec 8-9 meeting, statement on second day) | 2026-12-09 | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01 | 2026-10-01 |
 | ai/robot | GTC | NVIDIA GTC 2027, San Jose McEnery Convention Center — flagship AI/robotics launch showcase | 2027-03-14 | nvidia.com GTC FAQ | 2026-09-21 |
-| solar | Solar IV | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | 2026-10-14 | Reuters/SRN 2026-09-11; SMM; Sxcoal; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) | 2026-09-29 |
-| solar | Solar IV | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | 2026-11-02 | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) | 2026-09-29 |
+| solar | Solar IV | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | 2026-10-14 | Reuters/SRN 2026-09-11; SMM; Sxcoal; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) and 2026-10-01 (pv-tech.org 9/15: "Commission is scheduled to make its final determination on 14 October 2026") | 2026-10-01 |
+| solar | Solar IV | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | 2026-11-02 | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) and 2026-10-01 (pv-tech.org 9/15: "final AD/CVD duty orders, currently scheduled for 2 November 2026") | 2026-10-01 |
+| housing | DHI | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | 2026-10-29 | D.R. Horton investor site press release, 2026-09-10 (BusinessWire): "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens" | 2026-10-01 |
 
 ## Disputed
 
