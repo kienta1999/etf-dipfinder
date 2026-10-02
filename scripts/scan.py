@@ -1,6 +1,9 @@
 """Scan the ETF universe for dips. Writes data/scan.csv, prints candidates (grouped by theme) + leaders.
 
 is_dip = (price < SMA200  OR  dd_52w <= DD_MIN)  AND  rs_spy_3m < 0
+
+Also writes data/drops.csv: one row per universe fund that did NOT reach the candidate list, with the gate that
+stopped it and the failing values (`scripts/why.py GRID` reads it). Bookkeeping only — scan.csv is unchanged.
 """
 import sys
 from pathlib import Path
@@ -19,6 +22,8 @@ RISK = 0.01             # portfolio fraction risked per position → size_1pct =
 BENCH = "SPY"
 TOP_THEMES = 15         # candidates = every dip in the 15 themes with the deepest best dip
 OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
+DROPS = OUT.with_name("drops.csv")
+DROP_COLS = ["theme", "stage", "reason", "dd_52w", "vs_sma200", "rs_spy_3m", "rr"]
 
 # A theme = funds the SAME headline moves (gold + gold miners, uranium + reactors). Cause/necessity/catalyst are
 # researched once per theme; basket/price per fund. XLU/XLY share only the SPDR wrapper, so each sector is its own theme.
@@ -118,6 +123,31 @@ def flag_dips(df):
     return df.sort_values(["is_candidate", "theme_score", "dip_score", "rs_spy_3m"], ascending=[False, True, True, True])
 
 
+def drop_reasons(df):
+    """Non-candidates of a flag_dips() frame → DataFrame(theme, stage, reason, …), one row per fund.
+
+    Stages mirror the gates in order: '2 not a dip' (lists every failing leg), '3 theme outside top N'."""
+    rank = df.theme_score.rank(method="dense")
+    rows = {}
+    for t, r in df[~df.is_candidate].iterrows():
+        if r.is_dip:
+            stage = f"3 theme outside top {TOP_THEMES}"
+            reason = f"theme '{r.theme}' ranks #{int(rank[t])} by its best dip (dip_score {r.theme_score:.3f})"
+        else:
+            stage, legs = "2 not a dip", []
+            if not (r.vs_sma200 < 0 or r.dd_52w <= DD_MIN):
+                legs.append(f"not deep: {r.vs_sma200:+.2%} vs SMA200 (needs < 0) and {r.dd_52w:+.2%} off 52w high "
+                            f"(needs <= {DD_MIN:.0%})")
+            if pd.isna(r.rs_spy_3m):
+                legs.append("too young for a 3m return vs SPY")
+            elif not r.rs_spy_3m < 0:
+                legs.append(f"not lagging SPY over 3m ({r.rs_spy_3m:+.2%}, needs < 0)")
+            reason = "; ".join(legs)
+        rows[t] = {"theme": r.theme, "stage": stage, "reason": reason, "dd_52w": r.dd_52w,
+                   "vs_sma200": r.vs_sma200, "rs_spy_3m": r.rs_spy_3m, "rr": r.rr}
+    return pd.DataFrame.from_dict(rows, orient="index", columns=DROP_COLS)
+
+
 def main():
     tickers = list(THEME)
     raw = yf.download(tickers, period="3y", auto_adjust=True, progress=False, threads=True)
@@ -127,10 +157,11 @@ def main():
         close, volume = close.iloc[:-1], volume.iloc[:-1]
     asof = close.index[-1].date()
     spy = close[BENCH]
-    rows = {}
+    rows, early = {}, {}
     for t in tickers:
         if t not in close or close[t].dropna().shape[0] < 30:
             print(f"skip {t}: no data", file=sys.stderr)
+            early[t] = {"theme": THEME[t], "stage": "0 no data", "reason": "under 30 closes downloaded"}
             continue
         rows[t] = metrics(close[t], volume[t], spy)
     df = pd.DataFrame(rows).T
@@ -139,12 +170,18 @@ def main():
     liquid = df.dollar_vol >= MIN_DOLLAR_VOL          # NaN volume counts as illiquid
     if (~liquid).any():
         print(f"dropped illiquid: {' '.join(df.index[~liquid])}", file=sys.stderr)
+    for t, r in df[~liquid].iterrows():
+        vol = "no volume data" if pd.isna(r.dollar_vol) else f"20d avg $ volume {r.dollar_vol / 1e6:.1f}M"
+        early[t] = {"theme": r.theme, "stage": "1 illiquid", "reason": f"{vol} < {MIN_DOLLAR_VOL / 1e6:.0f}M"}
     df = flag_dips(df[liquid])
     young = df.index[df.rs_spy_3m.isna()]
     if len(young):
         print(f"too young for rs_spy_3m (cannot flag): {' '.join(young)}", file=sys.stderr)
     OUT.parent.mkdir(exist_ok=True)
     df.to_csv(OUT, float_format="%.4f")
+    drops = pd.concat([pd.DataFrame.from_dict(early, orient="index", columns=DROP_COLS), drop_reasons(df)])
+    drops.index.name = "ticker"
+    drops.to_csv(DROPS, float_format="%.4f")
 
     cols = ["theme", "dd_52w", "dd_z", "dd_pctile", "vs_sma200", "rs_spy_3m", "rs_spy_6m", "ret_10d", "stabilizing", "dip_score"]
     pd.set_option("display.width", 200)
@@ -156,7 +193,7 @@ def main():
         print(f"\nother dips (themes ranked > {TOP_THEMES}): {' '.join(rest.index)}")
     print("\n=== LEADERS (rs_spy_3m) — regime ===")
     print(df.sort_values("rs_spy_3m", ascending=False)[["theme", "rs_spy_3m", "rs_spy_6m", "dd_52w"]].head(8).to_string(float_format="{:.3f}".format))
-    print(f"\nwrote {OUT}")
+    print(f"\nwrote {OUT}\nwrote {DROPS} ({len(drops)} funds not in CANDIDATES, gate + reason per row)")
 
 
 if __name__ == "__main__":

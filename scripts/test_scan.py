@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import numpy as np
 import pandas as pd
-from scan import DD_MIN, flag_dips, metrics
+from scan import DD_MIN, drop_reasons, flag_dips, metrics
 
 idx = pd.bdate_range("2023-01-01", periods=400)
 spy = pd.Series(np.linspace(100, 150, 400), idx)          # steady up
@@ -39,6 +39,12 @@ assert 0 <= df.loc["slow", "dd_pctile"] <= 0.05           # at its own worst →
 assert df.index[0] in ("fast", "slow")                    # dips sort first
 assert df.loc["fast", "is_candidate"] and df.loc["slow", "is_candidate"] and not df.loc["lead", "is_candidate"]
 assert df.loc["fast", "theme_score"] == df.loc["fast", "dip_score"]   # only dip in its theme
+# drop log: every non-candidate gets exactly one row naming the leg it failed; candidates get none
+dr = drop_reasons(df)
+assert set(dr.index) == set(df.index[~df.is_candidate]) == {"lead", "same"}
+assert dr.loc["lead", "stage"] == "2 not a dip" and "not lagging SPY" in dr.loc["lead", "reason"]
+assert "not deep" not in dr.loc["lead", "reason"] or df.loc["lead", "vs_sma200"] >= 0
+assert "not lagging SPY" in dr.loc["same", "reason"]
 f = df.loc["fast"]
 assert abs(f.tp_pct - (300 / 260 - 1)) < 1e-9                # TP = back to the 52w high
 assert f.sl_pct < 0 and abs(f.rr - f.tp_pct / -f.sl_pct) < 1e-9
@@ -69,6 +75,11 @@ assert list(b.wtd) == [8.0, 7.0, 6.5, 6.0, 5.0]            # thin costs exactly 
 assert list(b.wtd_rank) == [1, 2, 3, 4, 5]
 assert list(b.theme_rank) == [1, 2, 3, 0, 1]
 assert list(b.bucket) == ["buy", "alt", "watch", "avoid", "watch"]   # E qualifies on every leg but thin
+from consolidate import bucket_reasons
+why = bucket_reasons(b)
+assert why["A"].startswith("buy:") and "behind A" in why["B"]          # alt names the theme leader that blocks it
+assert why["E"] == "watch: thin: R/R 1.00 < 1.3"                       # the one failing leg, nothing else
+assert why["C"].startswith("cause veto") and "cause 7" not in why["D"] and "catalyst 5" in why["D"]
 # core: broad funds need cause + necessity, not a catalyst. Replays 2026-09-26 (XLU/IGF/PAVE/GLD) plus edge cases.
 sc = pd.DataFrame({"cause":      [10, 8, 8, 8, 8, 6, 8, 8],
                    "necessity":  [10, 10, 10, 6, 9, 10, 7, 9],
@@ -88,6 +99,9 @@ assert b.bucket["UFO"] == "watch"                               # narrow theme: 
 assert b.bucket["XLP"] == "watch"                               # cause 6 < 7: necessity cannot carry a weak cause
 assert b.bucket["KBE"] == "watch"                               # necessity 7 < CORE_NECESSITY
 assert b.bucket["XLB"] == "watch"                               # thin (R/R < 1.3) is never core
+why = bucket_reasons(b)
+assert why["XLU"].startswith("core:") and "behind IGF" in why["PAVE"]
+assert "necessity 7 < 8" in why["KBE"] and "thin" in why["XLB"] and "cause 6 < 7" in why["XLP"]
 sc.loc["XLU", ["cause", "veto"]] = [3, True]
 assert bucket(sc).bucket["XLU"] == "avoid"                      # the cause veto still overrides everything
 from consolidate import deploy as _deploy

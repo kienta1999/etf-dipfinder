@@ -4,7 +4,8 @@ Scan ~115 liquid sector / thematic ETFs for dips, then decide which dips are wor
 
 ```
 uv sync
-uv run python scripts/scan.py                 # → data/scan.csv + CANDIDATES (dips in top 15 themes) / LEADERS
+uv run python scripts/scan.py                 # → data/scan.csv + data/drops.csv + CANDIDATES (dips in top 15 themes) / LEADERS
+uv run python scripts/why.py GRID XHB          # which gate (scan or bucket rule) kept a fund from being a buy
 uv run python scripts/test_scan.py            # self-check
 /etf-dip-pick                                      # Claude: full 5-lens Opus panel → log/<DATE>.md
 /etf-dip-pick-lite                                 # Claude: one agent, ~12 searches, same memo sections → log/<DATE>-lite.md
@@ -68,11 +69,14 @@ company-level lenses (moat, balance sheet) — an ETF is a basket.
 ## 3. Layout
 
 ```
-scripts/scan.py, consolidate.py, test_scan.py
+scripts/scan.py, consolidate.py, test_scan.py, why.py
 data/scan.csv                 latest scan, gitignored (has an asof column = last close used)
+data/drops.csv                every fund that missed CANDIDATES: gate (no data / illiquid / not a dip / theme
+                              outside top 15) + the failing values; frozen to output/<DATE>/drops.csv with scan.csv
 output/<DATE>/scan.csv        frozen scan the panel scored against (committed)
 output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)
+output/<DATE>/buckets_why.csv the rule leg behind every bucket (thin / cause / catalyst / behind <leader>) (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
 .claude/skills/etf-dip-pick/       SKILL.md + lenses.md
 .claude/skills/etf-dip-pick-lite/  SKILL.md (one agent, reads ../etf-dip-pick/lenses.md, same memo sections as full, writes log/<DATE>-lite.md only)

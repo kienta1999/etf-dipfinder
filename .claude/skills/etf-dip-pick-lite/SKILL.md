@@ -17,7 +17,8 @@ full verifier.
 cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
 ```
 Read LEADERS first (where did the money go?), then CANDIDATES — every dip in the 15 deepest themes, grouped by
-theme. `dip_score` is depth, not quality.
+theme. `dip_score` is depth, not quality. A fund the user holds or asks about that is missing → `uv run python
+scripts/why.py <TICKER>` (reads `data/drops.csv`: the gate and the failing values) — quote it, never guess.
 
 ## 2. Research — one search per theme
 The scan already groups candidates by `theme` — funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ; XLU alone).
@@ -31,7 +32,7 @@ price from the CSV columns (`dd_pctile`, `dd_z`, `rs_spy_12m`, `stabilizing`).
 Score every candidate 1-10 on each lens, then run this in the scratchpad (reads TP/SL from `data/scan.csv`):
 ```python
 import sys; sys.path.insert(0, "scripts"); import pandas as pd
-from consolidate import W, VETO, bucket          # same weights, veto, thin penalty and bucket rule as the panel
+from consolidate import W, VETO, bucket, bucket_reasons   # same weights, veto, thin penalty and bucket rule as the panel
 S = {"NLR": (8,9,8,7,8), ...}   # cause, necessity, catalyst, basket, price
 scan = pd.read_csv("data/scan.csv", index_col=0)
 df = pd.DataFrame(S, index=list(W)).T
@@ -40,6 +41,7 @@ df["veto"] = df.cause <= VETO
 for c in ["theme","dd_52w","dip_score","stabilizing","tp_pct","sl_pct","rr"]: df[c] = scan[c].reindex(df.index)
 df["dip_rank"] = df.dip_score.rank(method="min").astype(int)   # depth rank = memo's dip# column
 df = bucket(df)   # thin (R/R < 1.3) → wtd −1, never buy
+df["why"] = bucket_reasons(df)   # the rule leg behind each bucket — quote it when explaining a watch/alt
 print(df.to_string())
 ```
 Then set **my rank**: start from `wtd`, reorder only where a fact justifies it — one sentence per deviation.

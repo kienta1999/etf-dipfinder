@@ -2,7 +2,8 @@
 
 Lite (no ballots, sizes straight off data/scan.csv): uv run python scripts/consolidate.py lite 100000 NLR
 
-First run freezes data/scan.csv into output/<DATE>/scan.csv so later rescans never change this date's scores."""
+First run freezes data/scan.csv into output/<DATE>/scan.csv so later rescans never change this date's scores
+(and data/drops.csv alongside it). Also writes output/<DATE>/buckets_why.csv: the rule leg behind every bucket."""
 import re, shutil, sys
 from pathlib import Path
 import pandas as pd
@@ -60,6 +61,39 @@ def bucket(df):
     df.loc[df.veto, "bucket"] = "avoid"
     return df
 
+def bucket_reasons(df):
+    """Why each fund of a bucket() frame landed in its bucket — the failing (or deciding) legs, in words.
+    Reads only columns bucket() already used; never feeds back into scores."""
+    leader = df[df.theme_rank == 1].reset_index().groupby("theme")[df.index.name or "index"].first()
+    necessity = df["necessity"] if "necessity" in df else pd.Series(0, index=df.index)
+    out = {}
+    for t, r in df.iterrows():
+        if r.bucket == "avoid":
+            out[t] = f"cause veto: cause {r.cause:g} <= {VETO}"
+            continue
+        if r.bucket == "buy":
+            leg = "stabilizing" if bool(r.stabilizing) else f"catalyst {r.catalyst:g} >= 7"
+            out[t] = f"buy: cause {r.cause:g} >= 7, {leg}, R/R {r.rr:.2f} >= {THIN_RR}, #1 in theme"
+            continue
+        if r.bucket == "core":
+            out[t] = (f"core: broad theme, cause {r.cause:g} >= 7, necessity {necessity[t]:g} >= {CORE_NECESSITY}, "
+                      f"R/R {r.rr:.2f} >= {THIN_RR}, #1 in theme")
+            continue
+        if r.bucket == "alt":
+            out[t] = f"qualifies, but theme #{int(r.theme_rank)} behind {leader.get(r.theme, '?')} (one buy per theme)"
+            continue
+        legs = []
+        if r.thin:
+            legs.append(f"thin: R/R {r.rr:.2f} < {THIN_RR}")
+        if r.cause < 7:
+            legs.append(f"cause {r.cause:g} < 7")
+        if not bool(r.stabilizing) and r.catalyst < 7:
+            legs.append(f"no catalyst >= 7 (catalyst {r.catalyst:g}) and not stabilizing")
+        if r.theme in BROAD_THEMES and necessity[t] < CORE_NECESSITY:
+            legs.append(f"core path: necessity {necessity[t]:g} < {CORE_NECESSITY}")
+        out[t] = "watch: " + "; ".join(legs) if legs else "watch"
+    return pd.Series(out, name="why").reindex(df.index)
+
 def deploy(df, capital, only=None):
     """Risk-parity split of `capital` across bucket == buy, or across `only` (the memo's final buys if it overrode
     the rule). Each position loses the same $ at its stop. Returns per-ETF $, loss at SL, gain at TP."""
@@ -76,6 +110,9 @@ def main(date, capital=None, only=None):
     if not snap.exists():
         shutil.copy(out.parent.parent / "data" / "scan.csv", snap)
         print(f"froze data/scan.csv → {snap}")
+        drops = out.parent.parent / "data" / "drops.csv"   # frozen with the scan it describes, never later
+        if drops.exists():
+            shutil.copy(drops, out / "drops.csv")
     scan = pd.read_csv(snap, index_col=0)
     ballots = {l: out / f"score_{l}.md" for l in BALLOT_LENSES if (out / f"score_{l}.md").exists()}
     cands = set(re.findall(r"^\|\s*\d+\s*\|\s*([A-Z]+)\s*\|", next(iter(ballots.values())).read_text(), re.M))
@@ -99,6 +136,7 @@ def main(date, capital=None, only=None):
     df.insert(0, "wtd_rank", 0)
     df = bucket(df)
     df.to_csv(out / "scores.csv", float_format="%.2f")
+    pd.concat([df[["theme", "bucket"]], bucket_reasons(df)], axis=1).to_csv(out / "buckets_why.csv")
     print(f"lenses: {have} (weights renormalised to {wsum:.2f})")
     print(df.to_string(float_format="{:.2f}".format))
     core = list(df.index[df.bucket == "core"])

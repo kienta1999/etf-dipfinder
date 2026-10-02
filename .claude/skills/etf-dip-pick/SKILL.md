@@ -32,6 +32,10 @@ cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is alre
 Prints CANDIDATES — every dip in the `TOP_THEMES` (15) themes whose best dip is deepest, grouped by theme — and
 LEADERS, writes `data/scan.csv`. A theme = funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ); XLU and XLY
 are separate themes. `dip_score` is *depth*, not quality — it's the CSV's rank, never the memo's.
+It also writes `data/drops.csv` — every fund that missed CANDIDATES with the gate and the failing values. When the
+user holds or asks about a fund that is not a candidate (or not a buy), run `uv run python scripts/why.py <TICKER>`
+and quote it — never guess. `consolidate.py` freezes drops.csv with scan.csv and writes `output/<DATE>/buckets_why.csv`
+(the rule leg behind each bucket); both are committed with the run.
 
 ## Phase 1 — quick pass → dossier
 
