@@ -40,7 +40,8 @@ def main():
         elif why is not None and t in why.index:
             print(f"  {t:<5} candidate → {why.loc[t, 'why']}")
         elif t in THEME:
-            print(f"  {t:<5} candidate — passed every scan gate (bucket: see that run's scores.csv / memo)")
+            print(f"  {t:<5} candidate — passed every scan gate (its bucket: buckets_why.csv for a panel run, "
+                  f"the memo's table for lite)")
         else:
             print(f"  {t:<5} not in the scan universe (scan.py UNIVERSE)")
 
