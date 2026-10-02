@@ -1,115 +1,61 @@
-# verifier — 2026-10-01 (money-related: Opus-grade)
+# Verifier — 2026-10-01 (rerun under updated skill) — Phase 3.5
 
-Scope per Phase 3.5: re-check from PRIMARY sources the load-bearing facts behind every fund
-bucketed **buy** (NLR, XHB) and **core** (IGF, XLU), plus the regime premises the memo opens on.
-Every dated event confirmed here gets a row in `log/catalysts.md`; a live ledger row is overturned
-only by a cited contradicting source. Nothing in scope was contradicted.
+Independent verifier. I did NOT re-score anything. I opened / searched primary or authoritative sources myself for every item in the mandated scope 1–5, plus spot-checks that carry scores. Verdicts: **Confirmed / Refuted / Unverifiable**.
 
-Legend: **CONFIRMED** / **CONTRADICTED** / **UNCONFIRMABLE**.
+Scores context (from `output/2026-10-01/scores.csv`, internal file check): the only `buy` is URNM; the only `core` funds are XLU (cause 8, necessity 10) and IGF (cause 7, necessity 9). No other fund is bucketed buy/core in this rerun.
 
----
+## Verdict table
 
-## 1. NLR — VanEck Uranium+Nuclear Energy ETF (buy)
-
-| # | Claim | Verdict | Primary source + date (URL) | Exact fact |
+| # | Claim | Verdict | Source (URL opened / searched) | Note |
 |---|---|---|---|---|
-| 1.1 | Fund identity: VanEck Uranium+Nuclear Energy ETF, sponsored by Van Eck Associates | CONFIRMED | indmoney.com, updated 2026-10-01 (https://www.indmoney.com/us-stocks/etfs/nlr) | "VanEck Uranium and Nuclear ETF"; finviz: sponsor **Van Eck Associates Corporation**, index **MVIS Global Uranium & Nuclear Energy Index** |
-| 1.2 | Expense ratio 0.52% | CONFIRMED | indmoney.com, updated 2026-10-01; barchart.com (https://www.barchart.com/etfs-funds/quotes/NLR/overview) | "Expense Ratio 0.52%"; barchart: "Net Expense Ratio 0.52%" |
-| 1.3 | AUM ~$3.57B | CONFIRMED | indmoney.com, updated 2026-10-01 (same URL) | "AUM $3.57Bn" |
-| 1.4 | No name above ~8.5% (diversified nuclear-utility mix) | CONFIRMED | indmoney.com, updated 2026-10-01 (same URL) | Constellation Energy 8.46%, Cameco 8.13%, PSEG 7.66%, Fortum 7.06%, BWX Technologies 6.20% |
-| 1.5 | Cause thesis: uranium long-term contract price closed August 2026 at a record **$96.50/lb** (UxC + TradeTech averages compiled by Cameco), spot ~$89.60 — commodity strong while equities sold on rates | CONFIRMED | Cameco's compiled average via cruxinvestor.com (https://www.cruxinvestor.com/posts/uranium-contract-price-hits-96-50-deeper-supply-deficits-ahead) citing "UxC and TradeTech month-end averages published by Cameco"; cameco.com price page via hotcopper.com.au (2026-09-27): "spot US$89.68/lb, long-term US$96.50/lb" (cameco.com/invest/markets/uranium-price) | "The uranium long-term price, the rate utilities pay for U3O8 under multi-year contracts, closed August 2026 at $96.50 per pound, according to UxC and TradeTech month-end averages published by Cameco. That tops the $95.00 peak the series recorded in 2007 and early 2008, in nominal terms." SEQH post-close 2026-09-28: "rates are the whole story right now" (https://www.seqhresearch.com/p/nuclear-uranium-and-photonics-daily-49e) |
-| 1.6 | Catalyst date: Cameco Q3 2026 results **2026-10-30 before market open** | CONFIRMED | Cameco Q2 2026 press release, BusinessWire 2026-07-30 (https://www.businesswire.com/news/home/20260730139928/en/Cameco-Reports-Second-Quarter-Results-Year-to-Date-Performance-on-Track-Production-Outlook-Unchanged-Strategically-Positioned-Across-the-Nuclear-Fuel-Cycle-Significant-Support-for-Nuclear-Energy-Reinforces-Stronger-Long-Term-Uranium-Prices) | "We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026." Ledger row re-verified and kept live. |
+| 1a-1 | There was a September 2026 FOMC decision and it hiked | Confirmed | https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm | Fed implementation note, 2026-09-16: FOMC directed the Desk to maintain fed funds at 3-3/4 to 4 percent, effective 2026-09-17; reserve-balance rate raised to 3.90%, primary credit to 4.0%, unanimously. Statement text (via Dow Jones/Morningstar search result) : 12–0 vote, +1/4 pp to 3-3/4 to 4%. First hike since July 2023 per Reuters/USA Today reporting. Meeting was 2026-09-15–16, decision 2026-09-16 — not 9/16–17. |
+| 1a-2 | FOMC decision scheduled 2026-10-28 | Confirmed | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm | Fed calendar opened: 2026 October 27-28. Statement is released on the second day, so decision date = 2026-10-28. Already a live row in `log/catalysts.md`. |
+| 1a-3 | FOMC decision scheduled 2026-12-09 | Confirmed | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm | Same calendar: 2026 December 8-9*. Decision date = 2026-12-09. Already a live row in `log/catalysts.md`. |
+| 1b-1 | 10-year Treasury yield ~5.2–5.3% around 2026-10-01 | Confirmed | https://www.cnn.com/2026/10/01/business/bond-market-treasury-yields?cid=external-feeds_iluminar_meta | CNN 2026-10-01: 10y ended Thu at 5.24%. Investors.com same day: fell 5 bp to 5.24%, late trade ~5.25–5.26%. HDFCSky (Sep 30): 10y 5.281%. Reuters Oct 2 wrap: 5.2575% after easing overnight. Range 5.2–5.3% is accurate for closes around the run date. |
+| 1b-2 | 10y at “19-year highs” | Refuted | https://www.cnn.com/2026/10/01/business/bond-market-treasury-yields?cid=external-feeds_iluminar_meta | Correct the superlative, not the level. CNN/Reuters/Trading Economics all say intraday was the highest since 2002 — a 24-year high. Close was “still its highest level since 2007.” “19-year” conflates the close basis (≈19y, since 2007) with the intraday basis (24y, since 2002). See Material Corrections. |
+| 1b-3 | 10y intraday touch ~5.34% | Confirmed | https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/ | Reuters: 10y eased from a 24-year high of 5.3445%. Yonhap/Infomax: intraday high 5.3470%. CNN: “hit 5.34%.” Panel’s 5.34% is correct. |
+| 1c | Oil/gas leading; crude level/direction around 2026-10-01 | Confirmed | https://www.morningstar.com/news/dow-jones/202610016482/oil-rises-as-supply-concerns-persist-despite-middle-east-crude-exports-recovering-to-prewar-levels-commodities-roundup | Dow Jones via Morningstar, 2026-10-01 16:05 GMT: Brent Dec +1.5% to $99.52, WTI +1.8% to $92.01. Reuters Oct 2: Thu Brent closed >$4 higher, WTI >$2 higher; WTI then ~$92.84, Brent held above $102 on the rolled contract; Brent +14% in September, WTI ~+4–5% in September. Intraday Oct 1 prints vary by timestamp/contract roll ($88.7–$92.9 WTI, $97.3–$103.6 Brent in the sources searched) — direction on the US session was up, level was WTI ~$90–93 / Brent ~$98–102. Dossier leaders (USO/XOP/XLE/FCG positive RS) are consistent with that. |
+| 2-1 | URA Cameco ~22% | Confirmed | https://stockanalysis.com/etf/ura/holdings/ | Basket file’s own source, as of 2026-09-30: Cameco 22.03%. Corroborated: TipRanks Sep 28: 21.80%; INDmoney: 21.99%; MarketBeat: 21.86%. “~22%” holds; it is over the 20% basket cap, as the basket ballot states. |
+| 2-2 | URNM Cameco ~20% | Confirmed | https://sprottetfs.com/urnm-sprott-uranium-miners-etf | Issuer (Sprott) holdings as of 2026-09-30: Cameco 20.49%. As of 2026-09-25: 20.21%. Basket file’s StockAnalysis Sep 29 figure: 20.30%. “~20%” holds, at/just over the 20% line. |
+| 2-3 | ARGT MercadoLibre ~21% | Confirmed | https://www.indmoney.com/us-stocks/etfs/argt | INDmoney: MercadoLibre 21.40%. Basket file: 21.66% (StockAnalysis BMV listing). TradingView: 21.31%; MarketBeat: 21.33%. “~21%” holds; over the 20% cap, with YPF also >10% (~10.3–10.6%). |
+| 2-4 | TAN First Solar weight / role | Confirmed | https://stockanalysis.com/etf/tan/holdings/ | As of 2026-09-23: Nextpower 10.34% is #1, First Solar 9.62% is #2. Basket ballot’s 9.62% is exact. Necessity wording “led by First Solar and Nextpower” reverses the order — see Material Corrections. |
+| 2-5 | SLV is a physical, single-metal trust | Confirmed | https://www.sec.gov/Archives/edgar/data/1330568/000119312510260442/dfwp.htm | SEC filing (iShares FWP): “The Trust only holds silver. The Trust is not actively managed.” “The iShares Silver Trust is a grantor trust.” No miners, no derivatives in the structure claim. Basket ounces figure (479,034,340.90 oz at Jul 8, 2026) was not re-opened on a primary iShares bar list in this run — structure is confirmed, the exact ounce count is carried from the basket ballot, not independently re-verified here. |
+| 2-6 | GLD is a physical, single-metal trust | Confirmed | https://www.tradingnews.com/news/gld-etf-sheds-value-with-bullion-as-north-american-funds-stay-7b-usd-in-the-red | Summary of trust filings: GLD is a grantor trust holding physical gold; at 2026-06-30, 32,314,227.7 oz owned, 100% allocated London Good Delivery bars, no futures roll. Matches basket ballot’s 32.31M oz / 0.40% fee. |
+| 2-7 | XLU dividend yield ~3.08% (cause ballot) | Confirmed | https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-rise-bond-selloff-deepens/card/utilities-sector-sinks-to-17-month-low-as-rising-yields-weigh-stBUTUkmD4Z27h7gZCRX | MarketWatch, citing Jefferies: “The XLU ETF's dividend yield of 3.08% compares with the 10-year Treasury yield of 5.23%.” YCharts: 3.08% on 2026-09-24, 3.07% on 2026-09-25. FinanceCharts: 3.05% on 2026-10-01 at $39.68. The ~3.08% figure was correct for late September; by Oct 1 it was ~3.05%. |
+| 2-8 | Uranium term price record ~$96.50/lb (Cameco / UxC) | Confirmed | https://www.cruxinvestor.com/posts/uranium-contract-price-hits-96-50-deeper-supply-deficits-ahead | “The uranium long-term price closed August 2026 at $96.50 per pound, according to UxC and TradeTech month-end averages published by Cameco. That tops the $95.00 peak … in 2007.” Corroborated by multiple sources citing Cameco’s own price page (still showing Aug 31 on Sep 27): spot $89.68/lb, long-term $96.50/lb. This is a nominal record / 18-year-plus high; it is the Aug 31 month-end industry average, not a live Oct 1 print. UxC alone was $96, TradeTech ~$97 — $96.50 is the average. |
+| 3-1 | XLU is the broad US utilities basket; top holdings = regulated utilities (core, cause 8 / necessity 10) | Confirmed | https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu | Issuer (SSGA) as of 2026-09-30: NextEra 12.73%, Southern 7.68%, Duke 7.16%, Constellation 6.74%, AEP 5.20%. Industry: Electric Utilities 65.23%, Multi-Utilities 26.17%, Independent Power & Renewable Producers 4.38%, Gas 2.14%, Water 2.08%. Broad US utilities claim holds. Scores in scores.csv match the task statement (cause 8, necessity 10). |
+| 3-2 | XLU necessity: regulated must-buy electricity | Confirmed | https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu | Grounded in the main: the dominant weights are regulated electric/multi-utilities selling must-buy power/gas/water. Nuance the memo must keep: XLU is NOT 100% regulated — Constellation, Vistra, NRG etc. are merchant / independent-power exposure (SSGA IPP slice 4.38%, plus merchant generation inside electric utilities). Necessity ballot’s “100% utilities” is a sector label, not a “100% regulated” fact. |
+| 3-3 | IGF is the broad global infrastructure basket (core, cause 7 / necessity 9) | Confirmed | https://seekingalpha.com/article/4886717-igf-guide-to-ishares-global-infrastructure-etf | IGF tracks the S&P Global Infrastructure Index: ~75 names, clusters ~40% transportation / ~40% utilities / ~20% energy, no name >5% at rebalance. Current top holdings (MarketBeat/INDmoney): Aena ~5.4–5.5%, Transurban ~5.1%, NextEra ~4.6%, Iberdrola ~4.3%, Enbridge ~3.8%. Sector split: Utilities 39.74%, Industrials 38.62%, Energy 21.54%. Scores in scores.csv match (cause 7, necessity 9). |
+| 3-4 | IGF necessity: physical grid / infra necessity | Confirmed | https://www.indmoney.com/us-stocks/etfs/igf | Physical-infra necessity holds for operators of utilities, airports, toll roads and pipelines that must be used daily. It does NOT hold as a pure “grid” claim: only ~40% is utilities; ~39% is transportation industrials (airports/toll roads are the two largest holdings) and ~21% is energy pipelines. Basket ballot already docks IGF for this (“~a third-plus off the grid theme”). Memo must call IGF broad infrastructure, not a grid fund. |
+| 4-1 | Cameco Q3 earnings 2026-10-30 | Confirmed | https://www.businesswire.com/news/home/20260730139928/en/Cameco-Reports-Second-Quarter-Results-Year-to-Date-Performance-on-Track-Production-Outlook-Unchanged-Strategically-Positioned-Across-the-Nuclear-Fuel-Cycle-Significant-Support-for-Nuclear-Energy-Reinforces-Stronger-Long-Term-Uranium-Prices | Primary: Cameco Q2 release via BusinessWire, opened in full: “We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026.” Already a live row in `log/catalysts.md` — no new row appended. |
+| 4-2 | D.R. Horton earnings 2026-10-29 | Confirmed | https://investor.drhorton.com/news-and-events/press-releases/2026/09-10-2026-210511837 | Primary company IR, opened: “will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens,” call 8:30 a.m. ET. Already a live row in `log/catalysts.md` — no new row appended. |
+| 4-3 | USITC solar final vote 2026-10-14 | Confirmed | https://www.pv-tech.org/us-finalises-ad-cvd-duties-on-solar-cell-imports-from-india-indonesia-and-laos/ | PV Tech (opened): “The Commission is scheduled to make its final determination on 14 October 2026.” Corroborated by Reuters 2026-09-11, PV Magazine and Solar Power World with the same date. NOTE on primary access: a direct fetch of the dossier’s usitc.gov URL returned HTTP 403 in this run, so I could not re-open usitc.gov itself; the date is confirmed by consistent trade-press reporting of the ITC schedule, and it was already a live row in `log/catalysts.md` — no new row appended. Do not cite this run as a direct usitc.gov re-open. |
+| 4-4 | Commerce solar AD/CVD order 2026-11-02 | Confirmed | https://www.pv-tech.org/us-finalises-ad-cvd-duties-on-solar-cell-imports-from-india-indonesia-and-laos/ | Same opened source: “An affirmative ITC determination would allow Commerce to issue the final AD/CVD duty orders, currently scheduled for 2 November 2026.” PV Magazine states the same conditional schedule. This date is CONDITIONAL on an affirmative ITC vote on Oct 14 — it is not an unconditional Commerce decision date. Already a live row in `log/catalysts.md` — no new row appended. A direct commerce.gov page stating the Nov 2 order date was not opened in this run (Commerce’s Sep 11 final determinations themselves are confirmed by Reuters). |
+| 5-1 | MOFCOM No. 70 suspension expires 2026-11-10 (snapback reading) | Confirmed | https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html | PRIMARY MOFCOM text, opened (Announcement 2025 No. 70, 2025-11-07): in translation, Announcements Nos. 55, 56, 57, 58, 61 and 62 are suspended “from now until 2026-11-10.” That is the original legal expiry. |
+| 5-2 | MOFCOM No. 70 suspension extended to 2027-01-10 | Unverifiable | https://www.lexblog.com/2026/09/30/u-s-china-trade-truce-extended-two-months-bis-affiliates-rule-suspension-follows/ | **Stays Disputed — explicitly.** No primary MOFCOM text for an extension was findable in this run: site:mofcom.gov.cn searches returned no extension announcement, and the only MOFCOM primary text opened is No. 70 itself (Nov 10 expiry, row 5-1). The Jan 10, 2027 date rests on US-side secondary reporting of Bessent’s 2026-09-23/24 announcement (Press Insider notes “Beijing had not separately announced the 10 January date when Bessent made his comments”; LexBlog notes BIS had not yet published a Federal Register notice extending its parallel suspension). That corroborates a truce extension was announced by the US, but it does not settle the MOFCOM instrument. No catalyst ≥7 may rest on it — the catalyst ballot correctly caps REMX at 6. |
+| X-1 | Cameco “Q3 Results & MD&A” on 2026-10-09 as a second, separate catalyst (dossier §D duplicate) | Unverifiable | https://www.businesswire.com/news/home/20260730139928/en/Cameco-Reports-Second-Quarter-Results-Year-to-Date-Performance-on-Track-Production-Outlook-Unchanged-Strategically-Positioned-Across-the-Nuclear-Fuel-Cycle-Significant-Support-for-Nuclear-Energy-Reinforces-Stronger-Long-Term-Uranium-Prices | No source for an Oct 9 Cameco event was found. The primary release gives only Oct 30. The dossier’s cameco.com URL for this label returned “Page not found” when opened in this run. Treat Oct 9 as a ledger/dossier duplication artefact, not a dated event. See Material Corrections. |
+| X-2 | Gold: spot ~$4,156–4,186, central-bank buying 288.9t in Q2 (cause/necessity support) | Confirmed | https://www.tradingnews.com/news/gold-reboundsd-0-percent-6-record-central-bank-demand-meets-4-year-high-real-yields | Spot $4,182.37 on Oct 1 open, Wed settlement $4,157.80; “Central banks bought a record 288.9 tonnes of gold in Q2 2026, up 62% year over year” (World Gold Council figure, also reported by Ad Hoc News / Reuters summary). Dossier range holds. |
+| X-3 | Silver: 6th straight annual deficit, ~58–59% industrial use (necessity 9 support) | Confirmed | https://www.tradingview.com/news/DJN_DN20260929001158:0/ | Dow Jones via TradingView, 2026-09-29: silver “heading for a sixth consecutive annual deficit.” Silver Institute forecast reported Feb 2026: deficit for a sixth consecutive year in 2026 (46.3–67 Moz depending on forecast vintage/source), industrial share ~58%. Necessity ballot’s ~59% is within rounding of that. Solar thrifting pressure is also documented in the same sources, supporting the −1 dock. |
 
-**Verdict NLR: all claims CONFIRMED. No demotion.**
+**Counts: 28 claims checked — 25 Confirmed, 1 Refuted, 2 Unverifiable.**
 
----
+## Material corrections — what the memo must NOT repeat, or must correct
 
-## 2. XHB — SPDR S&P Homebuilders ETF (buy)
+1. **“19-year highs” for the 10y is wrong as written.** Intraday 5.34–5.347% was the highest since 2002 (24-year high); the Oct 1 close at ~5.24% was the highest close since 2007. Write one basis or the other, not “~5.28–5.34% (19-year highs).”
+2. **Do NOT list a Cameco catalyst on 2026-10-09.** Only 2026-10-30 is company-confirmed. The Oct 9 “MD&A” row in dossier §D / the ledger duplication has no primary source and its cited cameco.com page does not resolve. Nuclear’s catalyst 8 rests on Oct 30 alone (plus the Oct 28 FOMC in window) — that is sufficient; the duplicate adds nothing and must not be counted as a second event.
+3. **Do NOT call First Solar TAN’s top / leading holding.** Nextpower (10.34%) is #1; First Solar (9.62%) is #2 (Sep 23 holdings).
+4. **Do NOT describe XLU as 100% regulated, or IGF as a grid fund.** XLU is 100% utilities by sector but includes merchant/independent-power names (Constellation, Vistra, NRG). IGF is broad global infrastructure (~40% utilities / ~39% transport / ~21% energy pipelines); its two largest holdings are an airport operator and a toll-road operator. Core necessity holds on broad infra / must-buy utilities — not on purity claims.
+5. **MOFCOM extension stays Disputed.** The memo may say Bessent announced a truce extension to 2027-01-10, but must NOT present that as a MOFCOM-confirmed change to Announcement No. 70, whose primary text (opened this run) still reads expiry 2026-11-10. No score ≥7 rests on it.
+6. **Commerce Nov 2 is conditional, not fixed.** Write “Commerce orders scheduled 2026-11-02 *if* the ITC votes affirmative on 2026-10-14.” If the ITC votes negative, the investigations terminate and deposits are refunded.
+7. **Uranium $96.50 is an August month-end average, not a current price.** Cite it as “Aug 31, 2026 industry average (UxC/TradeTech, compiled by Cameco): long-term $96.50/lb, spot $89.68/lb, nominal record above the 2007 $95 peak.” Do not imply spot is $96.50.
+8. **Oil quotes need a contract/timestamp.** Oct 1 Brent prints from ~$97 to ~$103 across sources reflect the Nov→Dec contract roll and intraday volatility, not disagreement on direction. Use WTI ~$92 / Brent ~$99.5 (Dow Jones, Oct 1 16:05 GMT) or state the contract explicitly.
 
-| # | Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|---|
-| 2.1 | Fund identity: SPDR S&P Homebuilders ETF, tracks the S&P Homebuilders Select Industry Index (modified equal weight) | CONFIRMED | zacks.com, 2026-09-08 (https://www.zacks.com/stock/news/2986138/is-state-street-spdr-sp-homebuilders-etf-xhb-a-strong-etf-right-now) | "The Homebuilders Index is a modified equal weight index"; composer.trade ETF snapshot: "S&P Homebuilders Select Industry Index" |
-| 2.2 | Expense ratio 0.35% | CONFIRMED | zacks.com 2026-09-08 (same URL); indmoney.com updated 2026-10-01 (https://www.indmoney.com/us-stocks/etfs/xhb) | "Annual operating expenses for XHB are 0.35%"; indmoney: "Expense Ratio 0.35%" |
-| 2.3 | ~35 holdings, largest position Wayfair 3.39% (effectively flat-weighted) | CONFIRMED | indmoney.com updated 2026-10-01 (same URL); zacks.com 2026-09-08 | Wayfair Inc. 3.39%, Champion Homes 3.37%, Modine 3.33%; Zacks: "With about 35 holdings" |
-| 2.4 | Catalyst date: D.R. Horton Q4/FY26 results **2026-10-29 before market open**, 8:30 a.m. ET call | CONFIRMED | D.R. Horton investor site, 2026-09-10 (BusinessWire) (https://investor.drhorton.com/news-and-events/press-releases/2026/09-10-2026-210511837) | "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens. The Company will host a conference call that morning at 8:30 a.m. Eastern Time (ET)." **New row added to log/catalysts.md.** |
+## Ledger action (`log/catalysts.md`)
 
-**Verdict XHB: all claims CONFIRMED. No demotion.**
-
----
-
-## 3. IGF — iShares Global Infrastructure ETF (core)
-
-| # | Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|---|
-| 3.1 | Fund identity: iShares Global Infrastructure ETF, tracks the S&P Global Infrastructure Index | CONFIRMED | finviz.com (https://finviz.com/quote.ashx?t=IGF&ty=fc); zacks.com IGF profile (http://www.zacks.com/funds/etf/IGF/profile) | Sponsor BlackRock (iShares), index **S&P Global Infrastructure Index** |
-| 3.2 | Expense ratio 0.37% | CONFIRMED | indmoney.com updated 2026-10-01 (https://www.indmoney.com/us-stocks/etfs/igf); Zacks IGF profile | "Expense Ratio 0.37%" |
-| 3.3 | AUM ~$10.5B | CONFIRMED | mutualfunds.com (https://www.mutualfunds.com/etfs/igf-ishares-global-infrastructure-etf/) | "Net Assets $10.5 B" (marketbeat.com 2026-09-28: $10.17B) |
-| 3.4 | Index hard-caps any name at 5% (structural diversification) | CONFIRMED (with nuance) | Seeking Alpha IGF guide citing the iShares Global Infrastructure ETF website, March 2026 (https://seekingalpha.com/article/4886717-igf-guide-to-ishares-global-infrastructure-etf) | "No single stock can exceed 5% of the index. The index is rebalanced quarterly." Nuance: the cap binds at quarterly rebalances and drifts between them — current weights show AENA SME SA 5.44% and Transurban 5.12% (indmoney, 2026-10-01), a normal intra-quarter drift, not a broken rule. |
-| 3.5 | Top-10 38.5%, ~76–77 holdings | CONFIRMED with staleness note | mutualfunds.com (top 10 = 38.5%); ainvest.com: top-10 concentration 38.86% "this month"; marketbeat.com, updated 2026-09-28: **94** holdings; finviz: 95 holdings | The ballot's "76–77 holdings" came from the March-2026 iShares/SA figure (76 positions, one more than the 75-stock index target). Constituent count has since grown to ~94–95 per September-2026 sources — a staleness note, and it favors diversification, not against it. Basket score 10 stands. |
-
-**Verdict IGF: all material claims CONFIRMED. One staleness note on holdings count (favors the thesis); no demotion.**
-
----
-
-## 4. XLU — Utilities Select Sector SPDR Fund (core)
-
-| # | Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|---|
-| 4.1 | Fund identity: Utilities Select Sector SPDR Fund, tracks the S&P Utilities Select Sector Index | CONFIRMED | **ssga.com (issuer)** (https://www.ssga.com/us/en/individual/etfs/state-street-utilities-select-sector-spdr-etf-xlu) | "The Utilities Select Sector SPDR Fund before expenses seeks to closely match the returns and characteristics of the Utilities Select Sector Index" |
-| 4.2 | Expense ratio 0.08% | CONFIRMED | ssga.com, same URL | "Gross Expense Ratio: 0.08%" |
-| 4.3 | AUM ~$21.3B | CONFIRMED | indmoney.com updated 2026-10-01 (https://www.indmoney.com/us-stocks/etfs/xlu) | "AUM $21.26Bn" |
-| 4.4 | Top-10 58.6% with NextEra at ~12.7% (cheap but concentrated) | CONFIRMED | ssga.com fund top holdings as of **Sep 29, 2026**, same URL: NEXTERA ENERGY INC 12.66%; stocknear.com as of Sep 29, 2026 (https://stocknear.com/etf/XLU/holdings): "Total Holdings 31, Top 10 Percentage 58.86%"; indmoney 2026-10-01: NEE 12.67%, SO 7.69%, DUK 7.13% | Matches the ballot's "top-10 58.6% with NextEra at 12.7%" exactly. |
-
-**Verdict XLU: all claims CONFIRMED. No demotion.**
-
----
-
-## 5. Regime premise — FOMC 2026-10-28 decision date (and 12/09)
-
-| Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|
-| FOMC October decision date is 2026-10-28; December decision 2026-12-09 | CONFIRMED | federalreserve.gov: tentative schedule release, 2024-08-09 (https://www.federalreserve.gov/newsevents/pressreleases/monetary20240809a.htm) + FOMC calendar (https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) | 2026 meetings: October 27–28, December 8–9. "The Committee releases a policy statement at 2 p.m. Eastern Time on the **second day** of each regularly scheduled meeting" → decisions on **Oct 28** and **Dec 9**. Both ledger rows re-verified, kept live. |
-| (Adjacent, from the dossier regime read) The Fed **hiked** at its mid-September meeting | CONFIRMED | securities.io (https://www.securities.io/fomc-raises-federal-funds-target-range-to-3-3-4-to-4-percent/); plus500.com FOMC explainer | "FOMC Raises Federal Funds Target Range to 3-3/4 to 4 Percent"; Eighteen participants' SEP at the **September 15-16, 2026** meeting. Minor note: the dossier wrote "~9/16-9/17"; the meeting was **9/15–9/16** with the decision announced 9/16 — the hike itself is as stated. |
-
----
-
-## 6. Regime premise — 10y Treasury yield ~5.2–5.3%
-
-| Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|
-| 10y yield ~5.2–5.3% as of the 2026-09-30 close | CONFIRMED | Dow Jones Newswires via morningstar.com, **2026-09-30 15:40 ET** (https://www.morningstar.com/news/dow-jones/202609307288/10-year-treasury-yield-rises-to-5292-this-quarter-data-talk) | "The 10-year yield rose 0.872 percentage point to **5.292%** this quarter" (3 p.m. ET close, Tradeweb FTSE data); intraday 5.304–5.31%, highest since May 2002 (investopedia.com 2026-09-30: "intraday high of 5.29%, its highest level since 2007"; aistockwire citing Treasury/CBOE data) |
-
----
-
-## 7. Regime premise — oil (USO) leadership
-
-| Claim | Verdict | Primary source + date (URL) | Exact fact |
-|---|---|---|---|
-| Energy led: USO outperformed over the 3-month window; broad regime claim "money sits in yields' beneficiaries and duration-immune themes" holds | CONFIRMED | USO: tradestie.com, analysis updated **2026-09-30 12:00 AM ET** (https://tradestie.com/stocks/USO/buy-or-sell-now/): **90d: +41.05%**; tickeron.com, Sep 25, 2026: trailing quarter **+29%**. WTI/Brent: DTN, **2026-09-30** (https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/09/30/ulsd-53-q3-rally-gasoline-stocks): "For all of September, WTI advanced about 6%, while for the third quarter it climbed almost 31%" (settled $90.42); "Brent rose about 17% on the month and 42% over the three-month period." | USO +29–41% over ~90 days; WTI Q3 +31%; Brent Q3 +42%. Energy leadership confirmed on dated market data. (Note: different snapshots give different 90-day USO figures — +29% vs +41% — reflecting different trailing windows, not conflicting data.) |
-
----
-
-## 8. Ledger sanity — live rows the ballots relied on
-
-| Ledger row | Verdict | Source re-verified this run |
-|---|---|---|
-| nuclear / Cameco / Cameco Q3 results, BMO | 2026-10-30 | CONFIRMED — live, kept. Cameco Q2 press release, BusinessWire 2026-07-30 (see §1.6). |
-| solar / Solar IV / USITC final injury vote | 2026-10-14 | CONFIRMED — live, kept. pv-tech.org 2026-09-15: "The Commission is scheduled to make its final determination on **14 October 2026**." (https://www.pv-tech.org/us-finalises-ad-cvd-duties-on-solar-cell-imports-from-india-indonesia-and-laos/) pv-magazine/taiyangnews corroborate. |
-| solar / Solar IV / Commerce final AD/CVD duty orders | 2026-11-02 | CONFIRMED — live, kept. pv-tech.org 2026-09-15: "Commerce to issue the final AD/CVD duty orders, currently scheduled for **2 November 2026**." |
-| macro / FOMC / FOMC decision | 2026-10-28 | CONFIRMED — live, kept. federalreserve.gov (see §5). |
-| macro / FOMC / FOMC decision | 2026-12-09 | CONFIRMED — live, kept. federalreserve.gov (see §5). |
-| rare-earth / MOFCOM No. 70 pause-expiry | Disputed (expires 2026-11-10 vs extended 2027-01-10) | STAYS DISPUTED — no MOFCOM text found on either side in this run; no primary-source settle. The catalyst ballot correctly scored REMX at 2, resting only on what holds under both readings. |
-
-No CONTRADICTED rows. No RETRACTED rows. **No demotions.**
-
----
-
-## Verifier action on the ledger
-
-- Re-verified 5 live rows (updated "confirmed by" / "verified on" to 2026-10-01): nuclear/Cameco, macro/FOMC ×2, solar/Solar IV ×2.
-- **Added 1 new row**: housing/DHI — D.R. Horton Q4/FY26 results 2026-10-29 BMO (company's own investor site, 2026-09-10). This is the dated catalyst behind the XHB buy.
-- Unverified this run (out of task scope, untouched): space/Starship (expired 2026-09-28) and ai/robot/GTC 2027-03-14 rows.
+- All four scope-4 catalysts (Cameco 2026-10-30, D.R. Horton 2026-10-29, USITC 2026-10-14, Commerce 2026-11-02) were already live rows in `log/catalysts.md` before this run. Per instructions, **no rows were appended, duplicated, removed or altered**.
+- No live row was contradicted by a cited source in this run, so nothing is marked RETRACTED.
+- The Disputed rare-earth row stays in `## Disputed` unchanged: primary MOFCOM text for the original Nov 10, 2026 expiry was opened this run; no primary MOFCOM extension text was found.
 
 ## Demotions
 
-None. All buy/core load-bearing facts hold on primary sources.
+None recommended on the facts checked. URNM (buy) and XLU / IGF (core) load-bearing claims hold, subject to the wording corrections above — in particular, nuclear catalyst 8 must be justified by Oct 30 alone, and core necessity must be justified without the “100% regulated” / “pure grid” phrasings.

@@ -1,38 +1,55 @@
 # catalyst — 2026-10-01
-| rank | ETF | score | one-line reason (this lens only) | key source |
-| 1 | ITB | 9 | band 10 (company-confirmed date ≤30d: DHI Q4/FY26 results 10/29 BMO) −1: earnings two-sided, not one-way | D.R. Horton BusinessWire release, 2026-09-10 |
-| 2 | XHB | 9 | same as ITB — DHI Q4/FY26 results 10/29 BMO confirmed by company 9/10; sibling, no difference | D.R. Horton BusinessWire release, 2026-09-10 |
-| 3 | URNM | 9 | band 10 (company-confirmed ≤30d: Cameco Q3 10/30 BMO) −1: earnings cut both ways | Cameco Q2 press release 2026-07-31 (BusinessWire); re-verified 2026-09-29; carried in log/catalysts.md |
-| 4 | NLR | 9 | same as URNM — Cameco Q3 10/30 BMO, carried forward; sibling, no difference | same as URNM |
-| 5 | URA | 9 | same as URNM — Cameco Q3 10/30 BMO, carried forward; sibling, no difference | same as URNM |
-| 6 | TAN | 8 | band 8: Solar IV USITC final injury vote 10/14 + Commerce final duty orders 11/02 — confirmed near date, material but partly priced | carried in log/catalysts.md; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) |
-| 7 | ARGT | 7 | band 8 −1: IMF 3rd-review staff mission in Buenos Aires this week, ~$900M disbursement decision; −1 because Board date unconfirmed and staff flagged fiscal shortfalls | particle.news 2026-09-29/30; IMF review schedule (scribd-sourced EFF doc) |
-| 8 | INDA | 6 | band 6: RBI MPC decision 10/7 (meeting 10/5–7) confirmed by RBI calendar; outcome symmetric (Reuters poll: 60% expect a hike) | RBI FY27 MPC schedule; thehindubusinessline 2026-08-05; myfinbright 2026-09-29 |
-| 9 | XLU | 6 | band 6: FOMC decision 10/28 confirmed by federalreserve.gov calendar; scheduled event that cuts both ways (rates ±) | carried in log/catalysts.md; re-verified 2026-09-29 |
-| 10 | SLV | 6 | band 6: FOMC 10/28 confirmed; near-term silver direction hinges on US data + rate odds (Williams tempered Oct-hike odds 9/30) — symmetric | ad-hoc-news.de 2026-09-30; FOMC calendar row carried forward |
-| 11 | UFO | 6 | band 6: Flight 14 succeeded 9/28 (first orbit, 26 Starlink V3 deployed); Flight 15 NET 10/19 per CADENA air-traffic slides — NOT confirmed by SpaceX, so newsflow, no hard date | nasaspaceflight.com 2026-09 (Flight 14 forward path); foxweather.com 2026-09-30 |
-| 12 | ARKX | 6 | same as UFO — Starship cadence newsflow, no company-confirmed date; sibling, no difference | same as UFO |
-| 13 | IGF | 6 | band 6: plausible continuous newsflow (JERA $15B Chiba AI-DC MoU 10/1; US hyperscaler capex seen $1.2T in 2027) but no dated trigger | reuters.com 2026-10-01; tokenpost.com 2026-09-29 |
-| 14 | PAVE | 6 | same as IGF — grid/infra newsflow, no hard date; sibling, no difference | same as IGF |
-| 15 | GRID | 6 | same as IGF — grid/infra newsflow, no hard date; sibling, no difference | same as IGF |
-| 16 | PBW | 6 | band 6: adjacent dated catalyst (Solar IV 10/14 & 11/02) touches US solar names in the basket, but it is another theme's own trigger; ETC/ASES conferences 10/19–21 are newsflow only | altenergymag.com events list; prnewswire 2026-09-24 (SOLAR 2026 schedule) |
-| 17 | ICLN | 6 | same as PBW — adjacent Solar IV dates + conference newsflow, no own dated trigger; sibling, no difference | same as PBW |
-| 18 | IHI | 4 | band 4: ISRG Q3 est. 10/20 — NOT confirmed by company (MarketBeat); medtech earnings cadence, no confirmed date | marketbeat.com ISRG earnings page; barchart.com 2026-09-30 |
-| 19 | SHLD | 4 | band 4: LMT Q3 est. 10/20–27 — finviz/marketbeat estimate ~10/23, WSJ via ad-hoc-news says 10/27; conflicting estimates, nothing company-confirmed | finviz.com LMT earnings; ad-hoc-news.de 2026-09-24 |
-| 20 | XAR | 4 | same as SHLD — LMT/RTX earnings cadence, no confirmed date; sibling, no difference | same as SHLD |
-| 21 | ITA | 4 | same as SHLD — defense earnings cadence, no confirmed date; sibling, no difference | same as SHLD |
-| 22 | PPA | 4 | same as SHLD — defense earnings cadence, no confirmed date; sibling, no difference | same as SHLD |
-| 23 | LIT | 4 | band 4: ALB Q3 est. 11/4 (Zacks/MarketBeat) — estimated, not company-confirmed; lithium earnings cadence, no confirmed date | zacks.com ALB earnings calendar; marketbeat.com ALB earnings |
-| 24 | KWEB | 4 | band 4: BABA next print est. 11/24 (MarketBeat, "based on past reporting schedules") — unconfirmed; no confirmed China-tech dated trigger | marketbeat.com BABA earnings page |
-| 25 | REMX | 2 | band 2: rare-earth pause expiry is Disputed (11/10 snapback vs 2027-01-10 extension, no MOFCOM text on either side) — scoring only what holds under BOTH readings leaves no dated trigger | log/catalysts.md Disputed table, noted 2026-09-28, updated 2026-09-30 |
-Top-3 notes:
-1. D.R. Horton will release Q4 and fiscal-2026 results on 2026-10-29 before market open with an 8:30 a.m. ET call, announced by the company itself in a BusinessWire release on 2026-09-10; as the largest US homebuilder, its orders/buy-down commentary is the hardest dated repricing trigger on the board, though earnings cut both ways, so it scores 9 (band 10 −1) rather than a full 10.
-2. Cameco reports Q3 2026 before market open on 2026-10-30, confirmed by Cameco's own Q2 press release dated 2026-07-31 (BusinessWire) and re-verified 2026-09-29; it is carried in log/catalysts.md and is the highest-certainty ≤30-day date of any candidate, scored 9 (band 10 −1) because a uranium producer's print, even with term price at an 18-year high, remains a two-sided earnings event.
-3. The Solar IV sequence — USITC final injury vote on 2026-10-14 and Commerce final AD/CVD duty orders on 2026-11-02 (India/Indonesia/Laos imports) — was re-verified 2026-09-29 (solarpowerworld, Sxcoal, pv-magazine) and is carried forward in log/catalysts.md; final duties are materially one-sided-positive for US solar manufacturers, but preliminary duties have been known for months, so it scores 8 under the "confirmed near date, material but partly priced" band rather than 10.
-Disagreements with the dossier's first-pass memo:
-- health-other: memo says "no catalyst" — the medtech earnings cadence has ISRG Q3 estimated 10/20 (unconfirmed by the company), which lands this theme in band 4, not 2.
-- india: memo says "no new facts" — the RBI MPC decision on 10/7 (meeting 10/5–7) is a confirmed dated event with material local-market impact; outcome is symmetric, so band 6, not nothing.
-- housing: memo frames the theme purely as rates narrative — the catalyst lens found a harder, company-confirmed trigger (DHI Q4/FY26 on 10/29), hence score 9, the top of the sheet.
-- rare-earth: memo discusses the sentiment thesis but the only candidate dated trigger (the 11/10 pause-expiry) stays Disputed with no MOFCOM text on either side; per the panel rule it can only be scored on what holds under both readings, hence 2, not higher.
-- defense-us: the dossier's only dated hint is budget-talk newsflow; the concrete candidate (LMT Q3 est. 10/20–27) has conflicting estimates and no company confirmation, so band 4, not an 8-style scheduled-newsflow score.
-- utilities / silver: both hang on the confirmed 10/28 FOMC — a scheduled event whose outcome cuts both ways, which the anchors cap at 6; they are the best of the symmetric-event names, not rank-1 candidates.
+
+Method: Catalyst lens only, scored per the bands in lenses.md (band first, at most ±1 for a named reason). Dossier §D carry-forward catalysts inherited at full value with their original sources; FOMC decisions are scheduled symmetric events (band 6, cannot reach 7+ on the calendar alone); the disputed rare-earth expiry was checked this run — secondary reports of a 2026-09-24 extension agreement were found, but no primary MOFCOM text was located, so no score ≥7 rests on it (see note below). Note: this ballot replaces the earlier 2026-10-01 file, which ranked funds outside this rerun's 24-candidate set (GRID, IHI) and omitted GLD.
+
+| 1 | URNM | 8 | Band 8: Cameco Q3 earnings 2026-10-30 (MD&A 2026-10-09), company-confirmed, near, material but partly priced; FOMC 2026-10-28 also in window | https://www.cameco.com/invest/news/cameco-q3-2026-results-and-management-discussion-and-analysis |
+| 2 | NLR | 8 | Band 8: Cameco Q3 earnings 2026-10-30 (MD&A 2026-10-09), company-confirmed, near, material but partly priced; FOMC 2026-10-28 also in window | https://www.cameco.com/invest/news/cameco-q3-2026-results-and-management-discussion-and-analysis |
+| 3 | URA | 8 | Band 8: Cameco Q3 earnings 2026-10-30 (MD&A 2026-10-09), company-confirmed, near, material but partly priced; FOMC 2026-10-28 also in window | https://www.cameco.com/invest/news/cameco-q3-2026-results-and-management-discussion-and-analysis |
+| 4 | TAN | 8 | Band 8: USITC injury vote 2026-10-14 + Commerce Solar IV AD/CVD order 2026-11-02, agency-confirmed, near, material but prelims partly priced; FOMC 2026-10-28 | https://www.usitc.gov/press_room/news_release/2026/er0827_68185.html |
+| 5 | ITB | 8 | Band 8: DHI (D.R. Horton) earnings 2026-10-29, company-confirmed, one day after FOMC 2026-10-28, material but partly priced | https://investor.drhhorton.com/news-and-events/news/press-release-details/2026/D-R-Horton-Inc-Annou |
+| 6 | XHB | 8 | Band 8: DHI (D.R. Horton) earnings 2026-10-29 (theme event, covers both housing funds), one day after FOMC 2026-10-28, material but partly priced | https://investor.drhhorton.com/news-and-events/news/press-release-details/2026/D-R-Horton-Inc-Annou |
+| 7 | XLU | 6 | Band 6: FOMC decision 2026-10-28 (next 2026-12-09) — scheduled symmetric event, cuts both ways, but directly re-rates bond-proxy utilities | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 8 | IGF | 6 | Band 6: FOMC decision 2026-10-28 (next 2026-12-09) — symmetric, cuts both ways, directly re-rates rate-sensitive grid/infra | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 9 | PAVE | 6 | Band 6: FOMC decision 2026-10-28 (next 2026-12-09) — symmetric, cuts both ways, directly re-rates rate-sensitive grid/infra | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 10 | PBW | 6 | Band 6: FOMC decision 2026-10-28 (next 2026-12-09) — symmetric, cuts both ways, directly re-rates rate/financing-sensitive clean energy | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 11 | ICLN | 6 | Band 6: FOMC decision 2026-10-28 (next 2026-12-09) — symmetric, cuts both ways, directly re-rates rate/financing-sensitive clean energy | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 12 | GLD | 6 | Band 6: FOMC decision 2026-10-28 is the forcing event itself for gold (real yields/dollar), but scheduled and symmetric — capped at 6 | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 13 | SLV | 6 | Band 6: FOMC decision 2026-10-28 is the forcing event itself for silver (real yields/dollar), but scheduled and symmetric — capped at 6 | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 14 | INDA | 6 | Band 6: FOMC decision 2026-10-28 — the §C dip is FPI outflows chasing US yields, so the decision directly re-rates those flows; symmetric, capped at 6 | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 15 | REMX | 6 | Band 6, capped: FOMC 2026-10-28 symmetric event at band value only; disputed export-control expiry NOT used for 7+ — no primary MOFCOM source found this run (see note) | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 16 | KWEB | 5 | Band 6 minus 1: FOMC 2026-10-28 / 2026-12-09 dated, but channel is indirect (dollar/EM flows) for China internet; no China-specific dated event confirmed | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 17 | ARGT | 5 | Band 6 minus 1: FOMC 2026-10-28 dated, but channel is indirect (EM flows) and local politics dominates; no Argentina-specific dated event confirmed | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 18 | LIT | 5 | Band 6 minus 1: FOMC 2026-10-28 / 2026-12-09 dated, but re-rating channel is indirect (growth/capex rates) for lithium; no lithium-specific dated event confirmed | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm |
+| 19 | SHLD | 4 | Band 4: primes' Q3 prints expected on late-Oct cadence but no date confirmed in the §D ledger; no dated theme-level forcing event in window | dossier §D — no confirmed row for defense-us |
+| 20 | XAR | 4 | Band 4: primes' Q3 prints expected on late-Oct cadence but no date confirmed in the §D ledger; no dated theme-level forcing event in window | dossier §D — no confirmed row for defense-us |
+| 21 | ITA | 4 | Band 4: primes' Q3 prints expected on late-Oct cadence but no date confirmed in the §D ledger; no dated theme-level forcing event in window | dossier §D — no confirmed row for defense-us |
+| 22 | PPA | 4 | Band 4: primes' Q3 prints expected on late-Oct cadence but no date confirmed in the §D ledger; no dated theme-level forcing event in window | dossier §D — no confirmed row for defense-us |
+| 23 | UFO | 4 | Band 4: holdings' Q3 prints and a possible SpaceX IPO are expected with no date confirmed in the §D ledger; no dated forcing event in window | dossier §D — no confirmed row for space |
+| 24 | ARKX | 4 | Band 4: holdings' Q3 prints and a possible SpaceX IPO are expected with no date confirmed in the §D ledger; no dated forcing event in window | dossier §D — no confirmed row for space |
+
+## Dated events relied on, per theme
+
+- nuclear (URNM, NLR, URA) — Cameco Q3 2026 Results & MD&A — 2026-10-09 — https://www.cameco.com/invest/news/cameco-q3-2026-results-and-management-discussion-and-analysis (dossier §D carry-forward)
+- nuclear (URNM, NLR, URA) — Cameco Q3 2026 Earnings Release — 2026-10-30 — https://www.cameco.com/invest/news/cameco-q3-2026-results-and-management-discussion-and-analysis (dossier §D carry-forward; same event listed twice in the ledger, inherited as written)
+- solar (TAN) — USITC Final Phase Injury Vote — 2026-10-14 — https://www.usitc.gov/press_room/news_release/2026/er0827_68185.html (dossier §D carry-forward)
+- solar (TAN) — Commerce Final AD/CVD Determinations / Solar IV order issuance — 2026-11-02 — https://www.commerce.gov/news/press-releases/2026/04/commerce-initiates-new-antidumping-and-countervailing-duty (dossier §D carry-forward)
+- housing (ITB, XHB) — DHI (D.R. Horton) Earnings — 2026-10-29 — https://investor.drhhorton.com/news-and-events/news/press-release-details/2026/D-R-Horton-Inc-Annou (dossier §D carry-forward, URL as truncated in the ledger; ledger match token: DHI)
+- rate-sensitive / macro themes (utilities, grid/infra, clean, housing, solar, nuclear, gold, silver, india; tagged in §D also for rare-earth, china, argentina, lithium) — FOMC Meeting Decision — 2026-10-28 — https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (dossier §D carry-forward)
+- same macro calendar, second meeting — FOMC Meeting Decision — 2026-12-09 — https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (dossier §D carry-forward; tagged for nuclear, solar, clean, lithium, housing, utilities, china)
+
+## DISPUTED item note — REMX
+
+- REMX's score of 6 does NOT rest on the disputed rare-earth export-control suspension expiry for any value above the FOMC band: the §D dispute is (a) suspension expires 2026-11-10 with snapback (MOFCOM Announcement No. 70 text) vs (b) extended to 2027-01-10 (Bessent post-summit statement). This run found secondary reporting consistent with an extension agreed 2026-09-24 to 2027-01-10 (e.g., https://www.rivieramm.com/news-content-hub/not-ready-us-suspends-port-fees-on-chinese-linked-vessels-until-2027-90117 and https://www.lexblog.com/2026/09/30/u-s-china-trade-truce-extended-two-months-bis-affiliates-rule-suspension-follows/), but no PRIMARY source (MOFCOM text or equivalent official publication of the extension) was located this run — a site:mofcom.gov.cn search returned no results. Per the binding rule, REMX is therefore capped at 6 (the symmetric FOMC band) and the disputed date is treated as unconfirmed upside, not a load-bearing catalyst. No other fund's score rests on this item.
+
+## Top-3 notes
+
+- Nuclear (8): the load-bearing fact is a company-confirmed print inside 30 days — Cameco Q3 earnings on 2026-10-30 (MD&A 2026-10-09), inherited from §D with the cameco.com source — against a record uranium term price per dossier §C; scored band 8, not 10, because an earnings outcome is material but partly priced and not fully one-sided.
+- Solar (8): two agency-confirmed dates inside ~5 weeks — USITC injury vote 2026-10-14 and Commerce AD/CVD order 2026-11-02, both §D carry-forwards; band 8, not higher, because the preliminary determinations are already known and the basket mixes US manufacturers (helped) with installers (hurt by module costs).
+- Housing (8): the tightest dated cluster on the board — FOMC decision 2026-10-28 immediately followed by DHI (D.R. Horton) earnings 2026-10-29 (§D, investor.drhhorton.com) — but band 8 rather than 10 because both events can cut against the theme as well as for it.
+
+## Disagreements with the dossier's first-pass memo
+
+- The §C "rotation" labels do not translate into catalyst points: every theme whose only dated event is the 2026-10-28 FOMC (utilities, grid/infra, clean, gold, silver, india) caps at band 6 — a symmetric meeting is timing, not direction.
+- REMX: §C leans on the post-summit export-control extension to 2027-01-10; on the catalyst lens that item is DISPUTED and, absent a primary source this run, supports no score above 6.
+- Defense-us and space have no confirmed dated event in the §D ledger at all (band 4 on earnings cadence alone) — weaker on this lens than their §C rotation/unclear labels might suggest.
+- No §D live row is dismissed anywhere in this ballot; themes without a row are scored on cadence (band 4) or indirect FOMC exposure, not on a claim that a carried-forward event does not exist.
