@@ -17,6 +17,8 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 
 | theme | match | event | date | confirmed by | verified on |
 |---|---|---|---|---|---|
+| housing | DHI | D.R. Horton authorized a new $5.00B share repurchase program, no expiration; FY26 repurchases expected ≥$3.25B ($2.2B YTD through Q3) | 2026-09-15 | StockTitan via ad-hoc-news (board authorization 2026-09-15) | 2026-10-02 |
+|---|---|---|---|---|---|
 | nuclear | Cameco | Cameco Q3 results, before market open | 2026-10-30 | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 and 2026-10-01 (BusinessWire 20260730139928: "We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026") | 2026-10-01 |
 | space | Starship | Starship Flight 14 — first orbital attempt, 26 Starlink V3, first revenue flight | 2026-09-28 | SpaceX via TechCrunch / USA Today, 2026-09-17 slip notice | 2026-09-21 |
 | macro | FOMC | FOMC decision (Oct 27-28 meeting, statement on second day) | 2026-10-28 | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01 | 2026-10-01 |

@@ -1,0 +1,25 @@
+,theme,bucket,why
+XHB,housing,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.24 >= 1.3, #1 in theme"
+NLR,nuclear,buy,"buy: cause 9 >= 7, catalyst 8 >= 7, R/R 3.43 >= 1.3, #1 in theme"
+GLD,gold,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing; core path: necessity 7 < 8
+URA,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+XLU,utilities,core,"core: broad theme, cause 7 >= 7, necessity 10 >= 8, R/R 2.99 >= 1.3, #1 in theme"
+SLV,silver,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+URNM,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+IGF,grid/infra,core,"core: broad theme, cause 7 >= 7, necessity 10 >= 8, R/R 3.26 >= 1.3, #1 in theme"
+ITB,housing,alt,"qualifies, but theme #2 behind XHB (one buy per theme)"
+PAVE,grid/infra,alt,"qualifies, but theme #2 behind IGF (one buy per theme)"
+ICLN,clean,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+XAR,defense-us,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+REMX,rare-earth,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+SHLD,defense-us,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+PPA,defense-us,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+TAN,solar,watch,watch: cause 5 < 7
+INDA,india,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+PBW,clean,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+UFO,space,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing
+ITA,defense-us,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+ARKX,space,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing
+KWEB,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 2) and not stabilizing
+ARGT,argentina,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+LIT,lithium,avoid,cause veto: cause 3 <= 3
