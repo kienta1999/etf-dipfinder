@@ -27,6 +27,7 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | solar | Solar IV | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | 2026-10-14 | Reuters/SRN 2026-09-11; SMM; Sxcoal; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) and 2026-10-01 (pv-tech.org 9/15: "Commission is scheduled to make its final determination on 14 October 2026") | 2026-10-01 |
 | solar | Solar IV | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | 2026-11-02 | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) and 2026-10-01 (pv-tech.org 9/15: "final AD/CVD duty orders, currently scheduled for 2 November 2026") | 2026-10-01 |
 | housing | DHI | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | 2026-10-29 | D.R. Horton investor site press release, 2026-09-10 (BusinessWire): "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens" | 2026-10-01 |
+| lithium | ALB | Albemarle Q3 2026 results, after NYSE close; earnings call Nov 5, 8:00 a.m. EST | 2026-11-04 | Albemarle PR Newswire, 2026-10-01: "will release its third quarter 2026 earnings after the NYSE closes on Wednesday, November 4, 2026" | 2026-10-03 |
 
 ## Disputed
 
