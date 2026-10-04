@@ -28,6 +28,8 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | solar | Solar IV | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | 2026-11-02 | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) and 2026-10-01 (pv-tech.org 9/15: "final AD/CVD duty orders, currently scheduled for 2 November 2026") | 2026-10-01 |
 | housing | DHI | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | 2026-10-29 | D.R. Horton investor site press release, 2026-09-10 (BusinessWire): "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens" | 2026-10-01 |
 | lithium | ALB | Albemarle Q3 2026 results, after NYSE close; earnings call Nov 5, 8:00 a.m. EST | 2026-11-04 | Albemarle PR Newswire, 2026-10-01: "will release its third quarter 2026 earnings after the NYSE closes on Wednesday, November 4, 2026" | 2026-10-03 |
+| defense-us | RTX | RTX Q3 2026 results, before market open; call 8:30 a.m. ET | 2026-10-20 | RTX PR Newswire, 2026-09-29: "will issue its third quarter 2026 earnings results on Tuesday, October 20, prior to the stock market opening" (re-verified on prnewswire.com 2026-10-04; raised FY26 guidance: adj sales $95-96B from $92.5-93.5B, adj EPS $7.10-7.25 from $6.70-6.90; record $289B backlog) | 2026-10-04 |
+| gold | Diwali | Diwali 2026 — Lakshmi Puja main festival day; Dhanteras (gold/silver-buying day) Nov 6; seasonal India gold stocking window Nov 6-10 | 2026-11-08 | Wikipedia (Diwali 2026: Lakshmi Puja Nov 8, Dhanteras Nov 6); vedictemple.in 2026 guide (recurring annual seasonal, secondary/soft) | 2026-10-04 |
 
 ## Disputed
 
