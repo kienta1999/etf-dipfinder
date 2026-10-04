@@ -1,110 +1,143 @@
-# etf-dip-pick dossier — 2026-10-04 (data as of 2026-10-02 Friday close)
+# Dossier — 2026-10-04 (panel; clean rerun, scan as of Friday 2026-10-02 close)
 
-## A. Candidates (25 in 15 themes) — CSV rows with column legend
+Clean rerun: every prior 2026-10-04 artifact (output/2026-10-04/, log/2026-10-04.md, the two catalyst-ledger
+rows verified on 2026-10-04) was deleted before this run at the user's request — nothing below is inherited
+from the earlier 10-04 run. Fresh scan.py, fresh quick-pass searches.
 
-Column legend: `theme` = same-headline group; `asof` = price date; `days` = lookback window; `price` = close;
-`dd_52w` = drawdown from 52w high; `dd_pctile` = drawdown percentile vs own 3y history; `dd_z` = z-score of drawdown;
-`vs_sma200` / `vs_sma50`; `rs_spy_3m/6m/12m` = return vs SPY; `ret_10d` = last-10-day return; `vol_60d` = 60d vol;
-`dollar_vol` = $ daily volume; `tp_pct`/`sl_pct` = +52w-high / −2σ stop sizing from consolidate; `dip_low_pct` =
-distance below dip low; `rr` = reward/risk; `size_1pct` = 1%-risk position size fraction; `is_dip` = dip gate;
-`stabilizing` = ret_10d ≥ 0; `dip_score` = depth (CSV rank, never the memo's); `price_score` = computed price lens
-(depth dd_pctile: ≤.02→5, ≤.05→4, ≤.10→3, ≤.25→2 else 1) + (trend rs_spy_12m: >0→3, >−.15→2, >−.35→1 else 0) + (2 if
-stabilizing); `theme_score` = best dip_score in the theme.
+## A. Candidates (25 dips in top 15 themes; scan.py 2026-10-04, asof 2026-10-02 close)
 
-| ETF | theme | price | dd_52w | dd_pctile | vs_sma200 | rs_spy_3m | ret_10d | stabilizing | dip_score | price_score | tp_pct | sl_pct | rr |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| REMX | rare-earth | 63.21 | -42% | 0.007 | -26% | -29% | -8.5% | False | 0.076 | 6 | +73% | -17% | 4.3 |
-| TAN | solar | 44.05 | -40% | 0.031 | -20% | -26% | -3.5% | False | 0.089 | 5 | +68% | -15% | 4.4 |
-| KWEB | china | 23.86 | -41% | 0.003 | -18% | -9% | -3.9% | False | 0.089 | 5 | +70% | -10% | 6.9 |
-| FXI | china | 33.19 | -19% | 0.029 | -8% | -1% | -3.3% | False | 0.285 | 5 | +24% | -7% | 3.2 |
-| URNM | nuclear | 47.42 | -44% | 0.022 | -21% | -14% | -5.8% | False | 0.101 | 5 | +77% | -19% | 4.0 |
-| NLR | nuclear | 102.74 | -37% | 0.003 | -20% | -15% | -4.6% | False | 0.139 | 5 | +60% | -17% | 3.4 |
-| URA | nuclear | 39.79 | -36% | 0.016 | -17% | -12% | -4.5% | False | 0.227 | 6 | +55% | -19% | 2.9 |
-| SLV | silver | 54.74 | -48% | 0.040 | -17% | -5% | -8.7% | False | 0.114 | 7 | +93% | -17% | 5.6 |
-| SHLD | defense-us | 60.23 | -23% | 0.016 | -11% | -10% | -3.9% | False | 0.152 | 6 | +29% | -9% | 3.3 |
-| XAR | defense-us | 233.09 | -21% | 0.004 | -13% | -22% | -2.8% | False | 0.265 | 6 | +27% | -11% | 2.5 |
-| ITA | defense-us | 207.79 | -18% | 0.003 | -10% | -20% | -2.8% | False | 0.303 | 6 | +22% | -9% | 2.5 |
-| PPA | defense-us | 155.69 | -16% | 0.004 | -9% | -17% | -2.3% | False | 0.323 | 6 | +19% | -8% | 2.3 |
-| UFO | space | 43.13 | -36% | 0.019 | -9% | -17% | -0.2% | False | 0.165 | 8 | +57% | -12% | 4.8 |
-| ARKX | space | 32.68 | -13% | 0.135 | +1% | -7% | +1.7% | True | 0.792 | 6 | +15% | -11% | 1.4 |
-| XLU | utilities | 39.83 | -15% | 0.011 | -9% | -14% | -2.4% | False | 0.197 | 6 | +17% | -6% | 2.9 |
-| PBW | clean | 29.52 | -36% | 0.070 | -14% | -23% | -2.8% | False | 0.253 | 4 | +57% | -16% | 3.5 |
-| ICLN | clean | 17.19 | -27% | 0.012 | -9% | -17% | -2.1% | False | 0.310 | 7 | +38% | -12% | 3.2 |
-| GLD | gold | 380.14 | -23% | 0.044 | -9% | -3% | -5.2% | False | 0.266 | 6 | +30% | -11% | 2.8 |
-| IGF | grid/infra | 61.76 | -10% | 0.004 | -5% | -11% | -2.2% | False | 0.299 | 7 | +11% | -4% | 3.0 |
-| PAVE | grid/infra | 53.88 | -10% | 0.124 | -1% | -10% | +1.7% | True | 0.709 | 6 | +11% | -7% | 1.5 |
-| LIT | lithium | 69.28 | -24% | 0.154 | -7% | -12% | -1.7% | False | 0.343 | 5 | +32% | -11% | 2.9 |
-| ARGT | argentina | 84.52 | -18% | 0.055 | -8% | -13% | -8.6% | False | 0.348 | 6 | +21% | -9% | 2.3 |
-| ITB | housing | 86.64 | -23% | 0.154 | -10% | -16% | -0.9% | False | 0.366 | 2 | +30% | -12% | 2.5 |
-| XHB | housing | 96.70 | -20% | 0.128 | -8% | -15% | +0.9% | True | 0.455 | 5 | +24% | -11% | 2.3 |
-| INDA | india | 46.52 | -16% | 0.041 | -7% | -9% | -3.1% | False | 0.374 | 5 | +19% | -5% | 3.5 |
+Legend: dd_52w = drawdown from 52w high; dd_pctile = how deep vs own 3y history (<0.10 = real event);
+dd_z = drawdown / vol (vol-normalised depth); vs_sma200 = price vs 200-day SMA; rs_spy_3m/6m/12m = return
+relative to SPY; ret_10d = 10-day return; stabilizing = ret_10d > 0; dip_score = depth rank (0 = deepest,
+NOT quality); price_score = consolidate.price_score() (depth + trend + 2 if stabilizing) — the price lens,
+computed, never voted; tp_pct = back to 52w high; sl_pct = stop; rr = reward/risk (thin if < 1.3).
 
-BJK (gaming) delisted — skipped by scan ("No data found, symbol may be delisted").
+| ETF | theme | dd_52w | dd_pctile | dd_z | vs_sma200 | rs_spy_3m | rs_spy_6m | rs_spy_12m | ret_10d | stabilizing | dip_score | price_score | tp_pct | sl_pct | rr |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| REMX | rare-earth | -0.423 | 0.007 | -1.07 | -0.264 | -0.286 | -0.469 | -0.217 | -0.085 | False | 0.076 | 6 | 0.733 | -0.172 | 4.27 |
+| TAN | solar | -0.404 | 0.031 | -1.14 | -0.197 | -0.261 | -0.376 | -0.187 | -0.035 | False | 0.088 | 5 | 0.678 | -0.153 | 4.44 |
+| KWEB | china | -0.410 | 0.003 | -1.75 | -0.181 | -0.095 | -0.330 | -0.567 | -0.039 | False | 0.089 | 5 | 0.696 | -0.101 | 6.87 |
+| FXI | china | -0.190 | 0.029 | -1.12 | -0.080 | -0.005 | -0.239 | -0.347 | -0.033 | False | 0.285 | 5 | 0.235 | -0.074 | 3.19 |
+| URNM | nuclear | -0.435 | 0.022 | -0.97 | -0.214 | -0.142 | -0.432 | -0.342 | -0.058 | False | 0.101 | 5 | 0.771 | -0.194 | 3.97 |
+| NLR | nuclear | -0.375 | 0.003 | -0.93 | -0.204 | -0.145 | -0.411 | -0.398 | -0.046 | False | 0.139 | 5 | 0.600 | -0.174 | 3.45 |
+| URA | nuclear | -0.356 | 0.016 | -0.81 | -0.172 | -0.120 | -0.366 | -0.300 | -0.045 | False | 0.227 | 6 | 0.553 | -0.191 | 2.89 |
+| SLV | silver | -0.482 | 0.040 | -1.25 | -0.170 | -0.051 | -0.347 | 0.112 | -0.087 | False | 0.114 | 7 | 0.929 | -0.166 | 5.58 |
+| SHLD | defense-us | -0.226 | 0.016 | -1.12 | -0.113 | -0.098 | -0.362 | -0.300 | -0.039 | False | 0.152 | 6 | 0.291 | -0.087 | 3.33 |
+| XAR | defense-us | -0.214 | 0.004 | -0.85 | -0.128 | -0.222 | -0.281 | -0.177 | -0.028 | False | 0.265 | 6 | 0.272 | -0.109 | 2.49 |
+| ITA | defense-us | -0.178 | 0.003 | -0.89 | -0.097 | -0.197 | -0.241 | -0.168 | -0.028 | False | 0.303 | 6 | 0.217 | -0.087 | 2.49 |
+| PPA | defense-us | -0.158 | 0.004 | -0.83 | -0.088 | -0.171 | -0.259 | -0.160 | -0.023 | False | 0.323 | 6 | 0.187 | -0.082 | 2.29 |
+| UFO | space | -0.363 | 0.019 | -1.33 | -0.088 | -0.170 | -0.301 | 0.031 | -0.002 | False | 0.165 | 8 | 0.570 | -0.118 | 4.83 |
+| ARKX | space | -0.134 | 0.135 | -0.51 | 0.007 | -0.068 | -0.102 | -0.033 | 0.017 | True | 0.791 | 6 | 0.155 | -0.113 | 1.37 |
+| XLU | utilities | -0.148 | 0.011 | -1.07 | -0.090 | -0.141 | -0.308 | -0.233 | -0.024 | False | 0.197 | 6 | 0.174 | -0.060 | 2.91 |
+| PBW | clean | -0.362 | 0.070 | -0.96 | -0.139 | -0.233 | -0.236 | -0.178 | -0.028 | False | 0.253 | 4 | 0.568 | -0.163 | 3.49 |
+| ICLN | clean | -0.274 | 0.012 | -1.00 | -0.085 | -0.173 | -0.225 | -0.070 | -0.021 | False | 0.310 | 7 | 0.378 | -0.119 | 3.18 |
+| GLD | gold | -0.233 | 0.044 | -0.94 | -0.086 | -0.032 | -0.294 | -0.096 | -0.052 | False | 0.266 | 6 | 0.304 | -0.108 | 2.83 |
+| IGF | grid/infra | -0.097 | 0.004 | -1.16 | -0.053 | -0.106 | -0.254 | -0.126 | -0.022 | False | 0.299 | 7 | 0.108 | -0.036 | 2.97 |
+| PAVE | grid/infra | -0.100 | 0.124 | -0.58 | -0.008 | -0.095 | -0.127 | -0.022 | 0.017 | True | 0.709 | 6 | 0.112 | -0.075 | 1.49 |
+| LIT | lithium | -0.241 | 0.154 | -0.95 | -0.072 | -0.117 | -0.241 | 0.048 | -0.017 | False | 0.343 | 5 | 0.317 | -0.109 | 2.90 |
+| ARGT | argentina | -0.176 | 0.054 | -0.81 | -0.085 | -0.128 | -0.276 | 0.102 | -0.086 | False | 0.348 | 6 | 0.213 | -0.094 | 2.27 |
+| ITB | housing | -0.228 | 0.154 | -0.82 | -0.102 | -0.165 | -0.210 | -0.352 | -0.009 | False | 0.366 | 2 | 0.295 | -0.120 | 2.45 |
+| XHB | housing | -0.195 | 0.128 | -0.79 | -0.082 | -0.153 | -0.188 | -0.287 | 0.009 | True | 0.455 | 5 | 0.242 | -0.107 | 2.27 |
+| INDA | india | -0.159 | 0.041 | -1.28 | -0.067 | -0.094 | -0.182 | -0.276 | -0.031 | False | 0.374 | 5 | 0.189 | -0.053 | 3.52 |
 
-## B. Leaders — regime read
+Themes ranked by depth: rare-earth, solar, china, nuclear, silver, defense-us, space, utilities, clean,
+gold, grid/infra, lithium, argentina, housing, india. Sibling groups: KWEB/FXI; URNM/NLR/URA;
+SHLD/XAR/ITA/PPA; UFO/ARKX; PBW/ICLN; IGF/PAVE; ITB/XHB. Thin (R/R < 1.3): none (ARKX 1.37 and PAVE 1.49
+are closest). Stabilizing: ARKX, PAVE, XHB only.
 
-LEADERS (rs_spy_3m): ETHA +46% (crypto-spot), USO +39% (oil/gas), IBIT +29% (crypto-spot), ARKG +21% (biotech),
-SKYY/WCLD +18–20% (software), XOP +18% / XLE +16% (oil/gas/energy). Money sits in crypto-spot, oil/gas, software
-and energy. Dip themes cluster as the rate-shock mirror: utilities, housing, clean, solar, gold are the
-rate-sensitive side of a Fed-hike regime (Sep 16 hike to 3.75–4.00%, 10y at ~5.2–5.35%, highest since 2007;
-soft Aug PCE 3.0% and weak Sep payrolls 29K eased October-hike odds to ~38% by 10/1; oil elevated, WTI ~$93,
-Brent ~$98–106 on the Iran/Strait-of-Hormuz standoff). Broadly the same regime as the 10/3 run: a rate-shock
-rotation, not a broad selloff.
+## B. Leaders (rs_spy_3m) — where the money went
 
-## C. Quick-pass memo — *UNVERIFIED, challenge it*
+| ETF | theme | rs_spy_3m | rs_spy_6m | dd_52w |
+|---|---|---|---|---|
+| ETHA | crypto-spot | 0.457 | 0.107 | -0.438 |
+| USO | oil/gas | 0.385 | -0.111 | -0.090 |
+| IBIT | crypto-spot | 0.294 | 0.078 | -0.330 |
+| ARKG | biotech | 0.212 | 0.794 | -0.004 |
+| SKYY | software | 0.195 | 0.324 | -0.005 |
+| WCLD | software | 0.182 | 0.305 | -0.044 |
+| XOP | oil/gas | 0.179 | -0.130 | -0.070 |
+| XLE | energy | 0.162 | -0.105 | -0.042 |
 
-- rare-earth (REMX): **rotation** — sector-wide selloff on Trump-Xi Sept summit optimism eroding the scarcity
-  premium (MP −15.8%/30d, REMX −17%); fundamentals constructive (MP Gd supply deal, GM magnet qual, Q4
-  commercial magnet shipments). Thaw depth vs Nov-10 expiration still unresolved.
-- solar (TAN): **break** — residential 25D eliminated, commercial 48E phased out in the tax bill; rates add
-  pressure (Barron's 9/28: TAN −10%/month). Policy repeal, not rotation.
-- china (KWEB/FXI): **unclear** — broad US-listed China ETF outflows (−$3–3.5B peak-to-trough since May per
-  Global Markets Investor); Fifth Plenum 10/26–29 is symmetric timing, not direction.
-- nuclear (URNM/NLR/URA): **rotation** — term uranium at record $96.50/lb (Aug) while miners −35%+; oilprice.com
-  10/1: AI-power trade divorced from momentum (NLR −35% below high); utilities reluctant to contract at record
-  prices; Oklo FERC queue rejection, Holtec IPO pull. Thesis intact, momentum unwind.
-- silver (SLV): **rotation** — futures-led selling on the Sep rate hike; dovish Williams/Jefferson comments
-  eased Oct-hike odds; China export tightening in January is a demand tailwind; industrial demand fell 3%
-  (World Silver Survey 2026).
-- defense-us (SHLD/XAR/ITA/PPA): **rotation** — valuation fatigue after the $1.5T budget proposal rally;
-  spending intact (RTX $24.4B SM-6); equal-weight XAR cleanest.
-- space (UFO/ARKX): **rotation** — SpaceX IPO pulled returns forward (UFO +50% YTD → −40% from high);
-  high-capex physics + dilution risk now pricing (barchart via TipRanks). No dated event.
-- utilities (XLU): **rotation** — pure rate selloff (−17.7% since Feb record $47.73); 10y 5.23% vs XLU 3.08%
-  yield (Jefferies); options flow 10/2 suggests traders see the bond selloff nearing an end (10× XLU options
-  volume, $1M bet sector stops falling, CNBC 10/2). Broad fund → core candidate.
-- clean (PBW/ICLN): **break-ish** — subsidy cuts real headwind (48E phaseout) + rates; ICLN quality operators
-  (Bloom Energy 9.4%, First Solar 7.0%) vs PBW small-cap junk. ICLN the cleaner basket.
-- gold (GLD): **rotation** — September decline led by futures/speculative selling, not ETF redemptions
-  (tradingnews 10/1: ETF allocators added into the Fed meeting and held); central-bank buying intact (~1,000t/yr,
-  China 1,077t Jan–Aug); Morgan Stanley sees $4,000/oz floor. No dated trigger.
-- grid/infra (IGF/PAVE): **rotation** — AI data-center buildout capex intact (IEA: grid investment must double
-  to >$600B/yr by 2030; Gartner: AI infra +$401B 2026); PAVE stabilizing (+1.7% ret_10d, retaking). No dated catalyst;
-  broad funds → core candidates.
-- lithium (LIT): **unclear** — supply-driven (China lithium carbonate back to 1-month low on Australian
-  supply); Albemarle Q3 11/4 confirmed; LIT basket flawed (Rio Tinto 22.5%, chemicals).
-- argentina (ARGT): **unclear** — reform-durability bet on Milei; MELI 21.6% anchor; IMF review risk, peso
-  band dynamics; Oct 2026 legislative elections looming. Macro binary, no dated trigger.
-- housing (ITB/XHB): **rotation** — pure rate play; 30y ~7%, July new-home sales −10.5% MoM; structural 3–4M
-  home shortage intact; DHI Q4 10/29 confirmed; XHB stabilizing. ITB hit 52w low 10/2.
-- india (INDA): **rotation** — FII outflows ₹3.05 lakh crore Jan–Sep 2026 (NSDL), AI rotation to Taiwan/Korea,
-  weak rupee (₹96/$); no dated trigger.
+Money went to oil/energy (USO/XOP/XLE), crypto (rebounding from deep drawdowns — ETHA still −44% off high),
+biotech and software. The dips are the mirror: long-duration and rate-sensitive themes (utilities, housing,
+solar/clean, grid), no-yield metals (gold, silver) and 2025-26 momentum trades (nuclear, defense, space,
+rare-earth). That is one rotation — a rates shock — not 15 separate problems.
 
-## D. Confirmed catalysts carried forward — already verified, do NOT rescore as "not found"
+## C. Quick-pass memo (UNVERIFIED — challenge it; one search per theme, 2026-10-04)
+
+Regime as read from today's searches: Fed hiked 25bp on 2026-09-16 to 3.75–4.00% (discoveryalert, kitco);
+10y Treasury peaked ~5.33% (multi-decade high) and eased from it Oct 1–2 (CNBC 10/1 "Treasury yields fall from
+multiyear highs"; TLT best day in a month on 10/2); one source cites ~94% December hike odds (Yahoo, silver
+piece) — not confirmed against CME. Gold −6% in September, worst month since June.
+
+- **rare-earth (REMX) — rotation.** YTD −14.4% at 10/2 (VanEck). Trump–Xi thaw (September meeting) eroded the
+  scarcity premium on Western producers; no company-specific news from top holdings (tickeron; rareearthexchanges
+  on Benzinga). The ledger's MOFCOM No. 70 expiry is still Disputed (2026-11-10 vs 2027-01-10) — see §D.
+- **solar (TAN) — break-leaning.** −27% since late June, rates (Seeking Alpha downgrade to hold); 52w range
+  42.46–75.60. Policy backdrop (2025 tax bill cut residential 25D / phases 48E) is the thesis question for
+  cause. §D dates: USITC final vote 10/14, Commerce final AD/CVD orders 11/02.
+- **china (KWEB, FXI) — unclear.** KWEB YTD NAV −28% at 10/2 (KraneShares); overcapacity, weak domestic
+  consumption (pluang). No fund-specific break; FXI is the broad large-cap sibling, much shallower (−19%).
+- **nuclear (URNM, NLR, URA) — rotation.** NLR ~35% off 1/28 peak; selling clustered after Q1 hyperscaler calls
+  as the market moved from celebrating AI capex to questioning it (VanEck "The Nuclear Reset"); NLR −12% in a
+  month (MarketBeat). Thesis question = AI-power demand; §D: Cameco Q3 10/30.
+- **silver (SLV) — rotation, high beta.** Silver ~$60.4/oz 10/2, −9.9% 1m, still +26% y/y (tradingeconomics);
+  SLV ~50% below 52w high $109.83 (Yahoo) — the yield high crushed both monetary and industrial cases.
+- **defense-us (SHLD, XAR, ITA, PPA) — rotation (sentiment).** XAR/ITA six straight weekly losses, XAR longest
+  losing streak in its history, ~21% off peak = bear market; 42 of 50 XAR names fell in September; biggest losers
+  defense-tech (Axon −25%, Red Cat −24%) (Benzinga/TradingView). RSI ITA 22, XAR 18 (Investing.com). No budget
+  cut cited — positioning/valuation unwind.
+- **space (UFO, ARKX) — rotation-leaning, valuation.** SpaceX-fueled rally losing momentum, UFO −9% in recent
+  trading, 3m −17% (MarketBeat, stockanalysis). ARKX shallower (−13%), above its SMA200, stabilizing.
+- **utilities (XLU) — rotation.** −6% in September, steepest monthly drop since 2023, ~17% off 52w high; 10y >5.2%
+  vs XLU yield ~3.05% (24/7 Wall St 10/2; Seeking Alpha "oversold"); CNBC 10/2 "poised for a bounce". AI-power
+  demand backdrop intact.
+- **clean (PBW, ICLN) — break-leaning.** ICLN YTD +3.2% at 10/2 after being +27% mid-year (iShares); same policy
+  question as solar; PBW small/micro-cap, 0.6% fee.
+- **gold (GLD) — rotation.** Gold $4,140 10/2, −7.5% 1m, +6.5% y/y (tradingeconomics); worst month since June on
+  the hike and 5.3% 10y (discoveryalert); Goldman keeps bullish view on CB buying (TheStreet); Garner tactical
+  buy but bearish at $4,500 (Kitco 10/1).
+- **grid/infra (IGF, PAVE) — rotation.** No selloff story found; IGF YTD +1.5% (9/30), PAVE YTD +22% — the dip is
+  the rate-driven de-rating of yield infrastructure (IGF holds utilities/pipelines/toll roads). PAVE stabilizing.
+- **lithium (LIT) — unclear.** LIT +1.55% to $69.28 on 10/2; Sept 10 slide on "well-supplied physical market"
+  (Rio Times); China lithium futures shut for National Day through 10/8. §D: Albemarle Q3 11/04.
+- **argentina (ARGT) — unclear.** Search returned the 2025 swap/midterm episode, not a 2026 one — no current
+  catalyst found; MELI ~21% of fund (prior runs). Treat as unexplained.
+- **housing (ITB, XHB) — rates headwind.** Search returned mostly stale (2025) articles; XHB YTD −5.1% at 10/2
+  (stockanalysis). 30y mortgage ~7% per prior runs — panel must re-establish. §D: D.R. Horton Q4/FY26 10/29.
+  XHB stabilizing.
+- **india (INDA) — unclear/flows.** Nifty/Sensex headed for 8th straight weekly loss, longest in 25 years;
+  foreigners sold \$27.8B YTD; tariffs, weak rupee, high US yields, elevated crude (Rallies, whalesbook,
+  multibagg). INDA −10% YTD.
+
+Lone/idiosyncratic: rare-earth (trade diplomacy), space (SpaceX valuation reset), defense (positioning).
+The rest are one cluster around the Sep-16 hike and the 5%+ 10y.
+
+## D. Confirmed catalysts carried forward — already verified, do NOT rescore as 'not found'
 
 | theme | event | date | confirmed by |
 |---|---|---|---|
-| nuclear | Cameco Q3 results, before market open | **2026-10-30** | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 and 2026-10-01 |
-| macro | FOMC decision (Oct 27-28 meeting, statement on second day) | **2026-10-28** | federalreserve.gov FOMC calendar; re-verified 2026-09-29 and 2026-10-01 |
-| macro | FOMC decision (Dec 8-9 meeting, statement on second day) | **2026-12-09** | federalreserve.gov FOMC calendar; re-verified 2026-09-29 and 2026-10-01 |
-| ai/robot | NVIDIA GTC 2027, San Jose | **2027-03-14** | nvidia.com GTC FAQ |
-| solar | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | **2026-10-14** | Reuters/SRN 2026-09-11; re-verified 2026-09-29 and 2026-10-01 (pv-tech 9/15) |
-| solar | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | **2026-11-02** | Sxcoal 2026-09-14; re-verified 2026-09-29 and 2026-10-01 (pv-tech 9/15) |
-| housing | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | **2026-10-29** | D.R. Horton investor site PR 2026-09-10 (BusinessWire) |
-| lithium | Albemarle Q3 2026 results, after NYSE close; call Nov 5, 8:00 a.m. EST | **2026-11-04** | Albemarle PR Newswire 2026-10-01 |
+| nuclear | Cameco Q3 results, before market open | **2026-10-30** | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 and 2026-10-01 (BusinessWire 20260730139928: "We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026") |
+| macro | FOMC decision (Oct 27-28 meeting, statement on second day) | **2026-10-28** | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01 |
+| macro | FOMC decision (Dec 8-9 meeting, statement on second day) | **2026-12-09** | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01 |
+| ai/robot | NVIDIA GTC 2027, San Jose McEnery Convention Center — flagship AI/robotics launch showcase | **2027-03-14** | nvidia.com GTC FAQ |
+| solar | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | **2026-10-14** | Reuters/SRN 2026-09-11; SMM; Sxcoal; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) and 2026-10-01 (pv-tech.org 9/15: "Commission is scheduled to make its final determination on 14 October 2026") |
+| solar | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | **2026-11-02** | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) and 2026-10-01 (pv-tech.org 9/15: "final AD/CVD duty orders, currently scheduled for 2 November 2026") |
+| housing | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | **2026-10-29** | D.R. Horton investor site press release, 2026-09-10 (BusinessWire): "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens" |
+| lithium | Albemarle Q3 2026 results, after NYSE close; earnings call Nov 5, 8:00 a.m. EST | **2026-11-04** | Albemarle PR Newswire, 2026-10-01: "will release its third quarter 2026 earnings after the NYSE closes on Wednesday, November 4, 2026" |
 
-### Disputed — sources contradict; neither date confirmed
+A panelist that cannot re-find one of these writes "carried forward, not re-searched" and keeps
+the band the date earns. It does not score the theme down for having no dated trigger, and never
+calls it "unverified": only a cited source that CONTRADICTS the date overturns it (write
+"CONTRADICTED: <source>"; the verifier then marks the ledger row RETRACTED). check_memo.py fails
+a ballot that doubts a live row without one.
+
+### Disputed — sources contradict each other; neither date is confirmed
 
 | theme | claim | readings | sources |
 |---|---|---|---|
-| rare-earth | China's suspension of Oct-2025 rare-earth export controls (MOFCOM Announcement No. 70) | (a) expires 2026-11-10 with automatic snapback — MOFCOM No. 70 text (2025-11-07, pre-summit); (b) extended with truce to 2027-01-10 — Bessent post-9/24-summit (stockmoguls 9/22 flags the Nov-10 deadline as the real forcing function, leverage intact either way). No MOFCOM text on either side | (a) MOFCOM No. 70 text; (b) Bessent via post-summit outlets; 9/22 stockmoguls: "China's one-year suspension ... due to expire on November 10, 2026, giving Beijing significant leverage" |
+| rare-earth | China's suspension of its Oct-2025 rare-earth export controls (MOFCOM Announcement No. 70) | (a) expires 2026-11-10 with automatic snapback — MOFCOM No. 70 text (2025-11-07, pre-summit), per Sphera and pre-summit SilmarilMedia; (b) the rare-earth export-control pause was extended with the truce to 2027-01-10 — Bessent confirmed post-9/24-summit (The Global Market Brief 9/26; chomcho; tamaranews 9/26). Some outlets (FXStreet, InvestedAlpha) report no *new* firm rare-earth commitments. No MOFCOM text seen on either side | (a) MOFCOM No. 70 text; (b) Bessent via The Global Market Brief 9/26, chomcho, tamaranews 9/26; post-summit: Bessent Fox News 9/24 announced the Nov-10 → 2027-01-10 extension (WSJ headline via killbait; tokenpost; roic; pressinsider — which notes Beijing did not separately announce the date); silmarilmedia 9/29: "a 61-day reprieve with no binding commitments on rare earth supply volumes, no resolution of the April 2025 licensing architecture"; neuralwired 9/26: extension "preserves China's suspension of rare earth export controls". Still no MOFCOM text on either side — stays Disputed |
+
+A catalyst score of 7+ that rests on a disputed date must cite a primary source (the issuing
+ministry / agency / company) that settles it; otherwise score only what holds under both readings.
+
