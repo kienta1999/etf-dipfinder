@@ -128,4 +128,42 @@ assert render_problems("spend $1.5T request, RTX $289B backlog\n") == []        
 assert render_problems("costs $5 and $10\n") == []
 assert "math" in render_problems("the $x$ term\n")[0][1]
 assert render_problems("the \\$x\\$ term and `$a$`\n") == []                          # escaped / in code
+# independence: memo parsing, copy detection, catalyst floor, run ids, file ownership
+import check_memo as cm, carry_forward as cf, run_id
+memo = ("| my # | ETF | theme | cause | need | cat | basket | why (1 line) |\n|---|---|---|---|---|---|---|---|\n"
+        + "".join(f"| {i} | T{chr(65+i)} | x | 7 | 8 | {6+i%2} | 5 | r{i} |\n" for i in range(10)))
+rows = cm.memo_rows(memo)
+assert len(rows) == 10 and rows["TA"] == {"cause": "7", "necessity": "8", "catalyst": "6", "basket": "5", "why": "r0"}
+cm.errors.clear(); cm.other_runs = lambda run: {"prev": rows}
+cm.copy_check("2026-10-06", rows)                                  # identical judged scores -> copied
+assert cm.errors and "not an independent run" in cm.errors[0]
+cm.errors.clear()
+tweak = {t: dict(r, cause=str(int(r["cause"]) + (i % 4 > 0))) for i, (t, r) in enumerate(rows.items())}
+cm.copy_check("2026-10-06", tweak)                                 # 3 of 10 the same (30%) -> independent
+assert not cm.errors
+cf.load = lambda: [dict(theme="nuclear", match="Cameco", event="Cameco Q3 results", date="2026-10-30",
+                        confirmed_by="x", verified_on="2026-10-01"),
+                   dict(theme="india", match="RBI", event="RBI MPC policy decision", date="2026-10-07",
+                        confirmed_by="x", verified_on="2026-10-01"),
+                   dict(theme="solar", match="Solar IV", event="USITC vote", date="2026-12-14",
+                        confirmed_by="x", verified_on="2026-10-01"),
+                   dict(theme="housing", match="DHI", event="DHI results", date="2026-10-29",
+                        confirmed_by="x", verified_on="2026-10-20")]
+fl = cf.floors("2026-10-05")
+assert set(fl) == {"nuclear"}       # MPC is symmetric; Solar IV is 70 days out; DHI was not known on 10-05
+assert set(cf.floors("2026-10-05-r2")) == {"nuclear"}             # a rerun id reads as its date
+cm.errors.clear(); cm.floor_check("2026-10-05", {"NLR": ("nuclear", "6", "two-way print"), "URA": ("nuclear", "7", "")})
+assert len(cm.errors) == 1 and "NLR catalyst 6" in cm.errors[0]
+cm.errors.clear(); cm.floor_check("2026-10-05", {"NLR": ("nuclear", "5", "CONTRADICTED: cameco.com moved it")})
+assert not cm.errors
+assert cm.run_of("output/2026-10-05/scores.csv") == "2026-10-05" and cm.run_of("log/2026-10-05-r2-lite.md") == "2026-10-05-r2"
+assert cm.run_of("log/catalysts.md") is None
+import tempfile
+from pathlib import Path as _P
+run_id.ROOT = _P(tempfile.mkdtemp()); (run_id.ROOT / "log").mkdir(); (run_id.ROOT / "output").mkdir()
+assert run_id.next_run_id("2026-10-06") == "2026-10-06"
+(run_id.ROOT / "log" / "2026-10-06-lite.md").write_text("x")
+assert run_id.next_run_id("2026-10-06") == "2026-10-06-r2"
+(run_id.ROOT / "output" / "2026-10-06-r2").mkdir()
+assert run_id.next_run_id("2026-10-06") == "2026-10-06-r3"
 print("ok")

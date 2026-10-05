@@ -68,9 +68,131 @@ def memo_table(date):
     return head, rows
 
 
+JUDGED = ["cause", "necessity", "catalyst", "basket"]   # the researched lenses; price is computed
+COPY_SHARE, COPY_MIN = 0.80, 8   # >=80% of >=8 shared funds with all four judged scores identical = copied
+# Measured on 2026-09-19..10-05: the lite runs that copied their predecessor (09-24, 09-27, 09-28) matched it
+# on 100% of rows; independent runs on byte-identical prices never exceeded 29%.
+
+
+def memo_rows(text):
+    """{ticker: {'cause':..,'necessity':..,'catalyst':..,'basket':..,'why':..}} from a memo's ranking table.
+    Tolerates the abbreviated headers older lite memos used (need, cat)."""
+    alias = {"need": "necessity", "cat": "catalyst"}
+    rows, hdr = {}, None
+    for ln in text.splitlines():
+        c = [x.strip().strip("*").strip() for x in ln.strip().strip("|").split("|")]
+        if hdr is None and len(c) > 5 and c[1] == "ETF":
+            hdr = [alias.get(h.lower(), h.lower()) for h in c]
+            continue
+        if hdr and len(c) == len(hdr) and re.fullmatch(r"\d+", c[0]) and re.fullmatch(r"[A-Z]+", c[1]):
+            d = dict(zip(hdr, c))
+            rows[c[1]] = {k: d.get(k) for k in JUDGED} | {"why": next((v for k, v in d.items() if k.startswith("why")), "")}
+    return rows
+
+
+def _run_date(run):
+    return run[:10]
+
+
+def other_runs(run):
+    """{run id: judged rows} for every other memo dated on or before this run's date."""
+    out = {}
+    for p in sorted((ROOT / "log").glob("20*.md")):
+        rid = p.stem[:-5] if p.stem.endswith("-lite") else p.stem
+        if rid != run and _run_date(rid) <= _run_date(run):
+            rows = memo_rows(p.read_text())
+            if rows:
+                out[p.stem] = rows
+    return out
+
+
+def copy_check(run, today):
+    """Independence: today's judged scores must not be a copy of an earlier run's."""
+    for name, rows in other_runs(run).items():
+        both = set(rows) & set(today)
+        if len(both) < COPY_MIN:
+            continue
+        same = sum(all(str(today[t][k]) == str(rows[t][k]) for k in JUDGED) for t in both)
+        if same / len(both) >= COPY_SHARE:
+            errors.append(f"not an independent run: {same}/{len(both)} funds carry exactly the same cause/"
+                          f"necessity/catalyst/basket scores as log/{name}.md - score from today's dossier only, "
+                          f"never from an earlier memo, ballot or scores.csv")
+
+
+def floor_check(run, scores):
+    """scores: {ticker: (theme, catalyst score, reason text)}. Catalyst may not sit below the computed floor."""
+    fl = carry_forward.floors(_run_date(run))
+    for t, (theme, s, note) in scores.items():
+        r = fl.get(theme)
+        if r and s is not None and int(float(s)) < carry_forward.FLOOR and "CONTRADICTED" not in (note or ""):
+            errors.append(f"{t} catalyst {int(float(s))} is below the floor {carry_forward.FLOOR}: theme '{theme}' has "
+                          f"{r['match']} ({r['event']}) confirmed for {r['date']}, within {carry_forward.FLOOR_DAYS} days "
+                          f"(log/catalysts.md) - score >= {carry_forward.FLOOR} or cite 'CONTRADICTED: <source>'")
+
+
+def run_of(path):
+    """Run id a log/ or output/ path belongs to, or None (shared files such as log/catalysts.md)."""
+    parts = Path(path).parts
+    if len(parts) >= 2 and parts[0] == "output" and parts[1][:1].isdigit():
+        return parts[1]
+    if len(parts) == 2 and parts[0] == "log" and parts[1][:1].isdigit():
+        stem = Path(parts[1]).stem
+        return stem[:-5] if stem.endswith("-lite") else stem
+    return None
+
+
+def overwrite_check(run):
+    """A run writes only its own files (plus the shared ledger). Modifying or deleting another run's memo,
+    ballots or scores - as the 2026-10-01 and 2026-10-04 reruns did - erases an independent opinion."""
+    up = subprocess.run(["git", "merge-base", "HEAD", "@{upstream}"], cwd=ROOT, capture_output=True, text=True)
+    if up.returncode != 0:
+        return
+    diff = subprocess.run(["git", "diff", "--name-status", up.stdout.strip(), "--", "log", "output"], cwd=ROOT,
+                          capture_output=True, text=True).stdout
+    bad = []
+    for ln in diff.splitlines():
+        st, *paths = ln.split("\t")
+        if st[0] in "MDR":
+            for path in paths[:1]:
+                owner = run_of(path)
+                if owner and owner != run:
+                    bad.append(f"{st} {path}")
+    if bad:
+        errors.append("this run modified or deleted another run's files - a rerun writes under its own id "
+                      "(scripts/run_id.py), never over an earlier run:\n" + "\n".join("    " + b for b in bad))
+
+
+def lite_main(run, memo):
+    """Lite runs write only log/<RUN>-lite.md: audit what exists - independence, floor, rendering, overwrites."""
+    rows = memo_rows(memo.read_text())
+    if not rows:
+        errors.append(f"{memo.name}: no ranking table parsed")
+    copy_check(run, rows)
+    import pandas as _pd
+    scan = ROOT / "data" / "scan.csv"
+    theme = _pd.read_csv(scan, index_col=0).theme.to_dict() if scan.exists() else {}
+    from scan import THEME
+    floor_check(run, {t: (theme.get(t, THEME.get(t)), r["catalyst"], r["why"]) for t, r in rows.items()
+                      if r["catalyst"] and r["catalyst"].isdigit()})
+    errors.extend(f"{memo.name} line {n}: {msg}" for n, msg in render_problems(memo.read_text()))
+    overwrite_check(run)
+    dirty = subprocess.run(["git", "status", "--porcelain", "log/", "SESSIONS.md"], cwd=ROOT,
+                           capture_output=True, text=True).stdout.strip()
+    if dirty:
+        errors.append("uncommitted files - commit the memo and SESSIONS.md:\n"
+                      + "\n".join("    " + ln for ln in dirty.splitlines()))
+    for e in errors: print(f"ERROR   {e}")
+    for w in warns: print(f"WARN    {w}")
+    print(f"\n{run} (lite): {len(errors)} error(s), {len(warns)} warning(s)")
+    return 1 if errors else 0
+
+
 def main(date):
     out = ROOT / "output" / date
     if not out.exists():
+        lite = ROOT / "log" / f"{date}-lite.md"
+        if lite.exists():
+            return lite_main(date, lite)
         print(f"ERROR: no output/{date}"); return 1
 
     # 1. scores.csv must be consolidate.py's own output, not hand-written.
@@ -102,6 +224,21 @@ def main(date):
                 errors.append(f"consolidate.py rejected the ballots: {str(e).splitlines()[0]}")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+
+    # 2b. Independence: the judged scores must be this run's own, not an earlier run's carried over.
+    if set(JUDGED) <= set(committed.columns):
+        copy_check(date, {t: {k: int(committed.loc[t, k]) for k in JUDGED} for t in committed.index})
+
+    # 2c. Computed catalyst floor (lenses.md / carry_forward.floors).
+    cat_p = out / "score_catalyst.md"
+    if cat_p.exists() and "theme" in committed.columns:
+        notes = {t: (s, n) for t, s, n in re.findall(r"^\|\s*\d+\s*\|\s*\**([A-Z]+)\**\s*\|\s*(\d+)\s*\|(.*)$",
+                                                     cat_p.read_text(), re.M)}
+        floor_check(date, {t: (committed.theme[t], notes.get(t, (committed.catalyst[t], ""))[0],
+                               notes.get(t, ("", ""))[1]) for t in committed.index})
+
+    # 2d. Reruns never overwrite: only this run's own files (and the shared ledger) may change.
+    overwrite_check(date)
 
     # 3. Every bucket printed in the memo must equal the bucket the rule computed.
     head, memo = memo_table(date)

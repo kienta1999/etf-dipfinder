@@ -69,7 +69,7 @@ company-level lenses (moat, balance sheet) — an ETF is a basket.
 ## 3. Layout
 
 ```
-scripts/scan.py, consolidate.py, test_scan.py, why.py
+scripts/scan.py, consolidate.py, test_scan.py, why.py, run_id.py
 data/scan.csv                 latest scan, gitignored (has an asof column = last close used)
 data/drops.csv                every fund that missed CANDIDATES: gate (no data / illiquid / not a dip / theme
                               outside top 15) + the failing values; frozen to output/<DATE>/drops.csv with scan.csv
@@ -78,6 +78,7 @@ output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)
 output/<DATE>/buckets_why.csv the rule leg behind every bucket (thin / cause / catalyst / behind <leader>) (committed)
 log/<DATE>.md                 the memo — audit trail, never delete
+log/<DATE>-r2.md …          a rerun on the same date gets its own id (scripts/run_id.py), never overwrites
 .claude/skills/etf-dip-pick/       SKILL.md + lenses.md
 .claude/skills/etf-dip-pick-lite/  SKILL.md (one agent, reads ../etf-dip-pick/lenses.md, same memo sections as full, writes log/<DATE>-lite.md only)
 log/<DATE>-lite.md            lite memo

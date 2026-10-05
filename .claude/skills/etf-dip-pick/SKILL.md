@@ -23,6 +23,26 @@ event the panelist can name, or the ballot says "unverified" and the score caps 
 Every ballot row names the band from `lenses.md` it scored into; the anchors bind, and a score 2+ points
 off its band is a deviation that needs its own sentence.
 
+## Independence — every run scores from today's evidence only
+
+A run's judgment must be its own, or the consensus counts one opinion several times: the 2026-09-24, 09-27 and
+09-28 lite memos carried their predecessor's cause/necessity/catalyst/basket scores over unchanged (100% of rows),
+while genuinely independent runs on byte-identical prices never matched more than 29%.
+
+- **Until `consolidate.py` has written this run's `scores.csv`, open nothing from another run:** no other
+  `log/20*.md`, no other `output/<id>/` (ballots, scores, dossier, verifier), no `SESSIONS.md`. Panelists get this run's
+  dossier and the web, nothing else, and their prompt says so.
+- **Facts are shared, opinions are not.** The one past input allowed is dossier section D
+  (`carry_forward.py`): issuer-confirmed dated events, no scores. Re-searching a confirmed date from scratch only adds noise.
+- **Comparisons come after scoring.** check_memo's day-over-day table (check 6) is an audit of the finished run.
+- **Run id, not date.** `RUN=$(uv run python scripts/run_id.py)` — the date for a date's first run, `<date>-r2`, `-r3`…
+  for any later one. Everything below that says `<DATE>` means `<RUN>`: `output/<RUN>/`, `log/<RUN>.md`,
+  `consolidate.py <RUN>`, `check_memo.py <RUN>`. A rerun never edits or deletes an earlier run's files (the 2026-10-01
+  and 2026-10-04 reruns did, and the first opinion survived only in git history); `log/catalysts.md` is the only shared file a run may change.
+
+`check_memo.py` enforces all four: it fails a run whose judged scores match an earlier memo on ≥80% of ≥8 shared funds,
+a catalyst below the computed floor (lenses.md), and any change to another run's files.
+
 ## Phase 0 — scan
 
 ```
@@ -49,7 +69,7 @@ obsolescence, top-holding blowup, permanent re-rating) / **unclear**.
 Write `output/<DATE>/dossier.md`: (A) the candidates' full CSV rows with column legend, (B) leaders,
 (C) the quick-pass memo, marked *unverified — challenge it*, (D) the output of
 `uv run python scripts/carry_forward.py` — catalysts a previous verifier already confirmed and that have
-not expired. Panelists start cold, so without (D) a confirmed date has to be rediscovered every run. In quick mode, stop here and write the
+not expired, with the **catalyst floor** column (lenses.md) marked. Panelists start cold, so without (D) a confirmed date has to be rediscovered every run. In quick mode, stop here and write the
 memo (format below) to `log/<DATE>.md`.
 
 ## Phase 2 — panel, sequential
@@ -58,7 +78,8 @@ Read `lenses.md` (same folder). Four lenses are researched; **price is computed 
 from the scan, so never spawn a price panelist and never write `score_price.md`.** For each lens in order
 **cause → necessity → catalyst → basket**, skip if `output/<DATE>/score_<lens>.md` exists, else spawn ONE subagent
 (`subagent_type: "claude"`, `model: "opus"`) with: working dir, "read dossier.md and your row in
-lenses.md", score ALL candidates 1-10 on that lens only, search as far as the stop rule needs (no cap;
+lenses.md; do not open any other run's files (other log/ memos, other output/ folders, SESSIONS.md) — score from
+this dossier and the web only", score ALL candidates 1-10 on that lens only, search as far as the stop rule needs (no cap;
 WebFetch a primary source when a snippet is the only evidence for a buy-grade score), write the ballot file in the
 lenses.md format, return it. Wait for it before starting the next. Cause, necessity and catalyst are **theme**
 questions: research once per theme, copy the score to siblings, one sentence where a sibling differs. Basket is per fund.
@@ -93,8 +114,9 @@ run `/etf-dip-pick-lite` instead rather than a panel with no verifier.
 
 Phase 3.6 — audit, before the memo is final: `uv run python scripts/check_memo.py <DATE>`.
 It fails the run if `scores.csv` was not written by `consolidate.py`, if the ballots do not parse,
-if re-running the rule does not reproduce `scores.csv`, or if any bucket printed in the memo
-contradicts the one the rule computed. It also fails when anything under `output/` or `log/` is uncommitted, because a run nobody committed
+if re-running the rule does not reproduce `scores.csv`, if any bucket printed in the memo
+contradicts the one the rule computed, if the judged scores copy an earlier run, if a catalyst sits below the computed
+floor, or if the run changed another run's files. It also fails when anything under `output/` or `log/` is uncommitted, because a run nobody committed
 is a run nobody else can see: every other check here reads the filesystem and passes locally either way.
 Fix what it reports, commit what it lists, and re-run until it exits 0 — the run is not finished, and the
 memo is not published, while it is non-zero.

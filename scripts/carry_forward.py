@@ -7,11 +7,19 @@ rediscovered — and on 2026-09-21 the catalyst lens failed to, writing "no date
 for nuclear five weeks before a confirmed Cameco print. log/catalysts.md is the ledger; this
 prints the rows that have not expired, as the block that goes into the dossier."""
 import re, sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 LEDGER = Path(__file__).resolve().parent.parent / "log" / "catalysts.md"
 COLS = ["theme", "match", "event", "date", "confirmed_by", "verified_on"]
+
+# Computed catalyst floor (lenses.md): a THEME-SPECIFIC event confirmed in the ledger and dated within
+# FLOOR_DAYS of the run sets catalyst >= FLOOR for every fund in that theme. The panel's "is it one-sided /
+# priced?" judgment may lift it to 8-10 but never below. Rate decisions and data prints are symmetric
+# timing, not direction, so they never set a floor. Why: on identical prices NLR's catalyst went 7 -> 6
+# between two runs (2026-10-04/05) with Cameco's Oct 30 date unchanged, and that one point flipped buy -> watch.
+FLOOR, FLOOR_DAYS = 7, 30
+SYMMETRIC = re.compile(r"FOMC|\bMPC\b|monetary policy|policy decision|rate decision|\bCPI\b|payroll|jobs report", re.I)
 
 
 def load():
@@ -24,9 +32,26 @@ def load():
 
 
 def unexpired(asof=None):
-    """Rows whose event has not happened yet as of `asof`, retractions dropped."""
-    asof = str(asof or date.today())
-    return [r for r in load() if r["date"] >= asof and "RETRACTED" not in r["match"].upper()]
+    """Rows whose event has not happened yet as of `asof`, retractions dropped. A rerun id such as
+    2026-10-05-r2 is read as its date."""
+    asof = str(asof or date.today())[:10]
+    # Known by then: a row the verifier only added later cannot bind a run that predates it (auditing an old
+    # date against today's ledger otherwise fails it for facts nobody had yet).
+    return [r for r in load() if r["date"] >= asof and r["verified_on"][:10] <= asof
+            and "RETRACTED" not in r["match"].upper()]
+
+
+def floors(run_date=None):
+    """{theme: ledger row} for themes whose catalyst score may not fall below FLOOR on run_date."""
+    d0 = date.fromisoformat(str(run_date or date.today())[:10])
+    out = {}
+    for r in unexpired(d0.isoformat()):
+        if r["theme"] == "macro" or SYMMETRIC.search(r["event"]):
+            continue
+        if date.fromisoformat(r["date"]) <= d0 + timedelta(days=FLOOR_DAYS):
+            if r["theme"] not in out or r["date"] < out[r["theme"]]["date"]:
+                out[r["theme"]] = r
+    return out
 
 
 def disputed():
@@ -53,9 +78,15 @@ def block(asof=None):
                  "ministry / agency / company) that settles it; otherwise score only what holds under both readings."]
     if not live:
         return "\n".join(["## D. Confirmed catalysts carried forward", "", "None live."] + tail) + "\n"
+    fl = floors(asof)
     out = ["## D. Confirmed catalysts carried forward — already verified, do NOT rescore as 'not found'",
-           "", "| theme | event | date | confirmed by |", "|---|---|---|---|"]
-    out += [f"| {r['theme']} | {r['event']} | **{r['date']}** | {r['confirmed_by']} |" for r in live]
+           "", "| theme | event | date | floor | confirmed by |", "|---|---|---|---|---|"]
+    out += [f"| {r['theme']} | {r['event']} | **{r['date']}** | "
+            f"{f'**catalyst >= {FLOOR}**' if fl.get(r['theme']) == r else ''} | {r['confirmed_by']} |" for r in live]
+    if fl:
+        out += ["", f"**Catalyst floor:** every fund in a theme marked above scores catalyst >= {FLOOR} this run "
+                f"(issuer-confirmed, theme-specific, within {FLOOR_DAYS} days). Judgment may lift it to 8-10, never "
+                "below; only 'CONTRADICTED: <source>' overrides. check_memo.py fails a lower score."]
     out += ["", "A panelist that cannot re-find one of these writes \"carried forward, not re-searched\" and keeps",
             "the band the date earns. It does not score the theme down for having no dated trigger, and never",
             "calls it \"unverified\": only a cited source that CONTRADICTS the date overturns it (write",

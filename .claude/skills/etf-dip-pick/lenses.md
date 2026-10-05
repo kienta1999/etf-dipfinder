@@ -41,6 +41,14 @@ never by how exciting the theme is:
   no floor date)
 - **2** nothing on the calendar; "eventually mean-reverts"
 
+**Computed floor (binding, set by code, not judgment):** a theme-specific event in `log/catalysts.md`
+(issuer- or agency-confirmed) dated within 30 days of the run sets catalyst **≥ 7** for every fund in that theme —
+dossier section D marks those themes. The bands above may lift it to 8-10 (one-sided, not positioned); nothing takes it
+below 7 except a cited source that contradicts the date (`CONTRADICTED: <source>`). Rate decisions and data prints
+(FOMC, MPC, CPI, payrolls) are symmetric timing and never set a floor; the 6-band rule above still caps them. Why: on
+byte-identical prices NLR's catalyst went 7 → 6 between 2026-10-04 and 10-05 with Cameco's Oct 30 date unchanged, and
+that one point flipped it buy → watch. `carry_forward.floors()` computes it; `check_memo.py` fails a lower score.
+
 **basket** — 10 diversified, profitable, theme-pure, cheap, liquid · **7** theme-pure and liquid
 with one visible flaw (top-ten above ~50%, or fee above ~0.60%) · **5** two such flaws, or ~a third
 of the fund is a different theme · **3** a single name above ~20%, or half the fund off-theme ·

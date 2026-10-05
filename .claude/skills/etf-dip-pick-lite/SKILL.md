@@ -12,6 +12,11 @@ The memo carries every section the full memo does (dip#, TP/SL/R-R footnote, dev
 computed, not researched, so they cost nothing. What lite gives up is the five independent panelists and the
 full verifier.
 
+**Independence (same rule as the panel, see ../etf-dip-pick/SKILL.md):** until your scoring table is final, open no
+other `log/` memo, no `output/` folder and not `SESSIONS.md` — score from this scan, `carry_forward.py` (confirmed
+dates and the catalyst floor; facts, no scores) and the web. `RUN=$(uv run python scripts/run_id.py)`: the memo is
+`log/<RUN>-lite.md`, never over an earlier run of the same date.
+
 ## 1. Scan
 ```
 cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
@@ -19,6 +24,9 @@ cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is alre
 Read LEADERS first (where did the money go?), then CANDIDATES — every dip in the 15 deepest themes, grouped by
 theme. `dip_score` is depth, not quality. A fund the user holds or asks about that is missing → `uv run python
 scripts/why.py <TICKER>` (reads `data/drops.csv`: the gate and the failing values) — quote it, never guess.
+
+Then `uv run python scripts/carry_forward.py` — confirmed dated events; a theme marked **catalyst >= 7** may not
+score below 7 (lenses.md, computed floor).
 
 ## 2. Research — one search per theme
 The scan already groups candidates by `theme` — funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ; XLU alone).
@@ -52,9 +60,9 @@ would flip it if false) and spend up to 2 searches checking each is current, not
 number (term price, budget line, rate-odds print) over a headline about it. If a fact is stale or contradicted,
 demote to watch and say so in Deviations. This is not the full verifier — it covers one fund, not the top 3.
 
-## 4. Memo → `log/<DATE>-lite.md`
+## 4. Memo → `log/<RUN>-lite.md`
 ```
-# etf-dip-pick <DATE> — lite (one agent, N searches, buy spot-checked, no panel)
+# etf-dip-pick <RUN> — lite (one agent, N searches, buy spot-checked, no panel)
 
 Regime: 2-3 lines.
 
@@ -72,7 +80,8 @@ Risk-parity table: $ per buy, loss at SL, gain at TP, totals. Then the tranche c
 half now, half after it; independent → all in. One buy → do not risk-parity into it, use the per-position risk
 budget (~1% of capital at the stop, `size_1pct` in scan.csv) and leave the rest cash. Stops as orders, TPs as alerts.
 
-Since last memo: what changed vs the previous log/ entry — one or two lines, no searches (read the file).
+Since last memo (written last, after the table above is final — the first time you open the previous log/ entry):
+what changed vs it, one or two lines, no searches. A comparison, never an input: do not revise a score after reading it.
 
 Caveat: the one macro thing that flips the whole list.
 Not done in lite: per-lens independent scoring (one head scored all five — price contamination risk); the verifier
@@ -80,3 +89,8 @@ covered the buy only, not the top 3. Run the full /etf-dip-pick before sizing re
 ```
 TP/SL/R/R/dip# from `data/scan.csv` (`tp_pct` `sl_pct` `rr` `dip_score` rank; blank TP and R/R for avoids). Append a
 line to `SESSIONS.md`. Nothing is written to `output/`.
+
+## 5. Finish — `uv run python scripts/check_memo.py <RUN>`
+Commit the memo and `SESSIONS.md` (and push), then run the audit until it exits 0. For a lite run it checks independence
+(scores not copied from an earlier memo), the catalyst floor, rendering, that no other run's files changed, and that
+nothing is left uncommitted.
