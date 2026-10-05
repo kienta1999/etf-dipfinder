@@ -1,0 +1,38 @@
+## D. Confirmed catalysts carried forward — already verified, do NOT rescore as 'not found'
+
+| theme | event | date | confirmed by |
+|---|---|---|---|
+| nuclear | Cameco Q3 results, before market open | **2026-10-30** | Cameco press release, 2026-07-31 (BusinessWire); re-verified 2026-09-29 and 2026-10-01 (BusinessWire 20260730139928: "We plan to announce our 2026 third quarter results before markets open on Friday, October 30, 2026"); re-verified 2026-10-04 on SEC EDGAR 6-K ex-99.1 (Cameco Q2 release 2026-07-31, acc. 0001193125-26-326768), same sentence |
+| macro | FOMC decision (Oct 27-28 meeting, statement on second day) | **2026-10-28** | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01; re-verified 2026-10-04 (fomccalendars.htm: October 27-28) |
+| macro | FOMC decision (Dec 8-9 meeting, statement on second day) | **2026-12-09** | federalreserve.gov FOMC calendar (monetary20240809a + fomccalendars.htm); re-verified 2026-09-29 and 2026-10-01; re-verified 2026-10-04 (fomccalendars.htm: December 8-9, SEP meeting) |
+| ai/robot | NVIDIA GTC 2027, San Jose McEnery Convention Center — flagship AI/robotics launch showcase | **2027-03-14** | nvidia.com GTC FAQ |
+| solar | USITC final injury vote on Solar IV AD/CVD (India/Indonesia/Laos) | **2026-10-14** | Reuters/SRN 2026-09-11; SMM; Sxcoal; re-verified 2026-09-29 (solarpowerworld 9/20, Sxcoal 9/14, pv-magazine) and 2026-10-01 (pv-tech.org 9/15: "Commission is scheduled to make its final determination on 14 October 2026") |
+| solar | Commerce final AD/CVD duty orders (India/Indonesia/Laos), Solar IV | **2026-11-02** | Sxcoal 2026-09-14; Reuters 2026-09-11; re-verified 2026-09-29 (Sxcoal, pv-magazine, taiyangnews) and 2026-10-01 (pv-tech.org 9/15: "final AD/CVD duty orders, currently scheduled for 2 November 2026") |
+| housing | D.R. Horton Q4/FY26 results, before market open, 8:30 a.m. ET call | **2026-10-29** | D.R. Horton investor site press release, 2026-09-10 (BusinessWire): "will release financial results for its fourth quarter and fiscal year ended September 30, 2026 on Thursday, October 29, 2026 before the market opens" |
+| lithium | Albemarle Q3 2026 results, after NYSE close; earnings call Nov 5, 8:00 a.m. EST | **2026-11-04** | Albemarle PR Newswire, 2026-10-01: "will release its third quarter 2026 earnings after the NYSE closes on Wednesday, November 4, 2026" |
+| utilities | Southern Company Q3 2026 earnings released by 7:30 a.m. ET; analyst call 1 p.m. ET | **2026-11-05** | southerncompany.mediaroom.com press release 2026-09-25 (fetched): "plans to release its earnings for the third quarter of 2026 by 7:30 a.m. ET on Thursday, November 5, 2026"; Southern is XLU's #2 holding at 7.69% (SSGA, 2026-10-01) |
+| defense-us | RTX Q3 2026 results before market open; 8:30 a.m. ET call | **2026-10-20** | rtx.com news release 2026-09-29 (PRNewswire, fetched): "will issue its third quarter 2026 earnings results on Tuesday, October 20, prior to the stock market opening" |
+| defense-us | Lockheed Martin Q3 2026 results before market open; 8:30 a.m. ET webcast | **2026-10-22** | news.lockheedmartin.com release dated 2026-10-01 (fetched; also at investors.lockheedmartin.com): call "Thursday, Oct. 22, 2026, at 8:30 a.m. ET", results published prior to market opening |
+| defense-us | Howmet Aerospace Q3 2026 results ~7:00 a.m. ET, webcast 10:00 a.m. ET (also a PAVE holding) | **2026-10-29** | howmet.com press release 2026-10-01 (fetched): "Thursday, October 29, 2026. The press release and presentation materials will be available at approximately 7:00 AM ET" |
+| defense-us | FY27 continuing resolution (Division A of P.L. 119-103) expires: appropriations cliff, outcome cuts both ways | **2026-12-11** | P.L. 119-103 enrolled text (congress.gov PLAW-119publ103), Div. A sec. 106(3): funds available until "December 11, 2026"; CRS R49353 (2026-09-17) |
+| grid/infra | Surface Transportation Extension Act of 2026 (Division C of P.L. 119-103) ends: IIJA highway/transit authorities lapse unless reauthorized or re-extended | **2026-12-11** | P.L. 119-103 enrolled text (congress.gov PLAW-119publ103), Div. C: "extension end date means December 11, 2026", extension period from 2026-10-01 |
+| clean | Vestas Q3 2026 interim report (quiet period from 2026-10-10) | **2026-11-11** | vestas.com/en/investor/Calendar-Events (fetched 2026-10-04): "Disclosure of Q3 2026 interim report", 11 November 2026 |
+| india | HDFC Bank board meeting to approve results for the quarter ended 2026-09-30 (Q2 FY27) | **2026-10-17** | HDFC Bank Form 6-K filed 2026-09-22 (SEC acc. 0001193125-26-397434, text read via stocktitan): board meets 2026-10-17 to approve unaudited standalone and consolidated results; trading window closed 9/24-10/19 |
+| india | RBI MPC policy decision (Oct 5-7 meeting, decision on the last day); next meeting Dec 2-4 | **2026-10-07** | rbi.org.in press release 2026-03-23 "Meeting Schedule of the Monetary Policy Committee for 2026-2027" (prid=62422, fetched): October 5-7, 2026 |
+| china | APEC Economic Leaders' Meeting, Shenzhen, Nov 18-19 (CEO Summit Nov 17-18) | **2026-11-18** | Shenzhen Government Online (sz.gov.cn) 2026-09-10 (fetched): Economic Leaders' Meeting "Nov. 18 to 19"; Xi announced Shenzhen host 2025-11 (cppcc.gov.cn) |
+
+A panelist that cannot re-find one of these writes "carried forward, not re-searched" and keeps
+the band the date earns. It does not score the theme down for having no dated trigger, and never
+calls it "unverified": only a cited source that CONTRADICTS the date overturns it (write
+"CONTRADICTED: <source>"; the verifier then marks the ledger row RETRACTED). check_memo.py fails
+a ballot that doubts a live row without one.
+
+### Disputed — sources contradict each other; neither date is confirmed
+
+| theme | claim | readings | sources |
+|---|---|---|---|
+| rare-earth | China's suspension of its Oct-2025 rare-earth export controls (MOFCOM Announcement No. 70) | (a) expires 2026-11-10 with automatic snapback — MOFCOM No. 70 text (2025-11-07, pre-summit), per Sphera and pre-summit SilmarilMedia; (b) the rare-earth export-control pause was extended with the truce to 2027-01-10 — Bessent confirmed post-9/24-summit (The Global Market Brief 9/26; chomcho; tamaranews 9/26). Some outlets (FXStreet, InvestedAlpha) report no *new* firm rare-earth commitments. No MOFCOM text seen on either side | (a) MOFCOM No. 70 text; (b) Bessent via The Global Market Brief 9/26, chomcho, tamaranews 9/26; post-summit: Bessent Fox News 9/24 announced the Nov-10 → 2027-01-10 extension (WSJ headline via killbait; tokenpost; roic; pressinsider — which notes Beijing did not separately announce the date); silmarilmedia 9/29: "a 61-day reprieve with no binding commitments on rare earth supply volumes, no resolution of the April 2025 licensing architecture"; neuralwired 9/26: extension "preserves China's suspension of rare earth export controls". Still no MOFCOM text on either side — stays Disputed. 2026-10-04 verifier: a mofcom.gov.cn search finds only No. 70 itself (suspension "至2026年11月10日") and the MOFCOM Americas-dept readout of 2026-05-20 (measures suspended to 2026-11-10, extension planned but undated). No MOFCOM text for 2027-01-10 — still Disputed |
+
+A catalyst score of 7+ that rests on a disputed date must cite a primary source (the issuing
+ministry / agency / company) that settles it; otherwise score only what holds under both readings.
+
