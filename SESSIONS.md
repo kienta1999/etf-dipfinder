@@ -264,3 +264,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: XLU, NLR. Core: IGF. Alternates: URA, URNM. Avoid: none. No bucket overrides. Buy list changed vs 10-03 (NLR/XHB/ARKX): XHB cause 7→5 (7.28% mortgage, Lennar orders −9%), ARKX basket 5→3 (~47% megacap tech); XLU core→buy on the Southern date.
 - $100k risk-parity: XLU $74,400, NLR $25,600; max loss −$8,900, max gain +$28,300. Tranche: half now, half after the 10/28 FOMC (both dips are the 10y; XLU is 3/4 of the money).
 - Memo: log/2026-10-04.md. check_memo.py: all content + rendering checks pass; WARNs = identical scan to 10-03 and 3+ pt lens swings (explained in the memo's Panel section).
+
+## 2026-10-05 — ETF panel (full, cold rerun; prior same-day run deleted on user request)
+
+- User asked to override today's run, clean all of today's artifacts first, not look at or trust past runs, and push straight to master. Deleted output/2026-10-05/, log/2026-10-05.md and today's SESSIONS entry; no ledger rows were dated today.
+- Scan as of the 2026-10-02 close: 25 candidates in 15 themes. Quick pass (15 searches) → dossier with section D (carried-forward catalysts) deliberately left out.
+- Panel run sequentially and cold: cause → necessity → catalyst → basket (Opus); price computed. Verifier re-checked the cores, the regime and every live ledger row from primary sources; 11 rows appended, disputed rare-earth date settled at 2027-01-10 (MOFCOM 2026-09-28), nothing retracted. The catalyst panelist then cited 7 verifier-confirmed dates its cold ballot had missed; no score moved.
+- Buy: none. Core: XLU, IGF (IGF necessity 8 is a rounding margin). All other 23 funds are watch; no avoids.
+- \$100k: no risk-parity split (no buys); core tranche half now, half after the Oct 27-28 FOMC.
+- Memo: log/2026-10-05.md.
