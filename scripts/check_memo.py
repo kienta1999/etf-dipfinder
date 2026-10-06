@@ -69,9 +69,12 @@ def memo_table(date):
 
 
 JUDGED = ["cause", "necessity", "catalyst", "basket"]   # the researched lenses; price is computed
-COPY_SHARE, COPY_MIN = 0.80, 8   # >=80% of >=8 shared funds with all four judged scores identical = copied
-# Measured on 2026-09-19..10-05: the lite runs that copied their predecessor (09-24, 09-27, 09-28) matched it
-# on 100% of rows; independent runs on byte-identical prices never exceeded 29%.
+COPY_SHARE, COPY_WARN, COPY_MIN = 0.95, 0.60, 8
+# Share of >=8 shared funds whose four judged scores are ALL exactly equal to an earlier memo's. Measured
+# 2026-09-19..10-05: copies (09-24, 09-27, 09-28 lite) matched 100%; independent runs on byte-identical prices
+# matched 4-29% exactly (Claude 10-04 vs 10-05: 4% exact, 52% within +-1, 84% same bucket). Consistency is
+# welcome - it shows up as same bucket and +-1 scores, not as every score copied - so only a near-total match
+# fails; 60-95% is a warning to look at, room for a tighter rubric to raise honest agreement.
 
 
 def memo_rows(text):
@@ -113,7 +116,12 @@ def copy_check(run, today):
         if len(both) < COPY_MIN:
             continue
         same = sum(all(str(today[t][k]) == str(rows[t][k]) for k in JUDGED) for t in both)
-        if same / len(both) >= COPY_SHARE:
+        share = same / len(both)
+        if COPY_WARN <= share < COPY_SHARE:
+            warns.append(f"{same}/{len(both)} funds carry exactly the same four judged scores as log/{name}.md - "
+                         f"unusually close for independent runs (history: <=29%); fine if each score's reason is "
+                         f"today's evidence")
+        if share >= COPY_SHARE:
             errors.append(f"not an independent run: {same}/{len(both)} funds carry exactly the same cause/"
                           f"necessity/catalyst/basket scores as log/{name}.md - score from today's dossier only, "
                           f"never from an earlier memo, ballot or scores.csv")

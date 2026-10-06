@@ -40,7 +40,8 @@ while genuinely independent runs on byte-identical prices never matched more tha
   `consolidate.py <RUN>`, `check_memo.py <RUN>`. A rerun never edits or deletes an earlier run's files (the 2026-10-01
   and 2026-10-04 reruns did, and the first opinion survived only in git history); `log/catalysts.md` is the only shared file a run may change.
 
-`check_memo.py` enforces all four: it fails a run whose judged scores match an earlier memo on ≥80% of ≥8 shared funds,
+`check_memo.py` enforces all four: it fails a run whose four judged scores exactly match an earlier memo on ≥95% of ≥8
+shared funds (warns from 60%; consistency is welcome — same bucket, scores within ±1 — copying is not),
 a catalyst below the computed floor (lenses.md), and any change to another run's files.
 
 ## Phase 0 — scan

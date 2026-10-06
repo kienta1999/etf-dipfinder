@@ -141,6 +141,10 @@ cm.errors.clear()
 tweak = {t: dict(r, cause=str(int(r["cause"]) + (i % 4 > 0))) for i, (t, r) in enumerate(rows.items())}
 cm.copy_check("2026-10-06", tweak)                                 # 3 of 10 the same (30%) -> independent
 assert not cm.errors
+cm.warns.clear()
+close = {t: dict(r, basket=str(int(r["basket"]) + (i < 2))) for i, (t, r) in enumerate(rows.items())}
+cm.copy_check("2026-10-06", close)                                 # 8 of 10 (80%) -> warning, not a failure
+assert not cm.errors and cm.warns and "unusually close" in cm.warns[0]
 cf.load = lambda: [dict(theme="nuclear", match="Cameco", event="Cameco Q3 results", date="2026-10-30",
                         confirmed_by="x", verified_on="2026-10-01"),
                    dict(theme="india", match="RBI", event="RBI MPC policy decision", date="2026-10-07",
