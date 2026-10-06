@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-09-28 (scan asof 2026-09-25 close)
 
 Prices below are the **2026-09-25 close**; the panel runs 2026-09-28 (a 9/26–9/27 weekend sat between scan close and run). **25 candidates, 15 themes — candidate set IDENTICAL to the 2026-09-27 run** (no entries, no exits).

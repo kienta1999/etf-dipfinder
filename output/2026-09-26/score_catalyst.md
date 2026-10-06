@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-26
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | UFO | 9 | Starship Flight 14 NET Mon Sept 28 — first orbital attempt, 26 Starlink V3 sats; wet dress rehearsal complete 9/24, pending FAA license. | https://teslanorth.com/2026/09/23/starship-flight-14-september-28/ |

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Cause — 2026-10-01 — method: one web search per theme (15 themes), scores copied to siblings unless a fund-specific driver was found; bands per lenses.md (10 pure rotation / 7 temporary headwind, trend intact / 5 sentiment, no thesis change established / 3 fundamental impairment that may be permanent / 1 policy repeal or demand collapse)
 
 | 1 | REMX | 8 | Band 7 rotation +1: Sep 23-25 Trump-Xi summit thaw cut the scarcity premium (MP -15.8%/30d, sector -17%) while controls framework stayed in place (extension only to 2027-01-10) and MP demand/shipments intact — rotation, not break | https://tickeron.com/blogs/mp-materials-mp-falls-15-8-over-30-days-amid-rare-earth-sector-selloff-17580/ |

@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | XLU | 10 | band 10: electricity is civilisation-critical with no substitute; EIA sees US power demand rising from record 4,195B kWh (2025) to 4,349B kWh (2027) on datacenters + electrification | EIA STEO via Reuters, 2026-07-07 |

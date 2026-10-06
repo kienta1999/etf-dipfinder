@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-26
 | 1 | IGF | 10 | Grid is the physical precondition of the AI buildout: IEA sees US datacenter demand 120 TWh (2021) → >400 TWh in 2030, ~half of all new US demand growth. | https://www.rigzone.com/news/usa_data_center_electricity_demand_projected_to_triple-27-nov-2025-182400-article/ |
 | 2 | PAVE | 10 | Same grid theme as IGF: 2,500 GW of generation+load projects stalled in global connection queues per IEA — grid buildout cannot be routed around. | https://www.pv-tech.org/electricity-demand-to-grow-rapidly-in-new-era-for-energy-says-iea/ |

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-28
 | rank | ETF | score | one-line reason (this lens only; name the band) | key source |
 | 1 | URNM | 10 | band 10: no-substitute fuel for structurally rising nuclear generation (IEA: record 2025, +2.8%/yr to 2030) | IEA Electricity 2026, 9/2026; dossier 9/28 |

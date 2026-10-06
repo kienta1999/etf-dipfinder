@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Catalyst lens — 2026-09-30
 | 1 | REMX | 6 | Disputed truce expiry (11/10 snapback vs Bessent-confirmed extension to 2027-01-10, no MOFCOM text seen) — dated decision point, outcome two-sided → band 6 | https://silmarilmedia.com/article/us-critical-mineral-strategy-truce-project-vault-bis-black-mass-2026 |
 | 2 | TAN | 6 | Carried forward, not re-searched: USITC final injury vote 2026-10-14 + Commerce final duty orders 2026-11-02, agency-confirmed, material but two-sided for TAN → band 6 | dossier ledger: Reuters/SRN 2026-09-11; Sxcoal 2026-09-14; re-verified 2026-09-29 |

@@ -62,6 +62,8 @@ demote to watch and say so in Deviations. This is not the full verifier — it c
 
 ## 4. Memo → `log/<RUN>-lite.md`
 ```
+> Run by: <model name> (<model id>) — lite
+
 # etf-dip-pick <RUN> — lite (one agent, N searches, buy spot-checked, no panel)
 
 Regime: 2-3 lines.
@@ -90,7 +92,10 @@ covered the buy only, not the top 3. Run the full /etf-dip-pick before sizing re
 TP/SL/R/R/dip# from `data/scan.csv` (`tp_pct` `sl_pct` `rr` `dip_score` rank; blank TP and R/R for avoids). Append a
 line to `SESSIONS.md`. Nothing is written to `output/`.
 
+The memo's first line names the model that ran it — the model id this session states it runs on (`unknown` if it
+does not know) — e.g. `> Run by: Claude Sonnet 5.5 (claude-sonnet-5-5) — lite`.
+
 ## 5. Finish — `uv run python scripts/check_memo.py <RUN>`
 Commit the memo and `SESSIONS.md` (and push), then run the audit until it exits 0. For a lite run it checks independence
-(scores not copied from an earlier memo), the catalyst floor, rendering, that no other run's files changed, and that
+(scores not copied from an earlier memo), the catalyst floor, the `> Run by:` line, rendering, that no other run's files changed, and that
 nothing is left uncommitted.

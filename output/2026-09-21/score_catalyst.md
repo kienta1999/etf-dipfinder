@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | UFO | 10 | band 10: Starship Flight 14 NET Sep 28 (SpaceX-confirmed Sep 17, 7 days out) — first orbital attempt + first revenue flight (26 Starlink V3); market not positioned (UFO −36%) | SpaceX via X, 2026-09-17; TechCrunch |

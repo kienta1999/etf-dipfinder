@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-25
 
 Scored 1-10 on fund CONSTRUCTION only (concentration, fee, liquidity/AUM, purity, structural quirks). Theme thesis not re-scored. Each score rests on a verified number below; "unverified" where noted.

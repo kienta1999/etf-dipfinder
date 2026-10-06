@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # price — 2026-09-06
 
 Lens: is this *unusually* cheap for this ETF, and is the long-term trend intact? Weighting inside the lens:

@@ -1,3 +1,5 @@
+> Run by: Claude Opus 5.5 (claude-opus-5-5) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier (Phase 3.5) — 2026-10-04
 
 Scope: the three buy/core funds from consolidate.py (**XLU** buy, **NLR** buy, **IGF** core), alternates URA/URNM where facts are shared, the regime premises a memo opens on, the catalyst ballot's "New confirmed dates" list, and the Disputed MOFCOM row. Checked against primary sources (company press releases / IR pages / SEC filings, federalreserve.gov, home.treasury.gov, Freddie Mac, EIA, IEA, RBI, congress.gov, issuer fund pages) with uncapped searches/fetches on 2026-10-04. Where only a secondary source exists the evidence column says so. Searches: 29; fetches: 42 (39 WebFetch + 3 direct downloads).

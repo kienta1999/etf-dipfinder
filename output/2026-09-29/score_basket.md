@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-29
 | rank | ETF | score | one-line reason (this lens only; name the band) | key source |
 | 1 | TAN | 5 | Band 5: 0.70% fee and top-ten 57.7% (Nextpower 10.47%) are the two flaws; pure solar but 42% small + 18% micro cap lowers basket quality, $900M AUM. | indmoney.com |

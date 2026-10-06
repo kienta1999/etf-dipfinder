@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — ETF dip candidates, scan date 2026-09-17
 
 ## A. Scan numbers (deterministic; dip_score 0 = most beaten up on depth + rel weakness + trend)

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-28
 | rank | ETF | score | one-line reason (this lens only; name the band) | key source |
 | 1 | URNM | 10 | Cameco Q3 results before market open 2026-10-30, company-confirmed — band 10, carried forward not re-searched | carried forward §D — Cameco press release 2026-07-31 (BusinessWire) |

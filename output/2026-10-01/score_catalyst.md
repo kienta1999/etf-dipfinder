@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-10-01
 
 Method: Catalyst lens only, scored per the bands in lenses.md (band first, at most ±1 for a named reason). Dossier §D carry-forward catalysts inherited at full value with their original sources; FOMC decisions are scheduled symmetric events (band 6, cannot reach 7+ on the calendar alone); the disputed rare-earth expiry was checked this run — secondary reports of a 2026-09-24 extension agreement were found, but no primary MOFCOM text was located, so no score ≥7 rests on it (see note below). Note: this ballot replaces the earlier 2026-10-01 file, which ranked funds outside this rerun's 24-candidate set (GRID, IHI) and omitted GLD.

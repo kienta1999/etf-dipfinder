@@ -1,3 +1,5 @@
+> Run by: Claude Opus 5.5 (claude-opus-5-5) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-10-04 (panel; clean rerun, scan as of Friday 2026-10-02 close)
 
 Clean rerun: every prior 2026-10-04 artifact (output/2026-10-04/, log/2026-10-04.md, the two catalyst-ledger

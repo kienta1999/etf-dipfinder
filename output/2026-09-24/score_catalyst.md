@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-23
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | REMX | 9 | Dual hard deadlines: China export-control snapback 11/10/26 + DFARS magnet ban 1/1/27 — a calendar forcing function, not a thesis | silmarilmedia 2026-08-05 |

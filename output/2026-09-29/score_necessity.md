@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-29
 
 Theme-level scoring per lenses.md: siblings share the theme score; no sibling deviations taken this run — every same-theme pair scored identically because the necessity question is about the theme's structural role, and no fund-specific fact separated the siblings on that axis. Every row names its band; the two off-band scores (INDA 6, defense trio 8) state the ±1 reason inline. Stop rule: every score rests on a dated number or event cited below.

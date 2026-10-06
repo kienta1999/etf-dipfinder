@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-22
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | URNM | 8 | Cameco Q3 10/30/2026 (company-confirmed) + record $97/lb term price 9/18 with equities in the dumpster = dated sentiment-reconnection setup. | Cameco press release 7/30/2026; TradeTech 9/18 via cause ballot |

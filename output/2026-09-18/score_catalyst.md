@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 | 1 | UFO | 9 | Starship Flight 14 NET 2026-09-22 (SpaceX official page 9/15; FAA cleared window per Aviation Week 9/14); first orbital + 26 Starlink V3; purest sentiment vehicle; slipped twice — slip risk is the caveat |
 | 2 | URNM | 8 | Cameco Q3 results pre-open Fri 2026-10-30 (confirmed) + monthly LT uranium price still rising + Google–Fortum 22y PPA 9/9 demand newsflow; purest miner leverage to a beat |
 | 3 | ARKX | 8 | Same Flight 14 catalyst; SpaceX only ~7.2% of basket so lower leverage |

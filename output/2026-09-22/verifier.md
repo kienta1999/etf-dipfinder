@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier report — 2026-09-22 etf-dip-pick panel
 
 Role: Phase 3.5 verifier. Read SKILL.md first; artifacts dossier.md, score_cause.md,

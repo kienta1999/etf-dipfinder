@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Necessity lens — 2026-09-30
 | 1 | REMX | 7 | Rare-earth magnet demand structurally rising (NdFeB 7.5% CAGR, 60kt undersupply by 2030) but visible substitution/thrifting research | https://www.mining.com/supply-of-rare-earth-magnets-wont-keep-with-demand-by-2040-report/ |
 | 2 | TAN | 6 | Solar demand structurally rising (renewables set to surpass coal) but substitutable among generation sources and US subsidies impaired | https://www.pv-magazine-australia.com/2025/08/04/global-electricity-demand-to-rise-in-2026-as-renewables-lead-says-iea/ |

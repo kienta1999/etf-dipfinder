@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-23
 | rank | ETF | score | one-line reason (cause lens only) | key source |
 | 1 | URNM | 9 | Uranium spot $89.70/lb (9/18, +4.3% YTD) while equities -35% off peaks; sellers are AI-data-center sentiment and Saudi rumors, not the commodity | discoveryalert 2026-09-21 |

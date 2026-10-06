@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Research Dossier — 2026-09-21 ETF dip scan (rerun)
 
 Market data as-of: **2026-09-18 close** (run executed Monday 2026-09-21 before a completed session).

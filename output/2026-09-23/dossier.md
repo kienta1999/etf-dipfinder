@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-09-23 (scan asof 2026-09-22 close)
 
 Prices below are the **2026-09-22 close**; the panel ran 2026-09-23. Yesterday's (2026-09-22 run) buys were NLR, UFO, ICLN; avoid was ITB, XHB (cause veto). All 24 candidates present again; no new themes entered the candidate set.

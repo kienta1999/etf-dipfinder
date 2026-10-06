@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-25
 
 Run 4 of 30 (prices as of 2026-09-24 close). Lens: "Is the drop about flows/rates/rotation or did the *thesis* change?" One search per theme; sibling scores copied within theme unless a sibling genuinely differs.

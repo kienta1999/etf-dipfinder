@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-25
 
 Run 4 of 30 (prices as of 2026-09-24 close). Lens: "If the thesis is intact, does the world still *need* this?" 1 = discretionary/speculative nice-to-have; 10 = essential demand, secular growth, must-have infrastructure. One search per theme; sibling scores copied within theme unless noted. Scores below judge only urgency/irreplaceability of demand — not the cause lens.

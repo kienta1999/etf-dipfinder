@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-06
 
 Lens: a *dated, concrete* trigger in the next 3-12 months (Sep 2026 – Sep 2027) that reverses the flow.

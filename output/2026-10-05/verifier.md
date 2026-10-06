@@ -1,3 +1,5 @@
+> Run by: Claude Opus 5.5 (claude-opus-5-5) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # verifier — 2026-10-05
 Scope: core XLU, IGF (no rule buys); regime premises; ledger reconciliation.
 

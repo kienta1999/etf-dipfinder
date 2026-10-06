@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-06
 
 Lens: does the world *need* this theme in 5-10y, and can AI / substitute tech / policy route around it?

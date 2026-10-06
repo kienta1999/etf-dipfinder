@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-26
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | XLU | 9 | 0.08% fee, ~$21B AUM, 31 names, NEE 12.73% max, 100% utilities — cheapest fee on the ballot, pure regulated-dividend basket. | https://www.ssga.com/us/en/intermediary/etfs/state-street-utilities-select-sector-spdr-etf-xlu |

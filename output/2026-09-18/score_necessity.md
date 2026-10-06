@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 | 1 | GRID | 10 | purest AI-grid vehicle; $720B grid capex wave, no substitute for physical grid |
 | 2 | IGF | 10 | global infra super-cycle beneficiary; 5–10y capex, irreplaceable |
 | 3 | PAVE | 10 | US infra capex; same grid-build necessity, domestic tilt |

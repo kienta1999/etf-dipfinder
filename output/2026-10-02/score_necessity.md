@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-10-02
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | REMX | 10 | band 10: IEA magnet-REE demand doubled since 2015, +30%+ by 2030; China holds 91% of refined output and 94% of sintered magnets, no deployable substitute at scale | IEA Rare Earth report Apr 2026 (CleanTechnica 2026-04-17) |

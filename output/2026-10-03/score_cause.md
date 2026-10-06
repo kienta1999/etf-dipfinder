@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-10-03
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | URNM | 10 | pure rotation, thesis untouched: uranium LT price at record $96.50/lb while miners -30%+ — momentum/policy-trade unwind, sellers are macro tourists | discoveryalert.com, Sep 25 (Cameco/UxC/TradeTech compiled avg); oilprice.com, Oct 1 |

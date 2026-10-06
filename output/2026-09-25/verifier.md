@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier — etf-dip-pick 2026-09-25 (run 4 of 30, prices as of 2026-09-24 close)
 
 Scope: gate inputs for the two rule-buys (UFO, INDA), the LIT avoid spot-check, regime premises, ballot integrity (26-row format + 2 rows per file vs cited source). Uncapped searches used; primary sources opened where a buy-grade input was at stake.

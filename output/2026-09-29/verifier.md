@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier — 2026-09-29
 
 Independent re-check of the load-bearing claims behind every rule **buy** (URA, TAN, IHI) and **core**

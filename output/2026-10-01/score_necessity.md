@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Necessity — 2026-10-01
 
 Method: Scored the fund as held (top holdings / sector mix from fund and holdings sources below) against the lenses.md necessity bands — 10 civilisation-critical with no substitute, 7 structurally growing but substitutable, 5 real cyclical demand, 3 discretionary or condition-dependent, 1 fashion or subsidy-gone — applying the worked anchors (silver above gold, pure uranium miners above diluted nuclear baskets, regulated utilities and physical infrastructure at the top). Theme researched once, siblings split only where the basket as held captures or dilutes the end-use differently.

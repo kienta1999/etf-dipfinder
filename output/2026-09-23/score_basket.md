@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # BASKET panelist — ETF dip basket quality ballot, 2026-09-23
 Judging only: holdings quality, concentration, thematic purity, fees, AUM/liquidity, structural quirks.
 Dip cause, structural necessity, and catalyst timing are out of scope for this ballot.

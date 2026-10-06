@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-22
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | SLV | 9 | Fed-day reversal after Sep 16 hike; real yields + dollar against it, 12m rs still +0.39 — pure macro. | briefs.co 9/19; scan rs_spy_12m +0.386 |

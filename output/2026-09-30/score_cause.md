@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Cause lens — 2026-09-30
 | 1 | REMX | 7 | Summit optimism deflating the scarcity premium; April-2025 controls still in force, export vols -11% YTD while values +53% — temporary event overhang, thesis intact under both expiry readings | https://silmarilmedia.com/article/november-mineral-truce-expiry-markets-manufacturers-repricing-risk |
 | 2 | TAN | 6 | Band 7 (rate headwind: 10y ~5.25% raises project-financing costs, TAN at 52-wk low $43.00) minus 1: 2025 tax-bill subsidy cuts + permitting slowdown are a structural US demand impairment | https://www.barrons.com/articles/sunpower-sunrun-stocks-energy-interest-rates-dd0ad156 |

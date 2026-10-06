@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-28
 | rank | ETF | score | one-line reason (this lens only; name the band) | key source |
 | 1 | XLU | 10 | Band 10: pure rate victim — 10y touched 5.23% intraday 9/25–9/28 (highest since 2007), 30y >5.3%; regulated earnings untouched. | https://investinglive.com/news/investinglive-european-session-wrap-higher-yields-hit-gold-as-oil-rallies-and-tech-futures-fall/ |

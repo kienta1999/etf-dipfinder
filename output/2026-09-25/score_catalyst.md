@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-25
 
 Run 4 of 30 (prices as of 2026-09-24 close). Lens: "What makes it move in the next ~3–6 months?" 1 = no catalyst visible, dead-money risk; 10 = dated, high-probability trigger that reprices the theme UPWARD. Negative-repricing risks are scored on net expected direction and called out. One search per theme (plus date verifications); sibling scores copied within theme unless a sibling genuinely differs.

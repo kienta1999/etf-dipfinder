@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 | 1 | URNM | 10 | uranium $97/lb rising while miners −39%; AI-unwind + yield repricing flows, commodity intact |
 | 2 | NLR | 10 | broadest nuclear basket; same macro-flow selloff, dividend 2.7%, thesis untouched |
 | 3 | SHLD | 10 | Pentagon missile-stockpile push intact; 19% de-rating is flow rotation into software/biotech |

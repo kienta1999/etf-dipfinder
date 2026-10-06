@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Basket lens — 2026-09-30
 
 | 1 | XAR | 10 | band 10: modified equal-weight defense (~49 holdings, top-10 ~30%), 0.35% fee, theme-pure, ~$5.9B liquid | stockanalysis.com |

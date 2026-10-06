@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-10-03 (panel; as of Friday 2026-10-02 close)
 
 ## A. Candidates (25 dips in top 15 themes; scan.py 2026-10-03)

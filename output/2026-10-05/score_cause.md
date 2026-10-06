@@ -1,3 +1,5 @@
+> Run by: Claude Opus 5.5 (claude-opus-5-5) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-10-05
 | rank | ETF | score | one-line reason (this lens only) | key source |
 |---|---|---|---|---|

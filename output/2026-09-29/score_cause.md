@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-29
 
 Theme-level scoring per lenses.md: siblings share the theme score unless a concrete, cited deviation exists. Every row names its band; a score 1 point off a band states the −1 reason inline. Stop rule applied: every score rests on a dated number or event below, or would cap at 5 — none did. Rates are the dominant cross-theme driver (10y 5.24%, 19-year closing high 9/28; 30y 5.48% since 2004; ~70.3% October-hike odds after the 9/16 hike to 3.75–4.00%).

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier — etf-dip-pick 2026-10-02 (Phase 3.5, panel mode)
 
 Primary-source re-check of the load-bearing facts behind every rule-`buy` and rule-`core`

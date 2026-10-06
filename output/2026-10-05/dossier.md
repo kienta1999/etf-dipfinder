@@ -1,3 +1,5 @@
+> Run by: Claude Opus 5.5 (claude-opus-5-5) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — etf-dip-pick 2026-10-05 (panel)
 
 Scan as of **2026-10-02 close** (last full session before this run). 25 candidates in 15 themes (53 dips of 103 liquid funds).

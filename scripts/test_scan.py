@@ -164,6 +164,11 @@ assert cm.run_of("output/2026-10-05/scores.csv") == "2026-10-05" and cm.run_of("
 assert cm.run_of("log/catalysts.md") is None
 import tempfile
 from pathlib import Path as _P
+_d = _P(tempfile.mkdtemp()); (_d / "a.md").write_text("# memo\n"); (_d / "b.md").write_text("> Run by: X (x) — lite\n\n# memo\n")
+cm.errors.clear(); cm.provenance_check("2026-10-06", [_d / "a.md", _d / "b.md"])
+assert len(cm.errors) == 1 and "a.md" in cm.errors[0] and "b.md" not in cm.errors[0]
+cm.errors.clear(); cm.provenance_check("2026-10-05", [_d / "a.md"])          # older runs were annotated by hand
+assert not cm.errors
 run_id.ROOT = _P(tempfile.mkdtemp()); (run_id.ROOT / "log").mkdir(); (run_id.ROOT / "output").mkdir()
 assert run_id.next_run_id("2026-10-06") == "2026-10-06"
 (run_id.ROOT / "log" / "2026-10-06-lite.md").write_text("x")

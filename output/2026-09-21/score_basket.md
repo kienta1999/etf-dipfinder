@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only, naming the band you scored into) | key source |
 | 1 | TAN | 7 | 7-band: theme-pure solar, liquid (46 holdings, ~$938M AUM, ~860K daily volume); single flaw is 0.70% fee | web search 2026-09-21 |

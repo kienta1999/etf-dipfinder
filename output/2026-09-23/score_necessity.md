@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-23
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | URNM | 10 | WNA: uranium demand +28% by 2030, doubling to 150kt by 2040; existing mines cover only 40% of reactor needs by 2035, no substitute in operating reactors | tradingview.com Reuters 2025-09-05 |

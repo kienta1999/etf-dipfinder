@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier report — etf-dip-pick 2026-09-21 (Phase 3.5)
 
 Independent re-check of the three rule buys' load-bearing facts from primary sources,

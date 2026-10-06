@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-26
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | XLU | 10 | Pure rate victim: −1.92% 9/23 (worst sector), −0.98% 9/24 as 10y hit 5.20%+ — thesis untouched. | https://aitrading67.com/en/etf-technical-analysis-oil-communications-meta-oracle-en/ |

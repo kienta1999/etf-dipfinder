@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-09-22
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | URNM | 9 | Firm 24/7 carbon-free baseload is irreplaceable at scale; TradeTech term price hit a record $97/lb on 9/18/2026 (above the 2007 peak) and Google signed a Finnish nuclear PPA. | TradeTech 9/18/2026 via cause ballot; Google Finnish PPA (dossier 9/21) |

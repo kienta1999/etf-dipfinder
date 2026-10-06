@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-10-02
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | GLD | 10 | band 10: 100% physical gold, fee 0.40%, $141.7B AUM, $3.69B/day | indmoney 2026-10-02; scan 2026-10-01 |

@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier report — 2026-09-18 run, every buy + regime premises (scope per SKILL.md Phase 3.5:
 every fund the rule buckets `buy`, plus the tape premises the memo opens on)
 # Verifier: Avocado 5.16. Method: ≥8 fresh web searches, primary sources preferred

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # necessity — 2026-10-03
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | XLU | 10 | 10-band: civilisation-critical electricity, no at-scale substitute, demand structurally rising (EIA: record US power use 2026-27) | EIA STEO via Reuters, 2026-09-09 |

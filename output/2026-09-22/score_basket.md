@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-22
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | GLD | 9 | Physically backed gold trust, 100% bullion, 0.40% fee, ~$155B AUM — no roll decay, no miner risk. | fool.com GLD vs SLV 2026-04-02 |

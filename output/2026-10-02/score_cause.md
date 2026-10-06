@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-10-02
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | URNM | 10 | pure rotation: record term uranium ($96.50/lb Aug, UxC/U3O8) while equities fell on exogenous AI-growth anxiety, thesis untouched | Cameco-compiled UxC/TradeTech, 2026-09-25 |

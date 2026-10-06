@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-06
 
 Lens: is the *fund* a clean way to own the theme? Holdings quality, concentration, hidden exposures,

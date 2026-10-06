@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # ETF dip panel — dossier for RUN_DATE 2026-09-30
 
 Scan asof: 2026-09-29 close (3 years of daily bars, days=751). 26 candidates in 15 themes.

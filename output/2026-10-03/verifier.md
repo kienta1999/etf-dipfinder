@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # verifier — 2026-10-03 (Phase 3.5)
 
 Re-checked from primary sources (uncapped searches) the load-bearing facts behind every

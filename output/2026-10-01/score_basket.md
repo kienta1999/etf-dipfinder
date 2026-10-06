@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Basket — 2026-10-01 — Method: scored the fund as held only (purity, concentration, structure, fee/liquidity) from actual top-holdings pages (chiefly StockAnalysis holdings as of Sep 29–30, 2026; SSGA fund pages for XAR/XLU; MarketBeat holdings for SHLD/ITB/XHB), applying the lenses.md basket bands and the >20% / >10% single-name caps.
 
 | 1 | XAR | 9 | Band 10→9: passive equal-weight, top name only 3.33%, top-10 ~30%, 100% aerospace & defense, 0.35% fee | https://www.ssga.com/us/en/individual/etfs/state-street-spdr-sp-aerospace-defense-etf-xar |

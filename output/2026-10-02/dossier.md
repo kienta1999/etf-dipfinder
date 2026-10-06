@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-10-02 (scan asof 2026-10-01 close)
 
 24 candidates across 15 themes. Full scan row per candidate (frozen to output/2026-10-02/scan.csv at consolidation).

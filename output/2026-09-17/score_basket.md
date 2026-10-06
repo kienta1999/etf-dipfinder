@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # basket — 2026-09-17
 
 | rank | ETF | score | one-line reason (this lens only) | key source |

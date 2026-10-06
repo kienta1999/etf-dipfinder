@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Research Dossier — 2026-09-22 ETF dip scan (panel)
 
 Market data as-of: **2026-09-21 close** (24 candidates, 15 themes). New completed market

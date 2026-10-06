@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier — 2026-10-01 (rerun under updated skill) — Phase 3.5
 
 Independent verifier. I did NOT re-score anything. I opened / searched primary or authoritative sources myself for every item in the mandated scope 1–5, plus spot-checks that carry scores. Verdicts: **Confirmed / Refuted / Unverifiable**.

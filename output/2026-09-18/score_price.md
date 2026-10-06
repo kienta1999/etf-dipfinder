@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 | 1 | SLV | 9 | deepest dip (−44.2%) + best rr 4.55 + ret_10d flat −0.2%; decline arrested |
 | 2 | UFO | 9 | deep (−35.5%, pctile 0.0204), rr 3.97, stabilizing (+1.2%) — only deep fund turning |
 | 3 | TAN | 9 | deep (−37.3%, pctile 0.0436), rr 3.85, ret_10d −1.9% not worsening — vetoed |

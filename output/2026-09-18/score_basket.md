@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 | 1 | KWEB | 7 | 0.69%, $336M vol; concentrated China internet — theme-pure, not broad |
 | 2 | FXI | 8 | 0.72%, $552M vol; broad top-50 China large-cap, SOE tilt; cleaner broad vehicle |
 | 3 | REMX | 6 | 0.59%, $44M vol; globally diversified but thin, single-commodity |

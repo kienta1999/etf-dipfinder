@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # catalyst — 2026-09-29
 
 Theme-level scoring per lenses.md: siblings share the theme score; no sibling deviations taken this run — no fund-specific dated catalyst separated any sibling pair, so every same-theme group scored identically. Every row names its band; none is 2+ points off its band. Stop rule applied: every score rests on a dated event or confirmed calendar item named below, or (for the 4s) on a cadence the panelist could name — none needed the "unverified caps at 5" fallback. The cross-theme timing anchor is FOMC 10/28 (confirmed, federalreserve.gov ledger row): symmetric per the rubric, so it sets band 6 for every rate-driven theme and cannot score 7+ on the calendar alone.

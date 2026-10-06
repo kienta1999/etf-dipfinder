@@ -40,6 +40,11 @@ while genuinely independent runs on byte-identical prices never matched more tha
   `consolidate.py <RUN>`, `check_memo.py <RUN>`. A rerun never edits or deletes an earlier run's files (the 2026-10-01
   and 2026-10-04 reruns did, and the first opinion survived only in git history); `log/catalysts.md` is the only shared file a run may change.
 
+**Provenance.** The first line of every md the run writes — `log/<RUN>.md`, `dossier.md`, each `score_<lens>.md`,
+`verifier.md` — is `> Run by: <model name> (<model id>) — full panel`, using the model id this session states it runs
+on (`unknown` if it does not know). Ballots and the verifier name the model that wrote them (the panelists are
+`model: "opus"` subagents: write the id they report). Then a blank line, then the file's usual heading.
+
 `check_memo.py` enforces all four: it fails a run whose four judged scores exactly match an earlier memo on ≥95% of ≥8
 shared funds (warns from 60%; consistency is welcome — same bucket, scores within ±1 — copying is not),
 a catalyst below the computed floor (lenses.md), and any change to another run's files.
@@ -125,6 +130,8 @@ memo is not published, while it is non-zero.
 ## Phase 4 — memo → `log/<DATE>.md`
 
 ```
+> Run by: <model name> (<model id>) — full panel
+
 # etf-dip-pick <DATE> — panel   (or: quick)
 
 Regime: 2-3 lines.

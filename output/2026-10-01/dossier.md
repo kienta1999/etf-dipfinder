@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Dossier — 2026-10-01 (rerun under why-logging skill update)
 
 Scan as-of close 2026-10-01 (scan.csv `asof_date` = 2026-10-01). Universe 119 funds: 24 candidates in the top 15 themes by `dip_score`; 95 funds not in candidates are logged with gate + reason in `data/drops.csv` (next to `data/scan.csv`).

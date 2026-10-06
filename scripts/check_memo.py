@@ -170,6 +170,19 @@ def overwrite_check(run):
                       "(scripts/run_id.py), never over an earlier run:\n" + "\n".join("    " + b for b in bad))
 
 
+PROVENANCE_FROM = "2026-10-06"   # runs before this were annotated after the fact (owner's record)
+
+
+def provenance_check(run, paths):
+    """Every md a run writes opens with '> Run by: <model> (<model id>)' so a reader can tell whose judgment it is."""
+    if run[:10] < PROVENANCE_FROM:
+        return
+    missing = [p.name for p in paths if p.exists() and not p.read_text().startswith("> Run by:")]
+    if missing:
+        errors.append("first line must be '> Run by: <model name> (<model id>) — <full panel|lite>' in: "
+                      + ", ".join(missing))
+
+
 def lite_main(run, memo):
     """Lite runs write only log/<RUN>-lite.md: audit what exists - independence, floor, rendering, overwrites."""
     rows = memo_rows(memo.read_text())
@@ -183,6 +196,7 @@ def lite_main(run, memo):
     floor_check(run, {t: (theme.get(t, THEME.get(t)), r["catalyst"], r["why"]) for t, r in rows.items()
                       if r["catalyst"] and r["catalyst"].isdigit()})
     errors.extend(f"{memo.name} line {n}: {msg}" for n, msg in render_problems(memo.read_text()))
+    provenance_check(run, [memo])
     overwrite_check(run)
     dirty = subprocess.run(["git", "status", "--porcelain", "log/", "SESSIONS.md"], cwd=ROOT,
                            capture_output=True, text=True).stdout.strip()
@@ -247,6 +261,9 @@ def main(date):
 
     # 2d. Reruns never overwrite: only this run's own files (and the shared ledger) may change.
     overwrite_check(date)
+
+    # 2e. Provenance: which model wrote this run.
+    provenance_check(date, [ROOT / "log" / f"{date}.md", *sorted(out.glob("*.md"))])
 
     # 3. Every bucket printed in the memo must equal the bucket the rule computed.
     head, memo = memo_table(date)

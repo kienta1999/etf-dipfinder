@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # price — 2026-09-17
 
 Scored only from the scan snapshot (`data/scan.csv`, asof 2026-09-17): dd_52w, dd_pctile, dd_z, vs_sma200, rs_spy_12m, ret_10d, stabilizing.

@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Independent verification — ETF dip panel 2026-09-23
 
 Method: web search 2026-09-23, sources independent of panel ballots (no ballot/dossier citations reused).

@@ -1,3 +1,5 @@
+> Run by: unknown (not recorded; predates the owner's record) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # cause — 2026-09-21
 | rank | ETF | score | one-line reason (this lens only) | key source |
 | 1 | XLU | 9 | band 10 pure rotation (−1: 10y near 5% may partly persist and re-rate bond-proxy multiples): worst-performing sector week ending Sep 18 on rising yields alone, electricity demand thesis untouched | dossier quick-pass; search result: 10y ~5.01% |

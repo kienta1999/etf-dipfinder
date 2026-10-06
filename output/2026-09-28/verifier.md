@@ -1,3 +1,5 @@
+> Run by: Muse AI (underlying model not recorded) — annotated 2026-10-06 from the owner's record, not by the run itself.
+
 # Verifier — 2026-09-28 (full panel; scan asof 2026-09-25 close)
 
 All checks re-done from primary or first-party sources on 2026-09-28, uncapped searches. Prices are
