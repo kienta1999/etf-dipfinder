@@ -1,0 +1,25 @@
+,theme,bucket,why
+REMX,rare-earth,buy,"buy: cause 9 >= 7, catalyst 8 >= 7, R/R 4.22 >= 1.3, #1 in theme"
+XLU,utilities,buy,"buy: cause 9 >= 7, catalyst 7 >= 7, R/R 2.85 >= 1.3, #1 in theme"
+IGF,grid/infra,core,"core: broad theme, cause 7 >= 7, necessity 10 >= 8, R/R 2.83 >= 1.3, #1 in theme"
+XAR,defense-us,buy,"buy: cause 7 >= 7, catalyst 8 >= 7, R/R 2.58 >= 1.3, #1 in theme"
+PAVE,grid/infra,alt,"qualifies, but theme #2 behind IGF (one buy per theme)"
+INDA,india,buy,"buy: cause 9 >= 7, catalyst 7 >= 7, R/R 3.52 >= 1.3, #1 in theme"
+PPA,defense-us,alt,"qualifies, but theme #2 behind XAR (one buy per theme)"
+NLR,nuclear,buy,"buy: cause 8 >= 7, catalyst 8 >= 7, R/R 3.36 >= 1.3, #1 in theme"
+SHLD,defense-us,alt,"qualifies, but theme #3 behind XAR (one buy per theme)"
+SLV,silver,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing
+ICLN,clean,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 3.11 >= 1.3, #1 in theme"
+ITA,defense-us,alt,"qualifies, but theme #4 behind XAR (one buy per theme)"
+URNM,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+URA,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+GLD,gold,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing; core path: necessity 5 < 8
+XHB,housing,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.32 >= 1.3, #1 in theme"
+TAN,solar,watch,watch: cause 6 < 7
+ITB,housing,alt,"qualifies, but theme #2 behind XHB (one buy per theme)"
+PBW,clean,alt,"qualifies, but theme #2 behind ICLN (one buy per theme)"
+IHI,health-other,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+UFO,space,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 2) and not stabilizing
+LIT,lithium,watch,watch: cause 4 < 7
+KWEB,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+ARKX,space,watch,watch: thin: R/R 1.30 < 1.3; cause 6 < 7

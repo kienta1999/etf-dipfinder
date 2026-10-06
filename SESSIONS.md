@@ -278,3 +278,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Scan as of 2026-10-05 close, 24 candidates, 12 searches, XLU spot-checked (hike odds ~17-22%, XLU RSI ~21).
 - Buy: XLU, NLR. Core: IGF. Alt: PAVE, URA, URNM. Rest watch; no avoids.
 - Memo: log/2026-10-06-lite.md.
+
+## 2026-10-06 — ETF panel (full, run id 2026-10-06-r2)
+- Full panel on scan as of the 2026-10-05 close: 24 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Spark (muse-spark).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floor honored on all 7 live themes; no CONTRADICTED dates.
+- Buys (7): REMX, XLU, XAR, INDA, NLR, ICLN, XHB. Core: IGF. Alt: PAVE, PPA, SHLD, ITA, URNM, URA, ITB, PBW. Watch: SLV, GLD, TAN, IHI, UFO, LIT, KWEB, ARKX. No avoids; no bucket overrides.
+- Verifier: FOMC Oct 27–28, 10y ~5.31%, Brent $100–102, Sep 16 hike all confirmed; all 7 buys + IGF core load-bearing facts confirmed; no ledger changes.
+- $100k risk-parity: REMX 7.9k / XLU 22.7k / XAR 12.3k / INDA 25.4k / NLR 7.8k / ICLN 11.3k / XHB 12.7k; max loss -9.6k, max gain +29.8k; tranche half now, half after Oct 28 FOMC.
+- check_memo.py 2026-10-06-r2: only error is expected uncommitted-artifacts (parent commits); 1 WARN on day-over-day 3+ pt lens moves (same-scan consistency noise; lens 5c catalyst panelist appended a ledger-coverage note to fix 5b, scores unchanged).
+- Memo: log/2026-10-06-r2.md. Left uncommitted for parent commit+push.
