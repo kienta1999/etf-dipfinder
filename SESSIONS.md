@@ -273,3 +273,8 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: none. Core: XLU, IGF (IGF necessity 8 is a rounding margin). All other 23 funds are watch; no avoids.
 - \$100k: no risk-parity split (no buys); core tranche half now, half after the Oct 27-28 FOMC.
 - Memo: log/2026-10-05.md.
+
+## 2026-10-06 — lite run (scheduled, unattended)
+- Scan as of 2026-10-05 close, 24 candidates, 12 searches, XLU spot-checked (hike odds ~17-22%, XLU RSI ~21).
+- Buy: XLU, NLR. Core: IGF. Alt: PAVE, URA, URNM. Rest watch; no avoids.
+- Memo: log/2026-10-06-lite.md.
