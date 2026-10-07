@@ -287,3 +287,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: REMX 7.9k / XLU 22.7k / XAR 12.3k / INDA 25.4k / NLR 7.8k / ICLN 11.3k / XHB 12.7k; max loss -9.6k, max gain +29.8k; tranche half now, half after Oct 28 FOMC.
 - check_memo.py 2026-10-06-r2: only error is expected uncommitted-artifacts (parent commits); 1 WARN on day-over-day 3+ pt lens moves (same-scan consistency noise; lens 5c catalyst panelist appended a ledger-coverage note to fix 5b, scores unchanged).
 - Memo: log/2026-10-06-r2.md. Left uncommitted for parent commit+push.
+- 2026-10-07 lite: buy XLU, URA; core IGF; alt NLR. 12 searches. Memo: log/2026-10-07-lite.md
