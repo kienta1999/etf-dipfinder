@@ -287,4 +287,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: REMX 7.9k / XLU 22.7k / XAR 12.3k / INDA 25.4k / NLR 7.8k / ICLN 11.3k / XHB 12.7k; max loss -9.6k, max gain +29.8k; tranche half now, half after Oct 28 FOMC.
 - check_memo.py 2026-10-06-r2: only error is expected uncommitted-artifacts (parent commits); 1 WARN on day-over-day 3+ pt lens moves (same-scan consistency noise; lens 5c catalyst panelist appended a ledger-coverage note to fix 5b, scores unchanged).
 - Memo: log/2026-10-06-r2.md. Left uncommitted for parent commit+push.
-- 2026-10-07 lite: buy XLU, URA; core IGF; alt NLR. 12 searches. Memo: log/2026-10-07-lite.md
+
+## 2026-10-07 — ETF panel (full)
+- Full panel on scan as of the 2026-10-06 close: 24 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Spark (muse-spark).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floor honored on all 7 live themes; no CONTRADICTED dates. Cause panelist vetoed the clean theme (OBBBA repealed IRA wind/solar credits).
+- Buys (9): XLU, REMX, XAR, XHB, NLR, TAN, INDA, LIT, UFO. Core: IGF. Alt: SHLD, PPA, ITA, URA, URNM, ITB. Watch: GLD, EUAD, IHI, FXI, KWEB, ARKX. Avoid: ICLN, PBW (cause veto). No bucket overrides; my rank = weighted score.
+- Verifier: FOMC Oct 27–28, 10y 5.27–5.31%, WTI ~$88 / Brent ~$100 confirmed; all 9 buys + IGF core load-bearing facts confirmed; 11 ledger rows appended; zero demotions, zero retractions.
+- $100k risk-parity: XLU 17.2k / REMX 6.7k / XAR 10.4k / XHB 10.5k / NLR 6.4k / TAN 7.4k / INDA 21.3k / LIT 10.5k / UFO 9.6k; max loss -9.9k, max gain +32.5k; tranche half now, half after Oct 28 FOMC.
+- Memo: log/2026-10-07.md. Left uncommitted for parent commit+push.
