@@ -304,3 +304,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: REMX 7.6k / XLU 19.1k / XAR 11.4k / XHB 11.6k / NLR 7.0k / TAN 8.5k / INDA 23.3k / LIT 11.6k; max loss -10.2k, max gain +33.1k; tranche half now, half after Oct 28 FOMC.
 - check_memo.py 2026-10-08: catalyst-ballot ledger-coverage note appended (5 live rows all STAND, scores unchanged); day-over-day 3+ pt lens moves explained in memo; only remaining error is expected uncommitted-artifacts (parent commits).
 - Memo: log/2026-10-08.md. Left uncommitted for parent commit+push.
+- 2026-10-08-r2 lite (Sonnet 5.5): Buy NLR, ITA. Core: IGF. Alt: PPA, XAR, URA, SHLD, URNM, PAVE. Watch: XLU, INDA, GLD, ICLN, REMX, XHB, EUAD, LIT, SLV, ITB, FXI, TAN, UFO, KWEB, PBW, ARKX. Avoid: none. 12 searches; NLR spot-checked (Cameco 10/30, term U3O8 $96.50 record) held. $100k: NLR 33k / ITA 67k, max loss -11.8k, max gain +34.7k. Memo: log/2026-10-08-r2-lite.md.
