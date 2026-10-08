@@ -295,3 +295,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: FOMC Oct 27–28, 10y 5.27–5.31%, WTI ~$88 / Brent ~$100 confirmed; all 9 buys + IGF core load-bearing facts confirmed; 11 ledger rows appended; zero demotions, zero retractions.
 - $100k risk-parity: XLU 17.2k / REMX 6.7k / XAR 10.4k / XHB 10.5k / NLR 6.4k / TAN 7.4k / INDA 21.3k / LIT 10.5k / UFO 9.6k; max loss -9.9k, max gain +32.5k; tranche half now, half after Oct 28 FOMC.
 - Memo: log/2026-10-07.md. Left uncommitted for parent commit+push.
+
+## 2026-10-08 — ETF panel (full)
+- Full panel on scan as of the 2026-10-07 close: 25 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Spark (muse-spark).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floor honored on all 8 live themes; no CONTRADICTED dates. Space theme resolved to a genuine multiple reset (cause 5, catalyst 2); clean theme's veto lifted to a partial US-policy break (ICLN cause 6, PBW 5).
+- Buys (8): REMX, XLU, XAR, XHB, NLR, TAN, INDA, LIT. Core: IGF. Alt: PPA, SHLD, URNM, URA, ITA, ITB. Watch: GLD, SLV, PAVE, ICLN, PBW, FXI, KWEB, UFO, EUAD, ARKX. Avoid: none. No bucket overrides; my rank = weighted score.
+- Verifier: Fed 3.75–4%, 10y ~5.3%, Brent $101–104, CPI 10-14 / FOMC 10-28 timing all confirmed; all 8 buys + IGF core load-bearing facts confirmed from primary sources; one correction (dossier's Egypt/Middle East peace claim contradicted — El Alamein Declaration, not a peace deal — dropped from memo); zero demotions, zero retractions, zero ledger changes.
+- $100k risk-parity: REMX 7.6k / XLU 19.1k / XAR 11.4k / XHB 11.6k / NLR 7.0k / TAN 8.5k / INDA 23.3k / LIT 11.6k; max loss -10.2k, max gain +33.1k; tranche half now, half after Oct 28 FOMC.
+- check_memo.py 2026-10-08: catalyst-ballot ledger-coverage note appended (5 live rows all STAND, scores unchanged); day-over-day 3+ pt lens moves explained in memo; only remaining error is expected uncommitted-artifacts (parent commits).
+- Memo: log/2026-10-08.md. Left uncommitted for parent commit+push.
