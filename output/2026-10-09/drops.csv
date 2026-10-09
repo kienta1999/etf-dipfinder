@@ -1,0 +1,94 @@
+ticker,theme,stage,reason,dd_52w,vs_sma200,rs_spy_3m,rr
+BJK,consumer,0 no data,under 30 closes downloaded,,,,
+AIHY,ai/robot,1 illiquid,20d avg $ volume 0.8M < 5M,,,,
+PHOX,ai/robot,1 illiquid,20d avg $ volume 0.1M < 5M,,,,
+FINX,fin-other,1 illiquid,20d avg $ volume 1.0M < 5M,,,,
+BKCH,crypto-equity,1 illiquid,20d avg $ volume 3.4M < 5M,,,,
+GNOM,biotech,1 illiquid,20d avg $ volume 2.7M < 5M,,,,
+XHE,health-other,1 illiquid,20d avg $ volume 3.8M < 5M,,,,
+QCLN,clean,1 illiquid,20d avg $ volume 5.0M < 5M,,,,
+HYDR,hydrogen,1 illiquid,20d avg $ volume 0.9M < 5M,,,,
+FAN,wind,1 illiquid,20d avg $ volume 2.0M < 5M,,,,
+PEJ,consumer,1 illiquid,20d avg $ volume 3.8M < 5M,,,,
+IBUY,consumer,1 illiquid,20d avg $ volume 0.8M < 5M,,,,
+ONLN,consumer,1 illiquid,20d avg $ volume 0.2M < 5M,,,,
+SRVR,reit,1 illiquid,20d avg $ volume 3.4M < 5M,,,,
+PHO,water,1 illiquid,20d avg $ volume 4.7M < 5M,,,,
+VNM,vietnam,3 theme outside top 15,theme 'vietnam' ranks #16 by its best dip (dip_score 0.380),-0.16111104796095754,-0.08378837290343599,-0.10388206744755368,1.9621260932120894
+IHI,health-other,3 theme outside top 15,theme 'health-other' ranks #17 by its best dip (dip_score 0.415),-0.20352669278459135,-0.055971906048529196,-0.0308040559921664,2.619532585247409
+WGMI,crypto-equity,3 theme outside top 15,theme 'crypto-equity' ranks #18 by its best dip (dip_score 0.470),-0.4420249598663152,-0.1781523035906748,-0.30282149521531054,2.079912714987536
+BLOK,crypto-equity,3 theme outside top 15,theme 'crypto-equity' ranks #18 by its best dip (dip_score 0.470),-0.2004489629223295,-0.020193394360269123,-0.08992704023588505,1.4589349770387472
+XLRE,realestate,3 theme outside top 15,theme 'realestate' ranks #19 by its best dip (dip_score 0.472),-0.10467620729415128,-0.04012120778090866,-0.1009407129814599,2.1358443290082065
+XME,base-metals,3 theme outside top 15,theme 'base-metals' ranks #20 by its best dip (dip_score 0.482),-0.2113835708730567,-0.08184652257794822,-0.018135651836517885,1.6861016419544947
+VNQ,reit,3 theme outside top 15,theme 'reit' ranks #21 by its best dip (dip_score 0.483),-0.10723181925460268,-0.037253333413030054,-0.10161826394774698,2.243533538419041
+DTCR,reit,3 theme outside top 15,theme 'reit' ranks #21 by its best dip (dip_score 0.483),-0.16052130599554382,0.0013395554252113584,-0.0991637857907236,1.7570304013605096
+BOTZ,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.16292529979097148,-0.055177159420397026,-0.08403959011330409,1.970353590636144
+ARKQ,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.1484494855808588,-0.018767353415654164,-0.03994537811861176,1.3734169808701275
+AIPO,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.17773943698053274,0.009387786604442061,-0.11222043535267667,1.2957614170791543
+ROBO,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.11357089797149644,0.018874292728004116,-0.06240184466247234,1.2343470668466023
+QTUM,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.10170474602587165,0.11737354591104276,-0.04784883159008568,0.8311125360438718
+BAI,ai/robot,3 theme outside top 15,theme 'ai/robot' ranks #22 by its best dip (dip_score 0.528),-0.12225707401954788,0.14612486999336616,-0.029991960980418786,0.7083348720849199
+ARGT,argentina,3 theme outside top 15,theme 'argentina' ranks #23 by its best dip (dip_score 0.545),-0.1399940240692994,-0.04449633333042846,-0.09984371622023469,1.5344933148322633
+XLI,industrials,3 theme outside top 15,theme 'industrials' ranks #24 by its best dip (dip_score 0.602),-0.09467270685121909,-0.019815069721665024,-0.09951685777515085,1.5929437474225707
+XLY,discretionary,3 theme outside top 15,theme 'discretionary' ranks #25 by its best dip (dip_score 0.630),-0.09729777851101773,-0.034637729557596364,-0.072755943063184,1.3045729864815738
+XLB,materials,3 theme outside top 15,theme 'materials' ranks #26 by its best dip (dip_score 0.631),-0.07775774022911253,-0.021236388889443125,-0.05506417835380917,1.1796439208249307
+KBE,banks,3 theme outside top 15,theme 'banks' ranks #27 by its best dip (dip_score 0.631),-0.10827757944180161,-0.010294550196127128,-0.09809003351159207,1.8544386716147128
+KBWB,banks,3 theme outside top 15,theme 'banks' ranks #27 by its best dip (dip_score 0.631),-0.12049395987277889,-0.008155164990702568,-0.11484972762988499,1.9114041794760275
+KRE,banks,3 theme outside top 15,theme 'banks' ranks #27 by its best dip (dip_score 0.631),-0.10193318744453106,-0.004575182018521029,-0.09478378350425054,1.6613818079636344
+OIH,oil/gas,3 theme outside top 15,theme 'oil/gas' ranks #28 by its best dip (dip_score 0.631),-0.14855045205909267,-0.009570409909417377,-0.011249364244033,1.3898060510156063
+JETS,transport,3 theme outside top 15,theme 'transport' ranks #29 by its best dip (dip_score 0.642),-0.18043541477240144,-0.036906301294813426,-0.17134483074869788,1.8817783443304725
+IYT,transport,3 theme outside top 15,theme 'transport' ranks #29 by its best dip (dip_score 0.642),-0.1098729895592111,-0.013435349750651082,-0.11846791518450062,1.791492036566149
+IAI,fin-other,3 theme outside top 15,theme 'fin-other' ranks #30 by its best dip (dip_score 0.682),-0.10743664451712265,-0.018767736041576888,-0.08985560183605712,1.4993622225752252
+XRT,consumer,3 theme outside top 15,theme 'consumer' ranks #31 by its best dip (dip_score 0.721),-0.08947111471664271,-0.01645134384967406,-0.07301625752876983,1.1676801716002
+XLC,comms,3 theme outside top 15,theme 'comms' ranks #32 by its best dip (dip_score 0.784),-0.058197799864293964,-0.008693196086785315,-0.020526231131260175,0.6922108248482897
+XBI,biotech,3 theme outside top 15,theme 'biotech' ranks #33 by its best dip (dip_score 0.875),-0.11949283043917325,0.07131745612615492,-0.08893269257246716,1.0801313198623168
+EWY,korea,3 theme outside top 15,theme 'korea' ranks #34 by its best dip (dip_score 0.909),-0.19575731870215918,0.11480904218132193,-0.06708266186928313,0.99873915598423
+XSD,semis,3 theme outside top 15,theme 'semis' ranks #35 by its best dip (dip_score 0.938),-0.18648443940270065,0.14887649606144637,-0.08990895887839034,1.1299718557847718
+DRAM,semis,3 theme outside top 15,theme 'semis' ranks #35 by its best dip (dip_score 0.938),-0.2947225044073174,,-0.1246089489390384,1.287523704997574
+PSI,semis,3 theme outside top 15,theme 'semis' ranks #35 by its best dip (dip_score 0.938),-0.20051113935428566,0.1820564676807752,-0.08577187819771703,0.9970588818710188
+SOXX,semis,3 theme outside top 15,theme 'semis' ranks #35 by its best dip (dip_score 0.938),-0.13948137528122073,0.2232663367632628,-0.058119031431763224,0.8394997639790078
+IWM,bench,2 not a dip,not deep: +0.65% vs SMA200 (needs < 0) and -8.78% off 52w high (needs <= -10%),-0.08782670639596424,0.006503786196682126,-0.0874688515370522,1.676522912490857
+IAK,fin-other,2 not a dip,not deep: +4.04% vs SMA200 (needs < 0) and -6.86% off 52w high (needs <= -10%),-0.06862655067784662,0.040375946852973854,-0.056659629822150115,1.0432330869715094
+XLF,financials,2 not a dip,not deep: +1.69% vs SMA200 (needs < 0) and -7.07% off 52w high (needs <= -10%),-0.07066379098561326,0.016916462376579178,-0.05080733595192721,1.4481021646705814
+IHF,health-other,2 not a dip,not deep: +10.19% vs SMA200 (needs < 0) and -3.77% off 52w high (needs <= -10%),-0.03771983310491944,0.10191864874297929,-0.0463227146450238,0.6081283828423159
+EFA,dev-exus,2 not a dip,not deep: +0.85% vs SMA200 (needs < 0) and -5.62% off 52w high (needs <= -10%),-0.05615293398992449,0.008533150940026824,-0.04330990070791141,1.0737507897265575
+EEM,em,2 not a dip,not deep: +4.76% vs SMA200 (needs < 0) and -7.18% off 52w high (needs <= -10%),-0.07175959382178676,0.047599566719842334,-0.039644543663437726,0.7805673612774946
+RSP,bench,2 not a dip,not deep: +3.51% vs SMA200 (needs < 0) and -4.54% off 52w high (needs <= -10%),-0.04535434393958904,0.03512866068723186,-0.035309261585557694,1.0883370018193648
+SMH,semis,2 not a dip,not deep: +20.25% vs SMA200 (needs < 0) and -9.21% off 52w high (needs <= -10%),-0.09214984988714281,0.20247095645546986,-0.03383991153521537,0.6202520801332014
+XHS,health-other,2 not a dip,not deep: +13.39% vs SMA200 (needs < 0) and -3.02% off 52w high (needs <= -10%),-0.03017674120831182,0.1339178647064283,-0.02968124079882195,0.4440981881419253
+XLP,staples,2 not a dip,not deep: +0.77% vs SMA200 (needs < 0) and -5.54% off 52w high (needs <= -10%),-0.0553586669513082,0.007744525915765799,-0.02948582903343233,0.8684276807440547
+PPH,health-other,2 not a dip,not deep: +2.90% vs SMA200 (needs < 0) and -7.07% off 52w high (needs <= -10%),-0.07066911709792745,0.02900020686257543,-0.020882792711873988,0.9130572495703482
+XT,ai/robot,2 not a dip,not deep: +9.14% vs SMA200 (needs < 0) and -1.87% off 52w high (needs <= -10%),-0.018689398074372643,0.0914456838601676,-0.009421822395913049,0.29548251413613597
+AMLP,oil/gas,2 not a dip,not deep: +3.54% vs SMA200 (needs < 0) and -5.89% off 52w high (needs <= -10%),-0.05890723686582189,0.03542838340328003,-0.0052443202149141666,1.1292432930519785
+SPY,bench,2 not a dip,"not deep: +7.62% vs SMA200 (needs < 0) and -0.66% off 52w high (needs <= -10%); not lagging SPY over 3m (+0.00%, needs < 0)",-0.006623155221886501,0.07615440576676025,0.0,0.1388864860217345
+EWJ,japan,2 not a dip,"not deep: +7.57% vs SMA200 (needs < 0) and -2.01% off 52w high (needs <= -10%); not lagging SPY over 3m (+0.16%, needs < 0)",-0.020136931193569296,0.07568634548038244,0.0016102801473023565,0.23910110907169424
+QQQ,bench,2 not a dip,"not deep: +11.54% vs SMA200 (needs < 0) and -1.59% off 52w high (needs <= -10%); not lagging SPY over 3m (+0.38%, needs < 0)",-0.01590179354150223,0.11544874995829257,0.003807326618311624,0.20110090139005526
+PICK,base-metals,2 not a dip,"not lagging SPY over 3m (+0.63%, needs < 0)",-0.13292092046150983,-0.01310522096726252,0.006333201086893947,1.332582465074163
+AIQ,ai/robot,2 not a dip,"not deep: +13.77% vs SMA200 (needs < 0) and -6.47% off 52w high (needs <= -10%); not lagging SPY over 3m (+0.64%, needs < 0)",-0.06472770109828907,0.13771604132191384,0.006361565793446156,0.62338148044618
+IBB,biotech,2 not a dip,"not deep: +10.33% vs SMA200 (needs < 0) and -7.59% off 52w high (needs <= -10%); not lagging SPY over 3m (+1.62%, needs < 0)",-0.07590909701533843,0.10330131440193857,0.016210253067467706,0.7705584779379588
+XLV,health,2 not a dip,"not deep: +7.92% vs SMA200 (needs < 0) and -3.91% off 52w high (needs <= -10%); not lagging SPY over 3m (+2.18%, needs < 0)",-0.0391417423073378,0.0791602947701413,0.02182604376567987,0.5660403868184841
+XLK,tech,2 not a dip,"not deep: +19.31% vs SMA200 (needs < 0) and -2.09% off 52w high (needs <= -10%); not lagging SPY over 3m (+3.81%, needs < 0)",-0.02089109515199572,0.193123824405119,0.038148557977682795,0.19454178874214806
+EWT,taiwan,2 not a dip,"not deep: +26.15% vs SMA200 (needs < 0) and -3.95% off 52w high (needs <= -10%); not lagging SPY over 3m (+3.96%, needs < 0)",-0.03949155645855407,0.26145183061266897,0.0396457296453534,0.2914260989262421
+FDN,internet/ark,2 not a dip,"not deep: +10.64% vs SMA200 (needs < 0) and -0.63% off 52w high (needs <= -10%); not lagging SPY over 3m (+4.02%, needs < 0)",-0.006333181216634065,0.1064058077961001,0.04023302236133364,0.07212124105477193
+COPX,base-metals,2 not a dip,"not lagging SPY over 3m (+4.65%, needs < 0)",-0.14753754461159063,-0.009512528538689446,0.04652321489416966,1.017168976705548
+MAGS,bench,2 not a dip,"not deep: +10.83% vs SMA200 (needs < 0) and -1.18% off 52w high (needs <= -10%); not lagging SPY over 3m (+5.14%, needs < 0)",-0.011772702687663283,0.10834205492937232,0.0513620886228634,0.12756186449337056
+ARKK,internet/ark,2 not a dip,"not deep: +12.35% vs SMA200 (needs < 0) and -5.58% off 52w high (needs <= -10%); not lagging SPY over 3m (+6.40%, needs < 0)",-0.05583100208373426,0.1234665159297419,0.06397039283472994,0.36547055788102745
+ARKW,internet/ark,2 not a dip,"not deep: +15.19% vs SMA200 (needs < 0) and -8.55% off 52w high (needs <= -10%); not lagging SPY over 3m (+7.78%, needs < 0)",-0.08552802614607424,0.15192374210958692,0.07782506074905138,0.7206624459470008
+SIL,silver,2 not a dip,"not lagging SPY over 3m (+8.14%, needs < 0)",-0.28156583914606925,-0.07199819579059119,0.081416490309697,1.8600695361471744
+ARKF,fin-other,2 not a dip,"not lagging SPY over 3m (+8.74%, needs < 0)",-0.21012260351416112,0.0924902841180586,0.08737482947772701,1.9239916510704222
+GDXJ,gold,2 not a dip,"not lagging SPY over 3m (+9.39%, needs < 0)",-0.28996734879057073,-0.07282502462887808,0.09387518342610823,1.7979591047853112
+FCG,oil/gas,2 not a dip,"not deep: +6.73% vs SMA200 (needs < 0) and -7.02% off 52w high (needs <= -10%); not lagging SPY over 3m (+10.51%, needs < 0)",-0.07021453901859476,0.0672751226285786,0.1050921894578738,0.6169398346538691
+GDX,gold,2 not a dip,"not lagging SPY over 3m (+12.05%, needs < 0)",-0.2513811812653045,-0.04817722992426121,0.12046673465341629,1.6256891122985813
+HACK,cyber,2 not a dip,"not deep: +33.85% vs SMA200 (needs < 0) and -1.81% off 52w high (needs <= -10%); not lagging SPY over 3m (+12.25%, needs < 0)",-0.01809497980356012,0.33852595085830917,0.12252464663486906,0.1155085645556364
+CIBR,cyber,2 not a dip,"not deep: +31.87% vs SMA200 (needs < 0) and -1.78% off 52w high (needs <= -10%); not lagging SPY over 3m (+12.82%, needs < 0)",-0.01784888887634528,0.31867847812783956,0.1282024185509636,0.130244031548718
+EWZ,brazil,2 not a dip,"not deep: +17.02% vs SMA200 (needs < 0) and -0.95% off 52w high (needs <= -10%); not lagging SPY over 3m (+15.77%, needs < 0)",-0.009534880172374582,0.17017435599350694,0.1576740653914368,0.06543888369735773
+IGV,software,2 not a dip,"not deep: +16.99% vs SMA200 (needs < 0) and -6.38% off 52w high (needs <= -10%); not lagging SPY over 3m (+15.82%, needs < 0)",-0.06379788142279297,0.16987675425871607,0.1582241772767523,0.4783773260395711
+XLE,energy,2 not a dip,"not deep: +15.89% vs SMA200 (needs < 0) and -0.46% off 52w high (needs <= -10%); not lagging SPY over 3m (+16.38%, needs < 0)",-0.004583892816670487,0.15888767701468165,0.16381299181560993,0.05066853040721897
+ARKG,biotech,2 not a dip,"not lagging SPY over 3m (+16.52%, needs < 0)",-0.13175972312703033,0.3765378608507104,0.16519848068395881,0.7153269338071113
+SKYY,software,2 not a dip,"not deep: +27.38% vs SMA200 (needs < 0) and -0.51% off 52w high (needs <= -10%); not lagging SPY over 3m (+18.96%, needs < 0)",-0.0050873933988269116,0.27375755046042327,0.18959914712212722,0.04222894180623364
+BUG,cyber,2 not a dip,"not deep: +42.06% vs SMA200 (needs < 0) and -1.62% off 52w high (needs <= -10%); not lagging SPY over 3m (+19.00%, needs < 0)",-0.016211798131510746,0.4205939313588567,0.1899920816788645,0.08538301809627656
+XOP,oil/gas,2 not a dip,"not deep: +18.21% vs SMA200 (needs < 0) and -2.72% off 52w high (needs <= -10%); not lagging SPY over 3m (+19.74%, needs < 0)",-0.027233271568958828,0.18209528077006154,0.1973972457970583,0.2340186778342248
+WCLD,software,2 not a dip,"not deep: +29.65% vs SMA200 (needs < 0) and -1.44% off 52w high (needs <= -10%); not lagging SPY over 3m (+22.84%, needs < 0)",-0.014368545183253145,0.29653799506965517,0.22836793088081886,0.08704958413796905
+IBIT,crypto-spot,2 not a dip,"not lagging SPY over 3m (+24.92%, needs < 0)",-0.3397088219587181,0.10432409624096128,0.24915601377712737,3.1399472093481178
+USO,oil/gas,2 not a dip,"not deep: +26.43% vs SMA200 (needs < 0) and -8.82% off 52w high (needs <= -10%); not lagging SPY over 3m (+33.00%, needs < 0)",-0.08822438357499685,0.26430840317941007,0.32999539586212023,0.44475300798034845
+ETHA,crypto-spot,2 not a dip,"not lagging SPY over 3m (+34.46%, needs < 0)",-0.4566383806243898,0.09625007989881151,0.34457283894262325,4.055934341843408

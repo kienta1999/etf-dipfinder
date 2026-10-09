@@ -305,3 +305,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - check_memo.py 2026-10-08: catalyst-ballot ledger-coverage note appended (5 live rows all STAND, scores unchanged); day-over-day 3+ pt lens moves explained in memo; only remaining error is expected uncommitted-artifacts (parent commits).
 - Memo: log/2026-10-08.md. Left uncommitted for parent commit+push.
 - 2026-10-08-r2 lite (Sonnet 5.5): Buy NLR, ITA. Core: IGF. Alt: PPA, XAR, URA, SHLD, URNM, PAVE. Watch: XLU, INDA, GLD, ICLN, REMX, XHB, EUAD, LIT, SLV, ITB, FXI, TAN, UFO, KWEB, PBW, ARKX. Avoid: none. 12 searches; NLR spot-checked (Cameco 10/30, term U3O8 $96.50 record) held. $100k: NLR 33k / ITA 67k, max loss -11.8k, max gain +34.7k. Memo: log/2026-10-08-r2-lite.md.
+
+## 2026-10-09 — ETF panel (full)
+- Full panel on scan as of the 2026-10-08 close: 26 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Spark (muse-spark).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floor honored on all floored themes; no CONTRADICTED dates. Cause panelist vetoed TAN, KWEB, FXI.
+- Buys (7): IGF, XAR, XLU, REMX, NLR, XHB, LIT. Core: none (core is the non-buy path; IGF/XLU both met the buy gate). Alt: PAVE, PPA, SHLD, ITA, URA, URNM, ITB. Watch: GRID (thin), GLD, ICLN, INDA, EUAD, UFO, ARKX, SLV, PBW. Avoid: TAN, KWEB, FXI. No bucket overrides; my rank = weighted score.
+- Verifier: 36 CONFIRMED, 1 PARTIAL (Tesla-Piedmont 1B lithium deal, thinly sourced, non-load-bearing), 0 demotions. Regime premises (FOMC 3.75-4.00%, 10y ~5.3%, Brent >100 on Hormuz strikes) and all 7 buys' load-bearing facts confirmed from primary sources; all catalyst-floor dates confirmed. Cameco ledger check: exactly one row (nuclear, 2026-10-30) with full primary-source lineage — no duplicate existed. 7 new ledger rows appended; Disputed table empty.
+- $100k risk-parity: IGF 31.1k / XAR 11.4k / XLU 19.4k / REMX 7.7k / NLR 7.0k / XHB 11.6k / LIT 11.7k; max loss -9.1k, max gain +26.5k; tranche all in (catalysts per-fund and staggered, no single shared policy date).
+- check_memo.py 2026-10-09: catalyst-ballot ledger-coverage addendum appended (8 live rows acknowledged, all STAND, scores unchanged); only remaining error is expected uncommitted-artifacts (parent commits).
+- Memo: log/2026-10-09.md. Left uncommitted for parent commit+push.

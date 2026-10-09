@@ -1,0 +1,41 @@
+> Run by: Muse Spark (muse-spark) — full panel
+
+# necessity — 2026-10-09
+| rank | ETF | score | one-line reason (this lens only) | key source |
+| 1 | GRID | 10 | band 10: grid is civilisation-critical, no substitute; EIA STEO 2026-10-06: US power demand to records 4,288B kWh in 2026 and 4,356B in 2027 on AI data centers + electrification | EIA STEO via Reuters 2026-10-06 |
+| 2 | XLU | 10 | band 10: electricity delivery civilisation-critical, no substitute; same EIA outlook — commercial power sales to outpace residential for the first time on record | EIA STEO via Reuters 2026-10-06 |
+| 3 | IGF | 10 | band 10: same theme as GRID — civilisation-critical infra, no substitute, structurally rising demand; EIA record demand + IEA $550B global grid investment in 2026 | EIA STEO 2026-10-06 / IEA WEI 2026 |
+| 4 | PAVE | 10 | band 10: US infra sibling of IGF — civilisation-critical, no substitute; EIA record power demand, IEA $550B grid spend in 2026 | EIA STEO / IEA WEI 2026 |
+| 5 | URNM | 8 | band 7 +1: nuclear structurally growing but substitutable; +1 for hyperscaler 20-yr PPAs — Google-Constellation 890 MW deal signed 2026-10-06 | Reuters 2026-10-07 |
+| 6 | NLR | 8 | band 7 +1: same theme as URNM — structurally growing but substitutable; +1 Google-Constellation 890 MW 20-yr deal 2026-10-06 | Reuters 2026-10-07 |
+| 7 | URA | 8 | band 7 +1: same theme as URNM — structurally growing but substitutable; +1 Google-Constellation 890 MW 20-yr deal 2026-10-06 | Reuters 2026-10-07 |
+| 8 | REMX | 8 | band 7 +1: rare earths structurally growing, partly substitutable; +1 statutory defense demand — DFARS 252.225-7052 bans Chinese-origin magnets in US weapons systems from 2027-01-01 (~78% of Pentagon programs, Adamas) | DFARS/10 USC 4872 via GlobeNewswire 2026-06-10 |
+| 9 | SHLD | 8 | band 7 +1: defense structurally growing; +1 SIPRI $2.887T global military spending in 2025 (11th straight real increase) + NATO 5%-by-2035 pledge (Hague 2025, reaffirmed Ankara Jul-2026) | SIPRI 2026 / ECB Bulletin 6/2026 |
+| 10 | XAR | 8 | band 7 +1: same theme as SHLD — structurally growing; +1 SIPRI $2.887T 2025 + NATO 5%-by-2035 pledge | SIPRI 2026 / ECB Bulletin 6/2026 |
+| 11 | ITA | 8 | band 7 +1: same theme as SHLD — structurally growing; +1 SIPRI $2.887T 2025 + NATO 5%-by-2035 pledge | SIPRI 2026 / ECB Bulletin 6/2026 |
+| 12 | PPA | 8 | band 7 +1: same theme as SHLD — structurally growing; +1 SIPRI $2.887T 2025 + NATO 5%-by-2035 pledge | SIPRI 2026 / ECB Bulletin 6/2026 |
+| 13 | EUAD | 8 | band 7 +1: European rearmament is the sharpest leg — ECB 2026: most European countries committed to substantially raise defense spending over the coming decade under NATO 5%-by-2035 (reaffirmed Jul-2026) | ECB Bulletin 6/2026 |
+| 14 | UFO | 7 | band 7: structurally growing, visible competing tech (mega-constellations); space economy ~$626B in 2025, projected ~$1T by early-to-mid 2030s | Space Foundation est. via orbitalradar 2026 |
+| 15 | ARKX | 7 | band 7: same theme as UFO — structurally growing, competing launch/constellation tech; $626B space economy 2025 → ~$1T early-2030s | Space Foundation est. via orbitalradar 2026 |
+| 16 | PBW | 7 | band 7: clean energy structurally growing but substitutable/competing tech; IEA WEI 2026: $2.2T clean-energy investment in 2026, ~2x fossil fuels | IEA WEI 2026 |
+| 17 | ICLN | 7 | band 7: same theme as PBW — structurally growing but substitutable; IEA $2.2T clean investment in 2026, ~2x fossil fuels | IEA WEI 2026 |
+| 18 | TAN | 7 | band 7: solar structurally growing but substitutable; BNEF 3Q-2026: 624 GW installs in 2026, first-ever annual decline (-5%) — policy-driven pause, not structural reversal | BNEF Global PV Outlook 3Q 2026 |
+| 19 | INDA | 7 | band 7: structurally growing; IMF WEO: India 7.0% GDP growth in 2026, fastest major economy, ~17% of global real GDP growth | IMF WEO update Jul-2026 |
+| 20 | LIT | 7 | band 7: structurally growing but with a visible competing tech — CATL mass-producing sodium-ion EVs in 2026 (Naxtra, 175 Wh/kg; first mass-production passenger EV unveiled Feb-2026) | CATL/CarNewsChina 2026 |
+| 21 | SLV | 6 | band 5 +1: real demand, cyclical monetary metal; +1 for 6th straight physical deficit (46.3 Moz in 2026, Silver Institute WSS 2026) as inelastic byproduct supply can't respond | Silver Institute WSS 2026 via ainvest |
+| 22 | GLD | 6 | band 5 +1: real demand, cyclical hedge; +1 structural official bid — central banks ~1,000 t/yr for 4 years, 39t in Aug-2026 (170t YTD), 84% expect gold's reserve share to rise | WGC Aug-2026 data / 2026 survey |
+| 23 | ITB | 5 | band 5: real demand, cyclical, no structural growth claim — US housing shortage ~4.7M units (Zillow, Feb-2026) against 30y mortgages ~7.28% | Zillow Feb-2026 |
+| 24 | XHB | 5 | band 5: same theme as ITB — real demand, cyclical; 4.7M-unit shortage (Zillow Feb-2026), rate-bound | Zillow Feb-2026 |
+| 25 | KWEB | 3 | band 3: demand rests on conditions that may not hold — regulatory/geopolitical overhang (MOFCOM export-control extension 2026-09-28; -$3.5B China ETF outflows since May) | MOFCOM 2026-09-28 / dossier |
+| 26 | FXI | 3 | band 3: same theme as KWEB — demand rests on conditions that may not hold (MOFCOM 2026-09-28; -$3.5B outflows); no structural growth claim for the equity theme | MOFCOM 2026-09-28 / dossier |
+
+Top-3 notes:
+- GRID: EIA's Oct 6, 2026 Short-Term Energy Outlook projects US power consumption at record highs in 2026 and 2027 — 4,288B kWh in 2026 rising to 4,356B in 2027 — driven by AI-hungry data centers and electrification (Reuters, 2026-10-06). This is the structural demand engine for grid infrastructure: the grid must carry record loads, and there is no substitute for transmission and distribution.
+- XLU: The same EIA STEO (2026-10-06) forecasts 2026 commercial power sales of 1,549B kWh — outpacing residential sales for the first time on record — with PJM wholesale electricity prices set to rise 41% in 2026. Utilities are the monopoly delivery layer for that load growth, making delivered electricity civilisation-critical with structurally rising demand.
+- URNM: Google signed a 20-year power purchase agreement with Constellation Energy on October 6, 2026 for 890 MW of uprated nuclear capacity (a $4.3B+ investment across 11 units), reported by Reuters on 2026-10-07, with Amazon signing a parallel 20-year Calvert Cliffs deal on Sept 30, 2026. It is the single strongest dated proof that hyperscaler AI power demand is converting into multi-decade contracted nuclear fuel demand — the +1 behind nuclear's 8.
+
+Disagreements with the dossier's first-pass memo:
+- Silver: the dossier frames silver as a rate-driven washout; the Silver Institute's World Silver Survey 2026 shows industrial demand actually fell for a second consecutive year (solar silver demand -19% in 2026 to ~151 Moz on panel thrifting) yet the physical deficit widened to 46.3 Moz — the sixth straight year — because ~72-74% of mine supply is inelastic byproduct output. Necessity is a supply-inelasticity story, not a rates story; hence band 5 +1 rather than a pure cyclical 5.
+- Solar: the dossier's "leaning break" is a cause-lens read; on necessity, BNEF's 3Q-2026 outlook forecasts the first-ever annual decline in global solar installations (624 GW, ~-5% YoY), driven by China and US policy shifts. The theme stays band 7 on long-run structural drivers (IEA: $365B/yr solar investment), but the 2026 plateau tempers any higher claim — no +1 given.
+- Lithium: the dossier is cause-focused; on necessity, sodium-ion is now a genuine visible competing technology (CATL mass production in 2026; first mass-production sodium-ion passenger EV unveiled Feb 2026; CATL chairman projects 30-40% eventual battery-market share), which pins lithium at band 7 and rules out anything higher.
+- Agreement with teeth: the dossier's ROTATION calls on nuclear and rare-earth are supported — the Google-Constellation 20-year deal (Oct 6, 2026) and the DFARS 2027-01-01 statutory magnet ban (~78% of Pentagon weapons programs affected) confirm demand is structurally mandated, not sentiment-driven; the defense-us ROTATION call is likewise consistent with SIPRI's 11-year real growth streak and the reaffirmed NATO 5%-by-2035 pledge.
