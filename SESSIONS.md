@@ -332,3 +332,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: 9/9 rule-buys re-checked against primary sources — 9 confirmed, 0 demotions. Regime premises confirmed (FOMC Oct 27-28, 10y ~5.23-5.35%, Brent ~$103). No retractions, no disputes.
 - $100k risk-parity: IGF 22.3k / XLU 14.1k / NLR 5.2k / REMX 5.7k / XAR 8.5k / ICLN 8.3k / IHI 10.4k / INDA 16.6k / LIT 8.8k; max loss -8.1k, max gain +25.5k; tranche half now / half after Oct 28 FOMC statement (shared macro catalyst).
 - Memo: log/2026-10-12.md. Left uncommitted for parent commit+push.
+- 2026-10-12-r2 lite (Claude Sonnet 5.5, Mon 2026-10-12, data as of 2026-10-09): Buy XLU, IGF, NLR. Core: none. Alt: URA, URNM. 12 searches, XLU spot-checked, no demotion. Memo: log/2026-10-12-r2-lite.md.
