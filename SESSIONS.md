@@ -323,3 +323,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: 9/9 rule-buys re-checked against primary sources — 9 confirmed, 0 demotions. Regime premises confirmed (FOMC Oct 27-28, 10y ~5.24% Friday / 24-year high, WTI corrected ~89 → ~91 Oct 9). 2 ledger rows appended to log/catalysts.md (Abbott Q3 2026-10-21, FTSE Vietnam inclusion 2026-09-21); no retractions, no disputes.
 - $100k risk-parity: IGF 22.2k / XAR 8.5k / XLU 14.1k / REMX 5.7k / IHI 10.3k / URA 4.8k / INDA 16.5k / XHB 8.6k / VNM 9.4k; max loss -8.1k, max gain +23.4k; tranche all in (catalysts per-fund and staggered, no single shared policy date).
 - Memo: log/2026-10-10.md. Left uncommitted for parent commit+push.
+
+## 2026-10-12 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-09 close: 25 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Spark (muse-spark).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all floored themes; no CONTRADICTED dates. No cause vetos this run (lowest cause 5: TAN, KWEB, FXI, VNM).
+- Check-5c handling: verifier appended 4 new ledger rows (nuclear/Uranium $96/lb record, india/FII ₹45,125cr outflow, defense-us/FY27 $1.5T request, rare-earth/MP-gadolinium GM deal); catalyst ballot was updated to name each with its exact keyword before the memo — no score changes (all confirmations, not new triggers).
+- Buys (9): IGF, XLU, NLR, REMX, XAR, ICLN, IHI, INDA, LIT. Core: none (every theme-leading broad fund cleared the buy gate). Alt: PAVE, URA, URNM, SHLD, PPA, ITA, PBW. Watch: XHB, TAN, ITB, UFO, EUAD, VNM, KWEB, FXI, ARKX. Avoid: none. No bucket overrides; my rank = weighted score.
+- Verifier: 9/9 rule-buys re-checked against primary sources — 9 confirmed, 0 demotions. Regime premises confirmed (FOMC Oct 27-28, 10y ~5.23-5.35%, Brent ~$103). No retractions, no disputes.
+- $100k risk-parity: IGF 22.3k / XLU 14.1k / NLR 5.2k / REMX 5.7k / XAR 8.5k / ICLN 8.3k / IHI 10.4k / INDA 16.6k / LIT 8.8k; max loss -8.1k, max gain +25.5k; tranche half now / half after Oct 28 FOMC statement (shared macro catalyst).
+- Memo: log/2026-10-12.md. Left uncommitted for parent commit+push.
