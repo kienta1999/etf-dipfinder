@@ -341,3 +341,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: regime premises + 5/5 rule-buys re-checked — 20 confirmed, 1 unverified (uranium end-Sep tick 96.50 vs 96, record either way), 0 contradicted, 0 demotions. 3 ledger rows appended to log/catalysts.md, 1 disputed row added; no retractions.
 - $100k risk-parity: XAR 17.8k / NLR 10.9k / GLD 18.4k / INDA 34.6k / XHB 18.3k; max loss -9.5k, max gain +29.9k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
 - Memo: log/2026-10-13.md. Left uncommitted for parent commit+push.
+- 2026-10-13-r2 lite (Claude Sonnet 5.5, claude-sonnet-5-5): scan as of 2026-10-12; Buy GLD, NLR; Core none; Alt URA, URNM; NLR spot-checked, no demotion. Memo: log/2026-10-13-r2-lite.md.
