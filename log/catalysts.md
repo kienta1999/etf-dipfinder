@@ -73,6 +73,9 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | india | FII | FPIs net sold ₹45,125.67cr of Indian equities in October's first six trading sessions (≈ September's entire ₹45,536.89cr); YTD 2026 outflows ≈ ₹3.6 lakh cr on elevated crude, rising US Treasury yields and a weak rupee | 2026-10-12 | punjabkhabarnama.com 2026-10-12 (citing Moneycontrol data); corroborated by 7globe.in (₹44,166cr, NSDL) and 5paisa (₹12,944cr single-day Oct 8, 2nd-largest of 2026) | 2026-10-12 |
 | defense-us | FY27 | FY2027 national-defense budget request $1.5T (~$1.45T per CRS: $1.1T discretionary + $350B mandatory), ~44% above FY2026's ~$1.01T | 2026-04-21 | thepricer.org citing CRS; unveiled 2026-04-21 (White House rounds to $1.5T; reason.com 2026-04-03, washexaminer) | 2026-10-12 |
 | rare-earth | MP-gadolinium | MP Materials signed a significant long-term gadolinium supply agreement with a new US aerospace & defense customer; delivered magnets to GM for in-vehicle qualification testing; commercial magnet shipments targeted Q4 2026 | 2026-08-06 | MP Materials Q2 2026 release (Litinsky quote via prnewswire.com 2026-10-08); sharewise.com/MarketBeat 2026-09-13 (GM commercial deliveries targeted year-end); investorplace.com | 2026-10-12 |
+| housing | mortgage | Freddie Mac PMMS 30-yr fixed averaged 7.40% in the week ending Oct 8, 2026 — up from 7.28% the prior week, highest since Nov 2023 | 2026-10-08 | Freddie Mac PMMS via GlobeNewswire / Reuters, 2026-10-08 | 2026-10-13 |
+| macro | Brent | Brent Dec futures near $106.80/bbl and WTI Nov near $93.76 on the morning of Oct 12, 2026, after weekend Houthi strikes on Saudi infrastructure; Brent settled near $107 that day | 2026-10-12 | DTN Oil Update, 2026-10-12; Rigzone/Bloomberg, 2026-10-12; OilPrice.com, 2026-10-12 | 2026-10-13 |
+| gold | WGC | Gold finished September 2026 at $4,176/oz, -8.5% m/m, as the US 10y rose 53bp to 5.3% and the dollar gained 2%; global gold ETFs still took in $10bn (67t) in September, Q3 inflows a record $31bn | 2026-09-30 | World Gold Council, Gold Market Commentary September 2026 (gold.org), 2026-10-07 | 2026-10-13 |
 
 ## Disputed
 
@@ -82,6 +85,7 @@ Move a row up into the table above (or delete it) once one does.
 
 | theme | claim | readings | sources | noted on |
 |---|---|---|---|---|
+| nuclear | Uranium long-term price at end-September 2026 | (a) ended September at $96.50/lb — PR Newswire / Energy Metal News, 2026-10-12, citing Cameco-published figures; (b) held $96/lb through September, with $96.50 as the mid-August peak — oilprice.com, 2026-10-01 (UxC data via TD Cowen). Both readings agree the term price is a record above the 2007 ~$95 peak | (a) PR Newswire via Morningstar, 2026-10-12; (b) oilprice.com, 2026-10-01 | 2026-10-13 |
 
 ## Resolved
 

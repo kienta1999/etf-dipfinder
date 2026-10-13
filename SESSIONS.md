@@ -333,3 +333,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: IGF 22.3k / XLU 14.1k / NLR 5.2k / REMX 5.7k / XAR 8.5k / ICLN 8.3k / IHI 10.4k / INDA 16.6k / LIT 8.8k; max loss -8.1k, max gain +25.5k; tranche half now / half after Oct 28 FOMC statement (shared macro catalyst).
 - Memo: log/2026-10-12.md. Left uncommitted for parent commit+push.
 - 2026-10-12-r2 lite (Claude Sonnet 5.5, Mon 2026-10-12, data as of 2026-10-09): Buy XLU, IGF, NLR. Core: none. Alt: URA, URNM. 12 searches, XLU spot-checked, no demotion. Memo: log/2026-10-12-r2-lite.md.
+
+## 2026-10-13 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-12 close: 25 candidates in 15 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (muse-wonder) — full panel; panelist model Avocado 5.16 could not be pinned, panelists report Muse Wonder.
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all floored themes; no CONTRADICTED dates. No cause vetos this run (lowest cause 4: PBW, LIT, UFO).
+- Buys (5): XAR, NLR, GLD, INDA, XHB. Core: none (only broad-theme candidate GLD cleared the buy gate). Alt: PPA, SHLD, ITA, URA, URNM, ITB. Watch: ICLN, TAN, SLV, REMX, EUAD, PBW, FXI, KWEB, VNM, BLOK, LIT, ARKX, UFO, WGMI. Avoid: none. No bucket overrides; my rank = weighted score.
+- Verifier: regime premises + 5/5 rule-buys re-checked — 20 confirmed, 1 unverified (uranium end-Sep tick 96.50 vs 96, record either way), 0 contradicted, 0 demotions. 3 ledger rows appended to log/catalysts.md, 1 disputed row added; no retractions.
+- $100k risk-parity: XAR 17.8k / NLR 10.9k / GLD 18.4k / INDA 34.6k / XHB 18.3k; max loss -9.5k, max gain +29.9k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Memo: log/2026-10-13.md. Left uncommitted for parent commit+push.
