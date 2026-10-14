@@ -351,3 +351,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - check_memo.py 2026-10-14: catalyst-ballot ledger-coverage addendum appended (LMT, PJM, RBI named, all STAND, scores unchanged) and re-consolidated; only remaining error is the expected uncommitted-artifacts error (parent commits).
 - $100k risk-parity: XLU 14.3k / IGF 22.4k / XAR 8.6k / ICLN 8.5k / NLR 5.3k / INDA 16.1k / VNM 9.9k / IYT 14.9k; max loss -7.2k, max gain +19.5k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
 - Memo: log/2026-10-14.md. Left uncommitted for parent commit+push.
+- 2026-10-14-r2 lite (Claude Sonnet 5.5): Buy XLU/IGF/NLR; 10 searches; $100k XLU 34.1k / IGF 53.3k / NLR 12.5k, half-now on XLU+IGF until Oct 28 FOMC. Memo: log/2026-10-14-r2-lite.md
