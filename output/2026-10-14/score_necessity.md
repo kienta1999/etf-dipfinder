@@ -1,0 +1,55 @@
+> Run by: Muse Wonder (muse-wonder) — full panel
+
+# necessity — 2026-10-14
+| rank | ETF | score | one-line reason (this lens only) | key source |
+|---|---|---|---|---|
+| 1 | XLU | 10 | 10-band: electricity is civilisation-critical with no substitute and US demand hits record 4,288B kWh in 2026, rising to 4,356B in 2027 | EIA STEO via Reuters 2026-10-06 |
+| 2 | REMX | 9 | 10-band, -1 for visible rare-earth-free motor work: magnet rare-earth demand doubled since 2015 and rises another third by 2030, with no performance substitute for NdFeB in EV/defence | IEA magnet rare earths data, reported 2026-09-22 |
+| 3 | IGF | 9 | 10-band, -1 because fund is broad infra not pure grid: IEA says grid investment must rise ~50% by 2030 and 2,500 GW of projects await connection | IEA Electricity 2026, 2026-02-06 |
+| 4 | PAVE | 9 | 10-band, -1 because fund is broad infra not pure grid: same grid fact as IGF — grid investment must rise ~50% by 2030, no route around transmission | IEA Electricity 2026, 2026-02-06 |
+| 5 | URNM | 8 | 7-band, +1 because reactors once built have no fuel substitute: uranium demand +28% by 2030 and more than doubles to over 150,000 tU by 2040 | WNA Nuclear Fuel Report via Reuters 2025-09-05 |
+| 6 | NLR | 8 | 7-band, +1 for locked-in reactor fuel demand: same WNA fact as URNM — demand +28% by 2030, over 150,000 tU by 2040 | WNA Nuclear Fuel Report via Reuters 2025-09-05 |
+| 7 | URA | 8 | 7-band, +1 for locked-in reactor fuel demand: same WNA fact as URNM — demand +28% by 2030, over 150,000 tU by 2040 | WNA Nuclear Fuel Report via Reuters 2025-09-05 |
+| 8 | TAN | 8 | 7-band, +1 because solar becomes the largest power source: solar generation quadruples from 2023 by 2030 and solar is cheapest new build almost everywhere, though wind/gas/nuclear can substitute | IEA World Energy Outlook 2024 via Carbon Brief |
+| 9 | XME | 8 | 7-band, +1 for copper's no-substitute grid role: cleantech copper demand nearly doubles from 6,311 kt in 2023 to 12,001 kt by 2030, partly offset by aluminium substitution in some uses | IEA Global Critical Minerals Outlook 2024 |
+| 10 | PICK | 8 | 7-band, +1 for copper's no-substitute grid role: same IEA copper fact as XME — cleantech demand 6,311 kt to 12,001 kt by 2030 | IEA Global Critical Minerals Outlook 2024 |
+| 11 | SHLD | 8 | 7-band, +1 for locked multi-year rearmament: world military spending hit a record $2.887T in 2025, the 11th straight rise, though budgets remain policy-cyclical | SIPRI, 2026-04-27 |
+| 12 | XAR | 8 | 7-band, +1 for locked multi-year rearmament: same SIPRI fact as SHLD — record $2.887T in 2025, 11th consecutive increase | SIPRI, 2026-04-27 |
+| 13 | ITA | 8 | 7-band, +1 for locked multi-year rearmament: same SIPRI fact as SHLD — record $2.887T in 2025, 11th consecutive increase | SIPRI, 2026-04-27 |
+| 14 | PPA | 8 | 7-band, +1 for locked multi-year rearmament: same SIPRI fact as SHLD — record $2.887T in 2025, 11th consecutive increase | SIPRI, 2026-04-27 |
+| 15 | EUAD | 8 | 7-band, +1 because Europe's rise is structural: European spending surged 14% to $864B in 2025, fastest for European NATO members since 1953, with a NATO 5%-of-GDP target set June 2025 | SIPRI, 2026-04-27 |
+| 16 | ITB | 8 | 7-band, +1 because shelter is non-discretionary: US housing shortage widened to 4.03M homes in 2025, though new-build demand is rate-gated and renting/existing stock partly substitute | Realtor.com Supply Gap Report, 2026-03-03 |
+| 17 | XHB | 8 | 7-band, +1 because shelter is non-discretionary: same Realtor.com fact as ITB — shortage widened to 4.03M homes in 2025 | Realtor.com Supply Gap Report, 2026-03-03 |
+| 18 | BOTZ | 8 | 7-band, +1 because automation/AI compute is now core infrastructure: data-centre capex ~$800B in 2026 rising to $1.1T in 2030, though vendors and architectures substitute for each other | PwC/Oxford Economics data-centre outlook, 2025-26 index |
+| 19 | ARKQ | 8 | 7-band, +1 for core AI/automation demand: same PwC fact as BOTZ — capex ~$800B in 2026 to $1.1T in 2030 | PwC/Oxford Economics data-centre outlook, 2025-26 index |
+| 20 | AIPO | 8 | 7-band, +1 for core AI/automation demand: same PwC fact as BOTZ — capex ~$800B in 2026 to $1.1T in 2030 | PwC/Oxford Economics data-centre outlook, 2025-26 index |
+| 21 | ROBO | 8 | 7-band, +1 for core AI/automation demand: same PwC fact as BOTZ — capex ~$800B in 2026 to $1.1T in 2030 | PwC/Oxford Economics data-centre outlook, 2025-26 index |
+| 22 | BAI | 8 | 7-band, +1 for core AI/automation demand: same PwC fact as BOTZ — capex ~$800B in 2026 to $1.1T in 2030 | PwC/Oxford Economics data-centre outlook, 2025-26 index |
+| 23 | SLV | 7 | 7-band: industrial use is ~58% of demand and 2026 is a 6th straight deficit at 46.3 Moz, but solar thrifting cuts PV silver use ~19% in 2026 and copper substitution is live | Silver Institute / Metals Focus 2026; Deutsche Bank 2026-10-07 |
+| 24 | PBW | 7 | 7-band: renewables add 4.6 TW by 2030 and reach ~45% of electricity, but clean technologies substitute for each other and US tax-credit phase-out cut the IEA forecast | IEA Renewables 2025 |
+| 25 | ICLN | 7 | 7-band: same IEA fact as PBW — 4.6 TW of renewables added by 2030, ~45% of electricity, with technology substitution inside the theme | IEA Renewables 2025 |
+| 26 | QCLN | 7 | 7-band: same IEA fact as PBW — 4.6 TW of renewables added by 2030, ~45% of electricity, with technology substitution inside the theme | IEA Renewables 2025 |
+| 27 | LIT | 7 | 7-band: battery demand quadruples to 4,100 GWh by 2030 and lithium-ion stays dominant, but sodium-ion could displace 357 kt LCE, 12.5% of battery demand, by 2031 in storage/low-end uses | Bain 2024; GEM study via Mining.com 2026 |
+| 28 | INDA | 7 | 7-band: India is structurally growing — projected $7.3T GDP and 3rd-largest economy by 2030, median age 28.8 — but capital and supply chains can route to other large economies | India govt statement 2025-12-29; EY Economy Watch Aug 2025 |
+| 29 | GLD | 6 | 5-band, +1 for structural official-sector demand: gold ETFs took a record $31B in Q3 2026 and central banks bought 39 t in Aug 2026, yet gold has no civilisation-critical industrial need and reserve demand rests on fiscal/geopolitical conditions | World Gold Council, Sep-Oct 2026 |
+| 30 | VNM | 6 | 5-band, +1 for a structural manufacturing shift: Vietnam GDP forecast 7.8% in 2026, ASEAN-fastest, with registered FDI $34.7B up 61% YoY, but other hubs (India, ASEAN peers) can substitute | Maybank Invest ASEAN 2026; Vietnam Holding report 2026 |
+| 31 | FXI | 6 | 5-band, +1 for systemic scale: China GDP is projected to exceed 170T yuan (~$23.8T) by 2030 at ~4.2% growth, though population/workforce are shrinking; FXI differs from KWEB because its broad large-caps span banks/energy/telecom, not just discretionary internet | Premier Li remarks via FXLeaders 2025-11-05; IMF drag estimates |
+| 32 | UFO | 6 | 7-band, -1 because demand is concentrated and terrestrial networks substitute for much satcom: satellites launched rise from 3,154 in 2024 to a forecast 5,048 by 2030, with mega-constellations ~85% of Western satellite demand | Global Satellite Market report 2025; Quilty Space |
+| 33 | ARKX | 6 | 7-band, -1 for concentration/substitution: same satellite fact as UFO — launches 3,154 in 2024 to 5,048 forecast by 2030, mega-constellations dominant | Global Satellite Market report 2025; Quilty Space |
+| 34 | IYT | 6 | 5-band, +1 because freight movement has no substitute even though volumes are cyclical: global logistics growth is only mid-single-digit through 2030; IYT differs from JETS because it owns rail/trucking/parcel freight, not just discretionary passenger air travel | Global Logistics Market forecast 2026-2030 |
+| 35 | KWEB | 5 | 5-band: real demand, cyclical, no structural necessity claim — China mobile users rise only from 1.17B in 2024 to 1.22B by 2030 and consumer-internet use is discretionary and platform-substitutable | GSMA Mobile Economy China 2025 |
+| 36 | QTUM | 5 | 5-band: real but pre-commercial demand with no structural growth claim yet; QTUM differs from its ai/robot siblings because quantum computing has no proven large-scale necessity today and classical AI accelerators route around it for current workloads | PwC outlook noting no major commercial quantum role assumed, 2025-26 |
+| 37 | JETS | 5 | 5-band: real demand, cyclical — airlines market grows ~8% CAGR to $887B by 2030, but passenger air travel is partly discretionary and substitutable by surface/video for some trips | Airlines Market report, Oct 2026 |
+| 38 | BLOK | 4 | 3-band, +1 because the basket includes real payments/fintech firms beyond mining: blockchain demand still rests on crypto adoption conditions that may not hold, and proof-of-stake routed around mining, cutting Ethereum energy use over 99.988% | Cambridge CCAF 2026 mining survey |
+| 39 | WGMI | 3 | 3-band: discretionary, demand rests on a condition that may not hold — Bitcoin mining burns ~138 TWh (~0.5% of global power) to secure one substitutable asset, and miners themselves are pivoting capacity to AI/HPC | Cambridge CCAF via CoinLaw 2026 |
+
+Top-3 notes:
+- XLU (10): The load-bearing fact is EIA's record US power demand — 4,288B kWh in 2026 rising to 4,356B in 2027, driven by AI data centres and electrification (EIA STEO via Reuters, 2026-10-06). Electricity has no substitute at civilisational scale, so utilities sit alone in the 10-band.
+- REMX (9): The load-bearing fact is IEA magnet rare-earth demand doubling since 2015 with another third of growth by 2030, against China holding ~91% of refined output in 2024 (IEA, reported 2026-09-22). It stops short of 10 only because rare-earth-free motor designs are a visible competing technology.
+- IGF/PAVE (9): The load-bearing fact is IEA Electricity 2026 (2026-02-06) putting 2,500 GW of projects in grid-connection queues and requiring grid investment to rise ~50% by 2030 from ~$400B/yr. The -1 from the 10-band is basket breadth, not theme doubt: both funds own broad infrastructure beyond the grid itself.
+
+Disagreements with the dossier's first-pass memo:
+- Housing is marked "break" in the memo — that is a rates/affordability (cause) judgement, not necessity: a 4.03M-home shortage (Realtor.com, 2026-03-03) makes shelter demand structural, so necessity scores 8 despite the break label.
+- Lithium is marked "break" on a one-week price/inventory move — necessity is unaffected: battery demand quadrupling to 4,100 GWh by 2030 (Bain) keeps LIT in the 7-band, with sodium-ion as the named substitute capping it there.
+- Crypto-equity is marked "rotation" — on necessity it is the weakest theme on the board (WGMI 3, BLOK 4): proof-of-stake already routed around mining for Ethereum, so the dip's cause being flows does not make the theme needed.
+- Silver is marked "rotation" with the deficit cited — agreed on cause, but necessity is capped at the 7-band, not higher, because PV thrifting (-19% silver use in 2026, Metals Focus) and copper substitution are already eroding its fastest-growing demand leg.

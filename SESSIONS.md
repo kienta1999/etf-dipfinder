@@ -342,3 +342,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: XAR 17.8k / NLR 10.9k / GLD 18.4k / INDA 34.6k / XHB 18.3k; max loss -9.5k, max gain +29.9k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
 - Memo: log/2026-10-13.md. Left uncommitted for parent commit+push.
 - 2026-10-13-r2 lite (Claude Sonnet 5.5, claude-sonnet-5-5): scan as of 2026-10-12; Buy GLD, NLR; Core none; Alt URA, URNM; NLR spot-checked, no demotion. Memo: log/2026-10-13-r2-lite.md.
+
+## 2026-10-14 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-13 close: 39 candidates in 20 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (muse-wonder) — full panel; the Avocado 5.16 / Opus worker model could not be pinned, all panelists and the verifier report Muse Wonder (muse-wonder).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all eight floored themes; no CONTRADICTED dates. One cause veto: LIT (cause 3, lithium oversupply).
+- Buys (8): XLU, IGF, XAR, ICLN, NLR, INDA, VNM, IYT. Core: none (GLD necessity 6 < 8; qualifying broad leaders cleared the buy gate). Alt: SHLD, PPA, PAVE, ITA, URNM, URA. Watch: 24 funds. Avoid: LIT. No bucket overrides; my rank = weighted score.
+- Verifier: 38 confirmed, 2 unverified (XAR-specific drawdown figure; exact end-September uranium term tick 96.50 vs 96, record under both), 0 contradicted, 0 demotions. Regime premises confirmed (Sep 16 FOMC hike to 3.75-4.00%, 10y 5.24-5.31%, Brent 106.80 Oct 12, CPI Oct 14). 1 ledger row appended to log/catalysts.md (transport / Cass September freight); no retractions, no new disputes.
+- check_memo.py 2026-10-14: catalyst-ballot ledger-coverage addendum appended (LMT, PJM, RBI named, all STAND, scores unchanged) and re-consolidated; only remaining error is the expected uncommitted-artifacts error (parent commits).
+- $100k risk-parity: XLU 14.3k / IGF 22.4k / XAR 8.6k / ICLN 8.5k / NLR 5.3k / INDA 16.1k / VNM 9.9k / IYT 14.9k; max loss -7.2k, max gain +19.5k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Memo: log/2026-10-14.md. Left uncommitted for parent commit+push.
