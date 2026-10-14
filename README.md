@@ -4,11 +4,11 @@ Scan ~115 liquid sector / thematic ETFs for dips, then decide which dips are wor
 
 ```
 uv sync
-uv run python scripts/scan.py                 # → data/scan.csv + data/drops.csv + CANDIDATES (dips in top 15 themes) / LEADERS
+uv run python scripts/scan.py                 # → data/scan.csv + data/drops.csv + CANDIDATES (dips in top 20 themes) / LEADERS
 uv run python scripts/why.py GRID XHB          # which gate (scan or bucket rule) kept a fund from being a buy
 uv run python scripts/test_scan.py            # self-check
 /etf-dip-pick                                      # Claude: full 5-lens Opus panel → log/<DATE>.md
-/etf-dip-pick-lite                                 # Claude: one agent, ~12 searches, same memo sections → log/<DATE>-lite.md
+/etf-dip-pick-lite                                 # Claude: one agent, ~16 searches, same memo sections → log/<DATE>-lite.md
 uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots → scores.csv; optional $ split of buys
 ```
 
@@ -21,8 +21,8 @@ uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots →
   trade is SPY, not sector picking.
 - Everything is computed; only dips are ranked. Leaders are kept because they tell you *where the money went*.
 - **Candidates are picked by theme, not by depth.** A theme = funds the same headline moves (URA/URNM/NLR;
-  GLD/GDX/GDXJ; XLU is its own theme, so is XLY). Themes rank by their deepest dip; the top `TOP_THEMES` (15) themes
-  contribute every one of their dips as candidates. Research is once per theme, so 15 themes cost the same as 15 funds
+  GLD/GDX/GDXJ; XLU is its own theme, so is XLY). Themes rank by their deepest dip; the top `TOP_THEMES` (20) themes
+  contribute every one of their dips as candidates. Research is once per theme, so 20 themes cost the same as 20 funds
   and cover more ground; siblings still get their own row, score and `theme_rank`.
 
 Columns worth knowing: `dd_z` (drawdown ÷ vol — XBI at −15% is noise, XLP at −10% is news), `dd_pctile` (how deep vs
@@ -72,7 +72,7 @@ company-level lenses (moat, balance sheet) — an ETF is a basket.
 scripts/scan.py, consolidate.py, test_scan.py, why.py, run_id.py
 data/scan.csv                 latest scan, gitignored (has an asof column = last close used)
 data/drops.csv                every fund that missed CANDIDATES: gate (no data / illiquid / not a dip / theme
-                              outside top 15) + the failing values; frozen to output/<DATE>/drops.csv with scan.csv
+                              outside top 20) + the failing values; frozen to output/<DATE>/drops.csv with scan.csv
 output/<DATE>/scan.csv        frozen scan the panel scored against (committed)
 output/<DATE>/dossier.md      what the panel saw (committed)
 output/<DATE>/score_*.md      ballots (committed)   scores.csv (committed)

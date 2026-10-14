@@ -1,6 +1,6 @@
 ---
 name: etf-dip-pick-lite
-description: Cheap single-agent version of etf-dip-pick — same scan, same five lenses (cause, necessity, catalyst, basket, price), same weights/veto/one-buy-per-theme rule, same TP/SL/R-R, dip#, deviations and $100k sizing sections, but ONE agent does everything in one pass with ~12 web searches total (one per theme, not per ETF or per lens) and writes only log/<DATE>-lite.md. No subagents, no output/<DATE>/ dossier or ballots, and only a 2-search spot-check instead of the full verifier. Use when the user says "lite", "quick", "cheap", "one pass", "no subagents", is near a usage limit, or wants a fast read on which sector/thematic ETFs are on sale / beaten down / lagging. For the full panel with audit trail use etf-dip-pick.
+description: Cheap single-agent version of etf-dip-pick — same scan, same five lenses (cause, necessity, catalyst, basket, price), same weights/veto/one-buy-per-theme rule, same TP/SL/R-R, dip#, deviations and $100k sizing sections, but ONE agent does everything in one pass with ~16 web searches total (one per theme, not per ETF or per lens) and writes only log/<DATE>-lite.md. No subagents, no output/<DATE>/ dossier or ballots, and only a 2-search spot-check instead of the full verifier. Use when the user says "lite", "quick", "cheap", "one pass", "no subagents", is near a usage limit, or wants a fast read on which sector/thematic ETFs are on sale / beaten down / lagging. For the full panel with audit trail use etf-dip-pick.
 ---
 
 # etf-dip-pick-lite — one agent, one pass, one memo
@@ -21,7 +21,7 @@ dates and the catalyst floor; facts, no scores) and the web. `RUN=$(uv run pytho
 ```
 cd etf-dipfinder && uv run python scripts/scan.py     # full path if cwd is already inside
 ```
-Read LEADERS first (where did the money go?), then CANDIDATES — every dip in the 15 deepest themes, grouped by
+Read LEADERS first (where did the money go?), then CANDIDATES — every dip in the 20 deepest themes, grouped by
 theme. `dip_score` is depth, not quality. A fund the user holds or asks about that is missing → `uv run python
 scripts/why.py <TICKER>` (reads `data/drops.csv`: the gate and the failing values) — quote it, never guess.
 

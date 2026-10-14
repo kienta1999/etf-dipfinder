@@ -20,7 +20,7 @@ MIN_DOLLAR_VOL = 5e6    # 20d avg $ volume; below = illiquid, dropped
 SL_SIGMA = 1.5          # stop = SL_SIGMA monthly sigmas below entry (noise band; 2.0 if URA-class vol stops you out)
 RISK = 0.01             # portfolio fraction risked per position → size_1pct = RISK / |sl_pct|
 BENCH = "SPY"
-TOP_THEMES = 15         # candidates = every dip in the 15 themes with the deepest best dip
+TOP_THEMES = 20         # candidates = every dip in the 20 themes with the deepest best dip
 OUT = Path(__file__).resolve().parent.parent / "data" / "scan.csv"
 DROPS = OUT.with_name("drops.csv")
 DROP_COLS = ["theme", "stage", "reason", "dd_52w", "vs_sma200", "rs_spy_3m", "rr"]
