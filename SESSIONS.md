@@ -360,3 +360,8 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: regime premises (Sep 16 FOMC hike to 3.75-4.00%, 10y reaching ~5.3% on Oct 14 with a 5.19% official close, Brent ~107 on Oct 12) and all 11 rule-buys re-checked — all confirmed, 0 demotions, no-core outcome confirmed. 1 ledger row appended to log/catalysts.md (base-metals / Freeport Q3, Oct 27); no retractions, no new disputes.
 - $100k risk-parity: XLU 13.1k / PAVE 11.1k / INDA 14.8k / REMX 5.4k / XME 5.5k / NLR 4.8k / XAR 8.1k / XHB 8.1k / QTUM 6.3k / VNM 9.1k / IYT 13.7k; max loss -9.9k, max gain +26.3k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
 - Memo: log/2026-10-15.md. Left uncommitted for parent commit+push.
+
+## 2026-10-15-r2 — etf-dip-pick-lite (Claude Sonnet 5.5)
+- Buy: NLR, XLU, IGF. Alt: URA, URNM, PAVE. Core: none. Data as of 2026-10-14. 10 searches; NLR spot-checked (term price $96.50 record, Cameco Oct 30 held).
+- $100k risk-parity: NLR 12.5k / XLU 34.3k / IGF 53.2k; max loss -6.7k, max gain +17.9k; half now / half after Oct 28 FOMC.
+- Memo: log/2026-10-15-r2-lite.md.
