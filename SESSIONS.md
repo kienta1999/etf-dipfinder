@@ -352,3 +352,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: XLU 14.3k / IGF 22.4k / XAR 8.6k / ICLN 8.5k / NLR 5.3k / INDA 16.1k / VNM 9.9k / IYT 14.9k; max loss -7.2k, max gain +19.5k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
 - Memo: log/2026-10-14.md. Left uncommitted for parent commit+push.
 - 2026-10-14-r2 lite (Claude Sonnet 5.5): Buy XLU/IGF/NLR; 10 searches; $100k XLU 34.1k / IGF 53.3k / NLR 12.5k, half-now on XLU+IGF until Oct 28 FOMC. Memo: log/2026-10-14-r2-lite.md
+
+## 2026-10-15 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-14 close: 40 candidates in 20 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (muse-wonder) — full panel; the Avocado 5.16 / Opus worker model could not be pinned, all panelists and the verifier report Muse Wonder (muse-wonder).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all eight floored themes; no CONTRADICTED dates. No cause vetoes (lowest cause 4).
+- Buys (11): XLU, PAVE, INDA, REMX, XME, NLR, XAR, XHB, QTUM, VNM, IYT. Core: none (GRID, the only core-shaped broad fund at cause 9 / necessity 10, is thin at R/R 1.27 and third in theme). Alt: IGF, SHLD, PPA, URNM, URA, AIPO, ITB, ITA, BOTZ, ROBO, ARKQ. Watch: 18 funds. Avoid: none. No bucket overrides; my rank = weighted score.
+- Verifier: regime premises (Sep 16 FOMC hike to 3.75-4.00%, 10y reaching ~5.3% on Oct 14 with a 5.19% official close, Brent ~107 on Oct 12) and all 11 rule-buys re-checked — all confirmed, 0 demotions, no-core outcome confirmed. 1 ledger row appended to log/catalysts.md (base-metals / Freeport Q3, Oct 27); no retractions, no new disputes.
+- $100k risk-parity: XLU 13.1k / PAVE 11.1k / INDA 14.8k / REMX 5.4k / XME 5.5k / NLR 4.8k / XAR 8.1k / XHB 8.1k / QTUM 6.3k / VNM 9.1k / IYT 13.7k; max loss -9.9k, max gain +26.3k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Memo: log/2026-10-15.md. Left uncommitted for parent commit+push.

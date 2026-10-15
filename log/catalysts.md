@@ -78,6 +78,7 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | gold | WGC | Gold finished September 2026 at $4,176/oz, -8.5% m/m, as the US 10y rose 53bp to 5.3% and the dollar gained 2%; global gold ETFs still took in $10bn (67t) in September, Q3 inflows a record $31bn | 2026-09-30 | World Gold Council, Gold Market Commentary September 2026 (gold.org), 2026-10-07 | 2026-10-13 |
 
 | transport | Cass | Cass Transportation Index Report for September 2026: shipments +1.9% y/y and +2.3% m/m (+1.4% seasonally adjusted), a second straight y/y gain; ACT Research describes freight demand as recovering, with expenditures +20.4% y/y on rates and fuel surcharges | 2026-09-30 | Cass Transportation Index Report (September 2026), Cass / ACT Research, via FreightWaves and TradingView, Oct 2026 | 2026-10-14 |
+| base-metals | FCX | Freeport-McMoRan Q3 2026 results, before market open; conference call 10:00 a.m. ET | 2026-10-27 | Freeport-McMoRan Q3 operational update, 2026-10-02 (via ad-hoc-news 2026-10-13 and SMM 2026-10-05): Q3 results scheduled before the open on October 27, 2026, call at 10:00 a.m. ET | 2026-10-15 |
 
 ## Disputed
 
