@@ -375,3 +375,8 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Catalyst revision after verifier: UPS Q3 (Oct 27) confirmed and appended to log/catalysts.md, creating a transport floor; catalyst ballot revised (IYT/JETS 6 to 7, ledger-coverage addendum for Solar IV, DHI, LMT, truce, RBI, FCX and others, all STAND) and re-consolidated — buckets unchanged.
 - check_memo.py 2026-10-16: only remaining error is the expected uncommitted-artifacts error (parent commits); 1 warning (lens moves of 3+ points vs 2026-10-15, each explained in the memo).
 - Memo: log/2026-10-16.md. Left uncommitted for parent commit+push.
+
+## 2026-10-16-r2 — etf-dip-pick-lite (Claude Opus 5.5)
+- Buy: XLU, IGF, NLR. Core: GLD. Alt: GRID, URA, URNM, PAVE. Avoid: none. Data as of 2026-10-15. 12 searches; XLU spot-checked (Southern Q3 Nov 5 confirmed; Texas data-center freeze noted as a second cause, kept at buy).
+- $100k risk-parity: XLU 35.0k / IGF 53.0k / NLR 12.1k; max loss -6.6k, max gain +17.2k; half now / half after Oct 28 FOMC on XLU+IGF, NLR all in.
+- Memo: log/2026-10-16-r2-lite.md.
