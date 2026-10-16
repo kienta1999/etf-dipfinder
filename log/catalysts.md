@@ -79,6 +79,7 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 
 | transport | Cass | Cass Transportation Index Report for September 2026: shipments +1.9% y/y and +2.3% m/m (+1.4% seasonally adjusted), a second straight y/y gain; ACT Research describes freight demand as recovering, with expenditures +20.4% y/y on rates and fuel surcharges | 2026-09-30 | Cass Transportation Index Report (September 2026), Cass / ACT Research, via FreightWaves and TradingView, Oct 2026 | 2026-10-14 |
 | base-metals | FCX | Freeport-McMoRan Q3 2026 results, before market open; conference call 10:00 a.m. ET | 2026-10-27 | Freeport-McMoRan Q3 operational update, 2026-10-02 (via ad-hoc-news 2026-10-13 and SMM 2026-10-05): Q3 results scheduled before the open on October 27, 2026, call at 10:00 a.m. ET | 2026-10-15 |
+| transport | UPS | UPS Q3 2026 results, before market open; earnings call 8:30 a.m. ET | 2026-10-27 | UPS announcement via BusinessWire, 2026-10-13, summarised in Oct 14-15 reports: Q3 results on Oct 27, 2026 before market open, call 8:30 a.m. ET; UPS is a major IYT holding | 2026-10-16 |
 
 ## Disputed
 

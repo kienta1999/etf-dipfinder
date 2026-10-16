@@ -365,3 +365,13 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: NLR, XLU, IGF. Alt: URA, URNM, PAVE. Core: none. Data as of 2026-10-14. 10 searches; NLR spot-checked (term price $96.50 record, Cameco Oct 30 held).
 - $100k risk-parity: NLR 12.5k / XLU 34.3k / IGF 53.2k; max loss -6.7k, max gain +17.9k; half now / half after Oct 28 FOMC.
 - Memo: log/2026-10-15-r2-lite.md.
+
+## 2026-10-16 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-15 close: 41 candidates in 20 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (muse-wonder) — full panel; panelist model Avocado 5.16 could not be pinned, panelists report Muse Wonder.
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all nine floored themes; no CONTRADICTED dates. One cause veto: TAN (cause 2, residential solar credit repeal).
+- Buys (8): XLU, XAR, XME, INDA, NLR, IYT, ROBO, ITB. Core: GRID. Alt: PPA, SHLD, ITA, IGF, PICK, URA, URNM, BOTZ, ARKQ. Watch: 22 funds. Avoid: TAN. No bucket overrides; my rank = weighted score.
+- Verifier: regime premises + all 8 buys and core GRID re-checked — 27 confirmed, 1 unverified (exact jet-fuel rise figure, not load-bearing), 0 contradicted, 0 demotions. 1 ledger row appended to log/catalysts.md (transport / UPS Q3, Oct 27); no retractions.
+- $100k risk-parity: XLU 18.5k / XAR 10.5k / XME 7.4k / INDA 19.1k / NLR 6.4k / ROBO 11.2k / IYT 17.7k / ITB 9.2k; max loss -9.0k, max gain +21.8k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Catalyst revision after verifier: UPS Q3 (Oct 27) confirmed and appended to log/catalysts.md, creating a transport floor; catalyst ballot revised (IYT/JETS 6 to 7, ledger-coverage addendum for Solar IV, DHI, LMT, truce, RBI, FCX and others, all STAND) and re-consolidated — buckets unchanged.
+- check_memo.py 2026-10-16: only remaining error is the expected uncommitted-artifacts error (parent commits); 1 warning (lens moves of 3+ points vs 2026-10-15, each explained in the memo).
+- Memo: log/2026-10-16.md. Left uncommitted for parent commit+push.
