@@ -380,3 +380,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: XLU, IGF, NLR. Core: GLD. Alt: GRID, URA, URNM, PAVE. Avoid: none. Data as of 2026-10-15. 12 searches; XLU spot-checked (Southern Q3 Nov 5 confirmed; Texas data-center freeze noted as a second cause, kept at buy).
 - $100k risk-parity: XLU 35.0k / IGF 53.0k / NLR 12.1k; max loss -6.6k, max gain +17.2k; half now / half after Oct 28 FOMC on XLU+IGF, NLR all in.
 - Memo: log/2026-10-16-r2-lite.md.
+
+## 2026-10-17 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-16 close: 41 candidates in 20 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (unknown) — full panel; the Avocado 5.16 / Opus worker model could not be pinned, all panelists and the verifier report Muse Wonder (unknown).
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only, per independence rule); price deterministic from scan. Catalyst floors honored on all nine floored themes; no CONTRADICTED dates. No cause vetoes (lowest cause 4).
+- Buys (10): XLU, PPA, IGF, INDA, QTUM, VNQ, NLR, ITB, IYT, ARGT. Core: none (XLU and IGF, the broad funds with necessity at least 8, both passed the buy gate, so buy supersedes core — verifier confirmed). Alt: XAR, ITA, GRID, SHLD, PAVE, AIPO, BOTZ, ROBO, URNM, XHB. Watch: 21 funds. Avoid: none. No bucket overrides; my rank = weighted score.
+- Verifier: regime premises (FOMC Oct 28 hold favoured, Sep CPI 3.7 percent, 10y, Brent) and all 10 rule-buys re-checked — 20 confirmed, 2 contradicted, 1 unverified, 0 demotions. Contradicted: the 10y at 5.3 percent as a standing level (closed 5.09 percent Oct 16; 5.36 percent was the Oct 7 intraday peak) and QTUM's NVDA-heavy basket premise (NVDA about 1.3 percent; corrected catalyst 7 still passes the buy gate). Unverified: VNQ AFFO line, not load-bearing. 7 ledger rows appended to log/catalysts.md plus 1 disputed row (GTC start date); no retractions.
+- $100k risk-parity: XLU 11.8k / PPA 9.3k / IGF 17.8k / INDA 12.6k / QTUM 5.3k / VNQ 14.0k / NLR 4.1k / ITB 6.0k / IYT 11.4k / ARGT 7.5k (sums to 99.8k as printed, residual in cash); max loss -7.0k, max gain +16.2k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Memo: log/2026-10-17.md. Left uncommitted for parent commit+push.
