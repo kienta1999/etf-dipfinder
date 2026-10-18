@@ -87,6 +87,8 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | india | HDFC-update | HDFC Bank Q2 FY27 business update (filed Oct 4, 2026): gross advances ₹32.19 lakh cr, +16.3% y/y; average deposits +16.8% y/y; CASA +10.7-10.8% y/y — filed ahead of the Oct 17 board/results date | 2026-10-04 | HDFC Bank exchange filing of 2026-10-04 via Upstox (Oct 16) and Indian Stock Alerts | 2026-10-17 |
 | argentina | INDEC | INDEC September 2026 inflation: +1.9% m/m (Aug +1.7%), 12-month rate slowed to 33.4%, year-to-date +23.6%; core +1.7% m/m | 2026-10-13 | INDEC release via Reuters, 2026-10-13 (TradingView/Reuters newsml) | 2026-10-17 |
 | argentina | IMF | IMF October 2026 World Economic Outlook: Argentina 2026 growth cut to 2.1% from July's 3.5% (2027 cut to 3.5% from 4.0%); average 2026 inflation forecast raised to 32.5% | 2026-10-13 | IMF WEO released Oct 12-13, 2026 in Bangkok, via Reuters, 2026-10-13; MercoPress, 2026-10-13 | 2026-10-17 |
+| transport | UNP | Union Pacific Q3 2026 financial and operating results, 7:45 a.m. ET; conference call 8:45 a.m. ET — Union Pacific is IYT's #1 holding at ~17.5% | 2026-10-22 | Union Pacific press release, 2026-09-24 (via BusinessWire): Q3 results on October 22, 2026 at 7:45 a.m. ET, call at 8:45 a.m. ET | 2026-10-18 |
+| lithium | RIO | Rio Tinto Q3 2026 production results released (iron-ore-led: global iron ore sales 90.8 Mt, +3% y/y; Pilbara shipments 85.7 Mt) — Rio Tinto is LIT's dominant holding at 22.45% (Oct 9, 2026), so its Q3 event has already passed and was not a lithium event | 2026-10-14 | Rio Tinto Q3 2026 production results announcement, ASX/LSE, 2026-10-14 | 2026-10-18 |
 
 ## Disputed
 
