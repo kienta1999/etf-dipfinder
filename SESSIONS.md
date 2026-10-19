@@ -398,3 +398,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Lens moves of 3+ points vs 2026-10-17 on identical prices (BKCH cause 5→8, LIT cause 4→8, VNM catalyst 2→8) are each explained in the memo. Catalyst ballot carries a ledger-coverage addendum (DHI, truce x3, PJM, bond, UNP — all STAND).
 - check_memo.py 2026-10-18: only remaining error is the expected uncommitted-artifacts error (parent commits); 2 warnings (identical scan; lens moves, explained in the memo).
 - Memo: log/2026-10-18.md. Left uncommitted for parent commit+push.
+
+## 2026-10-19 — ETF dip panel, full (daily consistency experiment)
+- Full panel on scan as of the 2026-10-16 close (Monday run; scan byte-identical to 2026-10-18, no new completed session — deliberate duplicate-data full run per the always-full rule): 41 candidates in 20 themes; drops.csv + buckets_why.csv written. Run by Muse Wonder (muse-wonder) — full panel; the Avocado 5.16 / Opus worker model could not be pinned, all panelists and the verifier report Muse Wonder.
+- Panel strictly sequential (cause → necessity → catalyst → basket, each on this run's dossier + web only); price deterministic from scan. Catalyst floors honored on all floored themes; no CONTRADICTED dates. One cause veto: TAN (cause 3, Section 25D residential credit repeal).
+- Buys (9): XAR, XLU, IGF, NLR, INDA, BOTZ, IYT, XHB, FXI. Core: none (GRID passes broad/cause/necessity/not-thin but is theme #2 behind buy IGF, so alt — verifier confirmed). Alt: PPA, SHLD, ITA, GRID, ROBO, PAVE, URNM, URA, QTUM, ARKQ, VNQ, ITB, JETS. Watch: 18 funds. Avoid: TAN. No bucket overrides; my rank = weighted score.
+- Verifier: regime premises + all 9 buys re-checked from primary sources — no demotions; corrections: core CPI pinned at +2.6% y/y, the 5.33% 10y intraday peak dated to Oct 14 not Oct 15, FOMC pricing pinned at hold 84.5% / hike 15.5% (Oct 18). 2 ledger rows appended to log/catalysts.md (india FPI outflows Rs52,100cr; ai/robot Oct 14 debt repricing); no retractions.
+- $100k risk-parity: XAR 7.9k / XLU 13.2k / IGF 19.9k / NLR 4.6k / INDA 14.1k / BOTZ 8.5k / IYT 12.8k / XHB 7.6k / FXI 11.3k; max loss -7.2k, max gain +19.0k; tranche half now / half after Oct 28 FOMC statement (shared rates regime).
+- Memo: log/2026-10-19.md. Left uncommitted for parent commit+push.

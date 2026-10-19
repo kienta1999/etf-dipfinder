@@ -1,0 +1,42 @@
+,theme,bucket,why
+XAR,defense-us,buy,"buy: cause 9 >= 7, catalyst 8 >= 7, R/R 3.02 >= 1.3, #1 in theme"
+PPA,defense-us,alt,"qualifies, but theme #2 behind XAR (one buy per theme)"
+XLU,utilities,buy,"buy: cause 8 >= 7, stabilizing, R/R 1.71 >= 1.3, #1 in theme"
+SHLD,defense-us,alt,"qualifies, but theme #3 behind XAR (one buy per theme)"
+IGF,grid/infra,buy,"buy: cause 8 >= 7, stabilizing, R/R 1.70 >= 1.3, #1 in theme"
+ITA,defense-us,alt,"qualifies, but theme #4 behind XAR (one buy per theme)"
+NLR,nuclear,buy,"buy: cause 9 >= 7, catalyst 8 >= 7, R/R 4.11 >= 1.3, #1 in theme"
+GRID,grid/infra,alt,"qualifies, but theme #2 behind IGF (one buy per theme)"
+INDA,india,buy,"buy: cause 9 >= 7, stabilizing, R/R 2.71 >= 1.3, #1 in theme"
+BOTZ,ai/robot,buy,"buy: cause 8 >= 7, catalyst 7 >= 7, R/R 2.64 >= 1.3, #1 in theme"
+ROBO,ai/robot,alt,"qualifies, but theme #2 behind BOTZ (one buy per theme)"
+PAVE,grid/infra,alt,"qualifies, but theme #3 behind IGF (one buy per theme)"
+URNM,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+URA,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+BAI,ai/robot,watch,watch: cause 6 < 7
+SLV,silver,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+DTCR,reit,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+IYT,transport,buy,"buy: cause 8 >= 7, catalyst 8 >= 7, R/R 1.87 >= 1.3, #1 in theme"
+ICLN,clean,watch,watch: cause 6 < 7
+QTUM,ai/robot,alt,"qualifies, but theme #4 behind BOTZ (one buy per theme)"
+XHB,housing,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.43 >= 1.3, #1 in theme"
+ARKQ,ai/robot,alt,"qualifies, but theme #5 behind BOTZ (one buy per theme)"
+VNQ,reit,alt,"qualifies, but theme #2 behind DTCR (one buy per theme)"
+AIPO,ai/robot,watch,watch: cause 6 < 7
+ITB,housing,alt,"qualifies, but theme #2 behind XHB (one buy per theme)"
+QCLN,clean,watch,watch: cause 6 < 7
+FXI,china,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.65 >= 1.3, #1 in theme"
+REMX,rare-earth,watch,watch: cause 5 < 7
+JETS,transport,alt,"qualifies, but theme #2 behind IYT (one buy per theme)"
+EUAD,defense-eu,watch,watch: cause 6 < 7
+KWEB,china,watch,watch: cause 6 < 7
+LIT,lithium,watch,watch: cause 6 < 7
+PBW,clean,watch,watch: cause 5 < 7
+VNM,vietnam,watch,watch: cause 5 < 7
+ARKX,space,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+TAN,solar,avoid,cause veto: cause 3 <= 3
+BLOK,crypto-equity,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+BKCH,crypto-equity,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+UFO,space,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+WGMI,crypto-equity,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+ARGT,argentina,watch,watch: cause 4 < 7
