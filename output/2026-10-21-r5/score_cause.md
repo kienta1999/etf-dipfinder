@@ -1,0 +1,64 @@
+> Run by: Opus 5.5 (claude-opus-5-5) — full panel
+
+# cause — 2026-10-21-r5
+| rank | ETF | score | one-line reason (this lens only; name the band) | key source |
+|---|---|---|---|---|
+| 1 | GLD | 8 | band 7 (rates/dollar headwind, demand unchanged) +1: Fed hiked 25bp in Sept and gold fell, yet ETF holdings rose 67t to a record 4,256t on record Q3 inflows of $31bn — buyers added into the drop | WGC "Gold ETF Flows: September 2026", gold.org, 2026-10-07 (fetched) |
+| 2 | INDA | 8 | band 7 (crude + US yields/dollar, temporary) +1: FPI outflow ₹52,100cr Oct-to-date / ₹3.12 lakh cr YTD blamed on crude, yields, dollar, Fed-hike odds and an AI rally in North Asia pulling money away; no earnings reason cited; DIIs >₹5 lakh cr absorbing; FPIs net buyers 10-16 | Swarajya (NSDL data), 2026-10-18 (fetched) |
+| 3 | URNM | 8 | band 7 (rotation + rates, demand unchanged) +1: uranium spot $89.63 and long-term contract price $96.50/lb at Sept month-end, a high LT price, while the equities are −40%+ — the commodity thesis did not move with the stocks | Cameco uranium price page, month-end 2026-09-30 (fetched) |
+| 4 | URA | 8 | band 7 +1, same nuclear fact: spot $89.63 / LT $96.50 at 9-30; the equity drop is de-rating and rates, not demand | Cameco uranium price page, 2026-09-30 (fetched) |
+| 5 | NLR | 8 | band 7 +1, same nuclear fact (LT $96.50); NLR's utility/SMR holdings also carry the AI-power financing scare, so ranked last of the three | Cameco uranium price page, 2026-09-30 (fetched) |
+| 6 | IYT | 8 | band 7 (fuel + rates headwind) +1: freight demand is recovering — Cass Sept shipments +1.9% y/y, the second gain after 42 months of declines, and TL linehaul +10.1% y/y; the drop is not about freight demand | FreightWaves/Cass, 2026-10-13 (fetched) |
+| 7 | VNM | 8 | band 7 (mean-reversion after the upgrade) +1: on the FTSE EM upgrade day the VN-Index fell below 1,800 on foreign net selling of VND668bn, with analysts saying benefits were "already priced in"; flows, no fundamental cited | Viet Nam News, 2026-09-22 (fetched) |
+| 8 | COPX | 7 | band 7 (rates headwind, demand unchanged): LME copper slipped on "expectations of another Fed interest rate increase", while concentrate/scrap are tight and Oct refined output may hit a YTD low | Mysteel daily copper, 2026-10-14 (fetched) |
+| 9 | PICK | 7 | band 7, same base-metals fact: Fed-hike pressure on metals while mine supply stays tight | Mysteel, 2026-10-14 (fetched) |
+| 10 | XME | 7 | band 7, same base-metals/rates fact; the steel/coal sleeve is the same macro, no thesis break found | Mysteel, 2026-10-14 (fetched) |
+| 11 | ITB | 7 | band 7 (rates): 30y mortgage at 7.40% on 10-08 and 10-15, the highest since Nov 2023 and up from 6.67% on 8-13, after a global bond selloff took the 10y to multi-decade highs | Trading Economics/Freddie Mac, 2026-10-01/08/15 (fetched) |
+| 12 | XHB | 7 | band 7, same mortgage-rate fact (7.40%, 10-15) | Trading Economics/Freddie Mac, 2026-10-15 (fetched) |
+| 13 | XLU | 7 | band 7 (rates): Fed hike in Sept and the 10y at multi-decade highs raise the bond-proxy discount rate; no power-demand change found | WGC 2026-10-07 (fetched); Trading Economics 2026-10-08 (fetched) |
+| 14 | VNQ | 7 | band 7 (rates): the same Fed-hike / 10y multi-decade-high discount-rate headwind; no REIT demand break found | WGC 2026-10-07; Trading Economics 2026-10-08 (both fetched) |
+| 15 | JETS | 7 | band 7 (input-cost headwind, demand unchanged): Delta absorbed a ~$6bn fuel rise, cut its FY EPS to $5.10-5.60 and still guided Q4 revenue ~+20%, with Q3 pre-tax profit flat at $1.5bn | Delta Q3 release, news.delta.com, 2026-10-09 |
+| 16 | QTUM | 7 | band 7 (mean-reversion in an intact trend): pulled back with the 10-14 AI-infra credit scare (Oracle −8.8%, AMD −5.7%) after a hot CPI; still above its SMA200 with rs_12m +0.13; quantum thesis untouched | SiliconANGLE, 2026-10-14 (fetched); dossier scan |
+| 17 | BAI | 7 | band 7 (mean-reversion): −13% in 10 days on the same 10-14 AI-infra debt scare, still above its SMA200 with rs_12m +0.08; the trigger was a CoreWeave bond-yield chart, with no contract cancellations reported | SiliconANGLE, 2026-10-14 (fetched) |
+| 18 | ROBO | 7 | band 7 (mean-reversion): collateral risk-off from the 10-14 AI-debt scare and the Fed-hike path; robotics demand untouched, only −14% from the high | SiliconANGLE 2026-10-14; WGC 2026-10-07 |
+| 19 | BOTZ | 7 | band 7, same AI risk-off/rates fact; high-beta robotics, no thesis event found | SiliconANGLE, 2026-10-14 (fetched) |
+| 20 | ARKQ | 7 | band 7, same AI risk-off/rates fact; no autonomy/robotics thesis event found | SiliconANGLE, 2026-10-14 (fetched) |
+| 21 | ITA | 6 | band 7 (war-premium unwind + appropriations delay, base demand intact: House approps $1.072T) −1: defense reconciliation cut from the $350bn request to $60bn in both budget resolutions; selloff accelerated 9-22 on reports Iran offered to reopen Hormuz | CSIS FY27 tracker 2026-08-18 (fetched); Benzinga Sept 2026 (via search) |
+| 22 | PPA | 6 | band 7 −1, same defense-us fact (reconciliation $350bn → $60bn; Iran peace signal 9-22) | CSIS 2026-08-18 (fetched) |
+| 23 | XAR | 6 | band 7 −1, same defense-us fact; XAR had a record 7-week losing streak and 42 of 50 holdings were red in Sept | CSIS 2026-08-18 (fetched); Benzinga Sept 2026 |
+| 24 | SHLD | 6 | band 7 −1, same defense-us fact; global holdings are not separately verified this run | CSIS 2026-08-18 (fetched) |
+| 25 | EUAD | 6 | band 5 (peace-hope sentiment; June F126 frigate cancellation was programme-specific) +1: the 10-16 EU summit freed €6.6bn under the European Peace Facility, and doubts about US aid are shifting orders to EU suppliers (Hensoldt +5.9%) | ad-hoc-news, 2026-10-18 (fetched); CNBC 2026-06-25 |
+| 26 | SLV | 6 | band 7 (yields/dollar headwind; 2026 deficit of 46.3Moz unchanged) −1: European silver ETCs had −€1.6bn net outflows Jan-Aug, so investment demand did change after the parabolic ~$121→~$61 unwind | finanztrends (Silver Institute, Deutsche Börse), 2026-10-02 (fetched) |
+| 27 | DTCR | 6 | band 7 (rates, as VNQ) −1: data-center tenant-credit fear — CoreWeave 2032 bonds ~15% yield, $50bn of obligations; Gartner sees >80% of neoclouds not independent by 2030; no cancellations | SiliconANGLE 2026-10-14 (fetched); Crypto Briefing 2026-10-14 (fetched) |
+| 28 | TAN | 6 | band 7 (rates: project-finance cost) −1 for standing policy: First Solar −8% and TAN −4% on 9-24 as "high borrowing costs weigh on project financing" after the Sept Fed hike, despite FSLR's record Q1 sales; the 2025 OBBBA wind/solar credit sunset is already law | 24/7 Wall St, 2026-09-24 and 2026-09-18; P.L. 119-21, 2025-07-04 |
+| 29 | ICLN | 6 | band 7 −1, same clean-energy fact: rate-driven financing cost plus the enacted credit sunset | 24/7 Wall St, 2026-09-24 |
+| 30 | QCLN | 6 | band 7 −1, same clean-energy fact | 24/7 Wall St, 2026-09-24 |
+| 31 | PBW | 6 | band 7 −1, same clean-energy fact; the deepest of the clean funds (−45%), but no separate thesis break was found | 24/7 Wall St, 2026-09-24 |
+| 32 | UFO | 6 | band 5 (post-IPO valuation reset; SpaceX −42% from its $225.64 high to below the $135 IPO price) +1 named flows mechanism: lockup tranches run through the IPO anniversary, and Rocket Lab sold $1.94bn of stock on 9-18 — share-supply overhang, not a demand change | Axios 2026-07-17; Stocktwits 2026-09-18 (via search); no October story found |
+| 33 | ARKX | 6 | band 5 +1, same space fact (lockup/issuance supply overhang) | Axios 2026-07-17; Stocktwits 2026-09-18 |
+| 34 | BLOK | 6 | band 5 (as miners) +1: BLOK's exchange/broker sleeve tracks spot crypto, which leads (IBIT rs_3m +0.26), so less of the AI-hosting debt fear applies | Crypto Briefing 2026-10-14 (fetched); dossier section B |
+| 35 | REMX | 5 | band 5: the Sept Trump-Xi thaw hit rare-earth stocks (MP −5% in a session) and China extended its control suspension to 2027-01-10, while the lithium-heavy top holdings face a 2027 glut; rare-earth demand is not broken — Lynas is +249% YTD at 10-20 | CMC Markets 2026-10-20 (via search); MOFCOM 2026-09-28 (dossier D) |
+| 36 | LIT | 5 | band 5: GFEX carbonate fell to CNY104,740/t on 10-12, about half the 5-13 peak, on supply restarts (CATL Jianxiawo 6-29, Bald Hill) feeding 2027-glut fears, while near-term demand was called healthy; a supply cycle, not a demand break | Reuters via search, 2026-10-12; CnEVPost 2026-07-01; mining.com 2026-07-21 |
+| 37 | KWEB | 5 | band 5: no thesis change established — Q3 GDP of 4.5% beat, but Sept retail sales were only +1.1% and property investment −20.6%; Meituan returned to profit on 8-28 as the subsidy war eased; no flows evidence found | NBS via Al Jazeera, 2026-10-19; Morningstar/Dow Jones 2026-08-28 |
+| 38 | FXI | 5 | band 5, same China macro fact (GDP 4.5% beat vs retail +1.1%, property −20.6%); a shallower drop but the same cause read | NBS via Al Jazeera, 2026-10-19 |
+| 39 | AIPO | 5 | band 5 (fear, no thesis change established): AI-power infra sits at the centre of the 10-14 financing scare (CoreWeave bonds below 80c, CDS >1,000bp); no cancelled contracts, and the CEO says the $104bn backlog covers debt | SiliconANGLE 2026-10-14 (fetched); roic.ai 2026-10-15 |
+| 40 | WGMI | 5 | band 5: WGMI −10.7% on 10-14 while bitcoin fell ~2% — it trades with the AI-hosting debt complex after a hot 3.7% CPI and the Gartner neocloud forecast; financing stress, no confirmed business change | Crypto Briefing, 2026-10-14 (fetched) |
+| 41 | BKCH | 5 | band 5, same miner/AI-hosting financing-fear fact | Crypto Briefing, 2026-10-14 (fetched) |
+
+Top-3 notes:
+- GLD: The WGC's September flows report (gold.org, 2026-10-07) ties gold's fall directly to the Fed's 25bp September hike lifting yields and the dollar. In the same month, global gold ETF holdings rose 67t to a record 4,256t, so the price fell on the opportunity cost of holding gold, while the buyers stayed.
+- INDA: Per NSDL data reported 2026-10-18 (Swarajya), FPIs sold ₹52,100cr of Indian equities in October to date and ₹3.12 lakh cr YTD, and the stated reasons are all external (crude, US yields, dollar, Fed-hike odds, an AI rally in North Asia). Domestic institutions put in more than ₹5 lakh cr in 2026, and FPIs turned net buyers on 10-16, which looks like macro tourists leaving, not a broken thesis.
+- URNM: Cameco's month-end series (cameco.com, 2026-09-30) shows uranium spot at $89.63/lb and the long-term contract price at $96.50/lb, while the miners are −48% from their high. Utilities' term contracting prices did not crack, so the equity drop is de-rating and rates, not a demand change.
+
+Disagreements with the dossier's first-pass memo:
+- Regime: the memo's "firmer dollar, higher yields" understates it. The Fed actually hiked 25bp in September 2026 (WGC 2026-10-07), its first hike in three years (24/7 Wall St 2026-09-18). September CPI ran 3.7% (Crypto Briefing 2026-10-14), and the 10y hit multi-decade highs (Trading Economics 2026-10-08). The hard-asset/cyclical dips are mostly a tightening-cycle rates headwind (band 7), not pure rotation (band 10).
+- defense-us "unclear" → cause named: the selloff accelerated on 9-22 on reports Iran offered to reopen Hormuz (war-premium unwind), and the FY27 reconciliation add-on was cut from the requested $350bn to $60bn (CSIS 2026-08-18). The base budget is rising (House $1.072T), so it scores 6, not a veto.
+- crypto-equity "unclear" → cause named: miners fall with the AI-infra credit complex (WGMI −10.7% vs BTC −2% on 10-14; CoreWeave bonds ~15% yield), not with bitcoin. That is fear about financing, not a confirmed business change, so it scores 5, not a veto.
+- ai/robot "rotation" for all six → split: AIPO scores 5 because it sits at the centre of the 10-14 financing scare; the others score 7 (mean-reversion), not 10.
+- gold, nuclear, housing, utilities "rotation" → band 7 rates headwind, not band 10. Gold and nuclear each get +1 for demand evidence (record ETF holdings; LT uranium $96.50).
+- silver "unclear" → 6: yields are the headwind, but European ETC outflows of €1.6bn (Jan-Aug) show investment demand did change.
+- clean/solar "unclear" → 6: the named cause is rate-driven project-financing cost after the Sept hike (FSLR −8% on 9-24), with the 2025 credit sunset as a standing policy discount.
+- transport "rotation" → split: JETS is band 7 on fuel (Delta absorbing ~$6bn); IYT is 8 because Cass shows freight demand recovering (Sept shipments +1.9% y/y, 10-13).
+- lithium "unclear" → 5 with a named cause: supply restarts (CATL Jianxiawo) feeding 2027-glut fears, and GFEX at half its May peak.
+- rare-earth "unclear" → 5 with a named cause: the September Trump-Xi thaw plus REMX's lithium weight. Lynas +249% YTD (10-20) argues against a rare-earth thesis break.
+- reit: DTCR scores 6, below VNQ's 7, on data-center tenant-credit fear (agrees with the memo's direction).
