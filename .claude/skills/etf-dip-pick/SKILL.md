@@ -61,7 +61,8 @@ are separate themes. `dip_score` is *depth*, not quality — it's the CSV's rank
 It also writes `data/drops.csv` — every fund that missed CANDIDATES with the gate and the failing values. When the
 user holds or asks about a fund that is not a candidate (or not a buy), run `uv run python scripts/why.py <TICKER>`
 and quote it — never guess. `consolidate.py` freezes drops.csv with scan.csv and writes `output/<DATE>/buckets_why.csv`
-(the rule leg behind each bucket); both are committed with the run.
+(the rule leg behind each bucket); both are committed with the run. why.py reads the live `data/drops.csv` by default;
+after consolidate, `why.py --date <RUN> <TICKER>` also gives a candidate's bucket leg from this run's buckets_why.csv.
 
 ## Phase 1 — quick pass → dossier
 

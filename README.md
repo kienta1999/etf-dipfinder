@@ -8,7 +8,7 @@ uv run python scripts/scan.py                 # → data/scan.csv + data/drops.c
 uv run python scripts/why.py GRID XHB          # which gate (scan or bucket rule) kept a fund from being a buy
 uv run python scripts/test_scan.py            # self-check
 /etf-dip-pick                                      # Claude: full 5-lens Opus panel → log/<DATE>.md
-/etf-dip-pick-lite                                 # Claude: one agent, ~16 searches, same memo sections → log/<DATE>-lite.md
+/etf-dip-pick-lite                                 # Claude: one agent, ~23 searches, same memo sections → log/<DATE>-lite.md
 uv run python scripts/consolidate.py <DATE> [100000 NLR,GLD,XLU]   # ballots → scores.csv; optional $ split of buys
 ```
 

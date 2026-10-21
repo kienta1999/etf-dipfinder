@@ -1,13 +1,14 @@
 ---
 name: etf-dip-pick-lite
-description: Cheap single-agent version of etf-dip-pick — same scan, same five lenses (cause, necessity, catalyst, basket, price), same weights/veto/one-buy-per-theme rule, same TP/SL/R-R, dip#, deviations and $100k sizing sections, but ONE agent does everything in one pass with ~16 web searches total (one per theme, not per ETF or per lens) and writes only log/<DATE>-lite.md. No subagents, no output/<DATE>/ dossier or ballots, and only a 2-search spot-check instead of the full verifier. Use when the user says "lite", "quick", "cheap", "one pass", "no subagents", is near a usage limit, or wants a fast read on which sector/thematic ETFs are on sale / beaten down / lagging. For the full panel with audit trail use etf-dip-pick.
+description: Cheap single-agent version of etf-dip-pick — same scan, same five lenses (cause, necessity, catalyst, basket, price), same weights/veto/one-buy-per-theme rule, same TP/SL/R-R, dip#, deviations and $100k sizing sections, but ONE agent does everything in one pass with ~23 web searches total (one per theme, one regime, two spot-check; not per ETF or per lens) and writes only log/<DATE>-lite.md. No subagents, no output/<DATE>/ dossier or ballots, and only a 2-search spot-check instead of the full verifier. Use when the user says "lite", "quick", "cheap", "one pass", "no subagents", is near a usage limit, or wants a fast read on which sector/thematic ETFs are on sale / beaten down / lagging. For the full panel with audit trail use etf-dip-pick.
 ---
 
 # etf-dip-pick-lite — one agent, one pass, one memo
 
 Same question as `etf-dip-pick` (is this dip *on sale* or *broken*?), scored by you alone. Read
 `../etf-dip-pick/lenses.md` for the five lenses, weights, veto and bucket rule — do not re-derive them.
-Budget: **≤12 WebSearch total, no WebFetch** of filings/PDFs. Search snippets only.
+Budget: **≤23 WebSearch total — one per candidate theme (20), one regime search, two for the spot-check — no
+WebFetch** of filings/PDFs. Search snippets only.
 The memo carries every section the full memo does (dip#, TP/SL/R-R footnote, deviations, $100k sizing) — those are
 computed, not researched, so they cost nothing. What lite gives up is the five independent panelists and the
 full verifier.
@@ -31,6 +32,11 @@ score below 7 (lenses.md, computed floor).
 ## 2. Research — one search per theme
 The scan already groups candidates by `theme` — funds the same headline moves (URA/URNM/NLR; GLD/GDX/GDXJ; XLU alone).
 One search per theme: `"<theme> ETF" selloff <Month YYYY> outlook`. Plus one regime search (10y yield, Fed odds).
+Every candidate theme gets its own search; never merge themes into one query to save budget. On 2026-10-21 two lite
+runs on a 12-search budget skipped india, vietnam, argentina and transport, scored them from memory, and that was
+most of their split from the full panel (INDA cause 5 vs the panel's 8 on documented foreign-fund selling). If a
+theme's search returns nothing dated from the last ~6 weeks, write "unverified" in its rows' why column and cap its
+cause at 5 (the catalyst floor still binds).
 Siblings in a theme share cause / necessity / catalyst scores unless the snippet gives a fund-specific reason
 (e.g. US-residential-solar policy hits TAN but not ICLN) — then write that one sentence.
 Basket and price need no search: basket from what you know of the fund's top holdings / concentration;
