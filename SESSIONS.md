@@ -439,3 +439,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Fragile: COPX R/R 1.43 and rests on the FCX 10-27 floor; JETS — AAL Q3 printed 10-22, unread by the panel. check_memo.py: 0 errors, 1 warning (lens moves vs r5, explained in the memo).
 - Memo: log/2026-10-22.md.
 - 2026-10-22-r2 lite (Claude Opus 5.5, claude-opus-5-5; one agent, 23 searches, data as of 2026-10-21): Buy XLU, GLD; no core/alt; no avoids. 13/20 theme searches found no dated cause, so those themes were capped at cause 5. Spot-check XLU: 10y 5.10-5.24% (FRED, through Oct 15), sector EPS thesis intact (Morningstar Q3), no demotion. $100k risk parity: XLU 61k / GLD 39k, max loss -8.0k, max gain +18.9k; half now / half after the Oct 28 FOMC. Memo: log/2026-10-22-r2-lite.md.
+
+## 2026-10-22-r3 — ETF dip panel, full (user: "/etf-dip-pick can you dispatch another independent round opus")
+- Full panel on the same scan as 2026-10-22 (as of the 2026-10-21 close): 41 candidates in 20 themes. Orchestrator Claude Opus 5.5 (claude-opus-5-5); quick pass, cause/necessity/catalyst/basket and verifier were fresh Opus 5.5 subagents (orchestrator had read earlier runs, so it did not write section C).
+- Rule buys (9), no overrides: XLU, GLD, IYT, DTCR, NLR, ICLN, PICK, ITB, INDA. Alt: VNQ, URA, URNM, COPX, XHB, QCLN, JETS.
+- Verifier: 9 rule-buys + regime, no demotions. Corrections: 10y 5.13%, Oct-28 FOMC 92% hold (not a coin flip), ICLN/PICK holdings figures; RBI 10-07 hike confirmed. Ledger: +AMT, Equinix, PSEG, Nextpower.
+- $100k risk-parity: XLU 15.4k / GLD 9.8k / IYT 15.4k / DTCR 9.0k / NLR 5.7k / ICLN 9.6k / PICK 9.0k / ITB 8.2k / INDA 17.7k; max loss -9.0k, max gain +24.5k; half now / half after the Oct 28 FOMC.
+- Same-scan comparison with 2026-10-22: 26/41 buckets, rank corr 0.71, 7 buy themes shared; cause lens is the noisy one (76% within ±1 vs 95-98% for the others).
+- Memo: log/2026-10-22-r3.md.

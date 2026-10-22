@@ -1,0 +1,42 @@
+,theme,bucket,why
+XLU,utilities,buy,"buy: cause 7 >= 7, stabilizing, R/R 1.73 >= 1.3, #1 in theme"
+GLD,gold,buy,"buy: cause 7 >= 7, stabilizing, R/R 3.00 >= 1.3, #1 in theme"
+DTCR,reit,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.34 >= 1.3, #1 in theme"
+NLR,nuclear,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 4.21 >= 1.3, #1 in theme"
+VNQ,reit,alt,"qualifies, but theme #2 behind DTCR (one buy per theme)"
+BAI,ai/robot,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+ICLN,clean,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 4.12 >= 1.3, #1 in theme"
+PICK,base-metals,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 1.69 >= 1.3, #1 in theme"
+URA,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+XAR,defense-us,watch,watch: cause 5 < 7
+COPX,base-metals,alt,"qualifies, but theme #2 behind PICK (one buy per theme)"
+QTUM,ai/robot,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+PPA,defense-us,watch,watch: cause 5 < 7
+URNM,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+IYT,transport,buy,"buy: cause 8 >= 7, stabilizing, R/R 1.88 >= 1.3, #1 in theme"
+ITB,housing,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.41 >= 1.3, #1 in theme"
+SHLD,defense-us,watch,watch: cause 5 < 7
+XHB,housing,alt,"qualifies, but theme #2 behind ITB (one buy per theme)"
+AIPO,ai/robot,watch,watch: cause 5 < 7
+SLV,silver,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 5) and not stabilizing
+INDA,india,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.98 >= 1.3, #1 in theme"
+REMX,rare-earth,watch,watch: cause 5 < 7
+QCLN,clean,alt,"qualifies, but theme #2 behind ICLN (one buy per theme)"
+ITA,defense-us,watch,watch: cause 5 < 7
+JETS,transport,alt,"qualifies, but theme #2 behind IYT (one buy per theme)"
+TAN,solar,watch,watch: cause 5 < 7
+ROBO,ai/robot,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+PBW,clean,watch,watch: cause 6 < 7
+XME,base-metals,watch,watch: cause 6 < 7
+EUAD,defense-eu,watch,watch: cause 5 < 7
+BOTZ,ai/robot,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+VNM,vietnam,watch,watch: cause 6 < 7
+KWEB,china,watch,watch: cause 5 < 7
+ARKQ,ai/robot,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+FXI,china,watch,watch: cause 5 < 7
+LIT,lithium,watch,watch: cause 4 < 7
+UFO,space,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 3) and not stabilizing
+ARKX,space,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 3) and not stabilizing
+BLOK,crypto-equity,watch,watch: cause 5 < 7
+BKCH,crypto-equity,watch,watch: cause 5 < 7
+WGMI,crypto-equity,watch,watch: cause 4 < 7
