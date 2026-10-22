@@ -438,3 +438,4 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: XLU 16.0k / INDA 18.5k / GLD 10.2k / COPX 6.4k / VNQ 19.9k / ITB 8.6k / VNM 11.4k / JETS 9.1k; max loss -8.6k, max gain +18.3k; half now / half after the Oct 28 FOMC.
 - Fragile: COPX R/R 1.43 and rests on the FCX 10-27 floor; JETS — AAL Q3 printed 10-22, unread by the panel. check_memo.py: 0 errors, 1 warning (lens moves vs r5, explained in the memo).
 - Memo: log/2026-10-22.md.
+- 2026-10-22-r2 lite (Claude Opus 5.5, claude-opus-5-5; one agent, 23 searches, data as of 2026-10-21): Buy XLU, GLD; no core/alt; no avoids. 13/20 theme searches found no dated cause, so those themes were capped at cause 5. Spot-check XLU: 10y 5.10-5.24% (FRED, through Oct 15), sector EPS thesis intact (Morningstar Q3), no demotion. $100k risk parity: XLU 61k / GLD 39k, max loss -8.0k, max gain +18.9k; half now / half after the Oct 28 FOMC. Memo: log/2026-10-22-r2-lite.md.
