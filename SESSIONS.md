@@ -430,3 +430,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: NLR 5.3k / GLD 9.1k / XLU 14.2k / INDA 16.3k / COPX 5.6k / IYT 14.2k / ITB 7.6k / VNM 10.1k / VNQ 17.6k; max loss -8.1k, max gain +19.8k; half now / half after the Oct 28 FOMC (7 of 9 buys share the rate premise).
 - Fragile: NLR and COPX rest on catalyst-7 floors from single 5-8% holdings (Cameco 10-30, FCX 10-27); VNM liquidity $6.3M/day. check_memo.py: 0 errors, 0 warnings.
 - Memo: log/2026-10-21-r5.md.
+
+## 2026-10-22 — ETF dip panel, full (user: "/etf-dip-pick run and push straight to master for me")
+- Full panel on scan as of the 2026-10-21 close: 41 candidates in 20 themes (BJK no data; 12 illiquid dropped). Run by Opus 5.5 (claude-opus-5-5) as orchestrator; cause/necessity/catalyst/basket ballots and verifier by Opus 5.5 subagents, strictly sequential, each on this run's dossier + web only. Orchestrator opened no other run's files until scores.csv was written. Pushed straight to master per the user.
+- Rule buys (9): XLU, INDA, COPX, BAI, GLD, VNQ, VNM, ITB, JETS. One override: BAI rule-buy → watch (catalyst 7 partly rested on SK hynix as top holding; verifier: 1.26%). Final buys (my order): XLU, INDA, GLD, COPX, VNQ, ITB, VNM, JETS. Core: none. Alt: AIPO, DTCR, PICK, XME, XHB, IYT. Watch: 27 incl. BAI. Avoid: none.
+- Verifier: 9 rule-buys + regime — no demotions. Corrections: 10y 5.13% (not 5.2-5.3%), FERC accepted+suspended PJM backstop to 2027-02-28, INDA flows CDSL and easing, LME record $14,850 on 8-17, jet fuel $4.63/gal, SK hynix 1.26% of BAI. New ledger rows: AMD 11-03 and SK hynix 10-28 (both filed under `ai-semis`, AMD re-filed by the orchestrator), PJM 2027-02-28, UAL/jet fuel/ASML data rows.
+- $100k risk-parity: XLU 16.0k / INDA 18.5k / GLD 10.2k / COPX 6.4k / VNQ 19.9k / ITB 8.6k / VNM 11.4k / JETS 9.1k; max loss -8.6k, max gain +18.3k; half now / half after the Oct 28 FOMC.
+- Fragile: COPX R/R 1.43 and rests on the FCX 10-27 floor; JETS — AAL Q3 printed 10-22, unread by the panel. check_memo.py: 0 errors, 1 warning (lens moves vs r5, explained in the memo).
+- Memo: log/2026-10-22.md.
