@@ -1,0 +1,67 @@
+> Run by: Opus 5.5 (claude-opus-5-5) — full panel
+
+# basket — 2026-10-21-r5
+| rank | ETF | score | one-line reason (this lens only; name the band) | key source |
+|---|---|---|---|---|
+| 1 | GLD | 10 | band 10: physically backed (100% gold bars, London vaults), 0.40% fee, $2.9B/day; no constituent risk | stockanalysis.com/etf/gld (fee 0.40%, checked 2026-10-22) |
+| 2 | SLV | 10 | band 10: physical silver grantor trust, 0.50% fee, $857M/day; no futures roll, no constituent risk | iShares product-screener JSON (SLV fee 0.50%, fetched 2026-10-22) |
+| 3 | VNQ | 9 | band 10 −1: 155 REITs, 0.13% fee, $436M/day; headline top-10 55.8% inflated by a 14.5% internal Vanguard REIT II sleeve, WELL 9.1% | stockanalysis.com/etf/vnq (fee 0.13%, top-10 55.84%, checked 2026-10-22) |
+| 4 | XLU | 8 | band 7 (top-10 58.6%, NEE 12.5%) +1: 0.08% fee, 34 profitable regulated utilities, $1.48B/day | SSGA daily holdings xlsx, as of 2026-10-20 (NEE 12.50%, top-10 58.6%); fee 0.08% stockanalysis 2026-10-22 |
+| 5 | INDA | 8 | band 7 (fee 0.61% just over the line) +1: 173 names, top-10 35.0%, HDFC Bank 6.6% top, $262M/day | stockanalysis.com/etf/inda/holdings (as of 2026-10-19); fee 0.61% iShares screener 2026-10-22 |
+| 6 | PICK | 8 | band 7 (BHP 13.9% + iron-ore/steel tilt, copper a minority) +1: 298 holdings, top-10 48.9%, 0.39% fee, ex-precious by mandate | stockanalysis.com/etf/pick/holdings (as of 2026-10-19); fee 0.39% iShares screener 2026-10-22 |
+| 7 | XAR | 8 | band 7 (equal weight pulls in commercial-aero/eVTOL small caps, ~quarter of fund) +1: 52 names, top-1 3.3%, top-10 31.5%, 0.35% fee, $93M/day | SSGA daily holdings xlsx, as of 2026-10-20 (top-10 31.5%); fee 0.35% stockanalysis 2026-10-22 |
+| 8 | BAI | 8 | band 10 −2: top-10 42.0%, profitable AI semis (MU 6.1, NVDA 5.6, AMD 5.3), $163M/day; deviation: active manager discretion + 0.55% fee + 3.4% pre-IPO-style SpaceX stake | stockanalysis.com/etf/bai/holdings (as of 2026-10-19); fee 0.55% iShares screener 2026-10-22 |
+| 9 | ICLN | 7 | band 7 (top-10 56.7%): 175 names, 0.38% fee, $95M/day, FSLR 8.0% top; ~14.6% of top-10 is FX forwards/CNH cash (rebalance artefact) | stockanalysis.com/etf/icln/holdings (as of 2026-10-19); fee 0.38% iShares screener 2026-10-22 |
+| 10 | XHB | 7 | band 7 (~21% home-furnishing retail/appliances: SN, W, WSM, SGI, HD, LOW): equal weight 35 names, top-10 35.3%, 0.35%, $194M/day; homebuilders only ~37% | SSGA daily holdings xlsx, as of 2026-10-20; fee 0.35% stockanalysis 2026-10-22 |
+| 11 | SHLD | 7 | band 7 (top-10 66.2%): pure defense-revenue primes US+EU, 0.50% fee, $68M/day; PLTR 11.9% top is a software-multiple name | Global X full holdings CSV, as of 2026-10-20; fee 0.50% globalxetfs.com/funds/shld |
+| 12 | QTUM | 7 | band 7 (label says quantum, basket is broad AI/semis/software): equal weight 91 names, top-10 17.9%, 0.40% fee, $50M/day | stockanalysis.com/etf/qtum (fee 0.40%, top-10 17.93%, checked 2026-10-22; holdings date not stated) |
+| 13 | NLR | 6 | band 7 (top-10 66.0%) −1: ~32% utilities (CEG 9.3, PEG 8.8, Fortum 7.6, CGN Power 6.3) plus pre-revenue SMRs (OKLO, X-Energy); 0.52% fee | stockanalysis.com/etf/nlr/holdings (as of 2026-10-20); fee 0.52% stockanalysis 2026-10-22 |
+| 14 | FXI | 6 | band 5 (fee 0.73% + top-10 58.6%) +1: profitable large caps, $628M/day; ~20% state banks (CCB 9.3, ICBC 6.4, BoC 4.7) | stockanalysis.com/etf/fxi/holdings (as of 2026-10-20); fee 0.73% iShares screener 2026-10-22 |
+| 15 | KWEB | 6 | band 5 (fee 0.69% + top-10 62.0%) +1: profitable platforms (Tencent 10.0, Alibaba 8.9, PDD 8.3), $424M/day | stockanalysis.com/etf/kweb/holdings (as of 2026-10-19); fee 0.69% stockanalysis 2026-10-22 |
+| 16 | ITB | 6 | band 5 (top-10 68.9% + DHI 18.2% near the 20% line) +1: profitable builders, 0.37% fee, $274M/day; ~14% SHW/HD/LOW | stockanalysis.com/etf/itb/holdings (as of 2026-10-20); fee 0.37% iShares screener 2026-10-22 |
+| 17 | PPA | 6 | band 7 (top-10 61.5%) −1: Boeing 8.9 + GE Aerospace 8.7 + HWM/PH ≈ 25% commercial aero; fee 0.58% at the line | stockanalysis.com/etf/ppa/holdings (as of 2026-10-20); fee 0.58% stockanalysis 2026-10-22 |
+| 18 | COPX | 6 | band 5 (fee 0.65% + top-10 51.3%) +1: theme-pure copper miners, top-1 only 5.8% (Teck), 45 names, $174M/day | Global X full holdings CSV, as of 2026-10-20; fee 0.65% globalxetfs.com/funds/copx |
+| 19 | BOTZ | 6 | band 5 (fee 0.68% + top-10 57.6%) +1: profitable theme-pure robotics (ISRG 9.7, Keyence 8.6, Fanuc 8.4, ABB 7.5) | Global X full holdings CSV, as of 2026-10-20; fee 0.68% globalxetfs.com/funds/botz |
+| 20 | TAN | 5 | band 5 (fee 0.70% + top-10 61.3%): theme-pure solar, NXT 10.9 / FSLR 9.3 top; several loss-making resi names (SEDG, RUN) | stockanalysis.com/etf/tan/holdings (as of 2026-10-20); fee 0.70% stockanalysis 2026-10-22 |
+| 21 | DTCR | 5 | band 5 (~29% cell towers AMT 14.3 / CCI 10.0 / SBAC 4.8 + top-10 71.7%): data centers DLR 13.0 / EQIX 12.7; 0.50% fee | Global X full holdings CSV, as of 2026-10-20; fee 0.50% globalxetfs.com/funds/dtcr |
+| 22 | IYT | 5 | band 5 (top-10 73.2% + UNP 18.1% near 20% line): Uber 15.0% is a gig-platform; 0.37% fee, $74M/day | stockanalysis.com/etf/iyt/holdings (as of 2026-10-20); fee 0.37% iShares screener 2026-10-22 |
+| 23 | JETS | 5 | band 5 (top-10 62.5% + fee 0.60%): big-4 US airlines ≈ 43.5% (LUV 11.7, DAL 11.0, AAL 10.5, UAL 10.3), thin-margin constituents | stockanalysis.com/etf/jets (fee 0.60%, top-10 62.53%, checked 2026-10-21) |
+| 24 | AIPO | 5 | band 5 (fee 0.69% + top-10 57.2%): AI-power infra (PWR 8.9, GEV 8.6, ETN 8.5, VRT 6.0), profitable but power-grid not AI/robotics | stockanalysis.com/etf/aipo/holdings (as of 2026-10-19); fee 0.69% stockanalysis 2026-10-22 |
+| 25 | ROBO | 5 | band 5 (fee 0.95% + $8.8M/day thin): theme-pure, equal weight 90 names, top-10 17.1% | stockanalysis.com/etf/robo (fee 0.95%, top-10 17.09%, checked 2026-10-22; holdings date not stated) |
+| 26 | REMX | 4 | band 5 (~29% lithium: SQM 9.1, ALB 8.6, PLS 5.5, Ganfeng, Liontown + top-10 60.8%) −1: ~17% tungsten/moly, rare-earth names only ~27% | stockanalysis.com/etf/remx/holdings (as of 2026-10-20); fee 0.53% stockanalysis 2026-10-22 |
+| 27 | ITA | 4 | band 3 (GE Aerospace 20.2%) +1: 0.37% fee, $175M/day, profitable; but RTX 16.9 + BA 7.7 → top-10 76.2%, ~a third commercial aero | stockanalysis.com/etf/ita/holdings (as of 2026-10-20); fee 0.37% iShares screener 2026-10-22 |
+| 28 | XME | 4 | band 5 (~40% off base metals: precious 21%, coal 13%, uranium 6%) −1: top-10 53.4%, equal weight adds juniors (HYMC, USAR, ABAT) | SSGA daily holdings xlsx, as of 2026-10-20; fee 0.35% stockanalysis 2026-10-22 |
+| 29 | PBW | 4 | band 5 (fee 0.63% + many loss-making equal-weight small caps) −1: $11.2M/day; off-theme bits (OLED, DAR, ESE); top-10 17.9% | stockanalysis.com/etf/pbw/holdings (as of 2026-10-20); fee 0.63% stockanalysis 2026-10-22 |
+| 30 | QCLN | 4 | band 5 (top-10 61.0% + ~21% semis/lighting ON 9.0, MPWR 8.7, AYI 3.5) −1: $5.4M/day; Tesla 9.0 + Rivian 6.2 | stockanalysis.com/etf/qcln/holdings (as of 2026-10-20); fee 0.59% stockanalysis 2026-10-22 |
+| 31 | UFO | 4 | band 5 (fee 0.75% + top-10 55.5%) −1: SpaceX 16.2% single name; Garmin/Trimble/Sirius XM ≈ 16% downstream consumer/GPS | stockanalysis.com/etf/ufo/holdings (as of 2026-10-19); fee 0.75% stockanalysis 2026-10-22 |
+| 32 | ARKQ | 4 | band 5 (fee 0.75% + top-10 57.8%) −1: Tesla 11.8 + SpaceX 8.8 + KTOS/RKLB/LHX ≈ 30% not robotics | stockanalysis.com/etf/arkq/holdings (as of 2026-10-20); fee 0.75% stockanalysis 2026-10-22 |
+| 33 | BLOK | 4 | band 3 (~half non-crypto fintech/tech: HOOD, NU, OPRA, AMD, DELL, IBM, BLK) +1: diversified, top-10 36.0%; fee 0.70%, 8.6% "other assets" | stockanalysis.com/etf/blok/holdings (as of 2026-10-19); fee 0.70% stockanalysis 2026-10-22 |
+| 34 | VNM | 4 | band 5 (fee 0.66% + top-10 53.3%) −1: $6.3M/day; Vingroup pair VHM 7.2 + VIC 7.2 = 14.4% leveraged conglomerate | stockanalysis.com/etf/vnm (fee 0.66%, top-10 53.30%, checked 2026-10-22; holdings date not stated) |
+| 35 | EUAD | 4 | band 5 (swap-based: UMB money market 77.8% + total-return swaps carry the exposure; $9.9M/day) −1: swap terms not found on issuer docs | stockanalysis.com/etf/euad (fee 0.50%, MMF 77.79%, checked 2026-10-22); roic.ai/frenzycap snapshot Aug-31-2026 (MMF 54.5%) |
+| 36 | URA | 3 | band 3 (Cameco 23.3%): fee 0.69%, top-10 62.1%; Itochu/Sibanye/Oklo off-theme; $146M/day keeps it from 2 | Global X full holdings CSV, as of 2026-10-20; fee 0.69% globalxetfs.com/funds/ura |
+| 37 | URNM | 3 | band 3 (Cameco 21.1%): top-10 81.7%, fee 0.75%, NexGen 13.3% pre-production; SPUT 17.1 + Yellow Cake 4.6 are clean physical exposure | stockanalysis.com/etf/urnm/holdings (as of 2026-10-20); fee 0.75% stockanalysis 2026-10-22 |
+| 38 | ARKX | 3 | band 3 (~half off-theme: Deere 5.6, NVDA 5.4, AMZN 5.0, AMD 4.2, GOOG 4.2, PLTR, TSLA, Komatsu, TER): SpaceX 11.3%, fee 0.75% | stockanalysis.com/etf/arkx/holdings (as of 2026-10-20); fee 0.75% stockanalysis 2026-10-22 |
+| 39 | BKCH | 3 | band 5 −2: top-10 72.4% (COIN 15.7, CRCL 14.2, BMNR 11.5); deviation: BMNR is a levered ETH-treasury vehicle, miners carry convert overhang, $5.5M/day thinnest in set | Global X full holdings CSV, as of 2026-10-20; fee 0.50% globalxetfs.com/funds/bkch |
+| 40 | LIT | 2 | band 3 (Rio Tinto 22.8%, mostly iron ore) −1: fee 0.75%, NAURA 6.3% semicap; lithium miners only ALB 4.0 + SQM 3.1 in top-12; top-10 69.0% | Global X full holdings CSV, as of 2026-10-20; fee 0.75% globalxetfs.com/funds/lit |
+| 41 | WGMI | 2 | band 3 (~half AI hosting/cloud: NBIS 8.2, CRWV 7.4, CIFR/WULF/IREN/APLD pivots) −1: fee 0.75%, loss-making convert-funded miners | stockanalysis.com/etf/wgmi/holdings (as of 2026-10-19); fee 0.75% stockanalysis 2026-10-22 |
+
+Band deviations (2+ points off the band's anchor):
+- BAI 8 (band 10): it meets every 10-criterion on the numbers (top-10 42.0%, fee 0.55%, $163M/day), but it is actively managed, so its theme purity depends on the manager. It also holds a 3.4% SpaceX stake. At 0.55% the fee is close to the 0.60% line.
+- BKCH 3 (band 5): no single name is above 20%, but 11.5% sits in BMNR, a levered ETH-treasury company, and ~30% in convert-funded miners pivoting to AI hosting. At $5.5M/day it is also the thinnest fund in the set, so it falls into the "junky constituents" description from anchor 1.
+
+Top-3 notes:
+- GLD: the fund holds only gold bars in London vaults (100% gold), charges 0.40% and trades ~$2.9B/day, so it has no constituent, concentration or roll risk (stockanalysis.com/etf/gld, checked 2026-10-22). It is the cleanest wrapper in the set. The only knock is the fee, which is above the cheapest physical gold wrappers, and that isn't enough to leave band 10.
+- SLV: physical silver trust at a 0.50% fee, with no futures or swaps (iShares product-screener JSON, fetched 2026-10-22). It trades $857M/day, so even the most beaten-up theme (−50.5% from the high) can be owned with no basket risk on top of the metal risk.
+- VNQ: 155 REITs at a 0.13% fee and $436M/day (stockanalysis.com/etf/vnq, checked 2026-10-22). The headline top-10 of 55.8% includes a 14.5% internal Vanguard REIT II index sleeve. Looked through, no single REIT is above WELL's 9.1%, so it is a −1 from band 10, not a band-7 fund.
+
+Disagreements with the dossier's first-pass memo:
+- clean: the memo says ICLN's "top holding Bloom Energy". In current data FSLR is #1 at 7.97% and Bloom #4 at 6.32%. ICLN's top-10 also carries ~14.6% of EUR/CNH forwards and CNH cash (stockanalysis ICLN holdings, as of 2026-10-19). Bloom is the top holding in QCLN (9.52%), not ICLN.
+- rare-earth: the "lithium-heavy" call is confirmed and understated. SQM, ALB, PLS, Ganfeng and Liontown make up ~29% and tungsten/moly ~17%, while pure rare-earth names (China Northern 7.1, MP 6.7, Lynas 6.0, Iluka 3.8, Shenghe 3.6) are only ~27%. China Northern Rare Earth, not MP, is #3 (stockanalysis REMX, 2026-10-20).
+- transport: section D's "UNP ~17.5% of IYT" is now 18.14%, and the memo leaves out the second hidden exposure, Uber at 14.95% (#2) (stockanalysis IYT, 2026-10-20).
+- reit: the memo frames DTCR as an AI data-center fund. Its #1 holding is American Tower at 14.26%, and cell towers (AMT, CCI, SBAC) make up ~29%, more than DLR + EQIX at 25.7% (Global X CSV, 2026-10-20).
+- space: "funds hold many unprofitable names" is not the main issue. UFO's problem is concentration in a single name (SpaceX 16.15%) and its next tier is profitable downstream names (Garmin, Trimble, Sirius XM). ARKX's problem is dilution: ~half of it is Deere, NVDA, AMZN, AMD, GOOG, TSLA and Komatsu.
+- lithium: the memo leaves out that LIT is 22.77% Rio Tinto, an iron-ore major, and 6.29% NAURA, a semiconductor-equipment maker. LIT is a poor way to own lithium (Global X CSV, 2026-10-20).
+- defense-us: the memo doesn't mention that ITA is 20.22% GE Aerospace and 7.70% Boeing, roughly a third commercial aerospace. XAR (equal weight, top-10 31.5%) is the cleaner way to own the theme.
+- crypto-equity: the memo's "WGMI broadened to AI infrastructure" is confirmed. Two pure AI-cloud names, NBIS (8.16%) and CRWV (7.42%), are in its top 3 (stockanalysis WGMI, 2026-10-19).
+- defense-eu (new): the memo doesn't flag that EUAD shows 77.79% in a UMB money-market fund plus swap lines (e.g. a Clearstream RYCEY swap), so its exposure is largely synthetic. I could not find the swap terms in issuer documents.
+- utilities: section D's "Southern #2 at 7.69% (SSGA 2026-10-01)" is now 7.93% (SSGA, 2026-10-20). That is consistent with the memo, not a contradiction.
