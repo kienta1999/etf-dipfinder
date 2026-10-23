@@ -447,3 +447,10 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: XLU 15.4k / GLD 9.8k / IYT 15.4k / DTCR 9.0k / NLR 5.7k / ICLN 9.6k / PICK 9.0k / ITB 8.2k / INDA 17.7k; max loss -9.0k, max gain +24.5k; half now / half after the Oct 28 FOMC.
 - Same-scan comparison with 2026-10-22: 26/41 buckets, rank corr 0.71, 7 buy themes shared; cause lens is the noisy one (76% within ±1 vs 95-98% for the others).
 - Memo: log/2026-10-22-r3.md.
+
+## 2026-10-23 — ETF dip panel, full (daily consistency run, always-full rule)
+- Full panel on scan as of the 2026-10-22 close: 48 candidates in 20 themes (BJK no data; 12 illiquid dropped). Run by Muse Wonder (Muse Wonder) as orchestrator; cause/necessity/catalyst/basket ballots and verifier by subagents, strictly sequential, each on this run's dossier + web only. Orchestrator opened no other run's files until scores.csv was written.
+- Buys (9, my = weighted order): XSD, XAR, XME, REMX, DTCR, NLR, INDA, ICLN, WGMI. Core: none (GLD fails necessity 6<8; GRID fails cause 6<7). Alt: 15. Watch: 24. Avoid: none (lowest cause TAN 4). No bucket overrides, no rank deviations.
+- Verifier: regime + all 9 buys re-checked from primary sources — no demotions. Corrections: 10y 4.96% on Oct 22 (not ~5.2%); Brent $113.17 / WTI $99.47 Oct 22. WGMI flagged weakest buy (Coinbase not a holding; indirect catalyst). 7 new ledger rows in log/catalysts.md (10Y, Brent, Lam, RTX backlog, SCCO, Bloom, IMF India).
+- $100k risk-parity: XSD 7.0k / XAR 14.2k / XME 8.8k / REMX 8.7k / DTCR 12.3k / NLR 7.8k / INDA 24.3k / ICLN 13.1k / WGMI 3.8k; max loss -12.6k, max gain +46.8k; half now / half after the Oct 28 FOMC.
+- Memo: log/2026-10-23.md.
