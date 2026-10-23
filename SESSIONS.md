@@ -454,3 +454,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: regime + all 9 buys re-checked from primary sources — no demotions. Corrections: 10y 4.96% on Oct 22 (not ~5.2%); Brent $113.17 / WTI $99.47 Oct 22. WGMI flagged weakest buy (Coinbase not a holding; indirect catalyst). 7 new ledger rows in log/catalysts.md (10Y, Brent, Lam, RTX backlog, SCCO, Bloom, IMF India).
 - $100k risk-parity: XSD 7.0k / XAR 14.2k / XME 8.8k / REMX 8.7k / DTCR 12.3k / NLR 7.8k / INDA 24.3k / ICLN 13.1k / WGMI 3.8k; max loss -12.6k, max gain +46.8k; half now / half after the Oct 28 FOMC.
 - Memo: log/2026-10-23.md.
+
+## 2026-10-23-r2 — ETF dip panel, full (scheduled Friday routine)
+- Full panel on scan as of the 2026-10-22 close: 48 candidates in 20 themes (BJK no data; 13 illiquid dropped). Orchestrator Opus 5.5 (claude-opus-5-5); cause/necessity/catalyst/basket ballots and verifier by Opus 5.5 subagents, strictly sequential, each on this run's dossier and the web only.
+- Buys (10, my = weighted order, no overrides): SOXX, DTCR, GRID, COPX, PPA, GDXJ, NLR, AIPO, INDA, XHB. Core: none. Alt: 11. Watch: 27. Avoid: none (lowest cause LIT/TAN 4).
+- Verifier: regime + all 10 buys, no demotions. Corrections: GDXJ dated miners are Alamos/Equinox/Coeur (~19%), not Kinross/PAAS; GRID cause rests on ABB (7.44%) record orders, not GEV (0.96%); AMD 9.34% of SOXX; 10y 4.96%; Brent $113.17 (Oct 22). +15 ledger rows under sub-theme labels.
+- $100k risk-parity: SOXX 6.3k / DTCR 10.4k / GRID 10.4k / COPX 6.7k / PPA 16.2k / GDXJ 5.0k / NLR 6.6k / AIPO 7.0k / INDA 20.6k / XHB 10.8k; max loss -12.0k, max gain +29.8k; half now / half after the Oct 28 FOMC.
+- vs 2026-10-23 (same prices): cause lens is the spread — crypto/space/REMX at 5 here vs 9 there, flipping WGMI/REMX out of buy. Catalyst ballot reworded once for check_memo (scores unchanged).
+- Memo: log/2026-10-23-r2.md.
