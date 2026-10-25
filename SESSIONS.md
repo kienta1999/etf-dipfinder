@@ -462,3 +462,10 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: SOXX 6.3k / DTCR 10.4k / GRID 10.4k / COPX 6.7k / PPA 16.2k / GDXJ 5.0k / NLR 6.6k / AIPO 7.0k / INDA 20.6k / XHB 10.8k; max loss -12.0k, max gain +29.8k; half now / half after the Oct 28 FOMC.
 - vs 2026-10-23 (same prices): cause lens is the spread — crypto/space/REMX at 5 here vs 9 there, flipping WGMI/REMX out of buy. Catalyst ballot reworded once for check_memo (scores unchanged).
 - Memo: log/2026-10-23-r2.md.
+
+## 2026-10-24 — ETF dip panel, full (daily consistency run, always-full rule)
+- Full panel on scan as of the 2026-10-23 close: 49 candidates in 20 themes (BJK no data; 12 illiquid dropped). Run by Muse Wonder (Muse Wonder) as orchestrator; cause/necessity/catalyst/basket ballots and verifier by subagents, strictly sequential, each on this run's dossier + web only. Orchestrator opened no other run's files until scores.csv was written.
+- Buys (9, my = weighted order): GRID, DTCR, PICK, PSI, QTUM, NLR, REMX, XHB, IYT. Core: none (broad funds reaching cause ≥7 and necessity ≥8 already qualify as buys; VNQ fails necessity 6<8, IGF theme rank 3, GLD necessity 6). Alt: 15. Watch: 24. Avoid: TAN (cause 3 veto, solar-credit repeal). No bucket overrides, no rank deviations.
+- Verifier: regime + all 9 buys re-checked from primary sources, 23 claims all confirmed — no demotions. Corrections: 10y exactly 5.00% on Oct 23; Brent $116.72 / WTI $103.27 Oct 23. REMX PrNd-floor wording qualified (ballot had already taken the point). 6 new ledger rows in log/catalysts.md.
+- $100k risk-parity: GRID 13.0k / DTCR 12.2k / PICK 11.6k / PSI 6.0k / QTUM 10.3k / NLR 7.7k / REMX 8.4k / XHB 12.0k / IYT 18.7k; max loss -11.7k, max gain +35.6k; half now / half after the Oct 28 FOMC.
+- Memo: log/2026-10-24.md.
