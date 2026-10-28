@@ -1,0 +1,56 @@
+> Run by: Muse Wonder (Muse Wonder) — full panel
+
+# necessity — 2026-10-28
+| 1 | GRID | 10 | 10-band: civilisation-critical, no substitute for transmission; IEA sees power demand +3.6%/yr 2026-30 and grid spend must rise ~50% | IEA Electricity 2026, Feb 2026 |
+| 2 | COPX | 9 | 10-band, -1: copper is civilisation-critical for wiring/grids, but aluminium and recycling substitute at the margin; IEA sees ~30% 2035 supply shortfall | IEA Critical Minerals Outlook, cited Dec 2025 |
+| 3 | XAR | 9 | 10-band, -1: deterrence has no substitute and world military spend hit a record $2.89T in 2025, but procurement mix is a political choice | SIPRI military spending 2025, 2026 release |
+| 4 | ITA | 9 | 10-band, -1: same defence theme as XAR — civilisation-critical security, record $2.89T global spend in 2025, mix substitutable | SIPRI military spending 2025, 2026 release |
+| 5 | SHLD | 9 | 10-band, -1: same defence theme — defence tech is security-critical as spend hit $2.89T in 2025, though unmanned/cyber mix can shift | SIPRI military spending 2025, 2026 release |
+| 6 | PPA | 9 | 10-band, -1: same defence theme — no substitute for deterrence, US FY27 request $1.5T in dossier, but budgets are political | SIPRI 2025; dossier FY27 $1.5T request |
+| 7 | EUAD | 9 | 10-band, -1: Europe rearming, military spend +14% to $864B in 2025, fastest since 1953; no substitute for deterrence, pace is political | SIPRI Europe spending 2025, 2026 release |
+| 8 | PAVE | 9 | 10-band, -1: broad infrastructure (water, transport, power) is civilisation-critical with no substitute, though project timing is cyclical | IEA Electricity 2026 grid-investment gap, Feb 2026 |
+| 9 | IGF | 9 | 10-band, -1: same infra theme as PAVE — essential networks, no substitute, but global regulated/transport mix is more cyclical | IEA Electricity 2026, Feb 2026 |
+| 10 | REMX | 8 | 7-band, +1: structurally growing and near-irreplaceable in magnets — magnet demand ~260kt in 2024 to ~607kt by 2035, F-35 needs 400kg+ rare earths | Adamas/Reuters magnet forecast to 2035; Pentagon via ING |
+| 11 | NLR | 8 | 7-band, +1: firm low-carbon power is structurally growing and hard to substitute at scale; uranium LT price hit record $96.50/lb on 2026-09-30 | Cameco uranium pricing, 2026-09-30 |
+| 12 | URA | 8 | 7-band, +1: same nuclear theme as NLR — 413 reactors, 377GW at end-2025 and IAEA high case ~1,045GW by 2050, fuel has no route-around | IAEA projections, Sep 2026 |
+| 13 | URNM | 8 | 7-band, +1: same nuclear theme — uranium miners supply the irreplaceable fuel; LT price $96.50/lb record on 2026-09-30 signals structural utility demand | Cameco uranium pricing, 2026-09-30 |
+| 14 | AIPO | 8 | 7-band, +1: AI/robotics structurally growing; big-five hyperscaler capex forecast >$600B in 2026, ~75% AI infrastructure, though software can route around some hardware | IEEE ComSoc hyperscaler capex 2026 forecast |
+| 15 | BOTZ | 8 | 7-band, +1: same ai/robot theme — automation answers labour scarcity, hyperscaler capex >$600B in 2026, but human labour and software substitute partly | IEEE ComSoc hyperscaler capex 2026 forecast |
+| 16 | ROBO | 8 | 7-band, +1: same ai/robot theme — robotics demand structural in logistics/manufacturing, capex >$600B in 2026, substitutable at the margin | IEEE ComSoc hyperscaler capex 2026 forecast |
+| 17 | DTCR | 8 | 7-band, +1: data centres are now essential digital infrastructure; IEA sees data-centre power use doubling 485TWh in 2025 to ~950TWh by 2030, cloud can shift sites | IEA Energy and AI, cited 2026 |
+| 18 | XHB | 8 | 7-band, +1: shelter is essential and the US was short 4.03M homes in 2025, but renting and existing stock substitute for new builds | Realtor.com Housing Supply Gap, 2026-03-03 |
+| 19 | ITB | 8 | 7-band, +1: same housing theme as XHB — 4.03M-home US shortfall in 2025 is structural, homebuilder volumes still rate-cyclical | Realtor.com Housing Supply Gap, 2026-03-03 |
+| 20 | XME | 8 | 7-band, +1: base metals underpin electrification and construction; copper demand +30% by 2040 in IEA base case, but steel/aluminium demand is cyclical | IEA via Argus, 2025-05-21 |
+| 21 | PICK | 8 | 7-band, +1: same base-metals theme as XME — diversified miners supply copper and transition metals facing a ~30% 2035 copper gap | IEA Critical Minerals Outlook, cited Dec 2025 |
+| 22 | TAN | 7 | 7-band: structurally growing but substitutable — solar PV adds >600TWh/yr to 2030 and overtakes wind/nuclear in 2026, yet gas/nuclear/wind can fill power demand | IEA Electricity 2026 supply chapter |
+| 23 | PBW | 7 | 7-band: clean energy structurally growing — renewables add ~1,050TWh/yr to 2030 — but every clean technology here has a fossil or rival clean substitute | IEA Electricity 2026 supply chapter |
+| 24 | ICLN | 7 | 7-band: same clean theme as PBW — renewables and nuclear reach ~50% of generation by 2030, up from 42% in 2025, still substitutable and policy-sensitive | IEA Electricity 2026, Feb 2026 |
+| 25 | QCLN | 7 | 7-band: same clean theme — clean power/EV demand structural to 2030 per IEA, but holdings mix technologies that compete with each other | IEA Electricity 2026, Feb 2026 |
+| 26 | LIT | 7 | 7-band: structurally growing but with a visible competing technology — EV battery deployment reaches 3TWh by 2030, while sodium-ion takes <10% of EV batteries to 2030 | IEA Global EV Outlook 2026 via NextMSC |
+| 27 | UFO | 7 | 7-band: structurally growing but substitutable — 43,000 satellites forecast to launch 2025-34 for comms/defence/EO, terrestrial networks cover most users | Novaspace satellites forecast, 2025-34 |
+| 28 | ARKX | 7 | 7-band: same space theme as UFO — satellite comms, navigation and earth observation are structural, launch/satellite supply is concentrated and substitutable in part | Novaspace satellites forecast, 2025-34 |
+| 29 | GLD | 7 | 7-band: structurally growing but substitutable reserve demand — central banks bought 863t in 2025 and WGC forecasts ~850t in 2026, but gold has almost no industrial necessity and BTC/Treasuries compete | World Gold Council via Reuters summary, Jan 2026 |
+| 30 | INDA | 7 | 7-band: structurally growing economy, not a technology — IMF raised India to 7% growth for 2026 and 2027, fastest major economy, 1.5B people; other markets can substitute for investors | IMF World Economic Outlook, Oct 2026 |
+| 31 | XLC | 7 | 7-band: communication is essential and structurally growing — 6B people online in 2025, ~75% of world population — but platforms and media within the fund are substitutable and discretionary | ITU Facts and Figures 2025, Nov 2025 |
+| 32 | VNM | 7 | 7-band: structurally growing manufacturing hub — S and P raised Vietnam 2026 growth to 8% on exports/FDI — but production can route to India/Mexico/other ASEAN | S&P Global Ratings via Vietstock, Oct 2026 |
+| 33 | SLV | 6 | 5-band, +1: real, cyclical demand with a structural industrial leg — industrial use was 657.4Moz, 58% of demand in 2025 — capped because solar thrifting cuts PV use ~19% in 2026 | Silver Institute World Silver Survey 2026 |
+| 34 | SIL | 6 | 5-band, +1: same silver theme as SLV — miners levered to 657.4Moz industrial demand in 2025, but substitution/thrifting is proven, not hypothetical | Silver Institute World Silver Survey 2026 |
+| 35 | FXI | 6 | 5-band, +1: real demand, cyclical, no structural growth claim at 4.5% IMF 2026 growth for China, +1 only for the scale of an economy global supply chains cannot route around quickly | IMF World Economic Outlook, Oct 2026 |
+| 36 | VNQ | 6 | 5-band, +1: real estate is real, cyclical demand with no structural growth claim, +1 because shelter, logistics and data space cannot be digitised away | IEA data-centre demand doubling by 2030, cited 2026 |
+| 37 | KWEB | 5 | 5-band: real demand, cyclical, no structural growth claim — China growth 4.5% in IMF Oct 2026 outlook and internet consumption is discretionary within it; differs from FXI as it lacks the broad industrial scale claim | IMF World Economic Outlook, Oct 2026 |
+| 38 | EWZ | 5 | 5-band: real demand, cyclical, no structural growth claim — IMF cut Brazil to 2.2% growth in 2026 and 1.9% in 2027; food/iron-ore exports are needed but price-cyclical | IMF World Economic Outlook, Oct 2026 |
+| 39 | BLOK | 4 | 3-band, +1: blockchain demand rests on adoption that may not hold, +1 because the GENIUS Act 2025 gave dollar stablecoins a real payments use case that miners/coins lack | GENIUS Act 2025; Chainalysis 2026 report, Oct 2026 |
+| 40 | ARGT | 4 | 5-band, -1: real economy demand, but IMF cut Argentina 2026 growth to 2.1% from 3.5% in Oct 2026 and still forecasts 32.5% inflation, so conditions may not hold | IMF World Economic Outlook, Oct 2026 |
+| 41 | WGMI | 3 | 3-band: discretionary/speculative — crypto mining is the most substitutable link, spot ETFs and proof-of-stake route around miners entirely, and no physical need is served | Spot BTC ETF approvals Jan 2024; dossier crypto-equity section |
+| 42 | BKCH | 3 | 3-band: discretionary — blockchain equity demand rests on crypto adoption conditions that may not hold; global crypto adoption was flat ~9.9-10.3% in 2023-25 despite ETF launches | Coinbase outlook via Demand Sage data, 2025 |
+
+Top-3 notes:
+- GRID (10): The IEA Electricity 2026 report (Feb 2026) projects global power demand growing 3.6%/yr through 2030 with ~2,500GW stuck in grid-connection queues, and grid investment needing to rise ~50% from ~$400B/yr. Electricity transmission has no substitute technology — every other high-necessity theme in this ballot, from AI to EVs to nuclear, must pass through the grid, which is why it alone scores the 10-band.
+- COPX (9): The IEA projects primary copper supply falling ~30% short of requirements by 2035 (critical minerals outlook, cited Dec 2025), with new mines taking ~18 years from discovery to production per S&P Global. It stops at 9, not 10, because aluminium substitution in cabling and recycling are real, if partial, route-arounds.
+- XAR (9): SIPRI puts world military spending at a record $2.89T in 2025, with Europe up 14% to $864B and the US FY27 request at $1.5T per the dossier. Deterrence has no technological substitute, but the -1 from the 10-band is because the level is set by political budget choices that can be reversed, unlike physical demand for power or copper.
+
+Disagreements with the dossier's first-pass memo:
+- The dossier calls crypto-equity "unclear" on cause; on necessity it is not unclear — mining/blockchain equity scores 3-4 because spot ETFs, proof-of-stake and conventional payments route around it, whatever the flow story.
+- The dossier calls silver "rotation"; on necessity silver is capped at 6 because the Silver Institute's 2026 survey shows solar thrifting cutting PV silver demand ~19% in 2026 — substitution is already happening, so it cannot sit in the 7-band.
+- The dossier calls India and Vietnam "unclear"/"rotation" on flows; on necessity both score the 7-band on structural growth numbers (IMF India 7% for 2026-27; S&P Vietnam 2026 raised to 8%), which the first-pass memo does not weigh.
+- The dossier groups PAVE/IGF with GRID as one grid/infra theme; I score GRID alone at 10 and the broader infra funds at 9, because PAVE/IGF hold cyclical transport/construction exposure alongside the irreplaceable networks.

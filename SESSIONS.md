@@ -492,3 +492,10 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - $100k risk-parity: GRID 10.1k / PPA 13.3k / NLR 5.9k / COPX 5.9k / REMX 6.4k / DTCR 9.3k / AIPO 6.7k / VNM 12.7k / EUAD 11.3k / XLC 12.0k / BLOK 6.4k; max loss -11.0k, max gain +32.1k; half now / half after the Oct 28 FOMC.
 - Memo: log/2026-10-27.md.
 
+
+## 2026-10-28 — ETF dip panel, full (daily consistency run, always-full rule)
+- Full panel on scan as of the 2026-10-27 close: 42 candidates in 22 themes (BJK no data; 12 illiquid dropped). Scan NOT byte-identical to 2026-10-27 (fresh close). Run by Muse Wonder (Muse Wonder) as orchestrator; cause/necessity/catalyst/basket ballots and verifier by subagents, strictly sequential, each on this run's dossier + web only.
+- Buys (11, my = weighted order, no overrides): XAR, EUAD, GRID, DTCR, UFO, NLR, AIPO, XHB, REMX, LIT, VNM. Core: none (GLD necessity 7 < 8; IGF thin, theme_rank 3 — both verifier-checked). Alt: PPA, ITA, SHLD, PAVE, VNQ, ITB, URNM, URA, SIL. Watch: 20. Avoid: BKCH, WGMI (cause veto 3).
+- Verifier: regime + all 11 buys from primary sources, 11/11 confirmed, no demotions; 2 new ledger rows (10Y 4.99% Oct 27 close; Brent $113.88 / WTI $99.90 Oct 27 settlements). Regime pinned: FOMC statement due 14:00 ET Oct 28, not yet published at run time, current range 3.75-4.00%; dossier's 5.1-5.3% 10Y quote corrected to 4.99%.
+- $100k risk-parity: XAR 10.6k / EUAD 11.5k / GRID 9.7k / DTCR 9.1k / UFO 8.5k / NLR 5.8k / AIPO 6.5k / XHB 9.2k / REMX 6.1k / LIT 9.7k / VNM 13.3k; max loss -11.0k, max gain +36.8k; half now / half after the Oct 28 FOMC statement.
+- Memo: log/2026-10-28.md.
