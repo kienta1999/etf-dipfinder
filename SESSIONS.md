@@ -499,3 +499,12 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Verifier: regime + all 11 buys from primary sources, 11/11 confirmed, no demotions; 2 new ledger rows (10Y 4.99% Oct 27 close; Brent $113.88 / WTI $99.90 Oct 27 settlements). Regime pinned: FOMC statement due 14:00 ET Oct 28, not yet published at run time, current range 3.75-4.00%; dossier's 5.1-5.3% 10Y quote corrected to 4.99%.
 - $100k risk-parity: XAR 10.6k / EUAD 11.5k / GRID 9.7k / DTCR 9.1k / UFO 8.5k / NLR 5.8k / AIPO 6.5k / XHB 9.2k / REMX 6.1k / LIT 9.7k / VNM 13.3k; max loss -11.0k, max gain +36.8k; half now / half after the Oct 28 FOMC statement.
 - Memo: log/2026-10-28.md.
+
+## 2026-10-28-r2 — ETF dip pick, lite (one agent, one pass; independent second run of the 2026-10-28 date, the morning full-panel memo untouched)
+- Lite on scan as of the 2026-10-27 close (market open at ~15:45 ET, today's partial bar dropped): 42 candidates in 22 themes (BJK no data; 13 illiquid dropped). Run by Opus 5.5 (claude-opus-5-5), single agent, no subagents; scored from this scan, carry_forward.py and the web only, and opened no other log/ memo, output/ folder or SESSIONS.md until the scoring table was final.
+- Searches: 23/23 (20 themes + 1 regime + 2 spot-check), no WebFetch. reit and brazil not searched (22 themes vs the cap), cause capped 5. 12 searched themes returned nothing dated that explains the move → cause 5. Catalyst floor applied for 11 themes, no violations.
+- Regime: today's FOMC held 3.75-4.00% on a 10-2 vote (Cook, Hammack dissented for a hike) after the September hike; "Inflation remains elevated"; 10y ~5.04% intraday.
+- Buys (2, wtd order, one tie-break deviation): NLR, REMX. Core: none (GLD necessity 7). Alt: URNM, URA. Watch: 38 (defense-us cause 6: A&D index -19% through a turbulent Q3 season, no proof it is only flows; INDA/GLD cause 7 but catalyst 6, not stabilizing). Avoid: none. Thin: IGF, EWZ.
+- Spot-check (NLR): LT uranium $96.50/lb record (Sep 30 UxC/TradeTech avg; TradeTech LT $97 four months, Oct 2), spot $89.9 Oct 15 — current. Cameco Q3 Oct 30 not contradicted (Q2 6-K found, no Q3 out yet). No demotion.
+- $100k risk-parity: NLR 48.6k / REMX 51.4k; max loss -16.4k, max gain +88.1k; independent dates → all in by rule, but memo recommends ~1% risk at stop (NLR ~5.9k, REMX ~6.2k) and cash until a full panel confirms.
+- Memo: log/2026-10-28-r2-lite.md. Not committed (left in working tree for the user).
