@@ -516,3 +516,9 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Audit: check_memo.py re-run after a catalyst-ballot fix-up (8 dropped carried-forward rows now addressed, no score changes, scores.csv unchanged); remaining item at handoff is only the uncommitted-files check, which the orchestrator's commit clears. One warning: 5 lens scores moved 3+ points vs the prior day.
 - $100k risk-parity: XAR 15.9k / REMX 9.3k / QCLN 9.7k / ROBO 14.6k / UFO 13.0k / XME 9.4k / VNM 19.0k / BLOK 9.0k; max loss -11.2k, max gain +38.7k; independent triggers → all in.
 - Memo: log/2026-10-29.md.
+
+## 2026-10-29-r2 — ETF dip pick, lite (scheduled weekday run)
+- Lite, one agent, 23 searches (1 regime + 20 themes + 2 spot-check), scan as of the 2026-10-28 close: 39 candidates in 20 themes. Run by Opus 5.5 (claude-opus-5-5).
+- Buy: none (no fund cleared cause ≥ 7 with stabilizing or catalyst ≥ 7). Core: GLD (cause 7 on dollar/yields, necessity 8). Watch: 38. Avoid: none. Spot-check (GLD): rate/dollar cause current (Kitco Oct 2); WGC Q2 CB buying 289t but Q1 revised to 57t, so not demoted.
+- $100k: no risk-parity book; GLD at the 1% risk budget ≈ $9.6k, rest cash.
+- Memo: log/2026-10-29-r2-lite.md.
