@@ -1,0 +1,40 @@
+,theme,bucket,why
+XAR,defense-us,buy,"buy: cause 8 >= 7, stabilizing, R/R 3.62 >= 1.3, #1 in theme"
+GLD,gold,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing; core path: necessity 7 < 8
+PPA,defense-us,alt,"qualifies, but theme #2 behind XAR (one buy per theme)"
+SHLD,defense-us,alt,"qualifies, but theme #3 behind XAR (one buy per theme)"
+NLR,nuclear,watch,watch: cause 6 < 7
+REMX,rare-earth,buy,"buy: cause 7 >= 7, catalyst 8 >= 7, R/R 6.74 >= 1.3, #1 in theme"
+QCLN,clean,buy,"buy: cause 7 >= 7, stabilizing, R/R 3.60 >= 1.3, #1 in theme"
+URA,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+ITA,defense-us,alt,"qualifies, but theme #4 behind XAR (one buy per theme)"
+SLV,silver,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+URNM,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+ROBO,ai/robot,buy,"buy: cause 7 >= 7, stabilizing, R/R 1.64 >= 1.3, #1 in theme"
+ICLN,clean,alt,"qualifies, but theme #2 behind QCLN (one buy per theme)"
+QTUM,ai/robot,watch,watch: cause 6 < 7
+UFO,space,buy,"buy: cause 7 >= 7, stabilizing, R/R 5.96 >= 1.3, #1 in theme"
+XME,base-metals,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.07 >= 1.3, #1 in theme"
+PICK,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+ARKQ,ai/robot,alt,"qualifies, but theme #3 behind ROBO (one buy per theme)"
+AIPO,ai/robot,alt,"qualifies, but theme #4 behind ROBO (one buy per theme)"
+PBW,clean,watch,watch: cause 6 < 7
+VNM,vietnam,buy,"buy: cause 8 >= 7, stabilizing, R/R 2.25 >= 1.3, #1 in theme"
+ARKX,space,alt,"qualifies, but theme #2 behind UFO (one buy per theme)"
+BOTZ,ai/robot,alt,"qualifies, but theme #5 behind ROBO (one buy per theme)"
+INDA,india,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+XHB,housing,watch,watch: cause 6 < 7
+SIL,silver,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+ITB,housing,watch,watch: cause 5 < 7
+TAN,solar,watch,watch: cause 4 < 7
+COPX,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+LIT,lithium,watch,watch: cause 5 < 7
+EUAD,defense-eu,watch,watch: cause 6 < 7
+FXI,china,watch,watch: cause 5 < 7
+BLOK,crypto-equity,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 1.87 >= 1.3, #1 in theme"
+WGMI,crypto-equity,watch,watch: cause 6 < 7
+KWEB,china,watch,watch: cause 4 < 7
+XLC,comms,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+BKCH,crypto-equity,watch,watch: cause 6 < 7
+ARGT,argentina,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 5) and not stabilizing
+EWZ,brazil,avoid,cause veto: cause 3 <= 3

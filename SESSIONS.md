@@ -508,3 +508,11 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Spot-check (NLR): LT uranium $96.50/lb record (Sep 30 UxC/TradeTech avg; TradeTech LT $97 four months, Oct 2), spot $89.9 Oct 15 — current. Cameco Q3 Oct 30 not contradicted (Q2 6-K found, no Q3 out yet). No demotion.
 - $100k risk-parity: NLR 48.6k / REMX 51.4k; max loss -16.4k, max gain +88.1k; independent dates → all in by rule, but memo recommends ~1% risk at stop (NLR ~5.9k, REMX ~6.2k) and cash until a full panel confirms.
 - Memo: log/2026-10-28-r2-lite.md. Not committed (left in working tree for the user).
+
+## 2026-10-29 — ETF dip panel, full (daily consistency run, always-full rule)
+- Full panel on scan as of the 2026-10-28 close: 39 candidates in 20 themes (BJK no data; 13 illiquid dropped). Scan NOT byte-identical to the previous run's scan. Run by Muse Spark (muse-spark) as orchestrator; cause/necessity/catalyst/basket ballots and verifier by subagents, strictly sequential, each on this run's dossier + web only.
+- Buys (8, my = weighted order, no overrides): XAR, REMX, QCLN, ROBO, UFO, XME, VNM, BLOK. Core: none (GLD necessity 7 < 8). Alt: PPA, SHLD, URA, ITA, URNM, ICLN, ARKQ, AIPO, ARKX, BOTZ. Watch: 20. Avoid: EWZ (cause veto 3, thin at R/R 1.27).
+- Verifier: regime + all 8 buys from primary sources, no demotions; no new ledger rows (all confirmed events already live rows); regime pinned: FOMC held 3.75-4.00% Oct 28 (10-2 vote), December hike odds ~78-83% post-decision, 10y ~5.04-5.05% Oct 28 close, Brent 116.72 Oct 23.
+- Audit: check_memo.py re-run after a catalyst-ballot fix-up (8 dropped carried-forward rows now addressed, no score changes, scores.csv unchanged); remaining item at handoff is only the uncommitted-files check, which the orchestrator's commit clears. One warning: 5 lens scores moved 3+ points vs the prior day.
+- $100k risk-parity: XAR 15.9k / REMX 9.3k / QCLN 9.7k / ROBO 14.6k / UFO 13.0k / XME 9.4k / VNM 19.0k / BLOK 9.0k; max loss -11.2k, max gain +38.7k; independent triggers → all in.
+- Memo: log/2026-10-29.md.
