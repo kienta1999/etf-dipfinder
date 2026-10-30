@@ -522,3 +522,7 @@ deploy-keys page with write access; existing personal key is registered elsewher
 - Buy: none (no fund cleared cause ≥ 7 with stabilizing or catalyst ≥ 7). Core: GLD (cause 7 on dollar/yields, necessity 8). Watch: 38. Avoid: none. Spot-check (GLD): rate/dollar cause current (Kitco Oct 2); WGC Q2 CB buying 289t but Q1 revised to 57t, so not demoted.
 - $100k: no risk-parity book; GLD at the 1% risk budget ≈ $9.6k, rest cash.
 - Memo: log/2026-10-29-r2-lite.md.
+
+## 2026-10-30 — etf-dip-pick panel
+
+Full panel (scan as of 2026-10-29 close): 40 candidates, 4 sequential lenses, verifier with no demotion, memo log/2026-10-30.md, 8 buys, no core rows.
