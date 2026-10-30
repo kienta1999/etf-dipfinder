@@ -526,3 +526,7 @@ deploy-keys page with write access; existing personal key is registered elsewher
 ## 2026-10-30 — etf-dip-pick panel
 
 Full panel (scan as of 2026-10-29 close): 40 candidates, 4 sequential lenses, verifier with no demotion, memo log/2026-10-30.md, 8 buys, no core rows.
+
+## 2026-10-30-r2 — etf-dip-pick panel
+
+Full panel, second run of the day (scan as of the 2026-10-29 close): 40 candidates, 4 sequential Opus lenses, verifier with no demotions. Buys XAR, DTCR, VNM; core GRID. Memo: log/2026-10-30-r2.md.
