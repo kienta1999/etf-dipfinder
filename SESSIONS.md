@@ -534,3 +534,7 @@ Full panel, second run of the day (scan as of the 2026-10-29 close): 40 candidat
 ## 2026-10-31 — etf-dip-pick panel
 
 Full panel (scan as of 2026-10-30 close): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys XAR, QTUM, PBW, VNM, UFO; core GRID. Memo: log/2026-10-31.md.
+
+## 2026-11-01 — etf-dip-pick panel
+
+Full panel (scan as of the 2026-10-30 close, byte-identical to the prior run — full anyway under the always-full rule): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys XAR, NLR, AIQ, VNM, REMX, EUAD, UFO; core GRID. Memo: log/2026-11-01.md.
