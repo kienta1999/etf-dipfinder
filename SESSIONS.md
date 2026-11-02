@@ -542,3 +542,7 @@ Full panel (scan as of the 2026-10-30 close, byte-identical to the prior run —
 ## 2026-11-02 — etf-dip-pick panel
 
 Full panel (scan as of the 2026-10-30 close, byte-identical to the prior run — full anyway under the always-full rule): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys XAR, BAI, NLR, EUAD, VNM, UFO; core GRID. Memo: log/2026-11-02.md. Audit: check_memo.py initially failed on 6 dropped carried-forward catalyst rows; catalyst ballot amended with scores unchanged (keywords 12-11/Surface/truce/bond added), then audit passed except the uncommitted-files check cleared by commit.
+
+## 2026-11-02-r2 — etf-dip-pick-lite
+
+Lite (scan as of the 2026-10-30 close, 23 searches, Claude Opus 5.5): 46 candidates in 20 themes; no buys, core GLD, alt GDXJ/SIL; 13 themes capped at cause 5 as unverified on snippet search. Memo: log/2026-11-02-r2-lite.md.
