@@ -550,3 +550,7 @@ Lite (scan as of the 2026-10-30 close, 23 searches, Claude Opus 5.5): 46 candida
 ## 2026-11-03 — etf-dip-pick panel
 
 Full panel (scan as of the 2026-11-02 close): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys PAVE, XAR, QCLN, BAI, REMX, NLR, UFO, LIT; no core, no vetoes, no thin names. Memo: log/2026-11-03.md. Audit: check_memo.py initially failed on 7 dropped carried-forward catalyst keywords; catalyst ballot amended with a keyword cross-reference note, scores unchanged (same fix as 2026-11-02, plus the verifier-appended Cameco-FY row); final audit passes except the uncommitted-files check cleared by the orchestrator's central commit.
+
+## 2026-11-03-r2 — etf-dip-pick-lite
+
+Lite run (scheduled, one agent, 23 searches; scan as of the 2026-11-02 close): 46 candidates in 20 themes. Buys SOXX, PAVE, VNM; core GLD; alt SMH, GRID, GDXJ; no vetoes. SOXX spot-check passed (hyperscaler capex guides raised; NVDA Nov 17 call confirmed). Five themes capped at cause 5 as unverified. Memo: log/2026-11-03-r2-lite.md.
