@@ -558,3 +558,7 @@ Lite run (scheduled, one agent, 23 searches; scan as of the 2026-11-02 close): 4
 ## 2026-11-04 — etf-dip-pick panel
 
 Full panel (scan as of the 2026-11-03 close): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys PSI, BAI, XAR, REMX, TAN, NLR, QCLN, UFO; no core, no vetoes, no thin names. Memo: log/2026-11-04.md. Audit: check_memo.py initially failed on 5 dropped carried-forward catalyst keywords (12-11/truce/bond/Cameco-FY) and an ARGT catalyst doubt-phrasing flag; catalyst ballot amended with a keyword cross-reference note and reworded ARGT row, scores unchanged; final audit passes except the uncommitted-files check, cleared by the orchestrator's central commit.
+
+## 2026-11-04-r2 — etf-dip-pick lite
+
+Lite run (Claude Opus 5.5; scan as of the 2026-11-03 close): 46 candidates in 20 themes, 23 searches. None of the 20 theme searches returned dated news from the last 6 weeks, so cause is capped at 5 everywhere. Result: no buy, no core, all 46 watch. Top wtd: SOXX 7.00, PSI, XSD. Spot-check on SOXX (Oct 16 semis rout) confirmed band 5. Memo: log/2026-11-04-r2-lite.md.
