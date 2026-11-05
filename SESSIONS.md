@@ -562,3 +562,7 @@ Full panel (scan as of the 2026-11-03 close): 46 candidates in 20 themes, 4 sequ
 ## 2026-11-04-r2 — etf-dip-pick lite
 
 Lite run (Claude Opus 5.5; scan as of the 2026-11-03 close): 46 candidates in 20 themes, 23 searches. None of the 20 theme searches returned dated news from the last 6 weeks, so cause is capped at 5 everywhere. Result: no buy, no core, all 46 watch. Top wtd: SOXX 7.00, PSI, XSD. Spot-check on SOXX (Oct 16 semis rout) confirmed band 5. Memo: log/2026-11-04-r2-lite.md.
+
+## 2026-11-05 — etf-dip-pick panel
+
+Full panel (scan as of the 2026-11-04 close): 47 candidates in 20 themes, 4 sequential lenses, verifier with no demotions. Buys PSI, BAI, GDXJ, XAR, GRID, REMX, NLR, UFO, KWEB; no core; 6 vetoes (ICLN, PBW, QCLN, EWZ, BKCH, WGMI), no thin names. Memo: log/2026-11-05.md. Dossier correction flagged by cause and necessity panelists: the dossier's Argentina section pasted Brazil's Lula runoff story onto Argentina — Milei's party won Argentina's Oct 26 midterms, so ARGT scored cause 7, not 3.
