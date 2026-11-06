@@ -574,3 +574,7 @@ Lite run (Claude Opus 5.5; scan as of the 2026-11-04 close): 47 candidates in 20
 ## 2026-11-06 — etf-dip-pick panel
 
 Full panel (scan as of the 2026-11-05 close): 46 candidates in 20 themes, 4 sequential lenses, verifier with no demotions (45 claims: 43 confirmed, 2 contradicted — dossier's 10y ~4.16% Oct 30 corrected to 4.94%, FSLR Nov 5 +1.6% corrected to +0.64%; neither breaks a buy case). Buys PSI, PAVE, GLD, KWEB, PBW, AIQ, REMX; no core, no vetoes, no thin names. Memo: log/2026-11-06.md. Audit: check_memo.py initially failed on 8 dropped carried-forward catalyst keywords (12-11/Surface/truce/bond/Cameco-FY/Hinojosa) and 5 doubt-phrasing flags; catalyst ballot amended with a keyword cross-reference note and reworded rows, scores unchanged (same fix as 2026-11-02/03/04); final audit passes except the uncommitted-files check, cleared by the orchestrator's central commit. Model: Muse Spark (muse-spark) — full panel.
+
+## 2026-11-06-r2 — etf-dip-pick panel
+
+Full panel, second run of the day (scan as of the 2026-11-05 close, byte-identical to 2026-11-06): 46 candidates in 20 themes, 4 sequential Opus lenses, verifier with no demotions (all SOXX/GDXJ facts and regime premises confirmed; 4 figures corrected, SOXX cause flagged as arguably 6). Buys GDXJ, SOXX; no core; alts PSI, GLD, SMH, URNM, URA; no vetoes. Memo: log/2026-11-06-r2.md. Catalyst ballot got a ledger keyword cross-reference note (bond/Cameco-FY/Hinojosa), scores unchanged. Model: Claude Opus 5.5 (claude-opus-5-5) — full panel.
