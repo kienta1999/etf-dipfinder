@@ -73,3 +73,5 @@ New dated events found (for the verifier):
 - Seven-country OPEC+ group monthly meeting: **2026-11-29**. Source: opec.org release of 1 Nov 2026 (https://opec.org/pr-detail/2033620-1-november-2026.html), snippet only.
 - Tencent Music Entertainment Q3 2026 results, 17 Nov 2026 before the US open (board on 16 Nov). Source: itiger reprint (https://www.itiger.com/news/1120893590), third-party, a small KWEB weight, and not used for any score.
 - Not dated, so not used: Alibaba Sep-quarter (est. Nov 24), Tencent Holdings Q3, JD Q3, Broadcom Q4 FY26 (est. Dec 10), Micron FQ1 FY27 (est. Dec 16), Samsung Q4 prelim (early Jan), the refined-copper 232 duty (conditional, Jan 1, 2027), and the NATO 2027 Albania summit.
+
+Ledger keyword cross-reference (added by the orchestrator after consolidation; no score changed): ARGT's 2027-01-09 Globales coupon row is the ledger's `bond` row; URA/URNM/NLR's 2027-02-12 Cameco Q4/full-year row is the ledger's `Cameco-FY` row; GRID's Jan 19 Texas governor row is the ledger's `Hinojosa` row. All three are carried forward from section D and are scored above.
