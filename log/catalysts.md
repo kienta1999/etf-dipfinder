@@ -208,6 +208,10 @@ verifiers had quoted the date from Cameco's own Q2 release. `check_memo.py` now 
 | argentina | ARGT-low | ARGT hit a new 52-week low intraday $73.11-73.12 on Nov 5, 2026, closing $74.01 (-5.66%), on the broad US risk-off day (S&P -4.36%, SOXX -12.8%), not Argentina-specific news | 2026-11-05 | stockanalysis/financecharts ARGT history (Nov 5, 2026: low $73.11-73.12, close $74.01, -5.66%; 52-week low date 11/05/2026) | 2026-11-07 |
 
 
+| defense-eu | EU-summit | EU special budget summit (2028-2034 MFF / defence funding) in Brussels, Nov 26-27, 2026; Council President Costa to table a revised negotiating box; unanimity far from certain, fallback is the regular European Council Dec 17-18 | 2026-11-26 | brusselssignal.eu Nov 2026 (special summit Nov 26-27; MFF compromise, military mobility EUR14bn in the competitiveness heading); Agence Europe 2026-10-29 (extraordinary summit Thu 26 Nov; compromise most likely at Dec 17-18 Council) | 2026-11-08 |
+| defense-eu | MilMobility | EU military-mobility regulation trilogue (final round): Parliament on track for Dec 9; Commission proposes EUR17.65bn for 2028-2034 (~10x the EUR1.69bn 2021-2027), EMERS emergency mechanism still contested | 2026-12-09 | euperspectives.eu 2026-10-21 (Parliament on track for 9 December, last trilogue; Commission EUR17.65bn); wisevoter.com 2026-10-20 (next trilogue Dec 9, 2026; EMERS to be settled) | 2026-11-08 |
+| grid/infra | IEA-grid | IEA Electricity 2026: annual grid investment must rise ~50% by 2030 from ~USD400bn/yr (to ~USD600bn/yr); over 2,500 GW of renewable, large-load and storage projects stalled in grid connection queues worldwide | 2026-02-06 | iea.org/reports/electricity-2026/grids (fetched 2026-11-08): "Over 2 500 GW ... currently stalled in grid queues worldwide"; "annual grid investment to increase by approximately 50% by 2030 from today's USD 400 billion" | 2026-11-08 |
+
 ## Disputed
 
 Dates that sources contradict each other on. Not confirmed, so `carry_forward.py` prints them apart from the
