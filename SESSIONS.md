@@ -594,3 +594,7 @@ Full panel (scan as of the 2026-11-06 close, same completed session as 2026-11-0
 ## 2026-11-09-r2 — etf-dip-pick lite
 
 Lite run (Claude Opus 5.5; scan as of the 2026-11-06 close): 45 candidates in 20 themes, 22 searches (20 themes, 1 regime, 1 check). Only semis returned dated news from the last ~6 weeks (Oct 30 SOXX -8.2%, worst semis selloff since COVID on AI-capex financing doubts); the other 19 themes have cause capped at 5. Result: no buy, no core, no alt, all 45 watch, no veto. Top wtd: SOXX 7.25, PSI 7.10, XSD 7.10. Spot-check was on the #1 fund (no buy): SOXX cause 6 confirmed as dated sentiment, not flows-only. Memo: log/2026-11-09-r2-lite.md.
+
+## 2026-11-10 — etf-dip-pick lite
+
+Lite run (Claude Opus 5.5; scan as of the 2026-11-09 close): 48 candidates in 20 themes, 23 searches (20 themes, 1 regime, 2 spot-check). Most themes returned nothing dated from the last ~6 weeks, so their cause is capped at 5. Gold got a dated rates/positioning cause plus WGC Q3 data (Nov 3, central-bank buying +42%). Result: Buy GLD, Alt GDXJ, no core, 46 watch, no veto. Top wtd: GLD 7.30, PSI/XSD/SOXX 7.10. Spot-check on GLD: demand fact confirmed, rates-driver fact not refreshed past Sep 1, so no demotion. Memo: log/2026-11-10-lite.md.
