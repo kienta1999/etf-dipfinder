@@ -606,3 +606,7 @@ Full panel, second run of the day (scan as of the 2026-11-09 close; a lite run f
 ## 2026-11-11 — etf-dip-pick panel
 
 Full panel (scan as of the 2026-11-10 close, a new completed session): 48 candidates in 20 themes, 4 sequential lenses, verifier with no demotions (all 8 buys confirmed from primary sources; figures corrected — Quanta backlog USD 63.7bn, Eaton Q3 Americas +39%, First Solar 44.0 GW / USD 1.5bn net cash, Dec hike ~91% 25bp + ~9–11% 50bp, 10y 4.98% Nov 10, oil Nov 9–10 settles, Anthropic breach 112 accounts, gold USD 4,134.83 Nov 5 intraday high, silver ~USD 52–53, NVDA CEO probe Nov 8; GTC 2027 start still disputed Mar 14 vs 15). Buys REMX, NLR, BAI, GRID, ICLN, UFO, TAN, EWY; no core; no veto; 2 thin names (PAVE R/R 1.26, FCG R/R 1.18). Memo: log/2026-11-11.md. Model: Muse Spark (muse-spark-1.3) — full panel.
+
+## 2026-11-11-r2 — etf-dip-pick lite
+
+Lite (scan as of the 2026-11-10 close, 23 searches): 48 candidates in 20 themes. No buy. Core GLD (spot-checked: WGC Q3 central-bank buying +42%, Nov 3; Dec 9 hike ~85–91% priced). Alt GDXJ, GDX. Semis watch on cause 6 after the Nov 5 crash. No veto. 8 themes unverified and capped at cause 5. Memo: log/2026-11-11-r2-lite.md. Model: Claude Opus 5.5 (claude-opus-5-5) — lite.
