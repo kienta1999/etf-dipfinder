@@ -618,3 +618,7 @@ Full panel (scan as of the 2026-11-11 close, a new completed session — not byt
 ## 2026-11-12-r2 — etf-dip-pick panel
 
 Full panel by Claude Opus 5.5 (scan as of the 2026-11-11 close, same data as 2026-11-12; scored independently and renamed from 2026-11-12 because that id was taken first): 47 candidates in 20 themes, quick pass + 4 sequential Opus lenses + Opus verifier, all fresh subagents with no access to other runs. Buy SOXX, GRID, BAI, GDX, EWY; alt SMH, BOTZ, GDXJ; no core, no vetoes (defense-us lowest, cause 4, after the Democratic sweep). Verifier: all five buys confirmed, no demotions; regime premises corrected (Dec 9 hike 100% priced, 10y 4.98%, KOSPI −8.6% was intraday); ledger 14 rows re-verified, 6 history rows added. Tranche: SOXX/BAI/EWY half now, half after NVIDIA Nov 17; GRID, GDX all in.
+
+## 2026-11-12-r3 — etf-dip-pick-lite
+
+Lite by Claude Opus 5.5 (scan as of the 2026-11-11 close; 23 searches): 47 candidates in 20 themes. Buy SOXX, GRID, EWY; alt XSD, PSI, SMH; no core, no avoids. SOXX spot-check held (NVDA Nov 17 confirmed on investor.nvidia.com; no hyperscaler capex cut found). GRID's cause 7 flagged as inferred (no stated cause in its own search). Tranche: SOXX/EWY half now, half after NVIDIA Nov 17; GRID all in.
