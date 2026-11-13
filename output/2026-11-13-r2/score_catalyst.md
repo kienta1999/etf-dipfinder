@@ -43,7 +43,7 @@ Floors applied (verified against dossier section D, rows marked "catalyst >= 7" 
 | 35 | QTUM | 6 | Band 6: NVDA ~1-2%; GTC Mar 2027 (quantum day historically) as timing only | nvidia.com GTC; D |
 | 36 | UFO | 6 | Band 6: Starship Flight 15 NET Nov 13 (today), dual catch, still pending FAA license modification — provisional and binary; Artemis III only "summer 2027", no date | SpaceX Nov 7; spacepolicyonline / NSF (pending FAA) |
 | 37 | ARKX | 6 | Band 6: same Flight 15 binary; Neutron slipped to 2027 (no date) | SpaceX Nov 7; D |
-| 38 | ARGT | 6 | Band 6: Globales coupon/amortisation Jan 9, 2027 (prospectus-dated; payment expected, so market-neutral to two-way); MSCI keeps Argentina Standalone, next review June 2027, no date set | SEC 424B5 acc. 0001193125-20-221606; D |
+| 38 | ARGT | 6 | Band 6: Globales coupon/amortisation Jan 9, 2027 (prospectus-dated; payment expected, so market-neutral to two-way); MSCI keeps Argentina Standalone, next review June 2027 (day not yet announced) | SEC 424B5 acc. 0001193125-20-221606; D |
 | 39 | EWZ | 6 | Band 6: Copom Dec 8-9 (decision Dec 9, 18:30 BRT), Selic 13.75%, Focus sees 13.50% — symmetric rate timing, partly priced | BCB Copom 2026 calendar via valorfinal / investidor10 (secondary) |
 | 40 | OIH | 6 | Band 6: 42nd OPEC+ Ministerial Nov 29 — two-way quota decision; 'opec' row is not a scan-theme floor | opec.org press release Nov 1, 2026; D |
 | 41 | AMLP | 5 | Band 6 −1: OPEC+ Nov 29 is two-way, and fee-based midstream is only weakly crude-sensitive | opec.org; D |
@@ -75,3 +75,11 @@ New dated events found (with source):
 - Micron FQ1 FY27 results ~Dec 16, 2026 (days.to projection only). UNCONFIRMED; not used for any score above band 4.
 - Starship Flight 15: still NET Nov 13 pending FAA license modification as of the latest reports (spacepolicyonline, NASASpaceflight Nov 6). No new confirmation; the existing D row stands.
 - No new dated trigger found for crypto, nuclear (beyond Cameco Feb 12), Argentina (MSCI kept it Standalone in June 2026, next review June 2027, undated), or copper (refined-copper 232 phase-in has no proclamation date).
+
+## Orchestrator addendum (2026-11-13-r2; no score changed)
+Ledger match keys the rows above use by date rather than by key, so check_memo can link them (all live, all scored as dated):
+- defense-us: `12-11` = FY27 CR expiry 2026-12-11 (XAR/ITA/PPA/SHLD rows, floor 7).
+- grid/infra: `Hinojosa` = Texas governor-elect takes office 2027-01-19 (the "Texas data-center moratorium risk Jan 19" in the GRID row; negative overhang, not scored as upside).
+- nuclear: `Cameco-FY` = Cameco Q4/FY2026 results 2027-02-12 (the URA/URNM/NLR rows).
+- rare-earth: `No58-2026` = MOFCOM/GACC Announcement 2026 No. 58, suspension to 2027-01-10 (cited in the REMX row).
+- argentina: `bond` = Globales coupon/amortisation 2027-01-09 (the ARGT row; scored as dated, band 6). The ARGT row's MSCI phrase was reworded from "no date set" to "day not yet announced" so it is not read as doubting the bond date; the score is unchanged.
