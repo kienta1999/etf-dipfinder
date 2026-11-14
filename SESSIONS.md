@@ -630,3 +630,9 @@ Full panel (scan as of the 2026-11-12 close, 46 candidates in 20 themes, 4 seque
 ## 2026-11-13-r2 — etf-dip-pick panel
 
 Full panel (Friday full panel, scan as of 2026-11-12 close, Claude Opus 5.5 orchestrator + 5 Opus subagents): 46 candidates / 20 themes. Buy EWY; alt GDX, URNM, URA; no core, no avoids, no overrides. Verifier: 7/7 load-bearing claims confirmed, no demotions; ledger + Copom Dec 9. Cause lens far stricter than the same-day 2026-11-13 panel (1 buy vs 10) on identical prices.
+
+> Run by: Muse Spark (unknown) — full panel
+
+## 2026-11-14 — etf-dip-pick panel (run 53)
+
+Full panel on the Fri Nov 13 close: 46 candidates, 20 themes. Buy REMX, XAR, XSD, NLR, QTUM, TAN, ICLN, EWY, GDXJ, UFO; no core; vetoes EWZ, ARGT; no thin. Verifier confirmed all 10 buys, no demotions, 6 rows appended to log/catalysts.md. Regime: FOMC held Oct 28 (3.75-4.00%), Dec 9 hike priced ~100%; 10y ~5.13%; WTI 88.56 / Brent 95.84; gold broke its Oct 30 low Nov 12.
