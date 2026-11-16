@@ -644,3 +644,7 @@ Full panel on the Fri Nov 13 close (scan byte-identical to 2026-11-14 — always
 ## 2026-11-16 — etf-dip-pick-lite
 
 Lite, one agent, 23 searches, on the Fri Nov 13 close: 46 candidates, 20 themes. Buy none, core none, alt none, avoid none; all 46 watch. Top wtd: SOXX, GRID, PPA (7.05-7.10, cause 6). Regime: hot Oct CPI, 10y near 5%, Dec hike talk; Nov 3 Democratic sweep set off the AI/data-center sell-off (SOX −12% Nov 5). Spot-check had no buy to check and went to the regime premise; no change. \$100k stays cash until NVDA Nov 17 / CR cliff Dec 11. Diverges sharply from the 2026-11-15 panel (9 buys). Memo: log/2026-11-16-lite.md. Model: Claude Opus 5.5 (claude-opus-5-5) — lite.
+
+## 2026-11-16-r2 — etf-dip-pick panel
+
+Full panel on the Fri Nov 13 close (same scan as the 2026-11-16 lite and the 2026-11-14/15 panels — always-full rule): 46 candidates, 20 themes. Buy QTUM, XAR, GRID, NLR, REMX, EWY, UFO; no core; vetoes PBW, LIT, EWZ, BLOK, WGMI, ARGT (all cause 3); no thin. No deviations from the weighted score. UFO buys on the stabilizing leg alone (catalyst 2), the thinnest buy leg in the run. Verifier confirmed all 7 buys from primary sources, no demotions; 7 ledger rows re-verified, 1 new history row (Cameco Oct 31 uranium prices), no retractions; GTC start day stays Disputed (Mar 14 vs 15). Regime: FOMC held Oct 28 (3.75-4.00%), Dec 9 hike priced ~100%; 10y ~5.10%; Brent ~95.8, -19% from the late-Oct peak; Nov 5 SOX -12.2% after the Nov 3 midterm sweep; NVDA Q3 Tue Nov 17. Memo: log/2026-11-16-r2.md. Model: Muse Spark (unknown) — full panel.
