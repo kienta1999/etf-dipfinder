@@ -1,0 +1,73 @@
+> Run by: Opus 5.5 (claude-opus-5-5) — full panel
+
+# necessity — 2026-11-18
+
+Lens: how much the world needs what each theme provides over the next 5-10 years, and whether AI, a substitute
+technology or policy can route around it. Price, the cause of the drop and catalysts are deliberately ignored.
+Scored band-first from the lenses.md anchors (10 civilisation-critical / 7 structurally growing but substitutable /
+5 real but cyclical / 3 rests on conditions that may not hold / 1 fashion or dead subsidy), then moved by at most
+1 point for a named fact. Researched once per theme and copied to siblings; where a sibling differs, its row says
+why. No row is 2+ points off its band. No row is unverified: every score rests on the number and source shown.
+
+| rank | ETF | score | one-line reason (this lens only) | key source |
+|---|---|---|---|---|
+| 1 | SMH | 9 | semis. Band 10 −1: chips have no substitute and the market is still compounding (WSTS: $1.51T in 2026, +89.9%; $1.9T in 2027, +26.6%). −1 because $803.9B of 2026 is memory at cycle-peak prices, so part of the measured "demand" is price, not units | WSTS Spring 2026 forecast, 2026-06-02 (wsts.org) |
+| 2 | SOXX | 9 | semis. Band 10 −1: same as SMH | WSTS Spring 2026 forecast, 2026-06-02 |
+| 3 | PSI | 9 | semis. Band 10 −1: same as SMH | WSTS Spring 2026 forecast, 2026-06-02 |
+| 4 | XSD | 9 | semis. Band 10 −1: same as SMH | WSTS Spring 2026 forecast, 2026-06-02 |
+| 5 | GRID | 9 | grid/infra. Band 10 −1: wires have no substitute. IEA sees electricity demand +3.6%/yr in 2026-30 and grid capex needing to rise ~50%, from $400B to ~$600B/yr by 2030. −1 because the data-center share of that growth (206→460 TWh) is exposed to policy brakes such as the Texas new-approval moratorium pledge (dossier D, Jan 19) | IEA Electricity 2026, Feb 2026 (iea.org exec summary) |
+| 6 | COPX | 9 | base-metals. Band 10 −1: copper is the electrification metal, and the IEA still sees primary supply ~25% short of requirements in 2035 (30% in last year's edition). −1 for partial aluminium substitution in cables, and because the gap narrowed y/y | IEA Global Critical Minerals Outlook 2026, Jul 2026; mining.com |
+| 7 | DRAM | 8 | semis, sibling differs. Band 7 +1: memory is a commodity-cycle segment (band 7, not 10), but HBM has no substitute in AI accelerators. SK Hynix + Samsung hold ~80% of HBM, and memory revenue is forecast to go from $230B to $803.9B in 2026 | WSTS 2026-06-02; Counterpoint via Al Jazeera 2026-10-01 |
+| 8 | URA | 8 | nuclear. Band 7 +1: firm, carbon-free baseload. WNA reference-case reactor requirements go from 68,920 tU (2025) to >150,000 tU by 2040. Substitutable at the margin by gas and renewables+storage (band 7); +1 because no other firm zero-carbon source scales for 24/7 data-center load | WNA World Nuclear Fuel Report 2025 (world-nuclear.org; WNN) |
+| 9 | URNM | 8 | nuclear. Band 7 +1: same as URA (fuel-cycle miners carry the same demand curve) | WNA World Nuclear Fuel Report 2025 |
+| 10 | NLR | 8 | nuclear. Band 7 +1: same as URA (operators/utilities in the fund sell the same firm power) | WNA World Nuclear Fuel Report 2025 |
+| 11 | AIQ | 8 | ai/robot. Band 7 +1: AI compute demand is structurally rising, with NVIDIA Data Center at $107.6B, +110% y/y, and a $130B Q4 guide. IEA sees data-center power more than doubling to >460 TWh by 2030. The vendor is substitutable, the need is not | NVIDIA 8-K 2026-11-17 (dossier C.0); IEA Electricity 2026 |
+| 12 | BAI | 8 | ai/robot. Band 7 +1: same as AIQ | NVIDIA 8-K 2026-11-17 |
+| 13 | AIPO | 8 | ai/robot. Band 7 +1: same theme; AI-power is the binding input (IEA data-center TWh more than doubling by 2030) | IEA Electricity 2026, Feb 2026 |
+| 14 | DTCR | 8 | reit. Band 7 +1: data-center/tower/fiber landlords. North America data-center vacancy has been at 1% for a third straight year, with 25 GW absorbed in H1 2026 and 66 GW under construction, 95% pre-committed. Hyperscaler self-build is the visible substitute (band 7); +1 for the scarcity numbers | JLL North America Data Center Report, midyear 2026 (datacenterfrontier) |
+| 15 | REMX | 8 | rare-earth. Band 7 +1: magnet rare-earth demand goes from 59 kt (2022) to 176 kt (2035), roughly a tripling. Ferrite and rare-earth-free motors are the visible substitutes (band 7). +1 because ex-China refining (<40 kt planned vs ~50 kt mined by 2035) is policy-mandated demand (DFARS magnet ban from 2027-01-01, dossier D) | McKinsey via Northern Miner (2025); IEA GCMO 2026, Jul 2026 |
+| 16 | GLD | 8 | gold. Band 7 +1: neutral reserve asset; central banks bought 321t in Q3 2026 (+42% y/y, vs a 227t five-year quarterly average), 675t YTD, and the WGC expects 2026 to at least match 2025. Substitutable as a store of value (band 7); +1 because the official-sector bid is structural and price-insensitive | WGC Gold Demand Trends Q3 2026, 2026-11-03 (gold.org) |
+| 17 | GDX | 8 | gold. Band 7 +1: same as GLD (miners sell the same metal) | WGC Gold Demand Trends Q3 2026, 2026-11-03 |
+| 18 | GDXJ | 8 | gold. Band 7 +1: same as GLD | WGC Gold Demand Trends Q3 2026, 2026-11-03 |
+| 19 | XAR | 8 | defense-us. Band 7 +1: world military spending hit a record $2.887T in 2025 (+2.9% real, 11th straight rise). NATO is committed to 5% of GDP by 2035 (3.5% core), and non-US core spending rose from 2.2% to 2.4% of GDP in 2026. Deterrence has no substitute; the band is 7 only because the US path is set by appropriations | SIPRI 2026-04-27; NATO Hague 2025-06-25; Janes (Ankara summit, Jul 2026) |
+| 20 | SHLD | 8 | defense-us. Band 7 +1: same theme. Global defense-tech mix; Europe's spending was +14% to $864B in 2025 | SIPRI 2026-04-27 |
+| 21 | ITA | 8 | defense-us. Band 7 +1: same as XAR | SIPRI 2026-04-27 |
+| 22 | PPA | 8 | defense-us. Band 7 +1: same as XAR | SIPRI 2026-04-27 |
+| 23 | EWY | 7 | korea. Band 7: a country fund, but chips were $56.44B (+259% y/y), 49% of Korea's record $115.3B October exports, and HBM is AI-critical. Autos, shipbuilding and banks keep it at band 7, not higher | Korea Times / MOTIE 2026-11-01 |
+| 24 | BOTZ | 7 | ai/robot, sibling differs. Band 7: about half the fund is industrial automation. IFR: 603,307 robot installs in 2025 (+11%), forecast 655k in 2026 and 806k in 2029. Growing but cyclical-capex | IFR World Robotics 2026, 2026-09-24 |
+| 25 | ROBO | 7 | ai/robot, sibling differs. Band 7: same as BOTZ (automation-heavy) | IFR World Robotics 2026, 2026-09-24 |
+| 26 | ARKQ | 7 | ai/robot, sibling differs. Band 7: autonomy/robotics; IFR growth applies, but the autonomous-vehicle demand case is still pre-scale | IFR World Robotics 2026, 2026-09-24 |
+| 27 | QTUM | 7 | ai/robot, sibling differs. Band 7: the semis/ML half carries the AI demand (NVIDIA DC +110%); the quantum half has no proven commercial demand inside 10y | NVIDIA 8-K 2026-11-17 |
+| 28 | PAVE | 7 | grid/infra, sibling differs. Band 7: US construction and infrastructure need is real, but its funding is congressional, not structural. IIJA advance appropriations lapsed Oct 1, 2026 (transit −20%, rail −81%, dossier D), and the $580B BUILD America 250 Act is not enacted | CRS IG10101, 2026-09-14; dossier D (P.L. 119-103) |
+| 29 | LIT | 7 | lithium. Band 7: EV and storage demand is growing, but with a visible competing technology. Benchmark sees storage lithium demand slowing to ~5%/yr through 2030 (from >60%), and sodium-ion is taking stationary storage (CATL/Alfen 5 GWh). Not obsolete in long-range EVs | Benchmark via ess-news 2026-10-22 |
+| 30 | ICLN | 7 | clean. Band 7: IEA sees 4,600 GW of renewables added 2025-30, but the forecast was cut 248 GW and US additions cut ~50% after incentives were phased out. Growing, policy-exposed and substitutable | IEA Renewables 2025, 2025-10-07 |
+| 31 | UFO | 7 | space. Band 7: the space economy grew to $686B in 2025 (+12%), with $1T seen by ~2032. Comms and Earth observation drive it; terrestrial networks substitute at the margin | Space Foundation via Payload Space, Jul 2026 |
+| 32 | ARKX | 7 | space. Band 7: same as UFO; the defense sleeve (fund renamed Space & Defense) carries the same structural need | Space Foundation via Payload Space, Jul 2026 |
+| 33 | XME | 6 | base-metals, sibling differs. Band 5 +1: a modified-equal-weight mix of 8 sub-industries (steel, aluminium, coal, copper, gold, silver, precious, diversified), so it is mostly cyclical demand. +1 for the copper, uranium and critical-mineral constituents | SSGA XME index methodology / fund page, 2026-11-09 |
+| 34 | PICK | 6 | base-metals, sibling differs. Band 5 +1: iron-ore majors lead (BHP 13.87%, Rio 6.39%) and gold/silver are excluded, so China-steel cyclical demand dominates. +1 for the copper sleeve (Freeport, Glencore) | Trackinsight/ETF Central holdings 2026-08-31 |
+| 35 | PBW | 6 | clean, sibling differs. Band 7 −1: same renewables need as ICLN, but the small-cap mix leans on hydrogen and EV names whose US credits were cut (IEA US forecast ~−50%) | IEA Renewables 2025, 2025-10-07 |
+| 36 | TAN | 6 | solar. Band 7 −1: solar is ~80% of renewables growth, but 2026 is the first annual decline in two decades (SPE 612 GW, −8%; BNEF 584 GW). The US residential leg in TAN lost its credit. SPE sees growth resuming in 2027, so not band 3 | SolarPower Europe GMO 2026-2030, 2026-06-22; IEA Renewables 2025 |
+| 37 | AMLP | 6 | oil/gas, sibling differs. Band 5 +1: midstream volume rides gas, not crude. US LNG exports go from 15.0 bcf/d (2025) to ~18.6 bcf/d (2027), and export capacity nearly doubles by 2031 | EIA STEO / Today in Energy (2026) |
+| 38 | FCG | 6 | oil/gas, sibling differs. Band 5 +1: gas producers. LNG plus data-center gas burn (~4-6 bcf/d by 2030), and IEA LNG demand from 560 to 880 bcm by 2035 | EIA STEO (2026); IEA WEO 2025, Nov 2025 |
+| 39 | OIH | 5 | oil/gas. Band 5: oil demand plateaus at ~105.6 mb/d around 2029 per the IEA medium-term view. Real and cyclical, with no structural growth claim; services are the most capex-cyclical leg | IEA Oil 2025, Jun 2025 |
+| 40 | SLV | 5 | silver. Band 5: sixth straight deficit (46.3 Moz in 2026), but industrial demand is falling ~3% to ~640 Moz as PV use drops 19% to ~151 Moz on thrifting and substitution. Real demand, no structural growth claim | Silver Institute World Silver Survey 2026 (Apr 2026) |
+| 41 | SIL | 5 | silver. Band 5: same as SLV | Silver Institute World Silver Survey 2026 |
+| 42 | KWEB | 5 | china. Band 5: Chinese consumer-internet demand is real but maturing. NBS online goods sales were +4.6% and total retail +2.6% in Jan-Jul 2026 | NBS via gov.cn, Aug 2026 |
+| 43 | FXI | 5 | china. Band 5: same as KWEB (large-cap banks, SOEs and internet, same domestic-demand base) | NBS via gov.cn, Aug 2026 |
+| 44 | ARGT | 5 | argentina. Band 5: real export demand from a record 902,920 b/d of oil in July 2026 (Vaca Muerta 72% of output), plus agriculture. Commodity-cyclical, with no structural claim beyond that | oilprice / Gulf News (Jul 2026 data, Sep 2026) |
+| 45 | IBIT | 4 | crypto-spot. Band 3 +1: no cash-flow demand; it rests on adoption holding (band 3). +1 for institutional and sovereign anchoring: spot ETFs hold ~1.29M BTC (IBIT ~806k), and the US Strategic Bitcoin Reserve was set up by EO in Mar 2025 (revocable) | ETF holdings report, Oct 2026 (KuCoin/aggregator); The Block (SBR explainer) |
+| 46 | WGMI | 4 | crypto-equity, sibling differs. Band 3 +1: miners' demand rests on BTC price (band 3); +1 because powered sites now also host AI compute, into 1% data-center vacancy | JLL midyear 2026; dossier C.1 (IREN/Cipher pivot) |
+| 47 | ETHA | 3 | crypto-spot, sibling differs. Band 3: Ethereum's settlement role is substitutable and visibly being substituted. Its share of non-USD stablecoin supply fell from 90% (early 2023) to ~65% (Feb 2026), and it shed ~$4.9B of stablecoin supply to Tron in Q3 2026 | Dune/Visa via The Defiant, Feb 2026; Cryptobriefing Q3 2026 |
+| 48 | BLOK | 3 | crypto-equity. Band 3: blockchain equities whose demand rests on crypto activity and prices holding | ETF holdings report, Oct 2026; Cryptobriefing Q3 2026 |
+
+Top-3 notes:
+- **SMH / semis (9):** WSTS's Spring 2026 forecast (2026-06-02) puts the 2026 chip market at $1.51T (+89.9%), rising to ~$1.9T in 2027 (+26.6%), and its Q2 data release already runs the 2026 arithmetic to ~$1.655T. The one reason this is not a 10 is that $803.9B of 2026 is memory at peak pricing, so some of the "need" is price that will mean-revert, but nothing routes around logic or memory silicon.
+- **GRID (9):** The IEA's Electricity 2026 (Feb 2026) has demand growing 3.6%/yr in 2026-30, ~2.5x faster than total energy, and says grid capex must rise ~50% from $400B/yr. Wires are not substitutable, and the main thing that can slow it is policy on new data-center load (the Texas moratorium pledge, dossier D), which is a small share of the total.
+- **COPX (9):** The IEA's Global Critical Minerals Outlook 2026 (Jul 2026) still projects primary copper supply ~25% short of requirements in 2035 under current policies. That is narrower than last year's 30% but still a structural deficit in the electrification metal. Aluminium substitution in some cables is the only visible route around it, hence 9 not 10.
+
+Disagreements with the dossier's first-pass memo:
+- **base-metals is not one necessity theme.** The memo groups XME, COPX and PICK as copper/AI-infrastructure exposure. On necessity, only COPX is a copper fund. XME is modified-equal-weight across 8 sub-industries (steel, coal and aluminium included, per SSGA), and PICK is led by iron-ore majors (BHP 13.87%, Rio 6.39%, Aug 31, 2026). They score 6, not 9.
+- **grid/infra: PAVE is not GRID.** The memo's "electrification demand is not disputed" fits GRID (9). PAVE is US construction whose demand is set by appropriations that already lapsed in part (Div. J, Oct 1, 2026), so 7, below the 8 that the core path needs.
+- **silver: the "crowded trade unwinding" framing understates a weakening use-case.** The Silver Institute has PV silver demand −19% in 2026 from thrifting and substitution, so the structural industrial claim is fading even though the deficit persists. Band 5, not 7.
+- **solar: subsidy cliff ≠ necessity collapse.** The memo flags the OBBBA cliff as break-type. On necessity, the US is a minority of global demand (IEA's US cut is ~140 GW of solar out of 4,600 GW of renewables), and SPE sees installs resuming growth in 2027. TAN scores 6 (band 7 −1), not band 3/1.
+- **crypto-spot: IBIT and ETHA differ.** The memo treats them as one risk-off theme. On necessity, Ethereum is visibly being routed around by other chains (non-USD stablecoin share 90% → ~65%), while Bitcoin's ETF and reserve holdings anchor it slightly better: IBIT 4, ETHA 3.

@@ -656,3 +656,7 @@ Full panel on the Mon Nov 16 close: 47 candidates, 20 themes. Buy NLR, PAVE, TAN
 ## 2026-11-17-r2 — etf-dip-pick lite
 
 Lite run on the Mon Nov 16 close: 47 candidates, 20 themes, 23 searches (20 themes + regime + 2 spot-check). Buy NLR; alt URNM, URA; no core, no avoids; thin FCG only. Catalyst floors applied: defense-us, grid/infra, china, solar, clean, korea. Spot-check passed: TradeTech LT uranium record US 99.00/lb Oct 31; Cameco Feb 12 date uncontradicted. Grid/infra, clean, china, argentina, oil/gas marked unverified (no Nov-dated cause), cause capped 5. Sizing: one buy, so 1% risk budget (~5.4k USD NLR), rest cash. Memo: log/2026-11-17-r2-lite.md. Model: Claude Opus 5.5 (claude-opus-5-5) — lite.
+
+## 2026-11-18 — etf-dip-pick panel
+
+Full panel by Claude Opus 5.5 (scan as of the 2026-11-17 close, before NVIDIA's after-hours reaction): 48 candidates in 20 themes. Quick pass, 4 sequential Opus lenses and an Opus verifier, all fresh subagents with no access to other runs. Rule buys SOXX, GDXJ, GRID, BAI, EWY; the verifier demoted GDXJ (stabilizing flag rests on a Nov 3 base, gold fell again Nov 18) and EWY (cause is memory-peak fear, the DRAM cause scored 5). Final buys SOXX, GRID, BAI; alt XSD, PSI, SMH, AIQ, GDX, GLD; avoid TAN (cause 3, First Solar guidance cut). Tranche half now, half after Dec 9 (FOMC + Broadcom). Ledger: Broadcom Dec 9 added, five live rows re-verified.
