@@ -1,223 +1,106 @@
-> Run by: Opus 5.5 (claude-opus-5-5) — full panel
+> Run by: Muse Spark (muse-spark) — full panel
 
-# Dossier 2026-11-18
+# Dossier — etf-dip-pick 2026-11-18
 
-Run id `2026-11-18`. Scan as of the **2026-11-17 close** (`data/scan.csv`, written by scan.py today, not re-run).
-Dossier written ~04:00 ET on 2026-11-18, pre-market. **NVIDIA reported Q3 FY27 after the Nov 17 close, so scan
-prices do NOT include the reaction**: NVDA was +4.8% after hours and Nasdaq-100 futures +1.4% (see C.0). Semis,
-ai/robot, korea and reit open from a different level than the scan shows.
-Independence: built from today's scan, the web, and `scripts/carry_forward.py` output only. No other run's memos,
-dossiers, ballots or SESSIONS.md were opened.
+Scan as of 2026-11-17 close. 48 candidates in 20 themes. NOTE: Nvidia reported Q3 FY27 AFTER the Nov 17 close (revenue $115.8B vs $108.7B expected, Q4 guide $130B, EPS $2.70; interim CEO Colette Kress; SEC civil investigation opened; board chair Harvey Jones says Huang will not be reinstated) — scan prices do NOT reflect the print; futures pointed to a Nasdaq rebound on Nov 18 morning. Anthropic IPO prices Nov 18.
 
-**48 candidates in 20 themes:** rare-earth, silver, clean, solar, nuclear, lithium, crypto-equity, china, space,
-argentina, ai/robot, base-metals, crypto-spot, gold, reit, semis, korea, defense-us, grid/infra, oil/gas.
+## A. Candidates (full scan rows)
 
-## A. Candidates — full scan.csv rows
+Column legend: dd_52w = drawdown from 52w high; dd_pctile = drawdown depth vs own 3y history (<0.10 = real event); dd_z = drawdown / vol; vs_sma200 = price vs 200-day SMA; rs_spy_3m/6m/12m = relative strength vs SPY; ret_10d = 10-day return; stabilizing = 10-day return > 0; dip_score = depth rank (0 = deepest, NOT quality); price_score = computed price lens (see lenses.md); tp_pct/sl_pct/rr = take-profit / stop-loss / risk-reward from scan.
 
-**Legend.** Fractions, not percent: −0.58 = −58%.
-- `theme`: headline group; siblings move on the same news.
-- `asof`: last close used.
-- `days`: price history length in trading days (751 ≈ 3y; DRAM 159, AIPO 332, BAI 520 and ETHA 584 are young funds).
-- `price`: last close.
-- `dd_52w`: close vs the 252-day rolling high.
-- `dd_pctile`: share of this ETF's own history with a drawdown this deep or deeper. Low means unusually deep for
-  *this* fund.
-- `dd_z`: dd_52w / vol_60d, a vol-normalised depth.
-- `vs_sma200`, `vs_sma50`: close vs the 200-day and 50-day simple moving averages.
-- `rs_spy_3m`, `rs_spy_6m`, `rs_spy_12m`: return minus SPY return over 3, 6 and 12 months.
-- `ret_10d`: 10-day return.
-- `vol_60d`: annualised 60-day volatility.
-- `dollar_vol`: 20-day average $ volume.
-- `tp_pct`: target, a return to the 52w high.
-- `sl_pct`: stop, −SL_SIGMA·vol60/√12.
-- `dip_low_pct`: lowest close since the 52w high vs the last close; 0 means sitting on the low.
-- `rr`: tp_pct / |sl_pct|. Thin when below 1.3.
-- `size_1pct`: position size risking 1% of the portfolio at sl_pct.
-- `is_dip`: (below SMA200 OR ≥10% off the 52w high) AND rs_spy_3m < 0.
-- `stabilizing`: ret_10d > 0.
-- `dip_score`: depth rank, 0 = most beaten up. This is *depth, not quality*.
-- `price_score`: the computed price lens (lenses.md): depth from dd_pctile + trend from rs_spy_12m + 2 if
-  stabilizing.
-- `theme_score`: the theme's best dip_score.
-- `is_candidate`: in the top 20 themes by theme_score.
+| ticker | theme | asof | price | dd_52w | dd_pctile | dd_z | vs_sma200 | rs_spy_3m | rs_spy_6m | rs_spy_12m | ret_10d | stabilizing | dip_score | price_score | tp_pct | sl_pct | rr |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+| REMX | rare-earth | 2026-11-17 | 45.9500 | -0.5805 | 0.0014 | -1.6080 | -0.4334 | -0.3501 | -0.5045 | -0.4354 | -0.0760 | False | 0.0325 | 5 | 1.3837 | -0.1563 | 8.8517 |
+| SLV | silver | 2026-11-17 | 42.6400 | -0.5962 | 0.0027 | -1.4855 | -0.3078 | -0.2442 | -0.3659 | -0.1741 | -0.0491 | False | 0.0745 | 6 | 1.4765 | -0.1738 | 8.4963 |
+| SIL | silver | 2026-11-17 | 70.8300 | -0.3991 | 0.0027 | -0.8146 | -0.2026 | -0.2159 | -0.1832 | -0.0522 | -0.0062 | False | 0.3065 | 7 | 0.6641 | -0.2121 | 3.1304 |
+| PBW | clean | 2026-11-17 | 23.0400 | -0.5024 | 0.0014 | -1.2341 | -0.3062 | -0.2618 | -0.3876 | -0.3319 | -0.1243 | False | 0.0838 | 6 | 1.0096 | -0.1763 | 5.7271 |
+| ICLN | clean | 2026-11-17 | 14.8500 | -0.3731 | 0.0014 | -1.3696 | -0.2032 | -0.1219 | -0.2939 | -0.2202 | -0.0782 | False | 0.1398 | 6 | 0.5950 | -0.1179 | 5.0451 |
+| TAN | solar | 2026-11-17 | 38.1200 | -0.4844 | 0.0014 | -1.2887 | -0.2864 | -0.1994 | -0.3781 | -0.3319 | -0.1204 | False | 0.0885 | 6 | 0.9394 | -0.1628 | 5.7718 |
+| URA | nuclear | 2026-11-17 | 30.0400 | -0.5140 | 0.0014 | -1.1369 | -0.3424 | -0.2873 | -0.3669 | -0.3985 | -0.0911 | False | 0.0928 | 5 | 1.0576 | -0.1958 | 5.4021 |
+| URNM | nuclear | 2026-11-17 | 37.7500 | -0.5505 | 0.0014 | -1.1723 | -0.3368 | -0.2752 | -0.3419 | -0.3796 | -0.0864 | False | 0.0975 | 5 | 1.2249 | -0.2034 | 6.0234 |
+| NLR | nuclear | 2026-11-17 | 84.3000 | -0.4871 | 0.0014 | -1.1480 | -0.3080 | -0.2386 | -0.3292 | -0.4318 | -0.0637 | False | 0.1114 | 5 | 0.9498 | -0.1837 | 5.1693 |
+| LIT | lithium | 2026-11-17 | 56.4200 | -0.3815 | 0.0014 | -1.6168 | -0.2349 | -0.1981 | -0.3104 | -0.2109 | -0.0612 | False | 0.0978 | 6 | 0.6169 | -0.1022 | 6.0375 |
+| WGMI | crypto-equity | 2026-11-17 | 24.1900 | -0.6645 | 0.0027 | -0.7726 | -0.4831 | -0.4191 | -0.5623 | -0.5051 | -0.1758 | False | 0.1390 | 5 | 1.9806 | -0.3724 | 5.3182 |
+| BLOK | crypto-equity | 2026-11-17 | 46.8600 | -0.3173 | 0.0123 | -0.7319 | -0.2033 | -0.1781 | -0.2308 | -0.3116 | -0.1020 | False | 0.2971 | 6 | 0.4649 | -0.1877 | 2.4760 |
+| KWEB | china | 2026-11-17 | 22.0800 | -0.4137 | 0.0027 | -1.7105 | -0.1899 | -0.1436 | -0.2225 | -0.4892 | -0.0515 | False | 0.1771 | 5 | 0.7056 | -0.1047 | 6.7375 |
+| FXI | china | 2026-11-17 | 32.8800 | -0.1877 | 0.0355 | -1.0203 | -0.0659 | -0.0332 | -0.0902 | -0.2672 | -0.0093 | False | 0.4985 | 5 | 0.2310 | -0.0796 | 2.9008 |
+| UFO | space | 2026-11-17 | 39.3000 | -0.4196 | 0.0055 | -1.2968 | -0.1637 | -0.1126 | -0.3137 | 0.0768 | -0.0313 | False | 0.1821 | 8 | 0.7230 | -0.1401 | 5.1601 |
+| ARKX | space | 2026-11-17 | 27.6900 | -0.2663 | 0.0027 | -0.8483 | -0.1405 | -0.1316 | -0.1814 | -0.0998 | -0.0742 | False | 0.3676 | 7 | 0.3629 | -0.1359 | 2.6702 |
+| ARGT | argentina | 2026-11-17 | 70.7700 | -0.3100 | 0.0027 | -1.1200 | -0.2178 | -0.1805 | -0.1977 | -0.3154 | -0.0961 | False | 0.2136 | 6 | 0.4493 | -0.1199 | 3.7488 |
+| BOTZ | ai/robot | 2026-11-17 | 29.7100 | -0.2860 | 0.0027 | -1.0645 | -0.1793 | -0.1381 | -0.2390 | -0.2525 | -0.0808 | False | 0.2328 | 6 | 0.4005 | -0.1163 | 3.4431 |
+| AIPO | ai/robot | 2026-11-17 | 22.6300 | -0.3492 | 0.0096 | -0.7619 | -0.2059 | -0.1821 | -0.2613 | -0.1017 | -0.1041 | False | 0.2600 | 7 | 0.5365 | -0.1984 | 2.7036 |
+| BAI | ai/robot | 2026-11-17 | 34.2100 | -0.3692 | 0.0060 | -0.7248 | -0.1915 | -0.1813 | -0.2431 | -0.0747 | -0.1066 | False | 0.3159 | 7 | 0.5852 | -0.2206 | 2.6533 |
+| ARKQ | ai/robot | 2026-11-17 | 102.2800 | -0.2888 | 0.0068 | -0.8296 | -0.1680 | -0.1431 | -0.2142 | -0.1565 | -0.0781 | False | 0.3209 | 6 | 0.4061 | -0.1508 | 2.6938 |
+| ROBO | ai/robot | 2026-11-17 | 68.4400 | -0.2424 | 0.0055 | -0.7959 | -0.1334 | -0.1173 | -0.1738 | -0.0716 | -0.0810 | False | 0.4048 | 7 | 0.3200 | -0.1319 | 2.4262 |
+| QTUM | ai/robot | 2026-11-17 | 122.4200 | -0.2712 | 0.0027 | -0.7251 | -0.1126 | -0.1372 | -0.1287 | 0.0556 | -0.0738 | False | 0.5350 | 8 | 0.3721 | -0.1619 | 2.2977 |
+| AIQ | ai/robot | 2026-11-17 | 55.8500 | -0.2037 | 0.0109 | -0.7192 | -0.0525 | -0.0681 | -0.0786 | 0.0128 | -0.0620 | False | 0.6423 | 8 | 0.2559 | -0.1227 | 2.0860 |
+| XME | base-metals | 2026-11-17 | 89.1900 | -0.3276 | 0.0014 | -0.9356 | -0.1979 | -0.1924 | -0.1923 | -0.1276 | -0.0782 | False | 0.2696 | 7 | 0.4873 | -0.1516 | 3.2134 |
+| COPX | base-metals | 2026-11-17 | 65.3100 | -0.3229 | 0.0082 | -0.7664 | -0.2075 | -0.2149 | -0.1776 | -0.0050 | -0.0892 | False | 0.3155 | 7 | 0.4768 | -0.1824 | 2.6138 |
+| PICK | base-metals | 2026-11-17 | 51.2200 | -0.2507 | 0.0096 | -0.9014 | -0.1490 | -0.1447 | -0.1562 | 0.0341 | -0.0607 | False | 0.3815 | 8 | 0.3346 | -0.1204 | 2.7782 |
+| ETHA | crypto-spot | 2026-11-17 | 40.6500 | -0.4705 | 0.3558 | -1.0271 | -0.1609 | -0.1015 | -0.1527 | -0.5298 | -0.2149 | False | 0.3535 | 1 | 0.8886 | -0.1983 | 4.4798 |
+| IBIT | crypto-spot | 2026-11-17 | 36.1400 | -0.3481 | 0.2296 | -0.9028 | -0.1177 | -0.0228 | -0.1725 | -0.4260 | -0.1796 | False | 0.4052 | 2 | 0.5340 | -0.1670 | 3.1985 |
+| GLD | gold | 2026-11-17 | 352.4800 | -0.2892 | 0.0014 | -1.2175 | -0.1352 | -0.1030 | -0.1467 | -0.1643 | -0.0189 | False | 0.3538 | 6 | 0.4069 | -0.1029 | 3.9559 |
+| GDXJ | gold | 2026-11-17 | 95.8400 | -0.3864 | 0.0164 | -0.7440 | -0.1763 | -0.1974 | -0.1344 | -0.0956 | 0.0079 | True | 0.4273 | 9 | 0.6297 | -0.2249 | 2.8000 |
+| GDX | gold | 2026-11-17 | 79.5700 | -0.3131 | 0.0546 | -0.6769 | -0.1103 | -0.1372 | -0.0535 | -0.0495 | 0.0254 | True | 0.6277 | 7 | 0.4558 | -0.2003 | 2.2759 |
+| DTCR | reit | 2026-11-17 | 24.1000 | -0.2548 | 0.0014 | -0.9191 | -0.1243 | -0.1044 | -0.1839 | 0.0657 | -0.0486 | False | 0.3586 | 8 | 0.3420 | -0.1201 | 2.8484 |
+| PSI | semis | 2026-11-17 | 107.9600 | -0.4252 | 0.0055 | -0.6503 | -0.1804 | -0.1808 | -0.2485 | 0.3560 | -0.0842 | False | 0.3670 | 8 | 0.7397 | -0.2831 | 2.6129 |
+| DRAM | semis | 2026-11-17 | 38.9300 | -0.5177 | 0.0143 | -0.7081 |  | -0.2487 | -0.2211 |  | -0.1828 | False | 0.4167 | 5 | 1.0735 | -0.3166 | 3.3905 |
+| XSD | semis | 2026-11-17 | 417.2500 | -0.3573 | 0.0150 | -0.6864 | -0.1234 | -0.1254 | -0.2244 | 0.2468 | -0.0835 | False | 0.4374 | 8 | 0.5560 | -0.2254 | 2.4667 |
+| SMH | semis | 2026-11-17 | 460.1000 | -0.3122 | 0.0109 | -0.6702 | -0.1227 | -0.1345 | -0.1575 | 0.2360 | -0.1127 | False | 0.5162 | 8 | 0.4538 | -0.2017 | 2.2503 |
+| SOXX | semis | 2026-11-17 | 141.4600 | -0.3517 | 0.0178 | -0.6543 | -0.1187 | -0.1376 | -0.1480 | 0.3738 | -0.0874 | False | 0.5486 | 8 | 0.5424 | -0.2327 | 2.3308 |
+| EWY | korea | 2026-11-17 | 135.3200 | -0.3827 | 0.0027 | -0.7004 | -0.1757 | -0.1790 | -0.2257 | 0.3681 | -0.1273 | False | 0.3718 | 8 | 0.6199 | -0.2366 | 2.6203 |
+| XAR | defense-us | 2026-11-17 | 220.1500 | -0.2577 | 0.0055 | -0.8591 | -0.1572 | -0.1794 | -0.1542 | -0.1348 | -0.0595 | False | 0.3813 | 7 | 0.3471 | -0.1299 | 2.6727 |
+| SHLD | defense-us | 2026-11-17 | 58.4400 | -0.2486 | 0.0068 | -1.1007 | -0.1173 | -0.1102 | -0.0875 | -0.1920 | -0.0779 | False | 0.4469 | 6 | 0.3308 | -0.0978 | 3.3826 |
+| PPA | defense-us | 2026-11-17 | 154.5000 | -0.1641 | 0.0123 | -0.7661 | -0.0861 | -0.0913 | -0.0637 | -0.0735 | -0.0471 | False | 0.5677 | 7 | 0.1964 | -0.0928 | 2.1168 |
+| ITA | defense-us | 2026-11-17 | 69.6000 | -0.1745 | 0.0314 | -0.7961 | -0.0811 | -0.1055 | -0.0451 | -0.0854 | -0.0341 | False | 0.5817 | 6 | 0.2113 | -0.0949 | 2.2270 |
+| GRID | grid/infra | 2026-11-17 | 155.1500 | -0.2188 | 0.0041 | -0.7397 | -0.1281 | -0.1042 | -0.1597 | -0.0769 | -0.0732 | False | 0.4512 | 7 | 0.2801 | -0.1281 | 2.1867 |
+| PAVE | grid/infra | 2026-11-17 | 51.6700 | -0.1372 | 0.0669 | -0.6096 | -0.0575 | -0.0447 | -0.0407 | 0.0071 | -0.0576 | False | 0.7441 | 6 | 0.1590 | -0.0974 | 1.6316 |
+| OIH | oil/gas | 2026-11-17 | 354.3900 | -0.2193 | 0.1749 | -0.6464 | -0.1122 | -0.1083 | -0.2175 | 0.1531 | -0.0798 | False | 0.5072 | 5 | 0.2808 | -0.1469 | 1.9119 |
+| AMLP | oil/gas | 2026-11-17 | 50.0300 | -0.0912 | 0.0301 | -0.6189 | -0.0177 | -0.0246 | -0.0545 | 0.0507 | -0.0292 | False | 0.7633 | 7 | 0.1004 | -0.0638 | 1.5728 |
+| FCG | oil/gas | 2026-11-17 | 28.7000 | -0.1218 | 0.2937 | -0.4064 | -0.0152 | -0.0247 | -0.0806 | 0.1161 | -0.0587 | False | 0.8468 | 4 | 0.1387 | -0.1298 | 1.0687 |
 
-Ordered as scan.csv (theme_score, then dip_score).
+LEADERS (top rs_spy_3m among non-dips):
+- USO oil/gas rs_spy_3m 0.1165 rs_spy_6m -0.0865 dd_52w -0.1728
+- XLP staples rs_spy_3m 0.1091 rs_spy_6m 0.0735 dd_52w -0.0123
+- IAK fin-other rs_spy_3m 0.1042 rs_spy_6m 0.1397 dd_52w -0.0103
+- XLV health rs_spy_3m 0.1037 rs_spy_6m 0.2645 dd_52w -0.0233
+- BUG cyber rs_spy_3m 0.0968 rs_spy_6m 0.3167 dd_52w -0.1742
+- IHF health-other rs_spy_3m 0.0940 rs_spy_6m 0.1654 dd_52w -0.0326
+- INDA india rs_spy_3m 0.0929 rs_spy_6m 0.0946 dd_52w -0.0534
+- PHO water rs_spy_3m 0.0901 rs_spy_6m 0.1776 dd_52w -0.0250
+- PPH health-other rs_spy_3m 0.0726 rs_spy_6m 0.1794 dd_52w -0.0209
+- IHI health-other rs_spy_3m 0.0521 rs_spy_6m 0.1326 dd_52w -0.1125
 
-| ETF | theme | asof | days | price | dd_52w | dd_pctile | dd_z | vs_sma200 | vs_sma50 | rs_spy_3m | rs_spy_6m | rs_spy_12m | ret_10d | vol_60d | dollar_vol | tp_pct | sl_pct | dip_low_pct | rr | size_1pct | is_dip | stabilizing | dip_score | price_score | theme_score | is_candidate |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| REMX | rare-earth | 2026-11-17 | 751 | 45.95 | -0.5805 | 0.0014 | -1.6080 | -0.4334 | -0.2214 | -0.3501 | -0.5045 | -0.4354 | -0.0760 | 0.3610 | 47,311,720 | 1.3837 | -0.1563 | 0.0000 | 8.8517 | 0.0640 | True | False | 0.0325 | 5 | 0.0325 | True |
-| SLV | silver | 2026-11-17 | 751 | 42.64 | -0.5962 | 0.0027 | -1.4855 | -0.3078 | -0.1830 | -0.2442 | -0.3659 | -0.1741 | -0.0491 | 0.4013 | 887,913,402 | 1.4765 | -0.1738 | -0.0059 | 8.4963 | 0.0575 | True | False | 0.0745 | 6 | 0.0745 | True |
-| SIL | silver | 2026-11-17 | 751 | 70.83 | -0.3991 | 0.0027 | -0.8146 | -0.2026 | -0.1526 | -0.2159 | -0.1832 | -0.0522 | -0.0062 | 0.4899 | 79,416,271 | 0.6641 | -0.2121 | -0.0049 | 3.1304 | 0.0471 | True | False | 0.3065 | 7 | 0.0745 | True |
-| PBW | clean | 2026-11-17 | 751 | 23.04 | -0.5024 | 0.0014 | -1.2341 | -0.3062 | -0.1637 | -0.2618 | -0.3876 | -0.3319 | -0.1243 | 0.4071 | 10,534,539 | 1.0096 | -0.1763 | 0.0000 | 5.7271 | 0.0567 | True | False | 0.0838 | 6 | 0.0838 | True |
-| ICLN | clean | 2026-11-17 | 751 | 14.85 | -0.3731 | 0.0014 | -1.3696 | -0.2032 | -0.1110 | -0.1219 | -0.2939 | -0.2202 | -0.0782 | 0.2724 | 108,023,978 | 0.5950 | -0.1179 | 0.0000 | 5.0451 | 0.0848 | True | False | 0.1398 | 6 | 0.0838 | True |
-| TAN | solar | 2026-11-17 | 751 | 38.12 | -0.4844 | 0.0014 | -1.2887 | -0.2864 | -0.1241 | -0.1994 | -0.3781 | -0.3319 | -0.1204 | 0.3759 | 96,523,072 | 0.9394 | -0.1628 | 0.0000 | 5.7718 | 0.0614 | True | False | 0.0885 | 6 | 0.0885 | True |
-| URA | nuclear | 2026-11-17 | 751 | 30.04 | -0.5140 | 0.0014 | -1.1369 | -0.3424 | -0.1988 | -0.2873 | -0.3669 | -0.3985 | -0.0911 | 0.4521 | 152,710,053 | 1.0576 | -0.1958 | 0.0000 | 5.4021 | 0.0511 | True | False | 0.0928 | 5 | 0.0928 | True |
-| URNM | nuclear | 2026-11-17 | 751 | 37.75 | -0.5505 | 0.0014 | -1.1723 | -0.3368 | -0.1754 | -0.2752 | -0.3419 | -0.3796 | -0.0864 | 0.4696 | 34,532,373 | 1.2249 | -0.2034 | 0.0000 | 6.0234 | 0.0492 | True | False | 0.0975 | 5 | 0.0928 | True |
-| NLR | nuclear | 2026-11-17 | 751 | 84.30 | -0.4871 | 0.0014 | -1.1480 | -0.3080 | -0.1509 | -0.2386 | -0.3292 | -0.4318 | -0.0637 | 0.4243 | 48,197,434 | 0.9498 | -0.1837 | 0.0000 | 5.1693 | 0.0544 | True | False | 0.1114 | 5 | 0.0928 | True |
-| LIT | lithium | 2026-11-17 | 751 | 56.42 | -0.3815 | 0.0014 | -1.6168 | -0.2349 | -0.1399 | -0.1981 | -0.3104 | -0.2109 | -0.0612 | 0.2360 | 14,696,367 | 0.6169 | -0.1022 | 0.0000 | 6.0375 | 0.0979 | True | False | 0.0978 | 6 | 0.0978 | True |
-| WGMI | crypto-equity | 2026-11-17 | 751 | 24.19 | -0.6645 | 0.0027 | -0.7726 | -0.4831 | -0.3496 | -0.4191 | -0.5623 | -0.5051 | -0.1758 | 0.8601 | 24,872,723 | 1.9806 | -0.3724 | -0.0384 | 5.3182 | 0.0269 | True | False | 0.1390 | 5 | 0.1390 | True |
-| BLOK | crypto-equity | 2026-11-17 | 751 | 46.86 | -0.3173 | 0.0123 | -0.7319 | -0.2033 | -0.1834 | -0.1781 | -0.2308 | -0.3116 | -0.1020 | 0.4336 | 10,696,627 | 0.4649 | -0.1877 | 0.0000 | 2.4760 | 0.0533 | True | False | 0.2971 | 6 | 0.1390 | True |
-| KWEB | china | 2026-11-17 | 751 | 22.08 | -0.4137 | 0.0027 | -1.7105 | -0.1899 | -0.0838 | -0.1436 | -0.2225 | -0.4892 | -0.0515 | 0.2419 | 598,115,017 | 0.7056 | -0.1047 | 0.0000 | 6.7375 | 0.0955 | True | False | 0.1771 | 5 | 0.1771 | True |
-| FXI | china | 2026-11-17 | 751 | 32.88 | -0.1877 | 0.0355 | -1.0203 | -0.0659 | -0.0276 | -0.0332 | -0.0902 | -0.2672 | -0.0093 | 0.1839 | 727,449,422 | 0.2310 | -0.0796 | -0.0392 | 2.9008 | 0.1256 | True | False | 0.4985 | 5 | 0.1771 | True |
-| UFO | space | 2026-11-17 | 751 | 39.30 | -0.4196 | 0.0055 | -1.2968 | -0.1637 | -0.0544 | -0.1126 | -0.3137 | 0.0768 | -0.0313 | 0.3236 | 9,818,681 | 0.7230 | -0.1401 | -0.0532 | 5.1601 | 0.0714 | True | False | 0.1821 | 8 | 0.1821 | True |
-| ARKX | space | 2026-11-17 | 751 | 27.69 | -0.2663 | 0.0027 | -0.8483 | -0.1405 | -0.1056 | -0.1316 | -0.1814 | -0.0998 | -0.0742 | 0.3139 | 18,832,085 | 0.3629 | -0.1359 | -0.0233 | 2.6702 | 0.0736 | True | False | 0.3676 | 7 | 0.1821 | True |
-| ARGT | argentina | 2026-11-17 | 751 | 70.77 | -0.3100 | 0.0027 | -1.1200 | -0.2178 | -0.1696 | -0.1805 | -0.1977 | -0.3154 | -0.0961 | 0.2768 | 15,258,367 | 0.4493 | -0.1199 | -0.0031 | 3.7488 | 0.0834 | True | False | 0.2136 | 6 | 0.2136 | True |
-| BOTZ | ai/robot | 2026-11-17 | 751 | 29.71 | -0.2860 | 0.0027 | -1.0645 | -0.1793 | -0.1227 | -0.1381 | -0.2390 | -0.2525 | -0.0808 | 0.2686 | 28,615,474 | 0.4005 | -0.1163 | 0.0000 | 3.4431 | 0.0860 | True | False | 0.2328 | 6 | 0.2328 | True |
-| AIPO | ai/robot | 2026-11-17 | 332 | 22.63 | -0.3492 | 0.0096 | -0.7619 | -0.2059 | -0.1479 | -0.1821 | -0.2613 | -0.1017 | -0.1041 | 0.4582 | 46,731,299 | 0.5365 | -0.1984 | -0.0442 | 2.7036 | 0.0504 | True | False | 0.2600 | 7 | 0.2328 | True |
-| BAI | ai/robot | 2026-11-17 | 520 | 34.21 | -0.3692 | 0.0060 | -0.7248 | -0.1915 | -0.2010 | -0.1813 | -0.2431 | -0.0747 | -0.1066 | 0.5094 | 240,618,858 | 0.5852 | -0.2206 | -0.0494 | 2.6533 | 0.0453 | True | False | 0.3159 | 7 | 0.2328 | True |
-| ARKQ | ai/robot | 2026-11-17 | 751 | 102.28 | -0.2888 | 0.0068 | -0.8296 | -0.1680 | -0.1245 | -0.1431 | -0.2142 | -0.1565 | -0.0781 | 0.3482 | 13,587,467 | 0.4061 | -0.1508 | -0.0284 | 2.6938 | 0.0663 | True | False | 0.3209 | 6 | 0.2328 | True |
-| ROBO | ai/robot | 2026-11-17 | 751 | 68.44 | -0.2424 | 0.0055 | -0.7959 | -0.1334 | -0.1141 | -0.1173 | -0.1738 | -0.0716 | -0.0810 | 0.3046 | 9,451,711 | 0.3200 | -0.1319 | 0.0000 | 2.4262 | 0.0758 | True | False | 0.4048 | 7 | 0.2328 | True |
-| QTUM | ai/robot | 2026-11-17 | 751 | 122.42 | -0.2712 | 0.0027 | -0.7251 | -0.1126 | -0.1390 | -0.1372 | -0.1287 | 0.0556 | -0.0738 | 0.3740 | 49,119,485 | 0.3721 | -0.1619 | -0.0255 | 2.2977 | 0.0617 | True | False | 0.5350 | 8 | 0.2328 | True |
-| AIQ | ai/robot | 2026-11-17 | 751 | 55.85 | -0.2037 | 0.0109 | -0.7192 | -0.0525 | -0.1134 | -0.0681 | -0.0786 | 0.0128 | -0.0620 | 0.2833 | 99,354,847 | 0.2559 | -0.1227 | 0.0000 | 2.0860 | 0.0815 | True | False | 0.6423 | 8 | 0.2328 | True |
-| XME | base-metals | 2026-11-17 | 751 | 89.19 | -0.3276 | 0.0014 | -0.9356 | -0.1979 | -0.1315 | -0.1924 | -0.1923 | -0.1276 | -0.0782 | 0.3502 | 159,001,822 | 0.4873 | -0.1516 | 0.0000 | 3.2134 | 0.0659 | True | False | 0.2696 | 7 | 0.2696 | True |
-| COPX | base-metals | 2026-11-17 | 751 | 65.31 | -0.3229 | 0.0082 | -0.7664 | -0.2075 | -0.1856 | -0.2149 | -0.1776 | -0.0050 | -0.0892 | 0.4213 | 247,931,617 | 0.4768 | -0.1824 | 0.0000 | 2.6138 | 0.0548 | True | False | 0.3155 | 7 | 0.2696 | True |
-| PICK | base-metals | 2026-11-17 | 751 | 51.22 | -0.2507 | 0.0096 | -0.9014 | -0.1490 | -0.1234 | -0.1447 | -0.1562 | 0.0341 | -0.0607 | 0.2781 | 52,583,906 | 0.3346 | -0.1204 | 0.0000 | 2.7782 | 0.0830 | True | False | 0.3815 | 8 | 0.2696 | True |
-| ETHA | crypto-spot | 2026-11-17 | 584 | 40.65 | -0.4705 | 0.3558 | -1.0271 | -0.1609 | -0.2578 | -0.1015 | -0.1527 | -0.5298 | -0.2149 | 0.4581 | 448,571,243 | 0.8886 | -0.1983 | -0.1336 | 4.4798 | 0.0504 | True | False | 0.3535 | 1 | 0.3535 | True |
-| IBIT | crypto-spot | 2026-11-17 | 716 | 36.14 | -0.3481 | 0.2296 | -0.9028 | -0.1177 | -0.1993 | -0.0228 | -0.1725 | -0.4260 | -0.1796 | 0.3856 | 1,955,706,457 | 0.5340 | -0.1670 | -0.0789 | 3.1985 | 0.0599 | True | False | 0.4052 | 2 | 0.3535 | True |
-| GLD | gold | 2026-11-17 | 751 | 352.48 | -0.2892 | 0.0014 | -1.2175 | -0.1352 | -0.0697 | -0.1030 | -0.1467 | -0.1643 | -0.0189 | 0.2375 | 3,512,493,454 | 0.4069 | -0.1029 | 0.0000 | 3.9559 | 0.0972 | True | False | 0.3538 | 6 | 0.3538 | True |
-| GDXJ | gold | 2026-11-17 | 751 | 95.84 | -0.3864 | 0.0164 | -0.7440 | -0.1763 | -0.1333 | -0.1974 | -0.1344 | -0.0956 | 0.0079 | 0.5194 | 527,024,375 | 0.6297 | -0.2249 | -0.0436 | 2.8000 | 0.0445 | True | True | 0.4273 | 9 | 0.3538 | True |
-| GDX | gold | 2026-11-17 | 751 | 79.57 | -0.3131 | 0.0546 | -0.6769 | -0.1103 | -0.0904 | -0.1372 | -0.0535 | -0.0495 | 0.0254 | 0.4625 | 1,991,562,932 | 0.4558 | -0.2003 | -0.1110 | 2.2759 | 0.0499 | True | True | 0.6277 | 7 | 0.3538 | True |
-| DTCR | reit | 2026-11-17 | 751 | 24.10 | -0.2548 | 0.0014 | -0.9191 | -0.1243 | -0.0946 | -0.1044 | -0.1839 | 0.0657 | -0.0486 | 0.2773 | 33,975,252 | 0.3420 | -0.1201 | 0.0000 | 2.8484 | 0.0833 | True | False | 0.3586 | 8 | 0.3586 | True |
-| PSI | semis | 2026-11-17 | 751 | 107.96 | -0.4252 | 0.0055 | -0.6503 | -0.1804 | -0.1848 | -0.1808 | -0.2485 | 0.3560 | -0.0842 | 0.6538 | 81,588,172 | 0.7397 | -0.2831 | -0.1028 | 2.6129 | 0.0353 | True | False | 0.3670 | 8 | 0.3670 | True |
-| DRAM | semis | 2026-11-17 | 159 | 38.93 | -0.5177 | 0.0143 | -0.7081 | NaN | -0.2579 | -0.2487 | -0.2211 | NaN | -0.1828 | 0.7312 | 1,815,692,837 | 1.0735 | -0.3166 | -0.0493 | 3.3905 | 0.0316 | True | False | 0.4167 | 5 | 0.3670 | True |
-| XSD | semis | 2026-11-17 | 751 | 417.25 | -0.3573 | 0.0150 | -0.6864 | -0.1234 | -0.1434 | -0.1254 | -0.2244 | 0.2468 | -0.0835 | 0.5206 | 61,306,430 | 0.5560 | -0.2254 | -0.0578 | 2.4667 | 0.0444 | True | False | 0.4374 | 8 | 0.3670 | True |
-| SMH | semis | 2026-11-17 | 751 | 460.10 | -0.3122 | 0.0109 | -0.6702 | -0.1227 | -0.1716 | -0.1345 | -0.1575 | 0.2360 | -0.1127 | 0.4658 | 6,032,767,428 | 0.4538 | -0.2017 | -0.0269 | 2.2503 | 0.0496 | True | False | 0.5162 | 8 | 0.3670 | True |
-| SOXX | semis | 2026-11-17 | 751 | 141.46 | -0.3517 | 0.0178 | -0.6543 | -0.1187 | -0.1706 | -0.1376 | -0.1480 | 0.3738 | -0.0874 | 0.5375 | 6,121,310,710 | 0.5424 | -0.2327 | -0.0676 | 2.3308 | 0.0430 | True | False | 0.5486 | 8 | 0.3670 | True |
-| EWY | korea | 2026-11-17 | 751 | 135.32 | -0.3827 | 0.0027 | -0.7004 | -0.1757 | -0.1864 | -0.1790 | -0.2257 | 0.3681 | -0.1273 | 0.5463 | 2,516,927,032 | 0.6199 | -0.2366 | -0.0271 | 2.6203 | 0.0423 | True | False | 0.3718 | 8 | 0.3718 | True |
-| XAR | defense-us | 2026-11-17 | 751 | 220.15 | -0.2577 | 0.0055 | -0.8591 | -0.1572 | -0.0481 | -0.1794 | -0.1542 | -0.1348 | -0.0595 | 0.2999 | 84,526,441 | 0.3471 | -0.1299 | -0.0269 | 2.6727 | 0.0770 | True | False | 0.3813 | 7 | 0.3813 | True |
-| SHLD | defense-us | 2026-11-17 | 751 | 58.44 | -0.2486 | 0.0068 | -1.1007 | -0.1173 | -0.0459 | -0.1102 | -0.0875 | -0.1920 | -0.0779 | 0.2258 | 113,594,745 | 0.3308 | -0.0978 | -0.0073 | 3.3826 | 0.1023 | True | False | 0.4469 | 6 | 0.3813 | True |
-| PPA | defense-us | 2026-11-17 | 751 | 154.50 | -0.1641 | 0.0123 | -0.7661 | -0.0861 | -0.0179 | -0.0913 | -0.0637 | -0.0735 | -0.0471 | 0.2142 | 41,373,822 | 0.1964 | -0.0928 | -0.0234 | 2.1168 | 0.1078 | True | False | 0.5677 | 7 | 0.3813 | True |
-| ITA | defense-us | 2026-11-17 | 751 | 69.60 | -0.1745 | 0.0314 | -0.7961 | -0.0811 | -0.0084 | -0.1055 | -0.0451 | -0.0854 | -0.0341 | 0.2192 | 192,559,080 | 0.2113 | -0.0949 | -0.0315 | 2.2270 | 0.1054 | True | False | 0.5817 | 6 | 0.3813 | True |
-| GRID | grid/infra | 2026-11-17 | 751 | 155.15 | -0.2188 | 0.0041 | -0.7397 | -0.1281 | -0.0947 | -0.1042 | -0.1597 | -0.0769 | -0.0732 | 0.2958 | 110,370,553 | 0.2801 | -0.1281 | -0.0202 | 2.1867 | 0.0781 | True | False | 0.4512 | 7 | 0.4512 | True |
-| PAVE | grid/infra | 2026-11-17 | 751 | 51.67 | -0.1372 | 0.0669 | -0.6096 | -0.0575 | -0.0277 | -0.0447 | -0.0407 | 0.0071 | -0.0576 | 0.2250 | 106,806,627 | 0.1590 | -0.0974 | -0.0182 | 1.6316 | 0.1026 | True | False | 0.7441 | 6 | 0.4512 | True |
-| OIH | oil/gas | 2026-11-17 | 751 | 354.39 | -0.2193 | 0.1749 | -0.6464 | -0.1122 | -0.0869 | -0.1083 | -0.2175 | 0.1531 | -0.0798 | 0.3392 | 123,518,081 | 0.2808 | -0.1469 | -0.0190 | 1.9119 | 0.0681 | True | False | 0.5072 | 5 | 0.5072 | True |
-| AMLP | oil/gas | 2026-11-17 | 751 | 50.03 | -0.0912 | 0.0301 | -0.6189 | -0.0177 | -0.0349 | -0.0246 | -0.0545 | 0.0507 | -0.0292 | 0.1474 | 61,208,334 | 0.1004 | -0.0638 | -0.0203 | 1.5728 | 0.1567 | True | False | 0.7633 | 7 | 0.5072 | True |
-| FCG | oil/gas | 2026-11-17 | 751 | 28.70 | -0.1218 | 0.2937 | -0.4064 | -0.0152 | -0.0502 | -0.0247 | -0.0806 | 0.1161 | -0.0587 | 0.2997 | 27,377,529 | 0.1387 | -0.1298 | -0.0275 | 1.0687 | 0.0771 | True | False | 0.8468 | 4 | 0.5072 | True |
+## B. Leaders — where the money went
 
-## B. Leaders — top 10 by rs_spy_3m (where the money went)
+Top rs_spy_3m names are oil (USO +0.117), staples (XLP +0.109), financials-other (IAK +0.104), health (XLV +0.104), cyber (BUG +0.097), health-other, India, water. Money rotated into defensives and energy (oil is a LEADER, not a dip — USO rs_spy_3m +0.117 even as OIH/AMLP/FCG dip on the equity side). One cluster = one rotation: the Nov 5 AI/semiconductor rout (PHLX -12.25%, worst since Mar 2020) after the Democratic midterm sweep, compounded by the Nov 12 Jensen Huang resignation and a Fed-hike repricing (10y ~5.1-5.15%, Dec 9 hike priced ~91-95% for 25bp, dollar at a 19-month high). Almost every candidate is still falling: only GDXJ and GDX are stabilizing (ret_10d > 0).
 
-| ETF | theme | price | dd_52w | vs_sma200 | vs_sma50 | rs_spy_3m | rs_spy_6m | rs_spy_12m | ret_10d | is_dip | is_candidate |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| USO | oil/gas | 140.24 | -0.1728 | 0.0932 | -0.0813 | 0.1165 | -0.0865 | 0.8629 | -0.1134 | False | False |
-| XLP | staples | 91.46 | -0.0123 | 0.0865 | 0.0651 | 0.1091 | 0.0735 | 0.1145 | 0.0282 | False | False |
-| IAK | fin-other | 152.27 | -0.0103 | 0.1027 | 0.0524 | 0.1042 | 0.1397 | 0.0683 | 0.0173 | False | False |
-| XLV | health | 185.24 | -0.0233 | 0.1604 | 0.0547 | 0.1037 | 0.2645 | 0.1386 | 0.0066 | False | False |
-| BUG | cyber | 43.23 | -0.1742 | 0.1974 | -0.0667 | 0.0968 | 0.3167 | 0.2231 | -0.0769 | False | False |
-| IHF | health-other | 59.12 | -0.0326 | 0.1320 | 0.0206 | 0.0940 | 0.1654 | 0.1505 | -0.0049 | False | False |
-| INDA | india | 51.90 | -0.0534 | 0.0570 | 0.0782 | 0.0929 | 0.0946 | -0.1516 | 0.0657 | False | False |
-| PHO | water | 75.55 | -0.0250 | 0.0859 | 0.0621 | 0.0901 | 0.1776 | -0.0394 | -0.0079 | False | False |
-| PPH | health-other | 120.09 | -0.0209 | 0.1118 | 0.0546 | 0.0726 | 0.1794 | 0.1377 | 0.0126 | False | False |
-| IHI | health-other | 56.94 | -0.1125 | 0.0690 | 0.0586 | 0.0521 | 0.1326 | -0.1835 | 0.0090 | False | False |
+## C. Quick-pass memo (UNVERIFIED — challenge it)
 
-Reading: none of the leaders is a dip. Money went to **defensive, low-beta and rate-insensitive cash flows**:
-staples, health care (XLV, IHF, PPH, IHI), insurance (IAK) and water (PHO). It also went to cyber (BUG), which is
-non-cyclical IT spend, and India (INDA), a domestic-demand market outside the AI-hardware chain. USO leads on 3m RS
-from the earlier war premium but is −11% over 10d and is rolling over. That is the mirror of the candidate list:
-long-duration, AI-capex, metals and crypto beta. Most candidates are one rotation, not 20 separate problems (C.0).
+Regime: risk-off everywhere except defensives and oil. 10y Treasury ~5.1-5.15% (highest since 2002 in early Oct), Fed Chair Kevin Warsh already hiked once (Sep 16, 2026, first hike since 2023) and markets price a near-certain Dec 9 hike plus >80bp cumulative tightening by Sep 2027. Dollar at a 19-month high. Gold broke below $3,800 (14-month low, -6% since Nov 9); silver ~$47, -59% from its January record $121.60; Bitcoin ~$65k, -49% from the Oct 6 record $126,210, with US spot BTC ETFs losing $1.91B over seven straight sessions (Nov 5-13) and ETH ETFs -$399M in the Nov 9-13 week. Oil is the exception: Brent ~$93 / WTI ~$85, down ~20% from late-October highs on an IEA Q4 surplus call (1.7mb/d), even as US-Iran strikes continued (Iranian drones hit a US radar site in Bahrain Nov 17; US struck a missile site on Qeshm Island).
 
-## C. Quick-pass memo — *unverified — challenge it*
+Provisional buckets per theme (one search per theme, Nov 18):
 
-One web search per theme plus regime searches, run 2026-11-18 ~04:00 ET. Buckets are provisional and are copied to
-siblings unless a fund-specific reason is given. Snippet-level evidence only: panelists must re-check anything
-they score as buy-grade. "Rotation" here means the thesis looks intact and the selling is flows, rates or risk-off.
-It does not mean the selling is over.
-
-### C.0 Regime — where the money went
-
-**Leaders (section B)** are defensive, low-beta and rate-insensitive cash flows: staples (XLP), health
-(XLV, IHF, PPH, IHI), insurance (IAK), water (PHO), cyber (BUG, HACK), plus India (INDA) and oil (USO, whose 12m RS
-is still +86% from the Iran-war premium but which is −11% over 10d). **The dips are the mirror image:** long-duration,
-high-beta, AI-capex-linked and precious-metal funds. Read that as **three overlapping clusters, not 20 separate
-problems.** (1) An **AI-capex / post-midterm unwind**: semis, korea, ai/robot, reit (DTCR), grid, copper/base-metals,
-nuclear, crypto miners with AI pivots, part of space and China tech. (2) A **real-rate and dollar shock on metals**:
-gold, silver, partly rare-earth and lithium. (3) A **crypto risk-off**: IBIT, ETHA, WGMI, BLOK. Policy-specific
-overlays are defense-us (midterms), solar/clean (rates and the subsidy cliff) and argentina (country risk).
-
-- **Rates and Fed.** The Fed is in a hiking cycle. The Dec 8-9 FOMC prices ~90% for a 25bp *hike* (0% hold or cut;
-  see D, macro row). On Nov 10 the 10y reclaimed 5% after the hot October CPI (MarketWatch via Morningstar,
-  2026-11-10). On Nov 18 the 10y trades just below 5.09% and the 2y at 4.78%. St. Louis Fed President Musalem said
-  "several rate increases are likely to be needed before spring 2027", and FOMC minutes are due Nov 18 (Saxo
-  Market Quick Take, 2026-11-18). The USD is strong: EURJPY is at a one-year-plus low and EURUSD sits just under 1.10.
-- **Midterms (Nov 3): a Democratic sweep of Congress.** Analysts tied the Nov 5 rout to tougher regulatory scrutiny of
-  data centers and AI ("anti-data-center sentiment rides blue wave", HPCwire 2026-11-05). The PHLX Semiconductor Index
-  fell **−12.25% on Nov 5**, its second-worst day on record (247wallst 2026-11-06). The Nasdaq was −10.2% and the S&P
-  −5.6% over the month to Nov 6 (ii.co.uk 2026-11-09).
-- **Nov 17 (scan date).** Fourth straight US down session, an "AI-driven rout". S&P 500 −1% to 7,340.53 (lowest
-  since July); Nasdaq-100 −0.7% after −2.3% intraday; Dow −1.6%; Stoxx 600 −1.8% (worst day since March); all 11 US
-  sectors down. Gold −1.9% to a 14-month low of $3,780; silver near $45; copper −2.8% to a 7-month low; Brent $92.10;
-  BTC ~$64.4k, sentiment 11 ("Extreme Fear") (Saxo, 2026-11-18).
-- **NVIDIA Q3 FY27, after the close on Nov 17 (not in scan prices).** Revenue was **$115.8B** (+20% q/q, +103% y/y),
-  against the company's own $108B guide and roughly $109B consensus. Data Center was **$107.6B** (+110% y/y). Non-GAAP
-  gross margin was 74.9%, GAAP EPS $2.70 and non-GAAP EPS $2.68. **Q4 guide is $130.0B ±3%**, against roughly $124.7B
-  consensus; it includes an extra week and assumes zero China Data Center compute. The Q4 gross-margin guide is
-  71-72%. Q3 shareholder returns were $28.1B, with $227.3B of buyback authorization remaining. The quote came from
-  interim CEO and CFO Colette Kress: "Vera Rubin is off to an explosive start" (NVIDIA press release / 8-K,
-  2026-11-17, nvidianews.nvidia.com). **Reaction:** NVDA +4.8% after hours; S&P futures +0.8% and Nasdaq-100 futures
-  +1.4%; Samsung Electronics up as much as +4.5% and SK Hynix +5.8% in Seoul; KOSPI up as much as +3.1% early, then
-  choppy; Nikkei roughly flat; Hang Seng ~−1%, lagging (Saxo, 2026-11-18). Other reports put the after-hours move at
-  +3% to +4% (CNBC via aggregators). **Caveat for semis, ai/robot and the SMH basket:** Jensen Huang resigned as
-  CEO and director. The board accepted on Nov 11 (8-K) and NVIDIA announced it Nov 12. The official release gives no
-  reason; secondary reports cite personal-conduct scrutiny. Harvey Jones was named chairman and a CEO search is
-  under way (wccftech / DCD / yourstory, 2026-11-12). That is a top-holding governance event, not a demand event.
-  The print says the AI demand thesis is intact; what it does not settle is the policy and capex-financing fear
-  behind the Nov 5 unwind.
-
-### C.1 Per-theme provisional buckets
-
-| theme | funds | bucket | one-sentence reason | dated source |
-|---|---|---|---|---|
-| rare-earth | REMX | **unclear** | The US-China truce is draining the scarcity premium while ex-China NdPr is +23% YTD; Canaccord calls it the "great rare earth disconnect". This looks like a re-rating of a policy premium, not a demand break, but REMX is −58% off its high and has no bounce. The Jan 1, 2027 DFARS magnet ban and the Jan 10 truce expiry are both two-way (D). | oilprice.com (Canaccord), ~Oct 2026; 247wallst 2026-10-15; seekingalpha (Bessent truce) |
-| silver | SLV, SIL | **rotation** | A crowded trade (+150% in 2025) is unwinding on the hot October CPI, a hawkish Fed, 5% yields and a strong dollar. SLV is ~60% off its Jan 29, 2026 ATH. Watch-out: the Silver Institute sees 2026 demand −5% to 1.08bn oz. | stocktwits / SMM daily review 2026-11-13; mitrade 2026-11-12 |
-| clean | PBW, ICLN | **unclear** | No November-specific driver found; the search returned only mid-2026 rally pieces. The working assumption is the same rate shock as solar (10y ~5%). Floored by the Section 232 polysilicon MIP/duty effective Dec 4 (D). | none dated Nov 2026 (247wallst 2026-06-15 context only) |
-| solar | TAN | **unclear** (break risk) | High borrowing costs weigh on project finance, and First Solar fell −12% in the week to Nov 12 (−45.9% off its 1y high). The OBBBA credit cliff is a subsidy-removal risk, which is a break-type cause. The Dec 4 Section 232 MIP is a catalyst floor (D). | trefis 2026-11-13; 247wallst 2026-09-24 |
-| nuclear | URA, URNM, NLR | **rotation** | Sprott: "a liquidity shock, not a broken thesis". Equities are trading with risk assets while spot uranium holds in the mid-$80s/lb. Cameco's Q3 miss was a planned Key Lake outage (D). The AI-power link exposes the group to the same data-center policy fear as reit/grid. | Sprott / Kitco 2026-10-30 |
-| lithium | LIT | **unclear** | A 2027 surplus fear plus the rates shock (December hike priced). LIT closed at a 1y-low $59.43 on Nov 12, −35% from its May 11 high; Albemarle warned of weaker Q4 energy-storage sales. Cyclical oversupply, not obsolescence. | Rio Times 2026-11-10, 2026-11-12 |
-| crypto-equity | WGMI, BLOK | **unclear** | BTC broke below $70k on Nov 13 (3-month low); miners fell hardest on operating leverage. The AI-pivot miners (IREN, Cipher) also caught the AI unwind, and Strategy is −36% in November. Risk-off flows rather than a thesis change, but there is no evidence the crypto bear is only flows. **WGMI** is a fund-specific case: −66% off its high, vol 86%, dual crypto + AI-hosting beta. | roic.ai 2026-11-13; 247wallst 2026-11-09 |
-| china | KWEB, FXI | **unclear** | No clean November-dated driver found. China/HK tech is trading the AI-trade cracks, and the Hang Seng was ~−1% on Nov 18, lagging the NVDA bounce. The APEC Leaders' Meeting in Shenzhen (Nov 18-19, today) is a catalyst floor, as are NetEase results Nov 19 and the KL truce to Jan 10 (D). FXI is barely a dip (−19% off high, dd_pctile 0.036). | Saxo 2026-11-18; search otherwise undated |
-| space | UFO, ARKX | **unclear** | Space ETFs are under post-IPO pressure from the SpaceX slide (reported ~45% off its post-IPO highs) plus long-duration risk-off. **ARKX** is fund-specific: SpaceX concentration, and the fund was renamed Space & Defense Innovation. UFO is more diversified. No November-dated source found. | webull / Benzinga (undated, ~mid-2026); 247wallst 2026-05-04 |
-| argentina | ARGT | **unclear** (break risk) | The Milei reform trade is "among the first assets sold" in risk-off. Country risk was 787 on Oct 30 (a 2026 high), the Merval fell −4.8% on Nov 5 and −16% YTD by Oct 29, and Polymarket gives Milei's re-election 44.5%. A political re-rating could prove permanent, so this sits nearer break than rotation. | Rio Times 2026-11-05; Buenos Aires Herald ~2026-10-30 |
-| ai/robot | BOTZ, AIPO, BAI, ARKQ, ROBO, QTUM, AIQ | **rotation** | This is the AI-capex unwind after the blue wave (Nasdaq −10.2% in a month to Nov 6). NVIDIA's $115.8B quarter and $130B guide (Nov 17) contradict a demand collapse. BOTZ and ROBO are ~half industrial automation (BOTZ ~48% industrials), so they are cyclical as much as AI. AIPO is fund-specific: AI-power exposure carries the data-center policy risk. | ii.co.uk 2026-11-09; advisorperspectives 2026-11-06; NVIDIA 8-K 2026-11-17 |
-| base-metals | XME, COPX, PICK | **rotation** | Copper is at a 4-month low (Nov 10, $6.18/lb) and a 7-month low on Nov 17. The market is pricing weaker AI-infrastructure copper demand plus a strong USD and a 5% 10y. COPX has fallen 11 straight weeks, a record streak. This is cyclical and macro; supply deficits are not disputed. | Trading Economics 2026-11-10; XTB 2026-11-06; Saxo 2026-11-18 |
-| crypto-spot | ETHA, IBIT | **unclear** | Spot BTC ETFs lost $2.35B in November after nine sessions and are negative for 2026; BTC is ~$65k against $75.9k a week earlier. Analysts link the drop to the Democratic sweep and AI-spend doubts. Note the dip is *not* unusual for these funds' own history (dd_pctile 0.23 for IBIT, 0.36 for ETHA; price_score 1-2). | The Block 2026-11-07, 2026-11-14 |
-| gold | GLD, GDXJ, GDX | **rotation** | This is a real-rate and USD shock: hot October CPI, 100% December-hike pricing and oil-led inflation fears. Spot gold fell −3% to $3,852 on Nov 12, the lowest since Oct 2025, then $3,780 on Nov 17. Central-bank buying is not reported as reversed. GDX and GDXJ are the only `stabilizing` = True candidates. | Nation Thailand (Reuters) 2026-11-12; Saxo 2026-11-18; cruxinvestor (Nov 2026) |
-| reit | DTCR | **unclear** | The data-center REIT selloff came after the midterms: DLR −4.5% and EQIX −5% on Nov 5, with Reuters citing tougher regulatory scrutiny. Texas governor-elect Hinojosa has pledged a moratorium on *new* data-center approvals once she takes office Jan 19 (D, grid row). Policy risk on new supply, with rates on top. NVIDIA's guide supports demand, and a supply moratorium can help incumbent landlords, so this is two-way. | Weiss / Reuters 2026-11-05; HPCwire 2026-11-05; connectcre 2026-11-09 |
-| semis | PSI, DRAM, XSD, SMH, SOXX | **rotation** | The SOX fell −12.25% on Nov 5 on an AI-spend reassessment after the blue wave, with memory and equipment leading. NVIDIA's Nov 17 beat-and-raise (Data Center +110% y/y, $130B guide) and +4.8% after-hours reaction argue the thesis is intact. **DRAM** is fund-specific: a single-segment memory fund with only 159 days of history, already in a mid-2026 memory bear and the epicentre of the selloff. **SMH** is fund-specific: NVDA is ~20.6% of the fund, so the CEO exit (Nov 11-12) is a basket concentration flag. | 247wallst 2026-11-06; NVIDIA 8-K 2026-11-17; Saxo 2026-11-18 |
-| korea | EWY | **rotation** | Foreign selling of SK Hynix and Samsung is tied to the AI unwind and the US midterms: KOSPI −6.02% on Nov 6 and −3.59% to 5,100.50 on Nov 16, with Hynix −7.89%. Samsung rose as much as +4.5% and Hynix +5.8% on Nov 18 after NVDA. The Dec 2 budget deadline (AI and semis 21.3tn won) is a catalyst floor (D). Samsung and Hynix are a large share of EWY. That is a basket question for the panel; the weight was not checked here. | Kyunghyang 2026-11-06; Korea Times 2026-11-16; Saxo 2026-11-18 |
-| defense-us | XAR, SHLD, PPA, ITA | **unclear** (leans rotation) | The midterm blue wave put defense budgets under closer House scrutiny. Jefferies sees FY27 settling near the House's $1.15T rather than the $1.5T request; Bernstein says "the issue isn't demand, it's uncertainty". ITA was −17.9% Aug 14 to Oct 19. The Dec 11 CR expiry is a two-way floor (D). A slower budget path, not a cut to demand. | 247wallst 2026-10-20; forth.news (post-election); capital.com (Bernstein) |
-| grid/infra | GRID, PAVE | **rotation** (policy caveat) | GRID sold off with AI-power names: GE Vernova −7.5% on Nov 5, again on Nov 9-10, and electrical names (Vertiv, Eaton) were down Nov 16. A political-backlash frame ("voters rejected their power bill") is the risk to watch. Electrification demand is not disputed. PAVE is barely a dip (−14%, dd_pctile 0.067) and is fund-specific to US construction. The Dec 11 surface-transportation lapse is a floor (D). | kalkine (GEV Nov 5); webull (Nov 10); stockstory 2026-11-16; zerohedge 2026-11-09 |
-| oil/gas | OIH, AMLP, FCG | **unclear** | This is the war premium unwinding into a surplus. Brent fell −16% in the week to Nov 6 and was down again in the week to Nov 13. The IEA (Nov 13) sees a 4Q26 surplus with a larger 2027 build, and Goldman sees ~2 mb/d of surplus in 2027. Cyclical supply/demand, not a thesis break. OIH/AMLP/FCG are shallow dips for their own history (dd_pctile 0.17 / 0.03 / 0.29). OPEC+ meets Nov 29 but is filed under 'opec' and does not floor this theme (D). | nationthailand 2026-11-13; IEA OMR Nov 2026; Saxo 2026-11-18 |
-
-**Tally:** rotation 8 (silver, nuclear, ai/robot, base-metals, gold, semis, korea, grid/infra); unclear 12 (rare-earth,
-clean, solar, lithium, crypto-equity, china, space, argentina, crypto-spot, reit, defense-us, oil/gas), of which
-solar and argentina carry break risk; firm break 0.
-
-**Questions the panel should challenge:**
-1. Is the post-midterm data-center policy risk (reit, grid, nuclear, AIPO) a durable re-rating (cause ≤ 3) or
-   headline fear (5)?
-2. Does NVIDIA's Q4 guide of $130B with zero China compute settle "AI demand intact" for semis, korea and ai/robot,
-   or was the Nov 5 unwind about capex *financing* (rates near 5%, neocloud collapses: CoreWeave −50% and Nebius −48%
-   Oct 6 to Nov 6), which the print does not address?
-3. Is the solar subsidy cliff a break?
-4. Is gold or silver a rates trade that reverses on the first soft print, or the start of a longer unwind after a
-   +150% run?
-
-## D. Carry-forward — `uv run python scripts/carry_forward.py` (verbatim)
-
-**Catalyst-floor column marked:** the `floor` column below is the computed floor. Candidate themes floored at
-**catalyst ≥ 7** this run:
-- **china**: APEC Leaders' Meeting, Shenzhen, 2026-11-18.
-- **korea**: 2027 budget statutory deadline, 2026-12-02.
-- **solar** and **clean**: Section 232 polysilicon MIP and duty effective, 2026-12-04.
-- **defense-us**: FY27 CR expiry, 2026-12-11.
-- **grid/infra**: Surface Transportation Extension lapse, 2026-12-11.
-
-The `opec` (2026-11-29) and `defense-eu` rows also carry a floor, but neither is a candidate theme: `opec` does not
-floor oil/gas, and defense-eu is not in the scan's top 20. No floor for rare-earth, silver, nuclear, lithium,
-crypto-equity, space, argentina, ai/robot, base-metals, crypto-spot, gold, reit, semis or oil/gas. Dated, non-floor
-rows still exist for some of them: rare-earth Jan 1 and Jan 10, lithium Jan 10, nuclear Feb 12, argentina Jan 9,
-ai/robot GTC March (Disputed start day). The FOMC Dec 9 row is symmetric timing and never sets a floor.
-
-<!-- verbatim carry_forward.py output follows -->
+- rare-earth — ROTATION. REMX -58% off 52w high, -40% in 3m, RSI 29.4 oversold; Pr-Nd oxide prices sliding (CNY 714-716k/t late Oct) even as magnet exports hit records and Lynas revenue +55% y/y. Thesis intact (DFARS Jan 1, 2027 ban on China-origin magnets; KL truce suspension to Jan 10, 2027), but no floor: both dates are >30 days out.
+- silver — ROTATION. Silver Institute/Metals Focus: global silver demand -5% y/y to ~1.08bn oz in 2026 (jewellery -22%, silverware -17%, solar use down); SLV -59.6% off high, new 52w lows Nov 13 and 16. Rate-hike repricing is the driver, not a demand collapse — but the demand forecast itself is a real headwind.
+- clean — ROTATION. ICLN at 52w low $14.85 (-37.5% off high), PBW -50%; no single news item, broad slide. Dec 4 Section 232 polysilicon tariffs (15% duty + MIPs $0.22/W cells, $0.38/W modules) FLOOR catalyst >= 7. Dem Congress may defend clean-energy support, but OBBBA credit phase-out (in service by end-2027) still binds.
+- solar — ROTATION. TAN -48% off high, new 52w low $38.12 Nov 17 (-5.17% that day); rallied +13.4% the week after the midterms on hopes Congress defends clean-energy support, then gave it all back. Same Dec 4 Section 232 FLOOR as clean.
+- nuclear — ROTATION. URA/URNM/NLR all -49 to -55% off highs, new 52w lows; no single trigger. Long-term demand case strengthened (Goldman added SMRs: +62m lb uranium demand by 2045, 2.3bn lb supply gap; IAEA: output could halve by 2040 vs demand +144%). Cameco Q3 miss Oct 30 (adj net loss C$2M, revenue C$619M, Key Lake outage — mill restarted, "back on schedule in Q4"); next dated trigger Q4 results Feb 12, 2027 — no floor.
+- lithium — ROTATION. LIT at 52w low $56.84 (-38% off high), RSI 29.7; lithium carbonate ~90,650 yuan/t, fragile rebound after a steep fall, -3.2% w/w to Nov 12. KL suspension of Oct-2025 controls runs to Jan 10, 2027 — no floor (>30 days).
+- crypto-equity — BREAK (provisional). WGMI -66% off high, BLOK -32%; BTC -49% from record, ETF holders' avg cost ~$81.5k now ~20% underwater, Strategy mNAV ~1.08x, MSCI to remove Strategy Nov 30. Leveraged unwind ($2B liquidations Nov 15), no dated reversal trigger.
+- china — ROTATION. KWEB -41%, FXI -19% off highs; APEC Economic Leaders' Meeting Shenzhen Nov 18-19 (TODAY/TOMORROW) with Trump-Xi meeting Thu — FLOOR catalyst >= 7. KL arrangement extended to Jan 10, 2027; national team poured a record 156bn yuan into ETFs in the week to Nov 6. Baidu -5.9% in HK to a 5y low (online marketing revenue -22%); Alibaba reports Nov 19; NetEase reports Nov 19.
+- space — UNCLEAR. UFO -42% off high (1y +20%), ARKX -27%; SpaceX below its $135 IPO price (closed ~$123.62 Nov 5, -9%), SpaceX-Tesla merger on a "much tougher regulatory roadmap" after the midterms; RKLB -13.25% Nov 5 on the same headline. Speculative de-rating, no thesis change for launch demand, but valuation reset is real.
+- argentina — ROTATION. ARGT -31% off high, new 52w low $71.43 Nov 12; country risk 927bp (fell below 830bp Nov 12), dollar bonds -4%; Democrats in Congress pushing to restrict Trump's ability to extend aid to Milei. Oct inflation 2.2% m/m (vs 1.8% forecast), core 1.5% (15-month low). No dated catalyst in the ledger (Jan 9, 2027 coupon date is >30 days).
+- ai/robot — ROTATION. BOTZ/AIPO/BAI/ARKQ/ROBO/QTUM/AIQ all -20 to -37% off highs; the AI trade repriced the BILL, not the chips: hyperscaler 2026 capex guided $720-745B, Azure +48% y/y, CoreWeave Q3 revenue +168% to $3.7B with $133B backlog — but Anthropic's IPO filing shows $900.9B of compute purchase commitments vs ~$81B run-rate revenue, and Nvidia's leadership crisis (Huang resigned Nov 12; SEC probe; board says no reinstatement) hangs over the group. Nvidia's Nov 17 beat (after close) is NOT in scan prices. GTC 2027 Mar 14-18 — start day still Disputed on nvidia.com itself; no floor.
+- base-metals — ROTATION. XME/COPX/PICK -25 to -33% off highs; LME copper $13,610/t, fifth straight weekly decline, -7.7% from Oct 13, on AI-trade unwind — but physical is tight: SHFE stocks lowest since Dec 2023, Yangshan premium record $285/t, Chile output -8.4% in 2026. Flow-driven, not a demand collapse.
+- crypto-spot — BREAK (provisional). ETHA -47% off high (dd_pctile 0.356 — shallow vs own history, price_score 1), IBIT -35%; ETH ETFs -$399M Nov 9-13 week, outflows on 27 of 32 sessions since Oct 1 (-$2.37B), Oct was the worst month since launch (-$1.61B). No dated reversal trigger.
+- gold — ROTATION (core candidate). GLD -29% off high but only -1.9% ret_10d; GDXJ/GDX the ONLY stabilizing candidates. Driver is rates/dollar, not a thesis change: central-bank buying continues, Q3 gold ETF inflows were a record 211t to record holdings. Goldman cut its end-2026 target to $4,150 (from $4,650) and end-2027 to $4,800 — still above spot ~$3,800.
+- reit — ROTATION. DTCR -25% off high; REITs trade on the 10y, not on property results: median REIT ~10-15% discount to NAV, ~4% dividend yield, 5-7% earnings growth guided for 2027-28; private-market floating-rate apartment loans deteriorating (~1 in 4 not covering debt service). Futures price three MORE hikes by end-2027.
+- semis — ROTATION. PSI/DRAM/XSD/SMH/SOXX -31 to -52% off highs; PHLX -40% from its Jun 22 peak of 14,634; memory worst (Goldman AI memory basket -51% from June peak). But Nvidia BEAT after the close (Q3 $115.8B vs $108.7B, Q4 guide $130B) and SOXX was the only US sector ETF up on Nov 17 (+0.17%). The print is a fresh fact the scan does not contain — catalyst panelist must weigh it as a post-close event.
+- korea — ROTATION. EWY -38% off high, -13.46% on Nov 5 alone (worst single day in the episode), Samsung + SK Hynix ~48% of the fund; yet Korea's Oct exports surged +93.7% y/y to $115.28B on chip demand. 2027 budget (820.9tn won, +12.8%; 21.3tn won for AI + three mega-projects) has a Dec 2 statutory deadline — FLOOR catalyst >= 7. KOSPI +1.63% Nov 18 (5,049) on the Nvidia print.
+- defense-us — ROTATION. XAR/SHLD/PPA/ITA -16 to -26% off highs; Dem sweep puts the $1.5tn FY27 defense budget request under scrutiny, but the FY27 budget must be settled before the new Congress sits in January and the Pentagon runs on a CR expiring Dec 11 — FLOOR catalyst >= 7. Iran war continues (US-Iran strikes Nov 17). Wolfe Research called the selloff a buying opportunity.
+- grid/infra — ROTATION. GRID -22% off high, PAVE -14%; data-center power demand intact (Southern +59% y/y data-center power use, Dominion raised outlook on data-center demand, Iberdrola raised 2026 profit target). IIJA highway/transit authorities lapse Dec 11 unless reauthorized — FLOOR catalyst >= 7. Texas governor-elect Hinojosa takes office Jan 19, 2027 on a data-center moratorium platform (new approvals only) — a headwind, not a floor.
+- oil/gas — ROTATION (provisional). OIH -22%, AMLP -9%, FCG -12% off highs; Brent ~$93 / WTI ~$85, -20% from late-Oct highs on IEA Q4 surplus (1.7mb/d) and recovering Gulf exports (Hormuz flows 7.82mb/d, 46% of prewar). OPEC+ meets Nov 29 — filed under 'opec' in the ledger, NOT the scan theme 'oil/gas', so it does NOT floor OIH/AMLP/FCG. Note the tension: USO (oil futures) is a LEADER (+0.117 rs_spy_3m) while oil equities dip — the dip is equities, not the commodity.
 
 ## D. Confirmed catalysts carried forward — already verified, do NOT rescore as 'not found'
 
@@ -265,3 +148,4 @@ a ballot that doubts a live row without one.
 
 A catalyst score of 7+ that rests on a disputed date must cite a primary source (the issuing
 ministry / agency / company) that settles it; otherwise score only what holds under both readings.
+
