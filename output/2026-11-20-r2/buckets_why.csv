@@ -1,0 +1,47 @@
+,theme,bucket,why
+SOXX,semis,buy,"buy: cause 8 >= 7, stabilizing, R/R 2.49 >= 1.3, #1 in theme"
+PSI,semis,alt,"qualifies, but theme #2 behind SOXX (one buy per theme)"
+XSD,semis,alt,"qualifies, but theme #3 behind SOXX (one buy per theme)"
+SMH,semis,alt,"qualifies, but theme #4 behind SOXX (one buy per theme)"
+GRID,grid/infra,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.36 >= 1.3, #1 in theme"
+BAI,ai/robot,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.72 >= 1.3, #1 in theme"
+PAVE,grid/infra,alt,"qualifies, but theme #2 behind GRID (one buy per theme)"
+AIQ,ai/robot,alt,"qualifies, but theme #2 behind BAI (one buy per theme)"
+XAR,defense-us,watch,watch: cause 6 < 7
+AIPO,ai/robot,alt,"qualifies, but theme #3 behind BAI (one buy per theme)"
+QTUM,ai/robot,alt,"qualifies, but theme #4 behind BAI (one buy per theme)"
+ROBO,ai/robot,alt,"qualifies, but theme #5 behind BAI (one buy per theme)"
+BOTZ,ai/robot,alt,"qualifies, but theme #6 behind BAI (one buy per theme)"
+DRAM,semis,alt,"qualifies, but theme #5 behind SOXX (one buy per theme)"
+EWY,korea,buy,"buy: cause 7 >= 7, stabilizing, R/R 2.68 >= 1.3, #1 in theme"
+PPA,defense-us,watch,watch: cause 6 < 7
+VNM,vietnam,buy,"buy: cause 9 >= 7, catalyst 8 >= 7, R/R 2.76 >= 1.3, #1 in theme"
+COPX,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+GDX,gold,watch,watch: no catalyst >= 7 (catalyst 5) and not stabilizing; core path: necessity 7 < 8
+URA,nuclear,buy,"buy: cause 8 >= 7, catalyst 7 >= 7, R/R 6.12 >= 1.3, #1 in theme"
+GLD,gold,watch,watch: no catalyst >= 7 (catalyst 5) and not stabilizing; core path: necessity 7 < 8
+NLR,nuclear,alt,"qualifies, but theme #2 behind URA (one buy per theme)"
+SHLD,defense-us,watch,watch: cause 6 < 7
+PICK,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+REMX,rare-earth,buy,"buy: cause 7 >= 7, catalyst 8 >= 7, R/R 9.39 >= 1.3, #1 in theme"
+URNM,nuclear,alt,"qualifies, but theme #3 behind URA (one buy per theme)"
+GDXJ,gold,watch,watch: no catalyst >= 7 (catalyst 5) and not stabilizing; core path: necessity 7 < 8
+ITA,defense-us,watch,watch: cause 6 < 7
+DTCR,reit,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 5) and not stabilizing
+ICLN,clean,watch,watch: cause 5 < 7
+ARKQ,ai/robot,watch,watch: cause 6 < 7
+UFO,space,watch,watch: cause 6 < 7
+XME,base-metals,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+SLV,silver,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 5) and not stabilizing
+TAN,solar,watch,watch: cause 4 < 7
+FXI,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+ARKX,space,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 3) and not stabilizing
+KWEB,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+LIT,lithium,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+PBW,clean,watch,watch: cause 4 < 7
+SIL,silver,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 5) and not stabilizing
+IBIT,crypto-spot,watch,watch: cause 6 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+ARGT,argentina,watch,watch: cause 4 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+BLOK,crypto-equity,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+WGMI,crypto-equity,watch,watch: cause 5 < 7
+ETHA,crypto-spot,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
