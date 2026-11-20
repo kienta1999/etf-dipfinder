@@ -67,3 +67,7 @@ Disagreements with the dossier's first-pass memo:
 
 New dated events found:
 - None issuer- or agency-confirmed. Items checked that did NOT yield a confirmed date: Micron FQ1 FY27 results (no IR announcement yet; Tickeron's Dec 16 is an estimate; a Sep 30 call remark about stronger capital return "from December 9" came via an aggregator transcript and is not used); refined-copper Sec 232 tariff (paused, no date; cryptobriefing.com/trump-delays-copper-tariff-housing-ai/, Sep 10, 2026); CLARITY Act (cloture failed Sep 15, 2026, no new floor date; orrick.com/Insights/2026/10/The-CLARITY-Act-Stalls-in-the-Senate-Whats-Next-for-Digital-Asset-Regulation); MSCI Korea (not added to the watch list Jun 23, 2026; the next annual review is June 2027, date not yet announced; koreatimes.co.kr/economy/20260624/seoul-to-continue-push-for-msci-developed-market-status-bid-after-remaining-in-emerging-category).
+
+Ledger keys (orchestrator note, added after the ballot; no score changed): the rows above rest on these live `log/catalysts.md` entries.
+Nuclear (URA/URNM/NLR) uses `Cameco-FY` (Cameco Q4/FY26 results 2027-02-12). Argentina (ARGT) uses `bond` (Globales coupon 2027-01-09).
+REMX's two-way KL-expiry leg uses `No58-2026` (MOFCOM/GACC 2026 No. 58, suspension to 2027-01-10), alongside DFARS 2027-01-01.
