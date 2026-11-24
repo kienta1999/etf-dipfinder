@@ -696,3 +696,7 @@ Full panel on the Fri Nov 20 close (scan byte-identical to 2026-11-22 — no new
 ## 2026-11-23-r2 — etf-dip-pick lite
 
 Lite run on the Fri Nov 20 close: 46 candidates in 20 themes, 23 searches (20 themes + regime + 2 spot-check). Buy none, core none, alt none, avoid none, all 46 watch. No fund is stabilizing; floored themes (grid/infra, defense-us, clean, solar, korea) scored cause 4-5; nuclear is the only cause-7 theme but its catalyst is 6 (Cameco Feb 12, two-way). One rank deviation: NLR above PAVE. Spot-check (no buy) on NLR/regime: uranium term USD 99/lb Oct 31 and a >90% Dec 9 hike probability both hold. $100k stays in cash; re-scan after the Dec 9 FOMC and Dec 10 CPI. Memo: log/2026-11-23-r2-lite.md. Model: Claude Opus 5.5 — lite.
+
+## 2026-11-24 — etf-dip-pick lite
+
+Lite run on the Mon Nov 23 close: 49 candidates in 20 themes, 23 searches (20 themes + regime + 2 spot-check). Buy EWY, core none, alt none, avoid none, 48 watch. No fund is stabilizing; cause-7 funds are korea, semis and GLD, but only korea has a catalyst ≥ 7 (carried floor: Korea 2027 budget, Dec 2 deadline). Spot-check on EWY: budget still in deliberation (committee vote Nov 30) and Oct sell-off was foreign flows against record memory profits — both hold. One rank deviation: EWY #1 above higher-wtd semis/GLD. Size ~$3.8k (1% risk), half before / half after the Dec 9 FOMC. Memo: log/2026-11-24-lite.md. Model: Claude Opus 5.5 — lite.
