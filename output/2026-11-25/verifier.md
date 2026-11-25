@@ -1,0 +1,75 @@
+> Run by: Muse Spark (unknown) — full panel
+
+# verifier — 2026-11-25
+
+Scope, from `scores.csv` read directly: rule-buys are **XSD** (semis, wtd 8.70), **PAVE** (grid/infra, 7.70), **QTUM** (ai/robot, 7.55), **XAR** (defense-us, 7.45), **EWY** (korea, 6.65). **No core rows exist in scores.csv — there are no core funds to verify.** All five buys were re-checked from primary sources with uncapped searches. No demotions. Two regime-level corrections (10y level stale; Nov 5 "worst since Mar 2020" needs a qualifier) — neither overturns any buy's load-bearing fact.
+
+## Regime premises
+
+| claim | verdict | evidence |
+|---|---|---|
+| FOMC meets Dec 8–9, 2026; decision Dec 9, 2 p.m. ET, with SEP | CONFIRMED | federalreserve.gov FOMC calendar (fomccalendars.htm: December 8–9*, SEP meeting); frenzycap Dec 2026 FOMC page: "decision Wednesday, December 9, 2026, 2:00 PM ET · with economic projections (dot plot)". Ledger row re-verified. |
+| Market prices a 25bp HIKE (~90%), 50bp tail, 0% hold/cut | CONFIRMED in direction, UPDATED in detail | Fed funds futures live Nov 25, 4:24 AM ET (frenzycap): 99% 25bp hike / 1% hold / 0% >25bp. CME FedWatch via TradingView Nov 25: 96.4% 25bp / 3.6% 50bp. Kalshi Nov 25: ~92.5% 25bp / ~4% 50bp / 5% hold. The 50bp tail has collapsed to ~0–4% (was ~9–11% early Nov) and hold is now 1–5%, not 0%. The dossier's "~90% 25bp, 0% hold/cut" understates the 25bp odds slightly and the 0% hold is stale — but the load-bearing point (a 25bp hike, not a cut) stands. |
+| 10-year Treasury yield ~5.10% | STALE — correction, not a demotion | Fed H.15 (federalreserve.gov/releases/h15, release Nov 24, 2026): 10y constant maturity 5.10% Nov 17, 5.07% Nov 18, 5.04% Nov 19, 4.92% Nov 20, 4.92% Nov 23. As of the Nov 23 close — the scan's last completed session — the 10y is **4.92%, below 5%**. The "~5.10%" was the Nov 17 level. The memo must not say "~5.10%" or "10y above 5%"; the rates headwind is still elevated (~4.9%) but the 5% line has been crossed back down. No buy's score rests on the exact 5.10% figure, so no demotion. |
+| Oil: Brent ~$91–93 | CONFIRMED | Nov 24, 2026 close: Brent $91.40 (+$2.03), WTI $82.05 (+$1.88) — worldoilmonitor.com digest 2026-11-24; corroborated by Patrick De Haan (GasBuddy) Nov 25: Jan Brent $91.40, Jan WTI $82.05. Note: Brent touched ~$88.62–89.37 intraday Nov 24 (three-month low, Reuters) before rallying to the $91.40 close — the "near 3-month low" narrative was true intraday; the close recovered into the dossier's range. |
+| Nov 5 worst day since Mar 2020 (SMH −11.6%, S&P 500 −4.35%) after Democrats won both chambers Nov 3 | CONFIRMED in substance, QUALIFIED | S&P 500 −4.36% to 7,353.73, Nasdaq −5.52% (thestreet.com, CNBC via assetguidancegroup); Democrats won House and Senate Nov 3 (thestreet.com; advisorperspectives.com: 54 Senate / 254 House seats per AP count Nov 8). SMH fell ~11% on Nov 5 (ETF Copilot); SOXX fell >12% (presstemps/CNBC). Qualifier: for the broad indexes Nov 5 was the worst day since **April 2025**, not March 2020 (advisorperspectives.com); the "worst since Mar 2020" label fits the chip selloff (SOXX −12%+, worst since Mar 16, 2020 — ledger row, re-verified 2026-11-12), not the S&P 500. Memo should say "worst day for chips since Mar 2020; worst for the S&P since Apr 2025". |
+| Dollar near a 19-month high | CONFIRMED | DXY 103.30–103.97 through Nov 12–23, fresh 19-month highs (FXStreet Nov 13/19/23; Reuters via intelligencereport.org Nov 17: 103.66, highest since April 2, 2025; WSJ: DXY to 104.283). |
+
+## XSD — semis (buy, wtd 8.70; cause 8, necessity 10, catalyst 8, basket 10)
+
+| claim | verdict | evidence |
+|---|---|---|
+| Semis earnings more than doubled in a year; SMH EPS +112% YoY, price +33%, P/E 40.6x → 25.5x, below 27.1x decade median (cause 8) | CONFIRMED | ETF Copilot, "Are chip ETFs cheap after the sell-off?", data as of Nov 9, 2026, verbatim: "SMH traded at 40.6x trailing earnings a year ago. At Monday's close it stood at 25.5x, under its median of 27.1x since 2017… the earnings behind one share rose 112% over the same stretch." Corroborated by TradingView reconstruction (SMH earnings per fund unit +215.9% over two years to Oct 29, 2026). |
+| JPMorgan: AI capex $900bn in 2026, $5.5tn cumulative by 2030 (necessity 10) | CONFIRMED | jpmorgan.com, "AI Capex & Hyperscaler Investment Outlook": "J.P. Morgan Global Research projects global spending on AI capex to reach $5.5 trillion by 2030 and for $900 billion to be spent in 2026 alone" (revised up from $736bn). |
+| Micron fiscal Q1 2027 results Dec 17, 2026; guided revenue $61.5bn ±$1.5bn, adj EPS $38.15; >75% of 2027 supply sold out (catalyst 8) | CONFIRMED | Earnings date announced Nov 19, 2026 (equityswarm, citing Micron IR); Fool Nov 25: "On Thursday, Dec. 17, Micron posts results for that quarter… the first of its fiscal 2027." Guide: quantisnow — "On Sept. 30, 2026, Micron guided fiscal first-quarter revenue to $61.5 billion, plus or minus $1.5 billion, and adjusted EPS to $38.15"; unusualwhales: "Management said on its September earnings call that over 75% of Micron's 2027 output is already committed." New ledger row appended (semis/Micron/2026-12-17). |
+| AMD CES 2027 event Jan 5, 2027, 10:00 AM PT, Mandalay Bay; CES Jan 6–9, 2027 (catalyst 8) | CONFIRMED, one date corrected | Jack Huynh (AMD SVP/GM Computing & Graphics) posted the teaser **Nov 17, 2026** (Club386, windowsforum, zerocade) — the catalyst ballot's "Nov 20" is wrong by three days; the event date Jan 5, 2027, 10:00 AM PT, Mandalay Bay is confirmed by multiple outlets (mypcgames, digitalcitizen.life, gsmdome). No products named yet — a date to watch, not a launch to count on. CES 2027 show floor Jan 6–9, 2027 confirmed (gsmdome); ledger CES row already live (ai/robot/CES-2027). New ledger row appended (semis/AMD-CES/2027-01-05). |
+| Basket: modified equal-weight semis, 0.35% fee, top 10 ~27–33%, largest ~3.8% (basket 10) | CONFIRMED | ssga.com XSD page, fund characteristics as of Nov 23, 2026: gross expense ratio 0.35%; "The Index is modified equal weighted"; top holdings Synaptics 3.79%, NXP 3.49%, TI 3.39%… Lattice 2.98%; stockanalysis.com: top 10 = 32.67% of assets. |
+
+## PAVE — grid/infra (buy, wtd 7.70; cause 7, necessity 9, catalyst 7, basket 10)
+
+| claim | verdict | evidence |
+|---|---|---|
+| PJM 2029/2030 Base Residual Auction results posted Dec 22, 2026; bidding Dec 9–15 (cause 7) | CONFIRMED, delay risk flagged | Houlihan Lokey July 2026 deck: 2029/2030 BRA "results posted on December 22"; q08: "runs its next capacity auction from December 9 to 15 and posts results on December 22"; greenpowerenergy.com: window Dec 9–15, results Dec 22. NEW: PJM consumer advocates + the Independent Market Monitor asked PJM on Nov 18 to **delay** the auction; no answer published as of Nov 24 (RTO Insider, aimdesk). The Dec 22 date stands — this is a delay request, not a postponement — but the memo should carry it as a watch item. Ledger utilities/PJM row re-verified with this note. |
+| Surface Transportation Extension Act (Div. C of P.L. 119-103) ends Dec 11, 2026 (catalyst 7, floor) | CONFIRMED | House Budget Committee, updated Nov 18, 2026: "CR, surface transportation authority and NFIP authority all expire" Dec 11; P.L. 119-103 Div. C sec. 3002(2): "extension end date means December 11, 2026". Ledger grid/infra/Surface row re-verified. |
+| Basket: 100 holdings, 0.47% fee, top 10 ~32–34%, largest 3.9% (basket 10) | CONFIRMED | Global X PAVE fact sheet as of Aug 31, 2026: 100 holdings, total expense ratio 0.47%, top 10 31.7% (Deere 3.39% largest); Motley Fool Nov 2026 holdings: Fastenal 3.90% largest, top 10 ≈ 33.5%. |
+
+## QTUM — ai/robot (buy, wtd 7.55; cause 7, necessity 8, catalyst 8, basket 7)
+
+| claim | verdict | evidence |
+|---|---|---|
+| Jensen Huang reinstated as Nvidia CEO Nov 23; NVDA +30% (cause 7) | CONFIRMED | CNN Nov 23: Nvidia's board "reinstated Jensen Huang as chief executive, president and as a member of the board"; shares "rose as much as 36.6% before paring gains slightly and ending the day up 31.48% — their best day since 2003". Le Monde Nov 24: "soared by 30% to $165". Note: the bounce partly retraced Nov 24 (NVDA −8.15% by 11:05 AM ET Nov 24, per Fool) — consistent with the dossier's "Nov 24 down again". |
+| NVIDIA GTC 2027, San Jose McEnery, mid-March 2027 (catalyst 8) | CONFIRMED except start day — STAYS DISPUTED | nvidia.com/gtc/faq (fetched in search): "NVIDIA GTC will take place from March 14–18, 2027… at the San Jose McEnery Convention Center"; nvidia.com/gtc homepage and call-for-submissions still "March 15–18". Event, venue and month undisputed; only the start day (14 vs 15) is split on nvidia.com itself. Ledger confirmed row and Disputed row both re-verified today; the Disputed row stays. |
+| CES 2027 Jan 6–9 (catalyst 8) | CONFIRMED | gsmdome: "the trade show running from January 6 through January 9"; ledger ai/robot/CES-2027 row already live (verified 2026-11-24). |
+| JPMorgan AI capex $900bn / $5.5tn (necessity 8) | CONFIRMED | Same jpmorgan.com source as XSD above. |
+| Basket: 89 names, 0.40% fee, top 10 ~18%, loose quantum purity (basket 7) | CONFIRMED | stockanalysis.com (Nov 23 close): 90 holdings, expense ratio 0.40%, top 10 = 18.03% (Global Unichip 2.17%, Cloudflare 2.01%, Elastic 1.83%, Microsoft 1.83%…); Morningstar portfolio date Nov 19, 2026: top 10 = 18.0%; Defiance Oct 23, 2026 holdings file: top 10 = 18.79%, 89 names. Note: the Jun 30 N-PORT shows top 10 = 29.3% only because it counts a 13.85% money-market cash sweep (Mount Vernon Liquid Assets) as a holding — the operating top 10 is ~18%, so the ballot's figure stands. |
+
+## XAR — defense-us (buy, wtd 7.45; cause 7, necessity 7, catalyst 7, basket 10)
+
+| claim | verdict | evidence |
+|---|---|---|
+| Senate unveiled ~$1.1T FY27 defense bill Nov 17, vs $1.5T request ($1.15T base + $350B reconciliation) (cause 7) | CONFIRMED | appropriations.senate.gov DEF FY27 bill summary: "The Defense bill for Fiscal Year 2027 provides nearly $1.1 trillion in discretionary funding"; Breaking Defense, published 2026-11-17: "Senate appropriators are proposing nearly $1.1 trillion in defense spending for fiscal 2027… still falls well short of the $1.5 trillion figure sought by the Trump administration… split into two categories: $1.15 trillion in the base budget and $350 billion in a reconciliation bill." |
+| FY27 continuing resolution expires Dec 11, 2026 (catalyst 7, floor) | CONFIRMED | OMB Bulletin 27-01 (Sep 28, 2026): "Division A of Public Law (P.L.) 119-103… provides continuing appropriations for the period October 1, 2026, through December 11, 2026"; House Budget Committee updated Nov 18, 2026: "funds the government through Friday, December 11, 2026"; NACo Nov 16: CR "set to expire on December 11". Ledger defense-us/12-11 row re-verified. |
+| Basket: modified equal-weight A&D, 0.35% fee, top 10 ~29–30%, largest 3.33% (basket 10) | CONFIRMED | SSGA XAR fact sheet as of Sep 30, 2026: gross expense ratio 0.35%, "modified equal weighted", top 10 Rocket Lab 3.33%, Moog 3.13%… TransDigm 2.90% (sum ≈ 29.9%); ssga.com Nov 23, 2026 holdings: Lockheed Martin 3.54% largest. |
+
+## EWY — korea (buy, wtd 6.65; cause 8, necessity 5, catalyst 8, basket 3)
+
+| claim | verdict | evidence |
+|---|---|---|
+| Korea Oct exports +93.7% YoY to $115.3bn; semiconductor exports +259.4% to $56.4bn (cause 8) | CONFIRMED | Korea Ministry of Trade, Industry and Resources (MOTIR) Oct 2026 trade release, Nov 1, 2026: "Korea's exports rose 93.7 percent year-on-year to USD 115.28 billion… Semiconductor exports rose 259.4 percent to $56.44 billion." Ledger korea/exports-Oct history row re-verified. Caveat (already in the ledger row): Chuseok moved working days, so daily-average exports rose ~76%, not 93.7% — still a record print; the cause score does not rest on the unadjusted figure alone. |
+| DDR5 fixed price $50 in Oct; SK Hynix DRAM/HBM effectively sold out through 2029 (cause 8) | CONFIRMED | DDR5 16Gb contract price $40.0 (Jun 2026) → $50.0 (Oct) per MOTIE figures (vlsi.kr). SK Hynix Q3 2026 earnings call Oct 27–28: "our DRAM and HBM volumes for the next 3 years through 2029 are effectively sold out" (Webull transcript of the call; WSJ Oct 28: "The company's DRAM and high-bandwidth memory supply for the next three years, through 2029, is effectively sold out" — Joon Deok Park, head of SK Hynix DRAM marketing). |
+| Korea 2027 budget statutory deadline Dec 2, 2026; 21.3tn won for AI + three mega-projects (semis, physical AI, AI data centers), ~97% above 2026 (catalyst 8) | CONFIRMED | korea.net (official Republic of Korea site): President Lee Jae Myung's Nov 2, 2026 budget address — "KRW 21.3 trillion will go into artificial intelligence (AI) and the nation's three megaprojects of semiconductors, physical AI and AI data centers" — and he urged the legislature "to get the budget proposal and related bills finalized by the statutory deadline of Dec. 2." Seoul Economic Daily Nov 3: "21.3 trillion won — nearly double this year's level". Ledger korea/budget row re-verified; proposal, not yet law. |
+| Basket: Samsung ~22–23% + SK hynix ~21–24%, top two ~43–47% (basket 3) | CONFIRMED | iShares EWY fact sheet as of Sep 30, 2026: SK HYNIX 23.72%, SAMSUNG ELECTRONICS 22.77% (top two 46.5%); stockanalysis.com holdings Nov 20, 2026: Samsung 22.04%, SK hynix 20.86% (top two 42.9%). The concentration the basket ballot penalised (score 3) is real and already priced into the score — it is not a new fact and not a demotion. |
+
+## Core bucket
+
+**No core rows in scores.csv — nothing to verify under the core bucket.**
+
+## Demotions
+
+**None.** Every buy's load-bearing fact checked out against a primary or issuer source. The two corrections are regime-level wording fixes for the memo (10y 4.92% not ~5.10% as of the Nov 23 close; Nov 5 was the worst day since Apr 2025 for the broad market, Mar 2020 for chips), plus three watch items: (1) PJM consumer advocates/IMM asked Nov 18 to delay the Dec 9–15 auction — Dec 22 results date stands; (2) NVDA retraced part of the Nov 23 +31% bounce on Nov 24; (3) the AMD CES teaser was posted Nov 17, not Nov 20 as the catalyst ballot says — the Jan 5 event date is unaffected.
+
+## Ledger changes (log/catalysts.md)
+
+- **New rows:** semis/Micron — Micron fiscal Q1 2027 results, after close, 2026-12-17 (guided $61.5bn ±$1.5bn revenue, $38.15 adj EPS; >75% of 2027 output committed); semis/AMD-CES — AMD CES 2027 presentation, 10:00 AM PT, Mandalay Bay, 2027-01-05 (teaser Nov 17, 2026, Jack Huynh).
+- **Re-verified today (notes appended to live rows):** macro/FOMC 2026-12-09 (pricing updated: futures 99% 25bp / 1% hold / 0% >25bp); ai/robot/GTC 2027-03-14 (still split on nvidia.com, start day stays Disputed — Disputed row also re-checked); defense-us/12-11 (CR expiry); grid/infra/Surface 2026-12-11; utilities/PJM 2026-12-22 (delay-request note added); korea/budget 2026-12-02; korea/exports-Oct 2026-10-31.
+- **No retractions.** Nothing found contradicts any live ledger row. CES 2027 (ai/robot/CES-2027, 2027-01-06) and the Nov 5 rout row were already live and needed no new row.
