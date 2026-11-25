@@ -711,3 +711,7 @@ Full panel on the Tue Nov 24 close (scan differs from 2026-11-24 frozen scan; no
 ## 2026-11-25-r2 — etf-dip-pick-lite
 
 Lite on the Tue Nov 24 close: 49 candidates, 20 themes, 23 searches (20 themes + regime + 2 spot-check). Buy SOXX; core GLD; alt SMH, XSD, PSI, DRAM, GDX, GDXJ; no avoids; none stabilizing. Spot-check: capex fact current (AMAT Nov 12), Micron Dec 17 carried forward (not contradicted). Unverified themes (cause cap 5): clean, solar, grid/infra, crypto-equity. Memo: log/2026-11-25-r2-lite.md. Model: Claude Opus 5.5 (claude-opus-5-5) — lite.
+
+## 2026-11-25-r3 — etf-dip-pick panel
+
+Full panel by Claude Opus 5.5 (scan as of the 2026-11-25 close, third run of the day): 49 candidates in 20 themes. Quick pass, 4 sequential Opus lenses and an Opus verifier, all fresh subagents with no access to other runs. Buy SOXX, GRID; alt XSD, PSI, SMH, PAVE; no core, no vetoes. Verifier kept both buys: NVIDIA 8-Ks (Q3 print; Huang reinstated Nov 22), Micron Dec 17, Broadcom Dec 9. GRID's cause moved from GE Vernova (0.91% of the fund) to its real top holders (Quanta, JCI, Eaton, ABB). Ledger: 8 rows added, 10 re-verified. Tranche half now, half after Dec 9.
