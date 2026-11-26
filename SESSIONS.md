@@ -723,3 +723,7 @@ Full panel on the Wed Nov 25 close (Thanksgiving — US markets closed Nov 26; s
 ## 2026-11-26-r2 — etf-dip-pick-lite
 
 Lite by Claude Opus 5.5 (scan as of the 2026-11-25 close): 49 candidates, 20 themes, 23 searches. Rule buy REMX demoted to watch by the spot-check (ex-China NdPr below the 110/kg floor, Benchmark; undated and contradicted by Oilprice). Buy none; core none; alt none; avoid none. Hold cash into the Dec 9 FOMC.
+
+## 2026-11-26-r3 — etf-dip-pick panel
+
+Full panel by Claude Opus 5.5 (scan as of the 2026-11-25 close; Thanksgiving, no new session; scored under -r2 and renamed after the scheduled lite took that id): 49 candidates in 20 themes. Quick pass, 4 sequential Opus lenses and an Opus verifier, all fresh subagents with no access to other runs. Buy SOXX, GRID, SHLD, EWY; core GDX; avoid TAN, PBW (cause 3). Verifier kept all five, corrected EWY's cause 8→7 (memory-peak fear alongside flows) and the FY26 defense base ($890.6bn); ledger 7 rows added (live: korea 301-Korea), 16 re-verified. Tranche half now, half after Dec 9.
