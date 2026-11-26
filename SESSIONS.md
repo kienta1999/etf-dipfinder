@@ -719,3 +719,7 @@ Full panel by Claude Opus 5.5 (scan as of the 2026-11-25 close, third run of the
 ## 2026-11-26 — etf-dip-pick panel
 
 Full panel on the Wed Nov 25 close (Thanksgiving — US markets closed Nov 26; scan byte-identical to 2026-11-25, full panel anyway per the always-full rule): 49 candidates, 20 themes. Buy XSD, XAR, QTUM, GRID, NLR, ICLN, TAN; core none; alt PSI, SOXX, SMH, PAVE, BAI, PPA, AIQ, SHLD, AIPO, ROBO, URNM, ARKQ, BOTZ, DRAM, PBW, ITA, URA; no vetoes; FCG thin (R/R 1.29). No deviations from weighted score, no rule-bucket overrides. No candidate stabilizing (all 49 False). Tranche: half now, half after the Dec 9 FOMC decision. Verifier: 26 claims — 20 confirmed, 2 contradicted, 3 unverified, no demotions, all 7 buys stand; corrections: 10y 4.85% at Nov 25 close (not above 5%), Brent 91.40 Nov 24 / 94.61 Nov 25; GTC start day stays Disputed (Mar 14 vs 15). Ledger: 0 new rows (every confirmed dated event already had a live row), 18 live rows re-verified, none retracted. Memo: log/2026-11-26.md. Model: Muse Spark (unknown) — full panel.
+
+## 2026-11-26-r2 — etf-dip-pick-lite
+
+Lite by Claude Opus 5.5 (scan as of the 2026-11-25 close): 49 candidates, 20 themes, 23 searches. Rule buy REMX demoted to watch by the spot-check (ex-China NdPr below the 110/kg floor, Benchmark; undated and contradicted by Oilprice). Buy none; core none; alt none; avoid none. Hold cash into the Dec 9 FOMC.
