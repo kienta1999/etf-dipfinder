@@ -1,0 +1,50 @@
+,theme,bucket,why
+XSD,semis,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.60 >= 1.3, #1 in theme"
+PSI,semis,alt,"qualifies, but theme #2 behind XSD (one buy per theme)"
+GRID,grid/infra,buy,"buy: cause 8 >= 7, catalyst 7 >= 7, R/R 2.23 >= 1.3, #1 in theme"
+XAR,defense-us,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.74 >= 1.3, #1 in theme"
+SOXX,semis,alt,"qualifies, but theme #3 behind XSD (one buy per theme)"
+PAVE,grid/infra,alt,"qualifies, but theme #2 behind GRID (one buy per theme)"
+BAI,ai/robot,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 2.73 >= 1.3, #1 in theme"
+SMH,semis,alt,"qualifies, but theme #4 behind XSD (one buy per theme)"
+GLD,gold,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing; core path: necessity 6 < 8
+AIQ,ai/robot,alt,"qualifies, but theme #2 behind BAI (one buy per theme)"
+PPA,defense-us,alt,"qualifies, but theme #2 behind XAR (one buy per theme)"
+SHLD,defense-us,alt,"qualifies, but theme #3 behind XAR (one buy per theme)"
+GDX,gold,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing; core path: necessity 6 < 8
+ROBO,ai/robot,alt,"qualifies, but theme #3 behind BAI (one buy per theme)"
+GDXJ,gold,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing; core path: necessity 6 < 8
+NLR,nuclear,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 6.04 >= 1.3, #1 in theme"
+AIPO,ai/robot,alt,"qualifies, but theme #4 behind BAI (one buy per theme)"
+QTUM,ai/robot,alt,"qualifies, but theme #5 behind BAI (one buy per theme)"
+ARKQ,ai/robot,alt,"qualifies, but theme #6 behind BAI (one buy per theme)"
+BOTZ,ai/robot,alt,"qualifies, but theme #7 behind BAI (one buy per theme)"
+EWY,korea,buy,"buy: cause 8 >= 7, catalyst 8 >= 7, R/R 2.65 >= 1.3, #1 in theme"
+AMLP,oil/gas,watch,watch: no catalyst >= 7 (catalyst 5) and not stabilizing
+ICLN,clean,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 5.30 >= 1.3, #1 in theme"
+TAN,solar,buy,"buy: cause 7 >= 7, catalyst 7 >= 7, R/R 6.15 >= 1.3, #1 in theme"
+XOP,oil/gas,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+PICK,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+ITA,defense-us,alt,"qualifies, but theme #4 behind XAR (one buy per theme)"
+URNM,nuclear,alt,"qualifies, but theme #2 behind NLR (one buy per theme)"
+REMX,rare-earth,watch,watch: cause 5 < 7
+PBW,clean,alt,"qualifies, but theme #2 behind ICLN (one buy per theme)"
+DRAM,semis,alt,"qualifies, but theme #5 behind XSD (one buy per theme)"
+URA,nuclear,alt,"qualifies, but theme #3 behind NLR (one buy per theme)"
+COPX,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+DTCR,reit,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+SLV,silver,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+OIH,oil/gas,watch,watch: no catalyst >= 7 (catalyst 6) and not stabilizing
+FCG,oil/gas,watch,watch: thin: R/R 1.29 < 1.3; no catalyst >= 7 (catalyst 6) and not stabilizing
+UFO,space,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+XME,base-metals,watch,watch: no catalyst >= 7 (catalyst 4) and not stabilizing
+LIT,lithium,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+KWEB,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+FXI,china,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 6) and not stabilizing
+SIL,silver,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+ARKX,space,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 4) and not stabilizing
+BLOK,crypto-equity,watch,watch: no catalyst >= 7 (catalyst 3) and not stabilizing
+IBIT,crypto-spot,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing
+ETHA,crypto-spot,watch,watch: no catalyst >= 7 (catalyst 2) and not stabilizing
+WGMI,crypto-equity,watch,watch: cause 5 < 7; no catalyst >= 7 (catalyst 3) and not stabilizing
+ARGT,argentina,avoid,cause veto: cause 3 <= 3
