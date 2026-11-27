@@ -19,13 +19,13 @@
 | 14 | ICLN | 7 | Floor 7 (clean): Sec 232 polysilicon Dec 4 2026, copied from TAN | Proclamation 11052 |
 | 15 | PBW | 7 | Floor 7 (clean): Sec 232 polysilicon Dec 4 2026, copied from TAN | Proclamation 11052 |
 | 16 | REMX | 7 | Band 8 −1 (no floor): DFARS 252.225-7052 bans Chinese-chain NdFeB magnets for DoD from Jan 1 2027, an agency date 35 days out. −1 because REMX holds Chinese producers and the 7961 deviation/waivers soften it. KL truce Jan 10 2027 is two-way | acquisition.gov DFARS 252.225-7052 (section D); MOFCOM/GACC No. 58 Nov 9 2026 |
-| 17 | URA | 6 | Band 6: Cameco Q4/FY results Feb 12 2027, company-confirmed, but an earnings print cuts both ways. No dated policy trigger found (no 2026 Sec 232 uranium decision date) | Cameco Q3 release Oct 30 2026 (section D) |
+| 17 | URA | 6 | Band 6: Cameco Q4/FY results Feb 12 2027, company-confirmed, but an earnings print cuts both ways. Cameco-FY row carried forward from section D; besides it, the calendar holds no Sec 232 uranium decision | Cameco Q3 release Oct 30 2026 (section D) |
 | 18 | URNM | 6 | Band 6: Cameco Feb 12 2027, copied from URA | Cameco Oct 30 2026 |
 | 19 | NLR | 6 | Band 6: Cameco Feb 12 2027, copied from URA (NLR holds more utilities, same date) | Cameco Oct 30 2026 |
 | 20 | KWEB | 6 | Band 6: the KL arrangement/tariff suspension expires Jan 10 2027 and USTR Sec 301 hearings follow Jan 25 2027. Both are two-way (renewal vs snapback) | MOFCOM/GACC No. 58 Nov 9 2026; ustr.gov Nov 25 2026 |
 | 21 | FXI | 6 | Band 6: Jan 10 KL expiry and Jan 25 USTR hearings, copied from KWEB | same |
 | 22 | LIT | 6 | Band 6: China's suspended lithium-battery/anode export controls run with the KL arrangement to Jan 10 2027, two-way. The CATL Jianxiawo restart already happened (Jun 29 2026) | MOFCOM/GACC No. 58; cnevpost Jul 1 2026 |
-| 23 | ARGT | 6 | Band 6: Globales coupon/amortisation Jan 9 2027 (prospectus-fixed), two-way given the ~1,000bp+ spread and funding gap. The IMF board third review is only "early December", with no date | SEC 424B5 0001193125-20-221606; BA Times / Rio Times Oct-Nov 2026 |
+| 23 | ARGT | 6 | Band 6: Globales coupon/amortisation Jan 9 2027 (prospectus-fixed), two-way given the ~1,000bp+ spread and funding gap. Bond row carried forward from section D; the IMF board third review is set only for "early December" | SEC 424B5 0001193125-20-221606; BA Times / Rio Times Oct-Nov 2026 |
 | 24 | AIQ | 6 | Band 6: CES 2027 Jan 6-9 and NVIDIA GTC March 2027 (month undisputed, start day disputed). Showcase events, not flow reversals, and the data-center moratorium overhang (Texas Jan 19) makes them two-way | ces.tech Nov 17 2026; nvidia.com/gtc |
 | 25 | QTUM | 6 | Band 6: CES Jan 6 and GTC Mar 2027, copied from AIQ | same |
 | 26 | BOTZ | 6 | Band 6: CES Jan 6 and GTC Mar 2027 (robotics showcase), copied | same |
@@ -69,3 +69,5 @@ New dated events found:
 - space (history, no floor) | SpaceX 180-day IPO lockup expiry, final main-pool tranche | 2026-12-08 | https://www.tikr.com/blog/will-798-million-unlocked-spacex-shares-on-december-8-swamp-starships-catch (third-party, not issuer; share count disputed 342M vs 798M)
 - argentina (no date) | IMF Executive Board third EFF review, "early December" 2026, day not announced | — | https://batimes.com.ar/news/amp/economy/imf-approves-third-review-of-argentinas-programme.phtml
 - solar/clean (status) | Sec 232 polysilicon Dec 4 2026: CBP ACE Chapter 99 test classifications active Nov 12 2026, production filing instructions due before Dec 4, no delay found | 2026-12-04 | https://www.ghy.com/trade-compliance/us-section-232-polysilicon-tariff/
+
+Section-D rows carried forward (keyword note added by the orchestrator after check_memo; no score changed): defense-us 12-11 (FY27 CR expiry Dec 11, floor ≥7, scored 7); argentina bond (Globales Jan 9 2027, scored 6); nuclear Cameco-FY (Feb 12 2027, scored 6); grid/infra Hinojosa (Jan 19 2027, two-way/negative lean, inside GRID/PAVE 7); rare-earth No58-2026 (suspension to Jan 10 2027, alongside DFARS for REMX 7); ai/robot CES-2027 (Jan 6 2027, scored 6); semis AMD-CES (Jan 5 2027, alongside Micron Dec 17 for semis 7-8); china 301-excess-capacity (hearings Jan 25 2027, two-way, scored 6); korea 301-Korea (hearings Jan 25 2027, two-way, EWY 7 on the Dec 2 floor).
